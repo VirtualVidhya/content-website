@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Exercises on My New Hugo Site</title>
+    <title>Exercises on V.Vidhya</title>
     <link>http://localhost:1313/exercises/</link>
-    <description>Recent content in Exercises on My New Hugo Site</description>
+    <description>Recent content in Exercises on V.Vidhya</description>
+    <image>
+      <title>V.Vidhya</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- 0.130.0</generator>
-    <language>en-us</language>
+    <language>en</language>
     <atom:link href="http://localhost:1313/exercises/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>Style-Manipulation</title>
       <link>http://localhost:1313/exercises/stylemanipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/exercises/stylemanipulation/</guid>
-      <description>Style-Manipulation Exercise We have a sample web-page.
-Here are the respective HTML &amp;amp; CSS files for this web-page.
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;JS Basics&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;styles.css&amp;#34; /&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1 id=&amp;#34;main-heading&amp;#34;&amp;gt;JavaScript (Intermediate)&amp;lt;/h1&amp;gt; &amp;lt;div class=&amp;#34;sub-section&amp;#34;&amp;gt; &amp;lt;h2 id=&amp;#34;sub-heading&amp;#34;&amp;gt;Basics of DOM&amp;lt;/h2&amp;gt; &amp;lt;p&amp;gt;DOM - Document Object Model&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;h3&amp;gt;Main-Topics of Front-end Web Development&amp;lt;/h3&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li class=&amp;#34;list-items&amp;#34;&amp;gt; &amp;lt;div&amp;gt; &amp;lt;img src=&amp;#34;html.png&amp;#34; alt=&amp;#34;HTML-icon&amp;#34; /&amp;gt; &amp;lt;span&amp;gt;Hyper Text Markup Language&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;div&amp;gt; &amp;lt;img src=&amp;#34;html.</description>
+      <description>We have a sample web-page which looks like this.
+Below, are the respective HTML &amp;amp; CSS files for this web-page.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description>
     </item>
   </channel>
 </rss>

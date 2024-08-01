@@ -1,6 +1,8 @@
 ---
-title: "Style-Manipulation"
+title: "4. Style-Manipulation"
 draft: false
+---
+
 ---
 
 We have a sample web-page which looks like this.

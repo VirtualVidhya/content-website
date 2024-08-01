@@ -1,6 +1,7 @@
 ---
-title: "4. Style-Manipulation"
+title: "Style-Manipulation"
 draft: false
+weight: 4
 ---
 
 ---

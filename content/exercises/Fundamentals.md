@@ -1,6 +1,7 @@
 ---
-title: "1. Fundamentals"
+title: "Fundamentals"
 draft: false
+weight: 1
 ---
 
 ---

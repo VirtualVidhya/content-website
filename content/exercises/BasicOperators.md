@@ -1,6 +1,7 @@
 ---
-title: "2. Basic Operators"
+title: "Basic Operators"
 draft: false
+weight: 2
 ---
 
 ---

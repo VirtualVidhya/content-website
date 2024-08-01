@@ -1,7 +1,7 @@
 ---
-title: "Style-Manipulation"
+title: "Manipulation Attributes & Style"
 draft: false
-weight: 4
+weight: 51
 ---
 
 ---

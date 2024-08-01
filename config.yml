@@ -28,7 +28,7 @@ params:
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: false
   UseHugoToc: true
@@ -113,14 +113,14 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: notes
-      name: notes
-      url: /notes/
-      weight: 10
+    # - identifier: notes
+    #   name: notes
+    #   url: /notes/
+    #   weight: 10
     - identifier: exercises
       name: exercises
       url: /exercises/
-      weight: 20
+      weight: 10
     # - identifier: example
     #   name: example.org
     #   url: https://example.org

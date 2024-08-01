@@ -10,7 +10,7 @@ weight: 52
 
 ---
 
-1.
+#### Q1.
 
 Create a new `input` and `button` element on the page using JavaScript only. 
 
@@ -18,7 +18,7 @@ Set the text of button to "Click Me”.
 
 ---
 
-2.
+#### Q2.
 
 Now add following attributes to the element:
 - Change placeholder value of `input` to "username"
@@ -26,7 +26,7 @@ Now add following attributes to the element:
 
 ---
 
-3.
+#### Q3.
 
 Now access the `button` using `querySelector` and its id. 
 
@@ -34,13 +34,13 @@ Change the button background-color to blue and text color to white.
 
 ---
 
-4.
+#### Q4.
 
 Now create a `h1` element on the page and set its text to "DOM Practice" with an underline.
 Change its color to purple.
 
 ---
 
-5.
+#### Q5.
 
 Now create a `p` tag on the page and set its text to “Manipulating HTML & CSS using JavaScript with the help of DOM", where “DOM” is **bold**.

@@ -6,7 +6,7 @@ weight: 2
 
 ---
 
-1.
+#### Q1.
 
 Apply the right assignment operator, which will result in x being 20
 
@@ -20,7 +20,8 @@ x __ y;
 
 ---
 
-2.
+#### Q2.
+
 Apply the right assignment operator, which will result in x being 30
 
 ```jsx

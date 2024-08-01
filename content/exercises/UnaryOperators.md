@@ -20,7 +20,7 @@ let c = a + b;   // a = 2     b = 5     c = 7
 
 ---
 
-1.
+#### Q1.
 
 What is the value of each variable in each line of code?
 
@@ -31,7 +31,7 @@ newNum = ++num;
 ```
 ---
 
-2. 
+#### Q2.
 
 What is the value of each variable in each line of code?
 
@@ -47,7 +47,7 @@ z = x++;
 ---
 
 
-3. **(Adv.)**
+#### Q3. _(Adv.)_
 
 What is the value of each variable in each line of code?
 
@@ -63,7 +63,7 @@ z = z++;
 
 ---
 
-4. **(Adv.)**
+#### Q4. _(Adv.)_
 
 What is the value of each variable in each line of code?
 
@@ -81,7 +81,7 @@ x = x++ - --z;
 
 ---
 
-5. **(Adv)**
+#### Q5. _(Adv)_
 
 What is the value of each variable in each line of code?
 

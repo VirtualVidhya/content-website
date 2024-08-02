@@ -1,7 +1,7 @@
 ---
 title: "Object Selection & Setting Content (DOM)"
 draft: false
-weight: 50
+weight: 28
 ---
 
 ---

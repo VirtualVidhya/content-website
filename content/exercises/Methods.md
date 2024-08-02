@@ -25,7 +25,7 @@ Now create method to calculate the average runs scored per match for this object
 
 - let’s say an employee has played 30 matches and has scored 450 runs so his average is 15 (runs/matches = 450/30).
 
-Create a methods to increase number of matches, runs & wickets as well.
+Create separate methods to increase number of matches, runs & wickets as well.
 
 e.g.
 

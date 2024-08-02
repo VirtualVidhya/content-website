@@ -120,7 +120,7 @@ Let’s fix it one by one.
 
 - The image icons for CSS & JS list items are the same as HTML currently. Set the image of CSS & JS items to their respective icons using `setAttribute()` but before setting the image first ensure that you are setting the correct icon for the matching image element. (for e.g. check if the `alt` of an image is `CSS-icon` then only set css icon image for it.)
     
-    [**HINT:** Use `getAttribute()` to first know what is the value of `alt` for the respective image element.]
+    (**HINT:** Use `getAttribute()` to first know what is the value of `alt` for the respective image element.)
     
 - The CSS & JS list items don’t have the styling similar to HTML one. Add the class applied to HTML for CSS & JS list items as well.
 - Main-Topics of Front-end Web Development heading looks dull at the moment. Apply the `topic-heading` class to it for the styling.

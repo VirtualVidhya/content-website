@@ -1,5 +1,5 @@
 ---
-title: "string Methods"
+title: "String Methods"
 draft: false
 weight: 10
 ---

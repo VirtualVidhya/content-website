@@ -26,8 +26,9 @@ arr - [1, 3, 4, 5, 6, 3]
 #### Q2. 
 
 Print the factorial of a given number n.
-[**NOTE:** Factorial of a number n is the product of all positive integers less than or equal to a
-given positive integer and denoted by that integer. ]
+
+(**NOTE:** Factorial of a number n is the product of all positive integers less than or equal to a
+given positive integer and denoted by that integer.)
 
 for e.g.
 
@@ -78,7 +79,8 @@ count: 3
 #### Q5. _(Adv.)_
 
 Write a JS program to find the sum of digits in a given number.
-[**NOTE:** The number of digits of a given number can be anything.] 
+
+(**NOTE:** The number of digits of a given number can be anything.)
 
 for e.g.
 

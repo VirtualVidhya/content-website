@@ -112,9 +112,20 @@ Below, are the respective HTML & CSS files for this web-page.
 }
 ```
 
-(**NOTE:** You have to find the images used in this webpage yourself. You can use whatever appropriate images you like.)
+Below, all the image assets used for the above page are provided.
 
-But currently there are some inconsistencies within this page, we have to fix it by manipulating the HTML & CSS using JS.
+![WebDev](../../images/exercises/style-manipulation/webdev.png)
+![HTML Icon](../../images/exercises/style-manipulation/html.png)
+![CSS Icon](../../images/exercises/style-manipulation/css.png)
+![JS Icon](../../images/exercises/style-manipulation/js.png)
+
+(**NOTE:** While naming your image files and choosing their directory location, please follow the above HTML code. If you
+won't name & put the files according to HTML, it won't be able to find the image files. Though if you know what you are doing
+then you can use whatever assets you like and store wherever you want by changing the HTML as per your needs.)
+
+---
+
+Currently there are some inconsistencies within this page, we have to fix it by manipulating the HTML & CSS using JS.
 
 Let’s fix it one by one.
 

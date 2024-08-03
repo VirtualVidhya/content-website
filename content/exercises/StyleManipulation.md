@@ -121,7 +121,7 @@ Below, all the image assets used for the above page are provided.
 
 (**NOTE:** While naming your image files and choosing their directory location, please follow the above HTML code. If you
 won't name & put the files according to HTML, it won't be able to find the image files. Though if you know what you are doing
-then you can use whatever assets you like and store wherever you want by changing the HTML as per your needs.)
+then you can use whatever assets you like and store them wherever you want, by changing the HTML as per your needs.)
 
 ---
 

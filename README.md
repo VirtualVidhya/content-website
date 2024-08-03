@@ -1,1 +1,1 @@
-# JavaScript
+# VVidhya Course Content

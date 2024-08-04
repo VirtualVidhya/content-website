@@ -6,4 +6,4 @@ weight: 1
 
 ---
 
-[Webpage Preview](https://guru-404.github.io/MovieDetails/)
+{{< newtabref  href="https://guru-404.github.io/MovieDetails/" title="WebPage Preview" >}}

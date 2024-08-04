@@ -1,5 +1,5 @@
-
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $currentDir := .File.Dir -}}
+{{- $pages := where site.RegularPages "File.Dir" $currentDir -}}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 
 <br>

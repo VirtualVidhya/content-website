@@ -63,11 +63,9 @@ params:
     imageWidth: 250
     imageHeight: 250
     imageTitle: my image
-    # buttons:
-    #   - name: Posts
-    #     url: posts
-    #   - name: Tags
-    #     url: tags
+    buttons:
+      - name: Let's Learn
+        url: courses
 
   # home-info mode
   # homeInfoParams:
@@ -113,14 +111,11 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    # - identifier: notes
-    #   name: notes
-    #   url: /notes/
-    #   weight: 10
-    - identifier: exercises
-      name: exercises
-      url: /exercises/
+    - identifier: Courses
+      name: Courses
+      url: /courses/
       weight: 10
+
     # - identifier: example
     #   name: example.org
     #   url: https://example.org

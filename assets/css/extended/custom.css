@@ -6,6 +6,10 @@ html, body {
     margin-bottom: 25px;
 }
 
+.breadcrumbs a:hover {
+    box-shadow: 0 1px 0;
+}
+
 .paginav {
     padding-bottom: 7.5px;
 }
@@ -19,4 +23,14 @@ html, body {
 
 .paginav-hr {
     border-width: 1.75px;
+}
+
+#menu a:hover {
+    text-decoration: underline solid 1px;
+    text-underline-offset: 6.5px;
+}
+
+#menu .active {
+    font-weight: normal;
+    border-bottom: 1.5px solid currentColor;
 }

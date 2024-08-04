@@ -6,4 +6,17 @@ html, body {
     margin-bottom: 25px;
 }
 
+.paginav {
+    padding-bottom: 7.5px;
+}
+
+.paginav .title {
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-size: small;
+    color: var(--secondary);
+}
+
+.paginav-hr {
+    border-width: 1.75px;
 }

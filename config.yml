@@ -1,6 +1,6 @@
 baseURL: "https://vvidhya.pages.dev/"
 title: V.Vidhya
-paginate: 5
+paginate: 10
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -27,6 +27,7 @@ params:
   ShowReadingTime: false
   ShowShareButtons: false
   ShowPostNavLinks: false
+  ShowPageNums: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: false

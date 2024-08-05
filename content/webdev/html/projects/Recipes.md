@@ -22,5 +22,5 @@ This exercise is to understand the structure of a full site containing multiple 
 
 - ### Guidelines
 
-Feel free to have your own content (theme, text, images etc.). But the layout should be same, to make sure that all HTML tags and concepts are utilised.
+Feel free to have your own content (theme, text, images etc.). But the layout should be same, to ensure that all HTML tags and concepts are utilised.
 

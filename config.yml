@@ -15,7 +15,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: V.Vidhya Content
-  description: "ExampleSite description"
+  description: "Your virtual path to knowledge"
   keywords: [Blog, Portfolio, PaperMod]
   # author: Admin
   # author: ["Me", "You"] # multiple authors

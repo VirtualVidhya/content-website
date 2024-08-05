@@ -1,5 +1,6 @@
 ---
 title: Notes
+headless: true
 ---
 
 ---

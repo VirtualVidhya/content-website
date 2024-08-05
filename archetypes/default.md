@@ -1,5 +1,6 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-draft : false
 weight: 0
+draft : false
+headless: false
 ---

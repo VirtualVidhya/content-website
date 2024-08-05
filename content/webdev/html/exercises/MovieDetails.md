@@ -16,7 +16,7 @@ Make a webpage similar to given at the below link.
 
 - ### Main Lessons
 
-This exercise is to use every type of markup we have learnt in HTML.
+This exercise is to understand the practical usage of different HTML tags, all together in the form of a complete webpage.
 
 ---
 

@@ -135,8 +135,3 @@ markup:
 build:
   publish: public
   command: hugo --gc --minify
-
-cascade:
-  - _target:
-      path: /webdev/js/notes
-    headless: true

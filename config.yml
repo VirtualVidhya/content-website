@@ -131,3 +131,10 @@ markup:
     guessSyntax: true
     lineNos: true
     style: monokai
+
+build:
+  publish: "public"
+  command: "hugo --gc --minify"
+
+cascade:
+  headless: true

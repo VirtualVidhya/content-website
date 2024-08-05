@@ -133,8 +133,10 @@ markup:
     style: monokai
 
 build:
-  publish: "public"
-  command: "hugo --gc --minify"
+  publish: public
+  command: hugo --gc --minify
 
 cascade:
-  headless: true
+  - _target:
+      path: /webdev/js/notes
+    headless: true

@@ -34,3 +34,7 @@ html, body {
     font-weight: normal;
     border-bottom: 1.5px solid currentColor;
 }
+
+.button:hover {
+    background: var(--secondary);
+}

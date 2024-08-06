@@ -22,7 +22,7 @@ Take email from user as input using `prompt`.
 
 Now generally in practice, we prefer email to be in all small case.
 
-so convert it into lowercase, remove unnecessary spaces from start & end for safety (User might have added them by mistake), then store it, at last print it for testing.
+so convert it into lowercase, also remove unnecessary spaces from start & end for safety (User might have added them by mistake), then store it, at last print it for testing.
 
 ---
 
@@ -44,10 +44,12 @@ predict the output of the following operations:
 
 #### Q4.
 
-Separate the “Lets” part in above string & replace “t” with “s” in it.
+Separate the “Lets” part in above string ("LetsLearnJS") & replace 't' with 's' in it.
 
 expected output:
 
 ```jsx
+// LetsLearnJS --> Lets -->
+
 Less
 ```

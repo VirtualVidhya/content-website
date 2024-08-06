@@ -8,7 +8,7 @@ weight: 29
 
 We have a sample web-page which looks like this.
 
-![WebPage Preview](../../images/exercises/style-manipulation/webpage.png)
+![WebPage Preview](../../../../images/exercises/style-manipulation/webpage.png)
 
 Below, are the respective HTML & CSS files for this web-page.
 
@@ -114,10 +114,10 @@ Below, are the respective HTML & CSS files for this web-page.
 
 Below, all the image assets used for the above page are provided.
 
-![WebDev](../../images/exercises/style-manipulation/webdev.png)
-![HTML Icon](../../images/exercises/style-manipulation/html.png)
-![CSS Icon](../../images/exercises/style-manipulation/css.png)
-![JS Icon](../../images/exercises/style-manipulation/js.png)
+![WebDev](../../../../images/exercises/style-manipulation/webdev.png)
+![HTML Icon](../../../../images/exercises/style-manipulation/html.png)
+![CSS Icon](../../../../images/exercises/style-manipulation/css.png)
+![JS Icon](../../../../images/exercises/style-manipulation/js.png)
 
 (**NOTE:** While naming your image files and choosing their directory location, please follow the above HTML code. If you
 won't name & put the files according to HTML, it won't be able to find the image files. Though if you know what you are doing

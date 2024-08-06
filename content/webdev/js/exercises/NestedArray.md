@@ -14,7 +14,7 @@ Now as the game progresses, we continuously need to keep track of the filled & u
 
 For that, create a 2D array to represent the following tic-tac-toe game state.
 
-![Demo Preview](../../images/exercises/nested-array/demo-preview.png)
+![Demo Preview](../../../../images/exercises/nested-array/demo-preview.png)
 
 ---
 

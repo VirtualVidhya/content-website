@@ -30,11 +30,13 @@ This example logs `5` to the console. The semicolon denotes the end of the lin
 
 **Note:** Although in JavaScript your code will usually run as intended without a semicolon, we recommend learning the habit of ending each statement with a semicolon so you never leave one out in the few instances when they are required.
 
-# **`console.log()`**
+---
+
+# `console.log()`
 
 Until now we’ve been printing things on the console just by simply mentioning a string,
 
-![Console 1](../../images/notes/1.png)
+![Console 1](../../../../images/notes/Console/1.png)
 
 But this won’t work in our JS code files, so to print messages on the console from our JS code files, we’ll use `console.log()`
 
@@ -42,19 +44,19 @@ We can print
 
 - characters, strings
 
-![Console 2](../../images/notes/2.png)
+![Console 2](../../../../images/notes/Console/2.png)
 
 - variables’ values
 
-![Console 3](../../images/notes/3.png)
+![Console 3](../../../../images/notes/Console/3.png)
 
 - operations’ values
 
-![Console 4](../../images/notes/4.png)
+![Console 4](../../../../images/notes/Console/4.png)
 
 - multiple values
 
-![Console 5](../../images/notes/5.png)
+![Console 5](../../../../images/notes/Console/5.png)
 
 So the use of `console.log()` comes in to the picture because,
 

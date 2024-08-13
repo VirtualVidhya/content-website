@@ -1,7 +1,7 @@
 ---
 title: "Functions (Basic)"
 draft: false
-weight: 22
+weight: 23
 ---
 
 ---

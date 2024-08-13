@@ -1,7 +1,7 @@
 ---
 title: "Object Literals"
 draft: false
-weight: 19
+weight: 20
 ---
 
 ---

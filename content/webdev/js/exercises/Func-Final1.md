@@ -1,7 +1,7 @@
 ---
 title: "Functions Cumulative 1"
 draft: false
-weight: 24
+weight: 25
 ---
 
 ---

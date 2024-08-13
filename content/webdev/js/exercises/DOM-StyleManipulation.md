@@ -1,7 +1,7 @@
 ---
 title: "Manipulating Attributes & Style"
 draft: false
-weight: 29
+weight: 30
 ---
 
 ---

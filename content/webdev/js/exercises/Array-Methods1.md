@@ -1,7 +1,7 @@
 ---
 title: "Array Methods 1"
 draft: false
-weight: 11
+weight: 12
 ---
 
 ---

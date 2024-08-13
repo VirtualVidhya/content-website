@@ -1,7 +1,7 @@
 ---
 title: "Math (Object) 2"
 draft: false
-weight: 21
+weight: 22
 ---
 
 ---

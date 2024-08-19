@@ -10,7 +10,8 @@ weight: 2
 
 Make a small component we often see on shopping related websites which is a Quantity Selector for an item, where user can select quantity of an item 
 and the bill amount will gets automatically calculated & updated based on the given MRP. 
-An example is given at the below link. 
+
+An example is given at the below link.
 
 {{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/QuantitySelector/" title="WebPage Preview" >}}
 

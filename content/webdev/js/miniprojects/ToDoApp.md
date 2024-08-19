@@ -1,7 +1,7 @@
 ---
 title: 'TODO App'
 draft : false
-weight: 4
+weight: 5
 ---
 
 ---
@@ -9,6 +9,7 @@ weight: 4
 - ### Task
 
 Make a complete TODO App for the web, where user can add new tasks, mark them complete and remove the old ones. 
+
 An example is given at the below link. 
 
 {{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/ToDoApp/" title="WebPage Preview" >}}

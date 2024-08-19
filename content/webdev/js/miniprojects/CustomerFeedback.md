@@ -10,6 +10,7 @@ weight: 3
 
 Make a small component we often see on shopping related websites which is a Customer Feedback for an item, where user can select number of stars in terms of review 
 for an item and there will be a visual representation of what that amount of stars signify in the form of an emoji and review text. 
+
 An example is given at the below link.
 
 {{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/CustomerFeedback/" title="WebPage Preview" >}}

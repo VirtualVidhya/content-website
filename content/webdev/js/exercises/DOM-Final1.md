@@ -10,7 +10,9 @@ weight: 31
 
 ---
 
-The initial HTML & CSS code is already given below.
+- The initial HTML & CSS code is already given below.
+- Create HTML & CSS files with code given below & link the CSS file in HTML.
+- Create a JavaScript file now & link this JavaScript file with your HTML.
 
 ```html
 <!DOCTYPE html>
@@ -20,11 +22,8 @@ The initial HTML & CSS code is already given below.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DOM</title>
-
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <script src="app.js"></script>
   </body>
 </html>
 ```
@@ -44,14 +43,27 @@ The initial HTML & CSS code is already given below.
 }
 ```
 
-Now add the following elements on the webpage using **only JavaScript and DOM methods**.
+- Now add the following elements on the webpage using **only JavaScript and DOM methods**.
 
-- a `p` with red text that says “Hey, I am a red paragraph!”
-- a `h3` with blue text that says “I am a blue h3!”
-- a `div` with a black border and pink background color with the following element inside it:
-    - another `h1` that says “I am h1 inside a div”
-    - a `p` that says “I am p inside a div”
+---
 
+#### Q1.
+
+A `p` with red text that says “Hey, I am a red paragraph!”
+
+---
+
+#### Q2.
+
+A `h3` with blue text that says “I am a blue h3!”
+
+---
+
+#### Q3.
+
+A `div` with a black border and pink background color with the following element inside it:
+  - An another `h1` that says “I am h1 inside a div”
+  - A `p` that says “I am p inside a div”
 
 ---
 

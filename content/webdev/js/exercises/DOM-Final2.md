@@ -10,7 +10,9 @@ weight: 32
 
 ---
 
-- TThe initial HTML & CSS code is already given below.
+- The initial HTML & CSS code is already given below.
+- Create HTML & CSS files with code given below & link the CSS file in HTML.
+- Create a JavaScript file now & link this JavaScript file with your HTML.
 
 ```html
 <!DOCTYPE html>
@@ -20,8 +22,6 @@ weight: 32
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>DOM</title>
-
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -45,9 +45,6 @@ weight: 32
 }
 ```
 
-- Note that the name of the linked file in HTML is `styles.css` is here, so make changes accordingly while you male & link your CSS file with HTML.
-- Create a javascript file now, named `app.js` (or any other name of your choice)
-- Then link this javascript file with your HTML.
 - Now add and manipulate elements on the webpage as mentioned in the below questions using **only JavaScript & DOM methods**.
 
 ---

@@ -1,6 +1,6 @@
 baseURL: "https://vvidhya.pages.dev/"
 title: V.Vidhya
-paginate: 10
+paginate: 20
 theme: PaperMod
 
 enableRobotsTXT: true

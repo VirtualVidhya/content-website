@@ -10,7 +10,7 @@ weight: 31
 
 ---
 
-We have already got an initial HTML & CSS.
+The initial HTML & CSS code is already given below.
 
 ```html
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ We have already got an initial HTML & CSS.
 }
 ```
 
-Now add the following elements on the webpage using only JavaScript and DOM methods.
+Now add the following elements on the webpage using **only JavaScript and DOM methods**.
 
 - a `p` with red text that says “Hey, I am a red paragraph!”
 - a `h3` with blue text that says “I am a blue h3!”

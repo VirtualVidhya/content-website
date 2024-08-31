@@ -10,6 +10,27 @@ weight: 32
 
 ---
 
+- The initial HTML code with no elements inside is given below.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DOM</title>
+  </head>
+  <body>
+  </body>
+</html>
+```
+- Create a javascript file now, named `app.js` (or any other name of your choice)
+- Then link this javascript file with your HTML.
+- Now add and manipulate elements on the webpage as mentioned in the below questions using **only JavaScript & DOM methods**.
+
+---
+
 #### Q1.
 
 Create a new `input` and `button` element on the page using JavaScript only. 

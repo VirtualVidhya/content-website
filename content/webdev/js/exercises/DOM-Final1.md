@@ -55,6 +55,6 @@ Now add the following elements on the webpage using **only JavaScript and DOM me
 
 ---
 
-Expected Output:
+**Expected Output:**
 
 ![Preview](../../../../images/exercises/dom-final1/preview.png)

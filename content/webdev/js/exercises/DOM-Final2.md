@@ -73,7 +73,7 @@ Now add class "btn" on the `button` created above.
 
 #### Q4.
 
-Now create a `h1` element on the page and set its text to "DOM Practice" with an underline.
+Now create a `h1` element on the page and set its text to "Course: DOM" with an underline.
 Change its color to purple.
 
 ---
@@ -81,6 +81,28 @@ Change its color to purple.
 #### Q5.
 
 Now create a `p` tag on the page and set its text to “Manipulating HTML & CSS using JavaScript with the help of DOM", where “DOM” is **bold**.
+
+---
+
+#### Q6.
+
+Now create a `h2` element on the page and set its text to "Enrolled Students" with an underline, where "Enrolled is in _Italic_.
+Change its color to blue.
+
+---
+
+#### Q7.
+
+Now we have certain data in the form of student names.
+Let's say the name of the students are "Magan", "Gagan", "Lagan", "Chhagan".
+Add the names of these students in the form of an `ordered list` items on the webpage after "Enrolled Students" heading.
+
+---
+
+#### Q8.
+
+Now let's say the student number 3 - "Lagan" has dropped out from the course.
+Remove his name from the list on the webpage.
 
 ---
 

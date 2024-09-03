@@ -50,6 +50,24 @@ so overall what it means is, when this `event` gets triggered for this `element`
 
 Here, both the actions get performed. Whichever is assigned first, gets performed first and then the later one.
 
+---
+
 ## Double Click (Opt.)
     
 ![Untitled](../../../../images/exercises/dom-event-listeners/4.png)
+
+---
+
+## Event Listeners for other Elements
+
+Until now, we have used event listeners but mostly for buttons only but we can use it for other elements as well.
+
+![Untitled](../../../../images/exercises/dom-event-listeners/5.png)
+
+![Untitled](../../../../images/exercises/dom-event-listeners/6.png)
+
+![Untitled](../../../../images/exercises/dom-event-listeners/7.png)
+
+![Untitled](../../../../images/exercises/dom-event-listeners/8.png)
+
+So in this way, we can have event listeners for each and every element of our webpage.

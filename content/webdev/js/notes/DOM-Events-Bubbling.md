@@ -1,0 +1,48 @@
+---
+title: "DOM - Event Bubbling"
+draft: false
+weight: 19
+---
+
+---
+
+For e.g.
+
+We have a HTML here consisting of a `div` with nested `ul` having nested `li` elements.
+
+In JS, we have given click event listener with console message on all of these elements.
+
+![Untitled](../../../../images/exercises/dom-events-bubbling/1.png)
+
+![Untitled](../../../../images/exercises/dom-events-bubbling/2.png)
+
+![Untitled](../../../../images/exercises/dom-events-bubbling/3.png)
+
+![Untitled](../../../../images/exercises/dom-events-bubbling/4.png)
+
+Now when we will click the 
+
+- yellow region → `'div was clicked'`
+
+- orange region → `'ul was clicked'`
+    
+                            → `'div was clicked'`
+    
+- red region → `'li was clicked'`
+    
+                      → `'ul was clicked'`
+    
+                → `'div was clicked'`
+    
+
+So, the events on nested elements automatically trigger the events of their parents’ and subsequent parents’ events as well.
+
+This behaviour itself is called Event Bubbling.
+
+Because of this we can get undesirable changes on the page.
+
+But we can stop this behaviour, using `stopPropagation()`
+
+What it means is to stop this propagation (bubbling)
+
+![Untitled](../../../../images/exercises/dom-events-bubbling/5.png)

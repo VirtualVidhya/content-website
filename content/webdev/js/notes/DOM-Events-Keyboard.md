@@ -1,0 +1,64 @@
+---
+title: "DOM - Keyboard Events"
+draft: false
+weight: 15
+---
+
+---
+
+Until now, all the events we have seen are mouse related events.
+
+We can have keyboard input related events as well.
+
+Before we learn about keyboard events,
+
+let’s see something about a special default argument which is `event` argument, we have it as an automatic argument in callbacks.
+
+![Untitled](../../../../images/exercises/keyboard-events/1.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/2.png)
+
+This `event` argument gives us a lot of information about the triggered event.
+
+We will use this default `event` arg a lot for keyboard events.
+
+![Untitled](../../../../images/exercises/keyboard-events/3.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/4.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/5.png)
+
+This `keydown` event gets triggered when any keyboard key (all the letters, enter, shift, tab, arrow keys) gets down pressed.
+
+![Untitled](../../../../images/exercises/keyboard-events/6.png)
+
+Similarly we can use `keyup` for when the pressed key is released.
+
+![Untitled](../../../../images/exercises/keyboard-events/7.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/8.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/9.png)
+
+The important parameters (properties) we need to focus on are `code` and `key`.
+
+- `code`: It gives us the actual code of that key
+- `key`: It gives us what got visible on the screen via that key
+
+![Untitled](../../../../images/exercises/keyboard-events/10.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/11.png)
+
+This is very useful to detect which key input has been given.
+
+**IMPORTANT** to note here is that,
+
+If you want to use these key events on & for specific HTML elements, it’ll work only with focusable elements i.e. `input`, `textarea`
+
+So if we want to detect any key inputs, across the whole page then we can use key events using listener on the whole `document` object itself.
+
+![Untitled](../../../../images/exercises/keyboard-events/12.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/13.png)
+
+![Untitled](../../../../images/exercises/keyboard-events/14.png)

@@ -16,9 +16,9 @@ Event Listeners
 
 Let’s say we want to do multiple things on a single button click, for that let’s try to assign multiple function values to the event.
 
-![Untitled](../../../../images/exercises/dom-event-listeners/1.png)
+![Untitled](../../../../images/notes/dom-events-listeners/1.png)
 
-![Untitled](../../../../images/exercises/dom-event-listeners/2.png)
+![Untitled](../../../../images/notes/dom-events-listeners/2.png)
 
 But when we clicked, it only did the things mentioned inside the `userEntry()`. It didn’t perform the tasks of `greet()`
 
@@ -46,7 +46,7 @@ The method needs 2 parameters - `event` & `callback`
 
 so overall what it means is, when this `event` gets triggered for this `element`, this `callback` function tasks gets performed.
 
-![Untitled](../../../../images/exercises/dom-event-listeners/3.png)
+![Untitled](../../../../images/notes/dom-events-listeners/3.png)
 
 Here, both the actions get performed. Whichever is assigned first, gets performed first and then the later one.
 
@@ -54,7 +54,7 @@ Here, both the actions get performed. Whichever is assigned first, gets performe
 
 ## Double Click (Opt.)
     
-![Untitled](../../../../images/exercises/dom-event-listeners/4.png)
+![Untitled](../../../../images/notes/dom-events-listeners/4.png)
 
 ---
 
@@ -62,12 +62,12 @@ Here, both the actions get performed. Whichever is assigned first, gets performe
 
 Until now, we have used event listeners but mostly for buttons only but we can use it for other elements as well.
 
-![Untitled](../../../../images/exercises/dom-event-listeners/5.png)
+![Untitled](../../../../images/notes/dom-events-listeners/5.png)
 
-![Untitled](../../../../images/exercises/dom-event-listeners/6.png)
+![Untitled](../../../../images/notes/dom-events-listeners/6.png)
 
-![Untitled](../../../../images/exercises/dom-event-listeners/7.png)
+![Untitled](../../../../images/notes/dom-events-listeners/7.png)
 
-![Untitled](../../../../images/exercises/dom-event-listeners/8.png)
+![Untitled](../../../../images/notes/dom-events-listeners/8.png)
 
 So in this way, we can have event listeners for each and every element of our webpage.

@@ -12,13 +12,13 @@ We have a HTML here consisting of a `div` with nested `ul` having nested `li` el
 
 In JS, we have given click event listener with console message on all of these elements.
 
-![Untitled](../../../../images/exercises/dom-events-bubbling/1.png)
+![Untitled](../../../../images/notes/dom-events-bubbling/1.png)
 
-![Untitled](../../../../images/exercises/dom-events-bubbling/2.png)
+![Untitled](../../../../images/notes/dom-events-bubbling/2.png)
 
-![Untitled](../../../../images/exercises/dom-events-bubbling/3.png)
+![Untitled](../../../../images/notes/dom-events-bubbling/3.png)
 
-![Untitled](../../../../images/exercises/dom-events-bubbling/4.png)
+![Untitled](../../../../images/notes/dom-events-bubbling/4.png)
 
 Now when we will click the 
 
@@ -45,4 +45,4 @@ But we can stop this behaviour, using `stopPropagation()`
 
 What it means is to stop this propagation (bubbling)
 
-![Untitled](../../../../images/exercises/dom-events-bubbling/5.png)
+![Untitled](../../../../images/notes/dom-events-bubbling/5.png)

@@ -12,17 +12,17 @@ Events are signals that some activity has occurred (user input/actions) on the w
 
 Here we have simply created a button in HTML. On that button we have used a inline event called `onclick` . Now we can assign whatever JS code we want to execute when that button is clicked to this `onclick` event.
 
-![Untitled](../../../../images/exercises/dom-events-intro/1.png)
+![Untitled](../../../../images/notes/dom-events-intro/1.png)
 
-![Untitled](../../../../images/exercises/dom-events-intro/2.png)
+![Untitled](../../../../images/notes/dom-events-intro/2.png)
 
 Now whenever that button will be clicked, the `onclick` event will get triggered and this statement will be printed in the console.
 
 We can assign multiple JS expressions to this `onclick` as well.
 
-![Untitled](../../../../images/exercises/dom-events-intro/3.png)
+![Untitled](../../../../images/notes/dom-events-intro/3.png)
 
-![Untitled](../../../../images/exercises/dom-events-intro/4.png)
+![Untitled](../../../../images/notes/dom-events-intro/4.png)
 
 But…
 
@@ -30,9 +30,9 @@ But…
 
 For e.g. let’s say we have a like button for a content on a social media app. Now we have so many pieces of content so there will be multiple like buttons.
 
-![Untitled](../../../../images/exercises/dom-events-intro/5.png)
+![Untitled](../../../../images/notes/dom-events-intro/5.png)
 
-![Untitled](../../../../images/exercises/dom-events-intro/6.png)
+![Untitled](../../../../images/notes/dom-events-intro/6.png)
 
 Moreover there won’t be just like button for a content piece, there will be share, repost, comment etc. buttons for each piece of content.
 

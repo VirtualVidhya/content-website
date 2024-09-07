@@ -8,9 +8,9 @@ weight: 16
 
 Whatever we make with HTML form, that has its own events as well.
 
-![Untitled](../../../../images/exercises/form-events/1.png)
+![Untitled](../../../../images/notes/form-events/1.png)
 
-![Untitled](../../../../images/exercises/form-events/2.png)
+![Untitled](../../../../images/notes/form-events/2.png)
 
 The `action` given in the form is for the action to take after form submission, so here on clicking `Register`, it will go to the URL `/action` which currently doesn’t exist.
 
@@ -18,9 +18,9 @@ Now since we are going to the /action URL, we won’t be able to see the console
 
 We could’ve used `alert` instead of `console` so that before going to that URL, it would give an alert message first.
 
-![Untitled](../../../../images/exercises/form-events/3.png)
+![Untitled](../../../../images/notes/form-events/3.png)
 
-![Untitled](../../../../images/exercises/form-events/4.png)
+![Untitled](../../../../images/notes/form-events/4.png)
 
 But instead, we can use `preventDefaul()` of event.
 

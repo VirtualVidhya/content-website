@@ -12,9 +12,9 @@ The `change` event occurs when the value of an element has been changed
 
 (Only works on `input`, `textarea`, `select` elements)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/1.png)
+![Untitled](../../../../images/notes/dom-(more)-events/1.png)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/2.png)
+![Untitled](../../../../images/notes/dom-(more)-events/2.png)
 
 This `change` event tracks changes between the initial and final value.
 
@@ -32,9 +32,9 @@ The `input` event fires when the value has been changed.
 
 (Only works on `input`, `textarea`, `select` elements)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/3.png)
+![Untitled](../../../../images/notes/dom-(more)-events/3.png)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/4.png)
+![Untitled](../../../../images/notes/dom-(more)-events/4.png)
 
 **NOTE:** The non-character keys don’t trigger the input event.
 
@@ -42,8 +42,8 @@ The `input` event fires when the value has been changed.
 
 By using these both events, we can make a text-editor.
 
-![Untitled](../../../../images/exercises/dom-(more)-events/5.png)
+![Untitled](../../../../images/notes/dom-(more)-events/5.png)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/6.png)
+![Untitled](../../../../images/notes/dom-(more)-events/6.png)
 
-![Untitled](../../../../images/exercises/dom-(more)-events/7.png)
+![Untitled](../../../../images/notes/dom-(more)-events/7.png)

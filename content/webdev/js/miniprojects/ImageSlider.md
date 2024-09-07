@@ -1,7 +1,7 @@
 ---
 title: 'Image Slider'
 draft : false
-weight: 1
+weight: 2
 ---
 
 ---

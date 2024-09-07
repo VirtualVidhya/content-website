@@ -1,7 +1,7 @@
 ---
 title: 'Quantity Selector'
 draft : false
-weight: 2
+weight: 3
 ---
 
 ---

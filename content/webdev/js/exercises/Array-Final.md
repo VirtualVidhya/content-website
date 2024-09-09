@@ -1,7 +1,7 @@
 ---
 title: "Array Cumulative"
 draft: false
-weight: 14
+weight: 15
 ---
 
 ---

@@ -70,6 +70,13 @@ Now on clicking the `Check Eligibility button`, the `form` should get reset and 
 
 **Guidelines:**
 
-- Student is eligible for the course if he/she is older than 15 years, can operate computer and familiar with internet.
 - If a form gets submitted with empty name input field or absurd value of age (negative or some very high value i.e. more than 120) then give an alert
 warning with a reason mentioned in it.
+
+- Student is eligible for the course if he/she is older than 15 years, can operate computer and familiar with internet.
+
+    Add the following reasoning message after the "Sorry `StudentName`! You are not eligible for the course enrollment." message -
+
+    - If not older than 15 years : "Because you're still quite young to learn this."
+    - If can't operate computer : "Because you can't operate a Computer, which is mandatory for this course."
+    - If not familiar with internet : "Because you aren't quite familiar with the Internet, which is mandatory for this course."

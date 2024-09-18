@@ -1,19 +1,19 @@
 ---
-title: 'Responsive Menu'
+title: 'Responsive Navbar'
 draft : false
 weight: 8
-hidden: true
 ---
 
 ---
 
 - ### Task
 
-Make a small component we often see on websites which is an Theme Switcher, where user can choose a light or dark theme for the website. 
+Make a small component we often see on websites which is a Responsive Navbar, which changes its form based on screen size,
+on a large screen it's as a horizontal panel, on a smaller screen it's initially as a button and clicking on it opens a menu-bar. 
 
 An example is given at the below link. 
 
-{{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/FormValidation/" title="WebPage Preview" >}}
+{{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/NavbarMenu/" title="WebPage Preview" >}}
 
 ---
 

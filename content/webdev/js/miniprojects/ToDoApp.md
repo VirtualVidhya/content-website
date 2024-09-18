@@ -1,5 +1,5 @@
 ---
-title: 'TODO App'
+title: 'ToDo App'
 draft : false
 weight: 6
 ---

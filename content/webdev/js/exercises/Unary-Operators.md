@@ -25,9 +25,9 @@ let c = a + b;   // a = 2     b = 5     c = 7
 What is the value of each variable in each line of code?
 
 ```jsx
-let num = 5;
-let newNum = num++;
-newNum = ++num;
+let a = 5;
+let b = a++;
+b = ++a;
 ```
 ---
 
@@ -63,7 +63,7 @@ z = z++;
 
 ---
 
-#### Q4. _(Adv.)_
+<!-- #### Q4. _(Adv.)_
 
 What is the value of each variable in each line of code?
 
@@ -79,9 +79,9 @@ z = y++ - --x;
 x = x++ - --z;       
 ```
 
----
+--- -->
 
-#### Q5. _(Adv)_
+#### Q4. _(Adv)_
 
 What is the value of each variable in each line of code?
 

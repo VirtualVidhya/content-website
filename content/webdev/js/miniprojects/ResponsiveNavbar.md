@@ -13,7 +13,7 @@ on a large screen it's as a horizontal panel, on a smaller screen it's initially
 
 An example is given at the below link. 
 
-{{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/NavbarMenu/" title="WebPage Preview" >}}
+{{< newtabref  href="https://virtualvidhya.github.io/MiniProjects-JS/ResponsiveNavbar/" title="WebPage Preview" >}}
 
 ---
 

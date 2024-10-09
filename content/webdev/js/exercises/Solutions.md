@@ -7,7 +7,7 @@ hidden: true
 
 ---
 
-This page contains the links to code repositeries of all the JS mini-projects.
+This page contains the links to code repositeries of all the JS exercises.
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/RandomColorGenerator" title="Random Color Generator" >}}
 

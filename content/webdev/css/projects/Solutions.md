@@ -7,7 +7,7 @@ hidden: true
 
 ---
 
-This page contains the links to code repositeries of all the HTML projects.
+This page contains the links to code repositeries of all the CSS projects.
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/Projects-CSS/tree/main/SimplePortfolio" title="Simple Portfolio" >}}
 

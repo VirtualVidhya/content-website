@@ -1,7 +1,7 @@
 ---
 title: 'MovieDetails webpage'
 draft : false
-weight: 1
+weight: 2
 ---
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Amazon.com frontpage'
+title: 'Amazon.com homepage'
 draft : false
 weight: 3
 ---

@@ -1,5 +1,6 @@
 {{- $currentDir := .File.Dir -}}
 {{- $pages := where site.RegularPages "File.Dir" $currentDir -}}
+{{- $pages := where $pages "Params.hidden" "!=" true -}}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 
 <br>

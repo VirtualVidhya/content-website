@@ -38,3 +38,25 @@ html, body {
 .button:hover {
     background: var(--secondary);
 }
+
+/* ordered list styles */
+
+.none-ol {
+    list-style-type: none;
+}
+
+.lower-alpha-ol {
+    list-style-type: lower-alpha;
+}
+
+.upper-alpha-ol {
+    list-style-type: upper-alpha;
+}
+
+.lower-roman-ol {
+    list-style-type: lower-roman;
+}
+
+.upper-roman-ol {
+    list-style-type: upper-roman;
+}

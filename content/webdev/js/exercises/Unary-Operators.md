@@ -7,7 +7,7 @@ weight: 3
 ---
 
 
-(**NOTE:** In all the below exercises **y**ou have to predict the output yourself without running/executing the code. Predict the value of each variable after that statement gets executed.)
+(**NOTE:** In all the below exercises you have to predict the output yourself without running/executing the code. Predict the value of each variable after that statement gets executed.)
 
 for e.g.
 

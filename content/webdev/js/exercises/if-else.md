@@ -15,7 +15,8 @@ let x = 5;
 
 if (x == 6) {
     console.log("Hello");
-} else {
+} 
+else {
     console.log("Hi");
 }
 ```
@@ -35,18 +36,19 @@ What will be printed in console?
 What will be the output?
 
 ```jsx
-
 let x = 10; 
 let y = 20;
 
-if (x == 10) {
-    if (y == 20) {
-				console.log("x is 10 and y is 20");
-    } else {
-				console.log("x is 10 but y is not 20");
+if (x == 10) {     
+    if (y == 20) {   
+        console.log("x is 10 and y is 20");     
     }
-} else {
-		console.log("x is not 10");
+    else {   
+        console.log("x is 10 but y is not 20");     
+    } 
+}  
+else {  
+    console.log("x is not 10"); 
 }
 ```
 
@@ -67,13 +69,13 @@ What will be the output?
 let age = 25;
 
 if (age > 18)
-		console.log("Adult");
+    console.log("Adult");
 else if (age > 12)
-		console.log("Teenager");
+    console.log("Teenager");
 else if (age > 5)
-		console.log("Child");
+    console.log("Child");
 else
-		console.log("Toddler");
+    console.log("Toddler");
 ```
 
 What will be the output?
@@ -94,11 +96,11 @@ let x = 10;
 let y = 20;
 
 if (x > 5)
-		console.log("A");
+    console.log("A");
 else if (y > 15)
-		console.log("B");
+    console.log("B");
 else
-		console.log("C");
+    console.log("C");
 ```
 
 What will be the output?

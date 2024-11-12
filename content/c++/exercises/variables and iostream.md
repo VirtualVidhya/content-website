@@ -24,7 +24,7 @@ int main()
 }
 ```
 
-The program expects you to enter an integer value, as the variable x that the user input, will be put into is an integer variable.
+The program expects you to enter an integer value, that user input value will be put into an integer variabled as `x`.
 
 Predict the output that results when you enter the following types of input:
 
@@ -87,7 +87,7 @@ int main()
 
 #### Q4.
 
-Based on how you should name a variable, indicate whether each variable name is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
+Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
 - int sum;
 - int _apples;

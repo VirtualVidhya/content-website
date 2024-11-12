@@ -1,5 +1,6 @@
 ---
 title: Notes
+hidden: true
 ---
 
 ---

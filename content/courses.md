@@ -6,6 +6,6 @@ title: Courses
 
 ### [Web Development](/webdev/)
 
-<!-- ### [C++](/c++/) -->
+### [C++](/c++/)
 
 <!-- ### [Python](/python/) -->

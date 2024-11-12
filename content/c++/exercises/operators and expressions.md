@@ -55,7 +55,7 @@ Area: 50
 
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
-- then add a 18% GST (tax) on the total cost of the items and print the **GST Amount**
+- then calculate a 18% GST (tax) on the total cost of the items and print that **GST Amount**
 - finally print the **Total Bill** amount, adding Total Cost & GST Amount
 
 **Expected Output:**

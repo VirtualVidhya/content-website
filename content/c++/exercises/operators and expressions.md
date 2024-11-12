@@ -35,6 +35,24 @@ Triple of 4: 12
 
 #### Q3.
 
+Write a program to calculate the perimeter and the area of a rectangle.
+Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
+
+**Expected Output:**
+
+```cpp
+Enter the length & width of a rectangle: 10 5 // (user enters these values on console)
+Perimeter: 30
+Area: 50
+
+// Perimeter = 2 * (l + w) = 2 * (10 + 5) = 30
+// Area = l * w = 10 * 5 = 50
+```
+
+---
+
+#### Q4.
+
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
 - then add a 18% GST (tax) on the total cost of the items and print the **GST Amount**

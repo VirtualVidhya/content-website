@@ -30,3 +30,25 @@ Enter an integer: 4 // (user enters this number on console)
 Double of 4: 8
 Triple of 4: 12
 ```
+
+---
+
+#### Q3.
+
+Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
+- print the **Total Cost** of the items
+- then add a 18% GST (tax) on the total cost of the items and print the **GST Amount**
+- finally print the **Total Bill** amount, adding Total Cost & GST Amount
+
+**Expected Output:**
+
+```cpp
+Enter the cost of 3 food items: 50 20 60 // (user enters these amounts on console)
+Total Cost: 130
+GST Amount : 23.4
+Total Bill: 153.4
+
+// Total Cost = 50 + 20 + 60 = 130
+// GST Amount = (130 * 18) / 100 = 23.4
+// Total Bill = 130 + 23.4 = 153.4
+```

@@ -44,21 +44,6 @@ Predict the output that results when you enter the following types of input:
 
 #### Q2.
 
-Write a program that asks the user to enter three values, then print these values. Add an appropriate comment above function `main()`.
-
-**Expected Output:**
-
-```cpp
-// (when run with input values 4, 5, and 6)
-
-Enter three numbers: 4 5 6 // (user enters these numbers on console)
-You entered 4, 5, and 6.
-```
-
----
-
-#### Q3.
-
 What will be the output of the following program when run multiple times?
 
 ```cpp
@@ -85,7 +70,7 @@ int main()
 
 ---
 
-#### Q4.
+#### Q3.
 
 Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
@@ -98,3 +83,18 @@ Based on how you should name a variable, indicate whether each variable name men
 - int numFruit;
 - int 3some;
 - int meters_of_pipe;
+
+---
+
+#### Q4.
+
+Write a program that asks the user to enter three integer values, then print these values. Add an appropriate comment above function `main()`.
+
+**Expected Output:**
+
+```cpp
+// (when run with input values 4, 5, and 6)
+
+Enter three numbers: 4 5 6 // (user enters these numbers on console)
+You entered 4, 5, and 6.
+```

@@ -58,6 +58,8 @@ Write a program that takes the cost of any 3 food items from the user (e.g. a pa
 - then calculate a 18% GST (tax) on the total cost of the items and print that **GST Amount**
 - finally print the **Total Bill** amount, adding Total Cost & GST Amount
 
+(**NOTE:** Decide the data types of the variables needed in the program with proper logical consideration so that no data loss occur in the output.)
+
 **Expected Output:**
 
 ```cpp

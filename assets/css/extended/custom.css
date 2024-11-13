@@ -2,6 +2,12 @@ html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* chroma (syntax highlighting) */
+
+.chroma {
+    background-color: unset !important;
+}
+
 /* profile-mode */
 
 .profile img {
@@ -60,6 +66,20 @@ html, body {
 
 .footer a:hover {
     border-bottom: 1px solid var(--primary);
+}
+
+/* post-single - code blocks */
+
+.post-content .highlight:not(table) {
+    background: var(--code-bg) !important;
+}
+
+.post-content code {
+    background: var(--code-bg);
+}
+
+.post-content pre code {
+    background: var(--code-bg) !important;
 }
 
 /* ordered list styles */

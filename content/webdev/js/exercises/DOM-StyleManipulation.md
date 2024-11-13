@@ -108,7 +108,7 @@ Below, are the respective HTML & CSS files for this web-page.
 
 .btn-inactive {
     background-color: orange;
-    border: 5px solid □red;
+    border: 5px solid red;
 }
 ```
 

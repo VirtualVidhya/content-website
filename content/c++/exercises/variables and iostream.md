@@ -11,7 +11,8 @@ weight: 1
 Consider the following program:
 
 ```cpp
-#include <iostream>  // for std::cout and std::cin
+// for std::cout and std::cin
+#include <iostream>
 
 int main()
 {

@@ -51,6 +51,17 @@ html, body {
     background: var(--secondary);
 }
 
+/* footer - a (links) */
+
+.footer a {
+    color: inherit;
+    border: none;
+}
+
+.footer a:hover {
+    border-bottom: 1px solid var(--primary);
+}
+
 /* ordered list styles */
 
 .none-ol {

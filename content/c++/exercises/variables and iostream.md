@@ -25,7 +25,7 @@ int main()
 }
 ```
 
-The program expects you to enter an integer value, that user input value will be put into an integer variabled as `x`.
+The program expects you to enter an integer value, that user input value will be put into an integer variable as `x`.
 
 Predict the output that results when you enter the following types of input:
 

@@ -8,7 +8,7 @@ weight: 2
 
 #### Q1.
 
-Write a program that takes three numbers from user and then prints the average of those three numbers.
+Write a program that takes three integer numbers from user and then prints the average of those three numbers.
 
 **Expected Output:**
 
@@ -38,6 +38,8 @@ Triple of 4: 12
 Write a program to calculate the perimeter and the area of a rectangle.
 Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
 
+(**NOTE:** You can safely assume that the value of length and width will always be an integer.)
+
 **Expected Output:**
 
 ```cpp
@@ -53,12 +55,116 @@ Area: 50
 
 #### Q4.
 
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- a) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int a = 9;
+        int b = 2;
+        
+        std::cout << a / b << '\n';
+        
+        return 0;
+    }
+    ```
+
+- b) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        float a = 9;
+        int b = 2;
+        
+        std::cout << a / b << '\n';
+        
+        return 0;
+    }
+    ```
+
+- c) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        float a = 9;
+        float b = 2;
+        
+        std::cout << a / b << '\n';
+        
+        return 0;
+    }
+    ```
+
+- d) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int a = 9;
+        int b = 2;
+
+        float ans = a / b;
+        
+        std::cout << ans << '\n';
+        
+        return 0;
+    }
+    ```
+
+- e) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int a = 9;
+        float b = 2;
+
+        float ans = a / b;
+        
+        std::cout << ans << '\n';
+        
+        return 0;
+    }
+    ```
+
+- f) 
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        float a = 9;
+        float b = 2;
+
+        int ans = a / b;
+        
+        std::cout << ans << '\n';
+        
+        return 0;
+    }
+    ```    
+
+---
+
+#### Q5.
+
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
 - then calculate a 18% GST (tax) on the total cost of the items and print that **GST Amount**
 - finally print the **Total Bill** amount, adding Total Cost & GST Amount
 
-(**NOTE:** Decide the data types of the variables needed in the program with proper logical consideration so that no data loss occur in the output.)
+(**TIP:** Decide the data types of the variables needed in the program with proper logical consideration so that no data loss occur in the output.)
 
 **Expected Output:**
 

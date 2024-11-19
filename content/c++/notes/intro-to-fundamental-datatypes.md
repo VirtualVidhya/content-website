@@ -1,7 +1,7 @@
 ---
 title: "Introduction to fundamental data types" 
 draft: false
-weight: 13
+weight: 14
 ---
 
 ---

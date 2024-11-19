@@ -178,3 +178,85 @@ Total Bill: 153.4
 // GST Amount = (130 * 18) / 100 = 23.4
 // Total Bill = 130 + 23.4 = 153.4
 ```
+
+---
+
+#### Q6. 
+
+What will be the output of the following program?
+
+```cpp
+int main()
+{
+    const float gravity;
+    gravity = 9.8;
+
+    std::cout << "Gravity: " << gravity;
+
+    return 0;
+}
+```
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+a. 9.8
+
+b. Compile-time error
+
+c. Run-time error
+
+d. 9
+
+---
+
+#### Q7.
+
+What will be the output of the following program?
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int age = 5;
+
+    const int constAge = age;
+
+    age = 7;
+    constAge = 6;
+
+    std::cout << "Age: " << age;
+    std::cout << "Const Age: " << constAge;
+
+    return 0;
+}
+```
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+a. 55
+
+b. Compile-time error
+
+c. 75
+
+d. 76
+
+---
+
+#### Q8.
+
+Write a program that take a value of radius from a user, then find the circumference and area of a circle for a given radius.
+
+(**NOTE:** Take 3.14 as the value of pi.)
+
+**Expected Output:**
+
+```cpp
+Enter the value of radius: 5
+Circumference: 31.4
+Area: 78.5
+
+// Circumference = 2 * pi * r = 2 * 3.14 * 5 = 31.4
+// Area = pi * r * r = 3.14 * 5 * 5 = 78.5
+```

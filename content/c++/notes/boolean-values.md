@@ -1,7 +1,7 @@
 ---
 title: "Boolean values" 
 draft: false
-weight: 17
+weight: 18
 ---
 
 ---

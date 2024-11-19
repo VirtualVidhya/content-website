@@ -1,7 +1,7 @@
 ---
 title: "Floating point numbers" 
 draft: false
-weight: 16
+weight: 17
 ---
 
 ---

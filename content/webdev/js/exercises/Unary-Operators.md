@@ -12,7 +12,7 @@ weight: 3
 for e.g.
 
 ```jsx
-let a - 1;       // a = 1
+let a = 1;       // a = 1
 a++;             // a = 2
 let b = a + 3;   // a = 2     b = 5
 let c = a + b;   // a = 2     b = 5     c = 7

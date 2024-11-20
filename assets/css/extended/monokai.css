@@ -2,7 +2,8 @@
 /* PreWrapper */ .dark .chroma { color:#f8f8f2;background-color:#272822; }
 /* PreWrapper */ .dark .chroma pre { color:#f8f8f2;background-color:#272822; }
 /* Other */ .dark .chroma .x {  }
-/* Error */ .dark .chroma .err { color:#960050;background-color:#1e0010 }
+/* Error .dark .chroma .err { color:#960050;background-color:#1e0010 } */
+/* Error */ .dark .chroma .err { color:#ffffff }
 /* CodeLine */ .dark .chroma .cl { color:#ffffff }
 /* LineLink */ .dark .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
 /* LineTableTD */ .dark .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }

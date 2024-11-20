@@ -1,7 +1,7 @@
 ---
 title: "Operators & Expressions"
 draft: false
-weight: 2
+weight: 3
 ---
 
 ---
@@ -21,20 +21,6 @@ The average of 5, 9, and 16 is 10. // (5 + 9 + 16) / 3 = 10
 
 #### Q2.
 
-Write a program that takes an integer number from user and then prints the doubled & tripled value of that number.
-
-**Expected Output:**
-
-```cpp
-Enter an integer: 4 // (user enters this number on console)
-Double of 4: 8
-Triple of 4: 12
-```
-
----
-
-#### Q3.
-
 Write a program to calculate the perimeter and the area of a rectangle.
 Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
 
@@ -53,111 +39,7 @@ Area: 50
 
 ---
 
-#### Q4.
-
-What will be the output of the following programs?
-
-(**NOTE:** You have to predict the output result without running/executing the code.)
-
-- a) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        int a = 9;
-        int b = 2;
-        
-        std::cout << a / b << '\n';
-        
-        return 0;
-    }
-    ```
-
-- b) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        float a = 9;
-        int b = 2;
-        
-        std::cout << a / b << '\n';
-        
-        return 0;
-    }
-    ```
-
-- c) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        float a = 9;
-        float b = 2;
-        
-        std::cout << a / b << '\n';
-        
-        return 0;
-    }
-    ```
-
-- d) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        int a = 9;
-        int b = 2;
-
-        float ans = a / b;
-        
-        std::cout << ans << '\n';
-        
-        return 0;
-    }
-    ```
-
-- e) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        int a = 9;
-        float b = 2;
-
-        float ans = a / b;
-        
-        std::cout << ans << '\n';
-        
-        return 0;
-    }
-    ```
-
-- f) 
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        float a = 9;
-        float b = 2;
-
-        int ans = a / b;
-        
-        std::cout << ans << '\n';
-        
-        return 0;
-    }
-    ```    
-
----
-
-#### Q5.
+#### Q3.
 
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
@@ -181,7 +63,7 @@ Total Bill: 153.4
 
 ---
 
-#### Q6. 
+#### Q4.
 
 What will be the output of the following program?
 
@@ -209,7 +91,7 @@ d. 9
 
 ---
 
-#### Q7.
+#### Q5.
 
 What will be the output of the following program?
 
@@ -244,7 +126,7 @@ d. 76
 
 ---
 
-#### Q8.
+#### Q6.
 
 Write a program that take a value of radius from a user, then find the circumference and area of a circle for a given radius.
 

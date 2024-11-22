@@ -316,7 +316,7 @@ Predict the output of the following programs for the given input values.
     - `97`
     - `abc`
 
-- d) 
+- d) _**(Adv.)**_
     ```cpp
     #include <iostream>
 

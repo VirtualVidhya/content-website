@@ -58,7 +58,7 @@ let avg = (hindi + eng + math) / 3;
 #### Q7.
 Write a program to convert a temperature given in Kelvin unit to Celsius and then Fahrenheit.
 
-These are the conversation standards for the temperature conversion between different units.
+These are the standard formulas for the temperature conversion between different units.
 
 ```jsx
     Celsius = Kelvin - 273
@@ -66,4 +66,4 @@ These are the conversation standards for the temperature conversion between diff
     Fahrenheit = (9/5) * Celsius + 32
 ```
 
-(**HINT:** The temperature once given in the Kelvin unit shouldn’t get changed by any means in the program, so choose the data type for your variables wisely.)
+(**NOTE:** The temperature once given in the Kelvin unit shouldn’t get changed by any means in the program, so your variable declaration should take care of it.)

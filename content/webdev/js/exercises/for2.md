@@ -16,7 +16,7 @@ Print multiplication table of 5
 
 Print multiplication table of a number given by user input
 
-(**HINT:** take user input using `prompt`)
+(**HINT:** Take user input using `prompt`, then print the multiplication table of that given number.)
 
 ---
 

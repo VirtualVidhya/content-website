@@ -268,7 +268,6 @@ What will be the output of the following program?
 int main()
 {
     int age = 5;
-
     const int constAge = age;
 
     age = 7;

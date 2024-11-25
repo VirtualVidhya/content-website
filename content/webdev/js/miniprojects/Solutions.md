@@ -17,6 +17,8 @@ This page contains the links to code repositeries of all the JS mini-projects.
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/QuantitySelector" title="Quantity Selector" >}}
 
+- {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/FAQ" title="FAQ Section" >}}
+
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/CustomerFeedback" title="Customer Feedback" >}}
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/ToDoApp" title="ToDo App" >}}

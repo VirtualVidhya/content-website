@@ -1,7 +1,7 @@
 ---
 title: 'Form Validation'
 draft : false
-weight: 9
+weight: 10
 ---
 
 ---
@@ -24,5 +24,4 @@ This exercise is to understand the practical usage of different DOM concepts in 
 
 - ### Guidelines
 
-Feel free to have your own content (style, theme, text, images etc.). But all the functionality and interactions should be there to ensure that you can make interactive
-things using JavaScript.
+Feel free to have your own content (style, theme, text, images etc.). But all the functionality and interactions should be there to ensure that you can make interactive things using JavaScript.

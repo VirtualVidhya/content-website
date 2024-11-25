@@ -19,12 +19,12 @@ This page contains the links to code repositeries of all the JS mini-projects.
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/FAQ" title="FAQ Section" >}}
 
+- {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/ResponsiveNavbar" title="Responsive Navbar" >}}
+
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/CustomerFeedback" title="Customer Feedback" >}}
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/ToDoApp" title="ToDo App" >}}
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/ThemeSwitcher" title="Theme Switcher" >}}
-
-- {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/ResponsiveNavbar" title="Responsive Navbar" >}}
 
 - {{< newtabref  href="https://github.com/VirtualVidhya/MiniProjects-JS/tree/main/FormValidation" title="Form Validation" >}}

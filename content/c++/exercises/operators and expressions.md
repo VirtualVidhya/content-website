@@ -196,7 +196,7 @@ Take the length and the width of a rectangle from user and then prints the value
 **Expected Output:**
 
 ```cpp
-Enter the length & width of a rectangle: 10 5 // (user enters these values on console)
+Enter the length & width of a rectangle: 10 5 // (user input)
 Perimeter: 30
 Area: 50
 
@@ -218,7 +218,7 @@ Write a program that takes the cost of any 3 food items from the user (e.g. a pa
 **Expected Output:**
 
 ```cpp
-Enter the cost of 3 food items: 50 20 60 // (user enters these amounts on console)
+Enter the cost of 3 food items: 50 20 60 // (user input)
 Total Cost: 130
 GST Amount : 23.4
 Total Bill: 153.4

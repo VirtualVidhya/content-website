@@ -230,7 +230,7 @@ Write a program that asks a user whether they want to give a tip at the restaura
 **Expected Output:**
 
 ```cpp
-Would you like to give a tip: false
+Would you like to give a tip: false // (user input)
 
 Is user willing to give a tip: false
 ```

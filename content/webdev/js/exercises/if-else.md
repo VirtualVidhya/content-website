@@ -8,7 +8,7 @@ weight: 6
 
 #### Q1.
 
-Consider the code:
+Consider the following program:
 
 ```jsx
 let x = 5;
@@ -21,7 +21,7 @@ else {
 }
 ```
 
-What will be printed in console?
+What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
@@ -33,7 +33,7 @@ What will be printed in console?
 
 #### Q2.
 
-What will be the output?
+Consider the following program:
 
 ```jsx
 let x = 10; 
@@ -52,7 +52,7 @@ else {
 }
 ```
 
-What will be the output?
+What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
@@ -64,6 +64,8 @@ What will be the output?
 ---
 
 #### Q3.
+
+Consider the following program:
 
 ```jsx
 let age = 25;
@@ -78,7 +80,7 @@ else
     console.log("Toddler");
 ```
 
-What will be the output?
+What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
@@ -135,10 +137,10 @@ Take 2 numbers & the operator sign as variables (input), then give the result ba
 for e.g.
 
 ```jsx
-number1 -> 3
-number2 -> 5
+number1 : 3
+number2 : 5
 
-operator -> *
+operator : *
 
 // expected output
 5 * 3 = 15

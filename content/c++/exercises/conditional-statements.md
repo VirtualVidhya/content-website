@@ -1,7 +1,7 @@
 ---
-title: "if-else (Conditional Statements)"
+title: "Conditional Statements"
 draft: false
-weight: 6
+weight: 4
 ---
 
 ---
@@ -10,14 +10,15 @@ weight: 6
 
 Consider the following program:
 
-```jsx
-let x = 5;
+```cpp
+int x = 5;
 
-if (x == 6) {
-    console.log("Hello");
+if (x == 10) 
+{
+    std::cout << "Hi";
 } 
 else {
-    console.log("Hi");
+    std::cout << "Bye";
 }
 ```
 
@@ -25,9 +26,10 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-1. Hello
-2. Hi
+1. Hi
+2. Bye
 3. Error
+4. None
 
 ---
 
@@ -35,20 +37,24 @@ What will be the output in the console?
 
 Consider the following program:
 
-```jsx
-let x = 10; 
-let y = 20;
+```cpp
+int x = 10; 
+int y = 20;
 
-if (x == 10) {     
-    if (y == 20) {   
-        console.log("x is 10 and y is 20");     
+if (x == 10) 
+{     
+    if (y == 20) 
+    {   
+        std::cout << "x is 10 and y is 20";     
     }
-    else {   
-        console.log("x is 10 but y is not 20");     
+    else 
+    {   
+        std::cout << "x is 10 but y is not 20";     
     } 
 }  
-else {  
-    console.log("x is not 10"); 
+else 
+{  
+    std::cout << "x is not 10"; 
 }
 ```
 
@@ -67,17 +73,17 @@ What will be the output in the console?
 
 Consider the following program:
 
-```jsx
-let age = 25;
+```cpp
+int age = 25;
 
 if (age > 18)
-    console.log("Adult");
+    std::cout << "Adult";
 else if (age > 12)
-    console.log("Teenager");
+    std::cout << "Teenager";
 else if (age > 5)
-    console.log("Child");
+    std::cout << "Child";
 else
-    console.log("Toddler");
+    std::cout << "Toddler";
 ```
 
 What will be the output in the console?
@@ -93,19 +99,21 @@ What will be the output in the console?
 
 #### Q4.
 
-```jsx
-let x = 10;
-let y = 20;
+Consider the following program:
+
+```cpp
+int x = 10;
+int y = 20;
 
 if (x > 5)
-    console.log("A");
+    std::cout << 'A';
 else if (y > 15)
-    console.log("B");
+    std::cout << 'B';
 else
-    console.log("C");
+    std::cout << 'C';
 ```
 
-What will be the output?
+What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
@@ -118,6 +126,20 @@ What will be the output?
 
 #### Q5.
 
+Write a program that takes an integer from user and checks if that number is divisible by 3 or not.
+
+**Expected Output:**
+
+```cpp
+Enter a number: 98
+
+98 is not divisible by 3.
+```
+
+---
+
+#### Q7.
+
 Create a system to calculate popcorn prices based on the size customer asked for:
 
 Here, the price-size list is given - 
@@ -128,22 +150,22 @@ Here, the price-size list is given -
 
 ---
 
-#### Q6.
+#### Q8.
 
 Create a program to make a mini-calculator.
 
-Take 2 numbers & the operator sign as variables (input), then give the result based on those taken variables (input).
+Take 2 numbers & the operator sign as input from the user, then give the result based on those taken values.
 
-for e.g.
+**Expected Output:**
 
-```jsx
-number1 : 3
-number2 : 5
+```cpp
+first_number : 3
+second_number : 5
 
-operator : *
+operator_chosen : *
 
 // expected output
 5 * 3 = 15
 ```
 
-[**NOTE:** All the operators should be covered, i.e. + , - , * , / , % , **]
+[**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , % ]

@@ -6,7 +6,7 @@ weight: 27
 
 ---
 
-![Memory Addressing](../../../images/notes/C++/the-comma-operator/operator-table.png)
+![image](../../../images/notes/C++/comma-operator/operator-table.png)
 
 The **comma operator (,)** allows you to evaluate multiple expressions wherever a single expression is allowed. The comma operator evaluates the left operand, then the right operand, and then returns the result of the right operand.
 

@@ -1,7 +1,7 @@
 ---
 title: "Logical operators" 
 draft: false
-weight: 29
+weight: 30
 ---
 
 ---

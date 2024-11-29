@@ -12,7 +12,7 @@ Print multiplication table of 5
 
 ---
 
-#### Q2. _(Adv.)_
+#### Q2. 
 
 Print multiplication table of a number given by user input
 
@@ -20,7 +20,7 @@ Print multiplication table of a number given by user input
 
 ---
 
-#### Q3. _(Adv.)_
+#### Q3.
 
 Between 1 & 100, only print the numbers which are divisible by both 3 and 5.
 

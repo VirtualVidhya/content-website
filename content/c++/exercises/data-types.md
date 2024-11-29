@@ -11,14 +11,13 @@ weight: 2
 Consider the following program:
 
 ```cpp
-// for std::cout and std::cin
 #include <iostream>
 
 int main()
 {
-    std::cout << "Enter a number: "; // ask user for a number
-    int x; // define variable x to hold user input
-    std::cin >> x; // get number from keyboard and store it in variable x
+    std::cout << "Enter a number: ";
+    int x;
+    std::cin >> x;
     std::cout << "You entered " << x << '\n';
 
     return 0;
@@ -348,6 +347,6 @@ Write a program where the user is asked to enter a single character. Print the v
 **Expected Output:**
 
 ```cpp
-Enter a single character: a
-You entered 'a', which has an ASCII code 97.
+Enter a single character: A
+You entered 'A', which has an ASCII code 65.
 ```

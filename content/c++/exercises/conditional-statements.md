@@ -8,21 +8,42 @@ weight: 4
 
 #### Q1.
 
-Consider the following program:
+Consider the following programs:
 
-```cpp
-int x = 5;
+- a)
+    ```cpp
+    #include <iostream>
 
-if (x == 10) 
-{
-    std::cout << "Hi";
-} 
-else {
-    std::cout << "Bye";
-}
-```
+    int x = 5;
 
-What will be the output in the console?
+    if (x = 5) 
+    {
+        std::cout << "Hi";
+    } 
+    else 
+    {
+        std::cout << "Bye";
+    }
+    ```
+
+- b)
+    ```cpp
+    #include <iostream>
+
+    int x = 5;
+
+    if (x == 10) 
+    {
+        std::cout << "Hi";
+    } 
+    else 
+    {
+        std::cout << "Bye";
+    }
+    ```
+
+
+What will be the output in the console for the programs given above?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
@@ -138,19 +159,81 @@ Enter a number: 98
 
 ---
 
+#### Q6.
+
+Write a program that takes an integer from user and checks if that number is even or odd.
+
+(**NOTE:** The conditional logic of the program needs to be written using ternary operator here.)
+
+**Expected Output:**
+
+```cpp
+Enter a number: 9
+
+9 is an odd number.
+```
+
+---
+
 #### Q7.
+
+A college professor wants to make a student result declaration system.
+Write a program that takes student percentage as user input and gives student's result status.
+
+- If a student has less than 35% then he/she fails.
+- If a student has more than that there are different achievement levels.
+    - for more than 75% : Pass with "Distinction"
+    - 60-75% : Pass with "Merit"
+    - 35-60% : Pass
+
+**Expected Output:**
+
+```cpp
+Enter student percentage: 65
+
+Result: Pass with Merit
+```
+
+---
+
+#### Q8.
 
 Create a system to calculate popcorn prices based on the size customer asked for:
 
 Here, the price-size list is given - 
-- ‘XL’ → price is rs.250
 - ‘L’ → price is rs.200
 - ‘M’ → price is rs.100
 - ‘S’ → price is rs.50
 
 ---
 
-#### Q8.
+#### Q9.
+
+For a good and safe paragliding experience as a begineer, certain weather conditions need to be met.
+- No raining
+- Wind speeds between 5 to 20 km/h
+
+Write a program that checks based on necessary weather parameters as user input if it's a good condition for paragliding or not.
+
+**Expected Output:**
+
+```
+// e.g. 1
+Is it raining? : false
+Wind speeds (km/h) : 12
+
+It's a good condition for paragliding.
+
+// e.g. 2
+Is it raining? : true
+Wind speeds (km/h) : 12
+
+It's a bad condition for paragliding.
+```
+
+---
+
+#### Q10.
 
 Create a program to make a mini-calculator.
 

@@ -21,11 +21,9 @@ What will be the output of the following programs?
         int a = 3;
         
         a += 1;
-        
         std::cout << a << '\n';
 
         a /= 2;
-
         std::cout << a << '\n';
         
         return 0;
@@ -235,6 +233,8 @@ Total Bill: 153.4
 What will be the output of the following program?
 
 ```cpp
+#include <iostream>
+
 int main()
 {
     const float gravity;

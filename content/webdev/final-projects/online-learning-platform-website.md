@@ -20,7 +20,7 @@ An example is given at the below link.
 
 <ul class="dash-ul">
     <li>Get a good design sense for modern-age websites.</li>
-    <li>Understand and follow production level good practices for managing code of a decently scaled projects.</li>
+    <li>Understand and follow production-level good practices for managing decent-sized projects.</li>
 </ul>
 
 ---

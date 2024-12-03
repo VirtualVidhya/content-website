@@ -1,6 +1,6 @@
 ---
-title: 'Online Learning Platform Website'
-draft : false
+title: "Online Learning Platform Website"
+draft: false
 weight: 1
 ---
 
@@ -18,10 +18,13 @@ An example is given at the below link.
 
 - ### Main Lessons
 
-This project is to understand and follow good production level code and organization practices.
+<ul class="dash-ul">
+    <li>Get a good design sense for modern-age websites.</li>
+    <li>Understand and follow production level good practices for managing code of a decently scaled projects.</li>
+</ul>
 
 ---
 
 - ### Guidelines
 
-Feel free to have your own content (style, theme, text, images etc.).
+Feel free to have your own design (styling, layout, text, images etc.).

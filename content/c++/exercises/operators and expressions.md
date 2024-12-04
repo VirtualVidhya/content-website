@@ -104,6 +104,7 @@ What will be the output of the following programs?
         int y = 5;
 
         std::cout << std::boolalpha;
+
         std::cout << ((x - 3) == (y + 2)) << '\n';
         std::cout << ((x - 5) >= (y + 2)) << '\n';
         std::cout << ((x - 4) != (y + 2)) << '\n';
@@ -155,15 +156,16 @@ What will be the output of the following programs?
 
     int main() 
     {
-        bool w = false;
-        bool x = true;
+        bool w = true;
+        bool x = false;
         bool y = false;
         bool z = false;
         
         std::cout << std::boolalpha;
         
-        std::cout << (w || x && y || z) << '\n';
-        std::cout << (w || x) && (y || z) << '\n';
+        std::cout << (w || x || y && z) << '\n';
+        std::cout << ((w || x || y) && z) << '\n';
+        std::cout << (w || x || y) && z << '\n';
         
         return 0;
     }
@@ -271,7 +273,6 @@ int main()
     const int constAge = age;
 
     age = 7;
-    constAge = 6;
 
     std::cout << "Age: " << age;
     std::cout << "Const Age: " << constAge;

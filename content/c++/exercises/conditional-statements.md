@@ -32,7 +32,7 @@ Consider the following programs:
 
     int x = 5;
 
-    if (x == 10) 
+    if (x == 5) 
     {
         std::cout << "Hi";
     } 

@@ -16,7 +16,7 @@ Consider the following programs:
 
     int x = 5;
 
-    if (x = 5) 
+    if (x = 10) 
     {
         std::cout << "Hi";
     } 

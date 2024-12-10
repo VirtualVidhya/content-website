@@ -333,7 +333,7 @@ temperature in Fahrenheit: 86
 
 Population growth can be calculated by looking at the change in population over time. The formula for population growth is -
 
-`P = P0 x e^rt`
+<code>P = P0 x e<sup>rt</sup></code>
 
 Where, 
 - `P` = Total population after time t

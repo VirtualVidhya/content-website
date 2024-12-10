@@ -339,7 +339,7 @@ Where,
 - `P` = Total population after time t
 - `P0` = Starting population
 - `r` = Percentage rate of the growth
-- `T` = time in years or hours
+- `t` = time in years or hours
 - `e` = Euler number 2.71828
 
 so, calculate the current total population for P0 = 140 crores, r = 0.65 %, T = 5 years

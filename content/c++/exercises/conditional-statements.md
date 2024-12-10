@@ -198,12 +198,20 @@ Result: Pass with Merit
 
 #### Q8.
 
-Create a system to calculate popcorn prices based on the size customer asked for:
+Create a system to calculate popcorn prices based on the bucket size customer asks for:
 
-Here, the price-size list is given - 
-- ‘L’ → price is rs.200
-- ‘M’ → price is rs.100
-- ‘S’ → price is rs.50
+Here, the list for price per bucket-size is given - 
+- ‘L’ : price is rs.200
+- ‘M’ : price is rs.100
+- ‘S’ : price is rs.50
+
+**Expected Output:**
+
+```cpp
+Enter the popcorn-bucket size: M
+
+Price: 100
+```
 
 ---
 

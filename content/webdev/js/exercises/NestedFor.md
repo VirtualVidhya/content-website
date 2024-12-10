@@ -8,7 +8,7 @@ weight: 18
 
 #### Q1.
 
-Let’s say user is giving 2 numbers `n1` & `n2` as input.
+Let's say user is giving 2 numbers `n1` & `n2` as input.
 
 Write a program to print the multiplication tables of all numbers between `n1` & `n2` one by one in order.
 

@@ -331,7 +331,7 @@ temperature in Fahrenheit: 86
 
 #### Q9.
 
-We calculate population growth by looking at the change in population over time. The formula for population growth is below
+Population growth can be calculated by looking at the change in population over time. The formula for population growth is below
 
 `P = P0 x e^rt`
 
@@ -342,5 +342,5 @@ Where,
 - `T` = time in years or hours
 - `e` = Euler number 2.71828
 
-so calculate the current total population for P0 = 140 crores, r = 0.65 %, T = 5 years
+so, calculate the current total population for P0 = 140 crores, r = 0.65 %, T = 5 years
 

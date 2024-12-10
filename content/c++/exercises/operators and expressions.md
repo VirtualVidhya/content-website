@@ -326,3 +326,21 @@ temperature in Fahrenheit: 86
 // Kelvin = Celsius + 273 = 30 + 273 = 303
 // Fahrenheit = (9/5) * Celsius + 32 = (9/5) * 30 + 32 = 86
 ```
+
+---
+
+#### Q9.
+
+We calculate population growth by looking at the change in population over time. The formula for population growth is below
+
+`P = P0 x e^rt`
+
+Where, 
+- `P` = Total population after time t
+- `P0` = Starting population
+- `r` = Percentage rate of the growth
+- `T` = time in years or hours
+- `e` = Euler number 2.71828
+
+so calculate the current total population for P0 = 140 crores, r = 0.65 %, T = 5 years
+

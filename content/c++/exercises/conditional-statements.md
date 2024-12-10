@@ -245,7 +245,7 @@ It's a bad condition for paragliding.
 
 Create a program to make a mini-calculator.
 
-Take 2 numbers & the operator sign as input from the user, then give the result based on those taken values.
+Take 2 numbers and the operator sign as input from the user, then give the result based on those taken values.
 
 **Expected Output:**
 

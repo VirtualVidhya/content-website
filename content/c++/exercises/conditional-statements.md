@@ -219,9 +219,9 @@ Price: 100
 
 For a good and safe paragliding experience as a begineer, certain weather conditions need to be met.
 - No raining
-- Wind speeds between 5 to 20 km/h
+- Wind speeds between 5 and 20 km/h
 
-Write a program that checks based on necessary weather parameters as user input if it's a good condition for paragliding or not.
+Write a program that checks if it's a good condition for paragliding or not based on necessary weather parameters taken as user input .
 
 **Expected Output:**
 

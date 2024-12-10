@@ -251,4 +251,4 @@ operator_chosen : *
 5 * 3 = 15
 ```
 
-[**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , % ]
+[**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , %, power ]

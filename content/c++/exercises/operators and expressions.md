@@ -331,7 +331,7 @@ temperature in Fahrenheit: 86
 
 #### Q9.
 
-Population growth can be calculated by looking at the change in population over time. The formula for population growth is below
+Population growth can be calculated by looking at the change in population over time. The formula for population growth is -
 
 `P = P0 x e^rt`
 

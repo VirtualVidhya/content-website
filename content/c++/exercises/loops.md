@@ -295,7 +295,7 @@ What will be the output of the following programs?
 
 #### Q8.
 
-Write a program to print all the numbers that are not divisible by 4 between 1 and 50.
+Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
 ---
 

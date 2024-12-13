@@ -297,6 +297,22 @@ What will be the output of the following programs?
 
 Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
+**Expected Output:**
+
+```cpp
+1
+2
+3
+5
+6
+7
+9
+10
+.
+.
+.
+```
+
 ---
 
 #### Q9.

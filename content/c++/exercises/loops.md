@@ -332,14 +332,44 @@ Enter a number to add, or 0 to exit: 0
 The sum of all the numbers you entered is: 8
 ```
 
-<!-- ---
+---
 
 #### Q10.
 
-Create a game to guess a lucky number of an admin.
+Create a "Guess the Lucky Number" game in C++.
 
-Let's say, you as an admin has plugged in your lucky number in the program, now the user (game player) has to guess what's
-that lucky number of the program admin (i.e. you).
+As the admin, set a "lucky number" between 1 and 100 in the program. The user (player) will attempt to guess this number.
 
-The program will keep asking for an input prompt until the user enters a number that matches that lucky number, but to make the game
-a bit easier, the program should give constant hints. -->
+The program should repeatedly prompt the user for a guess until they either:
+- Correctly match the lucky number.
+- Enter 0 to exit the game at any time.
+
+To help the player, provide hints after each guess:
+- If the guess is larger than the lucky number, display a message indicating it is too high.
+- If the guess is smaller, indicate it is too low.
+
+This feedback allows the player to narrow down their guesses and find the lucky number.
+
+User can exit the game at any given time, by giving 0 as input.
+
+**Expected Output:**
+
+```cpp
+// lucky number: 25
+
+Guess the lucky number: 87
+
+Your guessed number is larger than the lucky number. Try Again. // (hint)
+
+Guess the lucky number: 17
+
+Your guessed number is smaller than the lucky number. Try Again. // (hint)
+
+Guess the lucky number: 45
+
+Your guessed number is larger than the lucky number. Try Again. // (hint)
+
+Guess the lucky number: 25
+
+Congratulations, you have guessed the lucky number.
+```

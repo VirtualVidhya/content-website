@@ -44,17 +44,22 @@ html, body {
 /* header - menu */
 
 #menu .active {
+    font-weight: normal;
     border: none !important;
 }
 
-#menu a:hover {
-    text-decoration: underline solid 1px;
-    text-underline-offset: 6.5px;
+#menu span {
+    background: var(--tertiary);
+    border-radius: var(--radius);
+    margin: 8px;
+    padding: 6px;
+    transition: transform 0.1s;
 }
 
-#menu .active {
-    font-weight: normal;
-    border-bottom: 1.5px solid currentColor;
+#menu a:hover span {
+    background: var(--secondary);
+    /* text-decoration: underline solid 1px; */
+    /* text-underline-offset: 6.5px; */
 }
 
 .button:hover {

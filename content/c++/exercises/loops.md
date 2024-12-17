@@ -113,9 +113,9 @@ What will be the output of the following programs?
 
     int main()
     {
-        for (int count = 10; i < 0; --i)
+        for (int count = 10; count < 0; --count)
         {
-            std::cout << cout << ' ';
+            std::cout << count << ' ';
         }
 
         std::cout << "loop end!\n";
@@ -130,9 +130,9 @@ What will be the output of the following programs?
 
     int main()
     {
-        for (int count = 10; i > 0; ++i)
+        for (int count = 10; count > 0; ++count)
         {
-            std::cout << cout << ' ';
+            std::cout << count << ' ';
         }
 
         std::cout << "loop end!\n";

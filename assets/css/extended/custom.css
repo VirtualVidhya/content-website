@@ -11,7 +11,7 @@ html, body {
 /* profile-mode */
 
 .profile img {
-    border-radius: 0;
+    border-radius: 5%;
 }
 
 /* post-single - breadcrumbs */

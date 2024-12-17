@@ -1,4 +1,4 @@
-baseURL: "https://vvidhya.pages.dev/"
+baseURL: "https://learn.vvidhya.com/"
 title: V.Vidhya
 paginate: 20
 theme: PaperMod
@@ -52,7 +52,7 @@ params:
 
   label:
     text: " "
-    icon: /images/logo.png
+    icon: /images/vvidhya-logo.svg
     iconHeight: 35
 
   # profile-mode
@@ -60,7 +60,7 @@ params:
     enabled: true # needs to be explicitly set
     title: Virtual Vidhya
     subtitle: "Your virtual path to knowledge"
-    imageUrl: "/images/logo.png"
+    imageUrl: "/images/vvidhya-logo.svg"
     imageWidth: 250
     imageHeight: 250
     imageTitle: Company Logo

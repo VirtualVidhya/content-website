@@ -52,15 +52,15 @@ params:
 
   label:
     text: " "
-    icon: /images/vvidhya-logo.svg
+    icon: /images/logos/vvidhya-logo.svg
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Virtual Vidhya
+    title: V.Vidhya
     subtitle: "Your virtual path to knowledge"
-    imageUrl: "/images/vvidhya-logo.svg"
+    imageUrl: "/images/logos/vvidhya-logo.svg"
     imageWidth: 250
     imageHeight: 250
     imageTitle: Company Logo

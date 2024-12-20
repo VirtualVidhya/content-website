@@ -14,7 +14,7 @@ html, body {
     border-radius: 5%;
 }
 
-.profile_inner h1 {
+.profile_inner>h1 {
     margin-top: 30px;
     color: #4CB748;
     font-weight: 800;

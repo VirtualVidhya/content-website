@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggleButton = document.getElementById("theme-toggle");
   if (themeToggleButton) {
     themeToggleButton.addEventListener("click", () => {
-      const isDarkMode = document.body.classList.contains("dark");
-      // Toggle theme
-      if (isDarkMode) {
-        // document.body.classList.remove("dark");
-        localStorage.setItem("pref-theme", "light");
-      } else {
-        // document.body.classList.add("dark");
-        localStorage.setItem("pref-theme", "dark");
-      }
+      // const isDarkMode = document.body.classList.contains("dark");
+      // // Toggle theme
+      // if (isDarkMode) {
+      //   // document.body.classList.remove("dark");
+      //   localStorage.setItem("pref-theme", "light");
+      // } else {
+      //   // document.body.classList.add("dark");
+      //   localStorage.setItem("pref-theme", "dark");
+      // }
 
       // Update the stroke color for all SVGs when the theme changes
       document.querySelectorAll("svg").forEach((svg) => {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    console.log("Loading SVG from:", src);
+    // console.log("Loading SVG from:", src);
 
     // Capture width and height from img element before replacing
     const imgWidth = imgElement.getAttribute("width") || imgElement.style.width;

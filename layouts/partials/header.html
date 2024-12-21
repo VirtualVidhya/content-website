@@ -47,7 +47,20 @@
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
-                {{- if $img }}
+
+                {{- if eq $img.MediaType.SubType "svg" }}              
+                    {{- $alt := "" }}
+                    {{- $ariaLabel := "logo" }}
+                    {{- $height := site.Params.label.iconHeight | default "30" }}
+
+                    {{- $svgContent := $img.Content }}
+                    {{- if $svgContent }}
+                        {{ $svgContent | safeHTML | replaceRE "<svg" (printf "<svg alt=\"%s\" aria-label=\"%s\" height=\"%d\"" $ariaLabel $alt $height) | safeHTML }}
+                    {{- else }}
+                        <p>Error: Unable to load SVG file.</p>
+                    {{- end }}
+
+                {{- else if $img }}
                     {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
                     {{- if hugo.IsExtended -}}
                         {{- $processableFormats = $processableFormats | append "webp" -}}
@@ -60,10 +73,10 @@
                             {{- $img = $img.Resize "x30" }}
                         {{- end }}
                     {{- end }}
-                    <img data-src="{{ $img.Permalink }}" alt="" aria-label="logo"
+                    <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
                         height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
-                <img data-src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
+                <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
                     height="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
@@ -72,6 +85,7 @@
                 {{- $label_text -}}
             </a>
             {{- end }}
+
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">

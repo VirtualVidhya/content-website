@@ -23,6 +23,7 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
+  useInstantPage: true # Enable prefetching for fast navigation
 
   ShowReadingTime: false
   ShowShareButtons: false

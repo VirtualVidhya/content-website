@@ -1,5 +1,5 @@
 ---
-title: "Variables & iostream"
+title: "Variables & Input/Output"
 draft: false
 weight: 1
 ---

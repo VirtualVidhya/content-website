@@ -23,8 +23,8 @@
     </main>
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 
-{{ $dynamicSvg := resources.Get "js/dynamic-svg.js" | resources.Minify }}
-<script src="{{ $dynamicSvg.RelPermalink }}" defer></script>
+<!-- {{ $dynamicSvg := resources.Get "js/dynamic-svg.js" | resources.Minify }}
+<script src="{{ $dynamicSvg.RelPermalink }}" defer></script> -->
 
 {{ $instantPage := resources.Get "js/instantpage.js" | resources.Minify }}
 <script src="{{ $instantPage.RelPermalink }}" type="module" defer></script>

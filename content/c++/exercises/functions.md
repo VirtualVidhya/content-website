@@ -389,8 +389,6 @@ What will be the output of the following programs?
   ```cpp
   #include <iostream>
 
-  #include <iostream>
-
   int add(float a, float b)
   {
       return a + b;
@@ -502,7 +500,7 @@ Write a program that takes student marks as input, then gives the result grade a
 - for more than 75 : A
 - for in between 60 and 75 : B
 - for in between 35 and 60 : C
-- for less than 35 : D
+- for less than 35 : F
 
 **Expected Output:**
 
@@ -533,7 +531,7 @@ Output: g
 
 #### Q10.
 
-Write a program to calculate simple interest for principal amount (`p`), rate of interest (`r`), number of years (`n`) given by user.
+Write a program to calculate simple interest (`i`) for principal amount (`p`), rate of interest (`r`), number of years (`n`) given by user.
 
 ```cpp
 Enter principal amount: 500000
@@ -542,5 +540,5 @@ Enter no of years: 2
 
 Simple Interest: 5000
 
-// I = (P*R*N)/100
+// i = (p*r*n)/100
 ```

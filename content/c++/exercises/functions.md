@@ -475,6 +475,33 @@ What will be the output of the following programs?
     }
     ```
 
+- e)
+    ```cpp
+    #include <iostream>
+
+    void func(int x)
+    {
+        int x = 3;
+        int y = 4;
+        
+        std::cout << "func: x = " << x << " y = " << y << '\n';
+    }
+
+    int main()
+    {
+        int x = 1;
+        int y = 2;
+
+        std::cout << "main: x = " << x << " y = " << y << '\n';
+
+        func(x);
+
+        std::cout << "main: x = " << x << " y = " << y << '\n';
+
+        return 0;
+    }
+    ```
+
 ---
 
 #### Q7.

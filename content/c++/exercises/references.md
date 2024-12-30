@@ -161,7 +161,7 @@ What will be the output of the following programs?
 
     int main()
     {
-        int var = 5;
+        int x = 5;
         int& ref1 = x;
         int& ref2 = ref1;
 

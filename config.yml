@@ -23,7 +23,6 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
-  useInstantPage: true # Enable prefetching for fast navigation
 
   ShowReadingTime: false
   ShowShareButtons: false
@@ -41,6 +40,16 @@ params:
   hideSummary: true
   showtoc: false
   tocopen: false
+
+  security:
+    funcs:
+      getenv:
+        - "^HUGO_"
+        - "^CI$"
+        - "^HUGO_ANALYTICS_ENABLED$"
+        - "^HUGO_ANALYTICS_SRC$"
+        - "^HUGO_ANALYTICS_HOST$"
+        - "^HUGO_ANALYTICS_WEBSITE_ID$"
 
   assets:
     disableHLJS: true # to disable highlight.js

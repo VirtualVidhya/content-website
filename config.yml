@@ -49,6 +49,7 @@ params:
         - "^HUGO_ANALYTICS_ENABLED$"
         - "^HUGO_ANALYTICS_SRC$"
         - "^HUGO_ANALYTICS_HOST$"
+        - "^HUGO_ANALYTICS_DATA_DOMAINS$"
         - "^HUGO_ANALYTICS_WEBSITE_ID$"
 
   assets:

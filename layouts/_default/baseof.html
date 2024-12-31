@@ -29,13 +29,9 @@
 {{ $instantPage := resources.Get "js/instantpage.js" | resources.Minify }}
 <script src="{{ $instantPage.RelPermalink }}" type="module" defer></script>
 
-<!-- {{ if site.Params.analyticsEnabled }}
-<script async defer src="{{ site.Params.analyticsSrc }}" data-host-url="{{ site.Params.analyticsHost }}" data-website-id="{{ site.Params.analyticsWebsiteId }}"></script>
-{{ end }} -->
-
 {{ $analyticsEnabled := getenv "HUGO_ANALYTICS_ENABLED" }}
 {{ if eq $analyticsEnabled "true" }}
-<script async defer src="{{ getenv "HUGO_ANALYTICS_SRC" }}" data-host-url="{{ getenv "HUGO_ANALYTICS_HOST" }}" data-website-id="{{ getenv "HUGO_ANALYTICS_WEBSITE_ID" }}"></script>
+<script async defer src="{{ getenv "HUGO_ANALYTICS_SRC" }}" data-host-url="{{ getenv "HUGO_ANALYTICS_HOST" }}" data-domains="{{ getenv "HUGO_ANALYTICS_DATA_DOMAINS" }}" data-website-id="{{ getenv "HUGO_ANALYTICS_WEBSITE_ID" }}"></script>
 {{ end }}
     
 </body>

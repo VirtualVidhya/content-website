@@ -8,7 +8,7 @@ weight: 27
 
 **NOTE:** 
 
-Some questions may take more time to solve as it will take time for any beginner to build logic for approaching such programming problems so don’t get discouraged.
+Some questions may take more time to solve as it takes time for any beginner to build logic for approaching such programming problems so don’t get discouraged.
 
 ---
 
@@ -77,7 +77,7 @@ str - "almond"
 
 #### Q5. _(Adv.)_
 
-Write a JavaScript function to generate a random number within a range
+Write a JavaScript function to generate a random number within a given custom range
 (start, end).
 
 ---

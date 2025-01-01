@@ -10,16 +10,19 @@ Find the errors in the following codes:
 
 (**NOTE:** you have to predict the errors/warnings yourself without running/executing the code.)
 
-```jsx
-let 1age = 5;
-let 2age = 10;
-```
+- a)
+    ```jsx
+    let 1age = 5;
+    let 2age = 10;
+    ```
 
-```jsx
-let marks = 75;
-let isPass = True;
-```
+- b)
+    ```jsx
+    let marks = 75;
+    let isPass = True;
+    ```
 
-```jsx
-let isPass = 'true';
-```
+- c)
+    ```jsx
+    let isPass = 'true';
+    ```

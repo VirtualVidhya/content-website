@@ -34,4 +34,4 @@ Once you click on it, it goes into `off` state.
 
 Now if it's clicked again, it will be in `on` state.
 
-[**HINT:** Use `classList` and its relevant methods to change styling of a button based on in which state it is currently.]
+(**HINT:** Use `classList` and its relevant methods to change styling of a button based on in which state it is currently.)

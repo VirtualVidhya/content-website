@@ -81,7 +81,7 @@ x = x++ - --z;
 
 --- -->
 
-#### Q4. _(Adv)_
+#### Q4. _(Adv.)_
 
 What is the value of each variable in each line of code?
 

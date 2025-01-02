@@ -142,7 +142,7 @@ markup:
     noClasses: false
     # anchorLineNos: true
     codeFences: true
-    guessSyntax: true
+    guessSyntax: false
     lineNos: true
     style: monokai
 build:

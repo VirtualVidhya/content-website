@@ -42,7 +42,7 @@ What will be the output of the following programs?
 
         int* ptr = x;
 
-        std::cout << "x: " << x << ", ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
         return 0;
     }
@@ -59,7 +59,7 @@ What will be the output of the following programs?
 
         int* ptr;
 
-        std::cout << "x: " << x << ", ptr: " << ptr << '\n';
+        std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
 
         return 0;
     }
@@ -76,7 +76,7 @@ What will be the output of the following programs?
 
         int* ptr = 5;
 
-        std::cout << "x: " << x << ", ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
         return 0;
     }
@@ -93,7 +93,7 @@ What will be the output of the following programs?
 
         int* ptr = 0x0012FF7C;
 
-        std::cout << "x: " << x << ", ptr: " << ptr << '\n';
+        std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
 
         return 0;
     }
@@ -110,7 +110,7 @@ What will be the output of the following programs?
 
         int* ptr = &x;
 
-        std::cout << "x: " << x << ", ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
         return 0;
     }
@@ -311,6 +311,41 @@ What will be the output of the following programs?
 
 #### Q6.
 
+Analyze the following program:
+  
+```cpp
+#include <iostream>
+
+int main()
+{
+    int x = 5;
+    int& ref = x;
+    int* ptr = &x;
+
+    std::cout << "x: " << x << '\n';
+    std::cout << "&x: " << &x << '\n';
+    std::cout << "*x: " << *x << '\n';
+
+    std::cout << "ref: " << ref << '\n';
+    std::cout << "&ref: " << &ref << '\n';
+    std::cout << "*ref: " << *ref << '\n';
+
+    std::cout << "ptr: " << ptr << '\n';
+    std::cout << "*ptr: " << *ptr << '\n';
+    std::cout << "&ptr: " << &ptr << '\n';
+
+    return 0;
+}
+```
+
+Evaluate each `cout` statement. Identify whether they are valid and explain what each of them represents.
+
+(**NOTE:** You have to predict the behaviour without running/executing the code.)
+
+---
+
+#### Q7. **_(Adv.)_**
+
 Consider the following program:
   
 ```cpp
@@ -343,7 +378,7 @@ Which of the following statement is correct for the above program?
 
 ---
 
-#### Q7.
+#### Q8.
 
 What will be the output of the following programs?
 
@@ -383,10 +418,238 @@ What will be the output of the following programs?
     int main()
     {
         int x = 5;
-        int* ptr;
+        int* ptr = &x;
 
+        std::cout << *ptr << '\n';
+
+        if (x > 0)
+        {
+            int y = 6;
+            ptr = &y;
+
+            std::cout << *ptr << '\n';
+        }
+
+        ptr = nullptr;
         std::cout << *ptr << '\n';
 
         return 0;
     }
     ```
+
+- c)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
+
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
+
+        ptr = nullptr;
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q9. **_(Adv.)_**
+
+Examine the following program:
+
+```cpp
+#include <iostream>
+
+int main()
+{   
+    int x = 5;
+    int* ptr;
+    
+    std::cout << *ptr;
+    
+    if (x > 5)
+    {
+        int y = 6;
+        ptr = &y;
+        
+        std::cout << *ptr;
+    }
+    
+    std::cout << *ptr;
+    
+    ptr = nullptr;
+    
+    std::cout << *ptr;
+
+    return 0;
+}
+```
+
+Predict the program's behavior upon execution.
+
+(**NOTE:** You have to predict the behaviour without running/executing the code.)
+
+If you identify any issues, explain what causes them and propose how you would correct them.
+
+---
+
+#### Q10.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- a)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        const int x = 5;
+        int* ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        *ptr = 7;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        return 0;
+    }
+    ```
+
+- b)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+        const int* ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        x = 6;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        *ptr = 7;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        return 0;
+    }
+    ```
+
+- c)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        const int x = 5;
+        const int* ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        int y = 6;
+        ptr = &y;
+
+        std::cout << x << " " << *ptr << " " << y << '\n';
+
+        return 0;
+    }
+    ```
+
+- d)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+        int* const ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        x = 6;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        *ptr = 7;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        int y = 6;
+        ptr = &y;
+
+        std::cout << x << " " << *ptr << " " << y << '\n';
+
+        return 0;
+    }
+    ```
+
+- e)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+        int* const ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        int y = 6;
+        ptr = &y;
+
+        std::cout << x << " " << *ptr << " " << y << '\n';
+
+        return 0;
+    }
+    ```
+
+- f)
+  
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+        const int* const ptr = &x;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        x = 6;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        *ptr = 7;
+
+        std::cout << x << " " << *ptr << '\n';
+
+        int y = 8;
+        ptr = &y;
+
+        std::cout << x << " " << *ptr << " " << y << '\n';
+
+        return 0;
+    }
+    ```
+
+<!-- --- -->
+
+

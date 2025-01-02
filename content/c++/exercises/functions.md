@@ -133,7 +133,7 @@ everywhere, you'd like a more efficient and scalable solution. Write a simple fu
 
 **Expected Output:**
 
-```
+```v
 Invalid command!
 
 Invalid command!
@@ -475,7 +475,7 @@ What will be the output of the following programs?
     }
     ```
 
-- e)
+- e) **_(Adv.)_**
     ```cpp
     #include <iostream>
 
@@ -510,7 +510,7 @@ Write a program that takes a person's height in feet as input, then gives back t
 
 **Expected Output:**
 
-```cpp
+```v
 Enter person's height (in ft): 5.4
 
 Person's height (in cm): 164.592
@@ -531,7 +531,7 @@ Write a program that takes student marks as input, then gives the result grade a
 
 **Expected Output:**
 
-```
+```v
 Enter student's marks (out of 100): 55
 
 Student's grade: C
@@ -545,7 +545,7 @@ Write a program that takes two alphabets as input, then tells which alphabet com
 
 **Expected Output:**
 
-```cpp
+```v
 Enter first alphabet: q
 Enter second alphabet: g
 
@@ -560,7 +560,7 @@ Output: g
 
 Write a program to calculate simple interest (`i`) for principal amount (`p`), rate of interest (`r`), number of years (`n`) given by user.
 
-```cpp
+```v
 Enter principal amount: 500000
 Enter rate of interest: 5
 Enter no of years: 2

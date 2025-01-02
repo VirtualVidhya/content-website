@@ -14,7 +14,7 @@ Print first 25 whole numbers one-by-one in new line.
 
 **Expected Output:**
 
-```cpp
+```v
 0
 1
 2
@@ -23,6 +23,7 @@ Print first 25 whole numbers one-by-one in new line.
 .
 .
 .
+24
 ```
 
 ---
@@ -49,7 +50,7 @@ Print the multiplication table of 7.
 
 (**NOTE:** Write this program using all types of loops i.e. `while`, `do-while`, `for` one by one.)
 
-```cpp
+```v
 7
 14
 21
@@ -58,6 +59,7 @@ Print the multiplication table of 7.
 .
 .
 .
+70
 ```
 
 ---
@@ -193,7 +195,7 @@ Take 2 numbers as user input and then print all the numbers starting from first 
 
 **Expected Output:**
 
-```cpp
+```v
 Enter first number: 9
 Enter Second number: 28
 
@@ -214,7 +216,7 @@ fizz
 .
 .
 .
-.
+28
 ```
 
 ---
@@ -299,7 +301,7 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 
 **Expected Output:**
 
-```cpp
+```v
 1
 2
 3
@@ -311,6 +313,7 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 .
 .
 .
+50
 ```
 
 ---
@@ -323,7 +326,7 @@ has entered upto that point.
 
 **Expected Output:**
 
-```cpp
+```v
 Enter a number to add, or 0 to exit: 5
 Enter a number to add, or 0 to exit: 2
 Enter a number to add, or 0 to exit: 1
@@ -354,7 +357,7 @@ User can exit the game at any given time, by giving 0 as input.
 
 **Expected Output:**
 
-```cpp
+```v
 // lucky number: 25
 
 Guess the lucky number: 87

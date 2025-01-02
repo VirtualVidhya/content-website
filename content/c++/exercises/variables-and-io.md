@@ -1,5 +1,5 @@
 ---
-title: "Variables & Input/Output"
+title: "Variables & User I/O"
 draft: false
 weight: 1
 ---
@@ -56,7 +56,7 @@ Write a program that takes an integer number from user and then prints the doubl
 
 **Expected Output:**
 
-```cpp
+```v
 Enter an integer: 4 // (user enters this number on console)
 Double of 4: 8
 Triple of 4: 12
@@ -70,7 +70,7 @@ Write a program that asks the user to enter three integer values, then print the
 
 **Expected Output:**
 
-```cpp
+```v
 // (when run with input values 4, 5, and 6)
 
 Enter three numbers: 4 5 6 // (user enters these numbers on console)

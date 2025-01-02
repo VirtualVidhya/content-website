@@ -151,7 +151,7 @@ Write a program that takes an integer from user and checks if that number is div
 
 **Expected Output:**
 
-```cpp
+```v
 Enter a number: 98
 
 98 is not divisible by 3.
@@ -167,7 +167,7 @@ Write a program that takes an integer from user and checks if that number is eve
 
 **Expected Output:**
 
-```cpp
+```v
 Enter a number: 9
 
 9 is an odd number.
@@ -188,7 +188,7 @@ Write a program that takes student percentage as user input and gives student's 
 
 **Expected Output:**
 
-```cpp
+```v
 Enter student percentage: 65
 
 Result: Pass with Merit
@@ -207,7 +207,7 @@ Here, the list for price per bucket-size is given -
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the popcorn-bucket size: M
 
 Price: 100
@@ -225,18 +225,11 @@ Write a program that checks if it's a good condition for paragliding or not base
 
 **Expected Output:**
 
-```
-// e.g. 1
+```v
 Is it raining? : false
 Wind speeds (km/h) : 12
 
 It's a good condition for paragliding.
-
-// e.g. 2
-Is it raining? : true
-Wind speeds (km/h) : 12
-
-It's a bad condition for paragliding.
 ```
 
 ---
@@ -249,14 +242,13 @@ Take 2 numbers and the operator sign as input from the user, then give the resul
 
 **Expected Output:**
 
-```cpp
+```v
 first_number : 3
 second_number : 5
 
 operator_chosen : *
 
-// expected output
-5 * 3 = 15
+output: 5 * 3 = 15
 ```
 
-[**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , %, power ]
+(**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , %, power)

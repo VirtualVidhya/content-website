@@ -179,7 +179,7 @@ Write a program that takes three integer numbers from user and then prints the a
 
 **Expected Output:**
 
-```cpp
+```v
 Enter three numbers: 5 9 16 // (user enters these numbers on console)
 The average of 5, 9, and 16 is 10. // (5 + 9 + 16) / 3 = 10
 ```
@@ -195,7 +195,7 @@ Take the length and the width of a rectangle from user and then prints the value
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the length & width of a rectangle: 10 5 // (user input)
 Perimeter: 30
 Area: 50
@@ -217,15 +217,15 @@ Write a program that takes the cost of any 3 food items from the user (e.g. a pa
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the cost of 3 food items: 50 20 60 // (user input)
 Total Cost: 130
 GST Amount : 23.4
 Total Bill: 153.4
 
 // Total Cost = 50 + 20 + 60 = 130
-// GST Amount = (130 * 18) / 100 = 23.4
-// Total Bill = 130 + 23.4 = 153.4
+// GST Amount = Total Cost * (18 / 100) = 130 * (18 / 100) = 23.4
+// Total Bill = Total Cost + GST Amount = 130 + 23.4 = 153.4
 ```
 
 ---
@@ -301,7 +301,7 @@ Write a program that takes a value of radius from user, then find the circumfere
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the value of radius: 5
 Circumference: 31.4
 Area: 78.5
@@ -318,7 +318,7 @@ Write a program that takes a value of temperature in Celsius from user, then con
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the value of temperature in Celsius: 30
 temperature in Kelvin: 303
 temperature in Fahrenheit: 86
@@ -333,14 +333,21 @@ temperature in Fahrenheit: 86
 
 Population growth can be calculated by looking at the change in population over time. The formula for population growth is -
 
-<code>P = P0 x e<sup>rt</sup></code>
+<code>P = P0 x (1 + r)<sup>t</sup></code>
 
 Where, 
 - `P` = Total population after time t
 - `P0` = Starting population
 - `r` = Percentage rate of the growth
 - `t` = time in years or hours
-- `e` = Euler number 2.71828
 
-so, calculate the current total population for P0 = 140 crores, r = 0.65 %, T = 5 years
+**Expected Output:**
+
+```v
+Enter the starting population (in crores): 140
+Enter the percentage rate of growth (in &): 0.65 
+Enter the time (in years): 5
+
+Total population after given time (in crores): 144.6095
+```
 

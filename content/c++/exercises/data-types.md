@@ -228,7 +228,7 @@ Write a program that asks a user whether they want to give a tip at the restaura
 
 **Expected Output:**
 
-```cpp
+```v
 Would you like to give a tip: false // (user input)
 
 Is user willing to give a tip: false
@@ -346,7 +346,7 @@ Write a program where the user is asked to enter a single character. Print the v
 
 **Expected Output:**
 
-```cpp
+```v
 Enter a single character: A
 You entered 'A', which has an ASCII code 65.
 ```

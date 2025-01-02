@@ -132,7 +132,7 @@ What will be the output of the following programs?
     }
     ```
 
-- c)
+- c) **_(Adv.)_**
   
     ```cpp
     #include <iostream>
@@ -154,7 +154,7 @@ What will be the output of the following programs?
     }
     ```
 
-- d)
+- d) **_(Adv.)_**
   
     ```cpp
     #include <iostream>
@@ -425,40 +425,6 @@ What will be the output of the following programs?
 
 #### Q5.
 
-Consider the following program:
-  
-```cpp
-#include <iostream>
-
-void printAddresses(int val, int& ref)
-{
-    std::cout << "The address of the value parameter is: " << &val << '\n';
-    std::cout << "The address of the reference parameter is: " << &ref << '\n';
-}
-
-int main()
-{
-    int x = 5;
-    std::cout << "The address of x is: " << &x << '\n';
-    printAddresses(x, x);
-
-    return 0;
-}
-```
-
-Which of the following statement is correct for the above program?
-
-(**NOTE:** You have to predict this result without running/executing the code.)
-
-1. The address value for all `x`, `val`, `ref` will be same.
-2. The address value for `x` and `ref` will be same but for `val` will be different.
-3. The address value for all `x`, `val`, `ref` will be different.
-4. This cannot be predetermined.
-
----
-
-#### Q6.
-
 What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
@@ -565,14 +531,14 @@ What will be the output of the following programs?
 
 ---
 
-#### Q7.
+#### Q6.
 
 Inside a text-based adventure game, we have a player whose health is full (100) when the game starts, now the player can get damaged on which his health will get decreased.
 So write a program to damage the player (i.e. decrease his health by amount 15 each time) using a function.
 
 **Expected Output:**
 
-```
+```v
 THE GAME STARTS!
 
 The player got damanged!
@@ -584,13 +550,13 @@ The updated player health: 60
 
 ---
 
-#### Q8.
+#### Q7.
 
 Write a program to swap the values of two variables using a function.
 
 **Expected Output:**
 
-```cpp
+```v
 Enter the value of a: 8
 Enter the value of b: 6
 

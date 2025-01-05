@@ -351,6 +351,7 @@ Enter a number to add, or 0 to exit: 1
 Enter a number to add, or 0 to exit: 0
 
 The sum of all the numbers you entered is: 8
+// 5 + 2 + 1 = 8
 ```
 
 ---

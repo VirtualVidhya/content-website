@@ -293,6 +293,24 @@ What will be the output of the following programs?
         return 0;
     }
 
+- d) 
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int i, sum = 0;
+        
+        for (i = 0; i < 5; i++);
+        {
+            sum += i;
+        }
+        
+        std::cout << "sum: " << sum << '\n';
+
+        return 0;
+    }
+
 ---
 
 #### Q8.

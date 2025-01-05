@@ -361,17 +361,23 @@ Create a "Guess the Lucky Number" game in C++.
 
 As the admin, set a "lucky number" between 1 and 100 in the program. The user (player) will attempt to guess this number.
 
+<div>
 The program should repeatedly prompt the user for a guess until they either:
-- Correctly match the lucky number.
-- Enter 0 to exit the game at any time.
+    <ul>
+        <li>Correctly match the lucky number.</li>
+        <li>Enter 0 to exit the game (at any time).</li>
+    </ul>
+</div>
 
+<div>
 To help the player, provide hints after each guess:
-- If the guess is larger than the lucky number, display a message indicating it is too high.
-- If the guess is smaller, indicate it is too low.
+    <ul>
+        <li>If the guess is larger than the lucky number, display a message indicating it is too high.</li>
+        <li>If the guess is smaller, indicate it is too low.</li>
+    </ul>
+</div>
 
 This feedback allows the player to narrow down their guesses and find the lucky number.
-
-User can exit the game at any given time, by giving 0 as input.
 
 **Expected Output:**
 

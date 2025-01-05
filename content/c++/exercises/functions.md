@@ -128,8 +128,7 @@ What will be the output of the following programs?
 
 #### Q2.
 
-Imagine you're working on a program where an error message needs to be displayed at multiple points. Instead of repeating the same statement
-everywhere, you'd like a more efficient and scalable solution. Write a simple function that prints the error message whenever needed.
+You need to display the same error message in multiple places in your program. Instead of writing the same std::cout statement repeatedly, design a reusable solution that makes your code more efficient and easier to maintain. Write a function that prints the error message whenever it is called.
 
 **Expected Output:**
 
@@ -506,7 +505,9 @@ What will be the output of the following programs?
 
 #### Q7.
 
-Write a program that takes a person's height in feet as input, then gives back the height in centimeter.
+Write a program that takes a person's height in feet as input and converts it to centimeters.
+
+(**HINT:** Use functions for a reusable and scalable solution.)
 
 **Expected Output:**
 
@@ -529,6 +530,8 @@ Write a program that takes student marks as input, then gives the result grade a
 - for in between 35 and 60 : C
 - for less than 35 : F
 
+(**HINT:** Use functions for a reusable and scalable solution.)
+
 **Expected Output:**
 
 ```v
@@ -542,6 +545,8 @@ Student's grade: C
 #### Q9.
 
 Write a program that takes two alphabets as input, then tells which alphabet comes first as per the alphabetical order.
+
+(**HINT:** Use functions for a reusable and scalable solution.)
 
 **Expected Output:**
 
@@ -560,8 +565,12 @@ Output: g
 
 Write a program to calculate simple interest (`i`) for principal amount (`p`), rate of interest (`r`), number of years (`n`) given by user.
 
+(**HINT:** Use functions for a reusable and scalable solution.)
+
+**Expected Output:**
+
 ```v
-Enter principal amount: 500000
+Enter principal amount: 50000
 Enter rate of interest: 5
 Enter no of years: 2
 

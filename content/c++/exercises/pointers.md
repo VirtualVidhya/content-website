@@ -650,6 +650,148 @@ What will be the output of the following programs?
     }
     ```
 
-<!-- --- -->
+---
 
+#### Q11.
 
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- a)
+    ```cpp
+    #include <iostream>
+
+    void updateValue(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
+
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
+
+- b)
+    ```cpp
+    #include <iostream>
+
+    void updateValue(int* ptr)
+    {
+        *ptr++;
+        std::cout << *ptr << '\n';
+    }
+
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
+
+- c)
+    ```cpp
+    #include <iostream>
+
+    void updateValue(const int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
+
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+
+- d)
+    ```cpp
+    #include <iostream>
+
+    void updateValue(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
+
+    int main()
+    {
+        int x = 5;
+        
+        int* ptr = nullptr;
+
+        updateValue(ptr);
+
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    
+---
+
+#### Q12.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- a)
+    ```cpp
+    #include <iostream>
+
+    void updateValue(int val)
+    {
+        val++;
+        std::cout << val << '\n';
+    }
+
+    void updateValueByReference(int& ref)
+    {
+        ref++;
+        std::cout << ref << '\n';
+    }
+
+    void updateValueByAddress(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
+
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(x);
+        
+        std::cout << x << '\n';
+        
+        updateValueByReference(x);
+        
+        std::cout << x << '\n';
+        
+        updateValueByAddress(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```

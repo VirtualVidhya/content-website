@@ -128,7 +128,7 @@ What will be the output of the following programs?
 
 #### Q2.
 
-You need to display the same error message in multiple places in your program. Instead of writing the same std::cout statement repeatedly, design a reusable solution that makes your code more efficient and easier to maintain. Write a function that prints the error message whenever it is called.
+You need to display the same error message in multiple places in your program. Instead of writing the same `std::cout` statement repeatedly, design a reusable solution that makes your code more efficient and easier to maintain. Write a function that prints the error message whenever it is called.
 
 **Expected Output:**
 

@@ -8,7 +8,18 @@ weight: 7
 
 #### Q1.
 
-What will be the output of the following programs?
+What will be the output of the following programs for the below mentioned inputs?
+
+**Input Test Cases:**
+
+```v
+- name: Lagan
+    color: black
+
+- name: Lagan Khelaiya
+    color: black
+```
+<br>
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 

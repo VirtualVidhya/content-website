@@ -14,10 +14,10 @@ What will be the output of the following programs for the below mentioned inputs
 
 ```v
 - name: Lagan
-    color: black
+  color: black
 
 - name: Lagan Khelaiya
-    color: black
+  color: black
 ```
 <br>
 

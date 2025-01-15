@@ -293,7 +293,7 @@ What will be the output of the following programs?
         return 0;
     }
 
-- d) 
+- d) **_(Adv.)_**
     ```cpp
     #include <iostream>
 

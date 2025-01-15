@@ -8,18 +8,7 @@ weight: 7
 
 #### Q1.
 
-What will be the output of the following programs for the below mentioned inputs?
-
-**Input Test Cases:**
-
-```v
-- name: Lagan
-  color: black
-
-- name: Lagan Khelaiya
-  color: black
-```
-<br>
+What will be the output of the following programs for the mentioned input test cases?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
@@ -45,6 +34,20 @@ What will be the output of the following programs for the below mentioned inputs
     }
     ```
 
+    **Input Test Cases:**
+
+    ```v
+    // #1
+    name: Lagan
+    color: black
+
+    // #2
+    name: Lagan Khelaiya
+    color: black
+    ```
+    
+    <br>
+
 - b)
   
     ```cpp
@@ -61,11 +64,25 @@ What will be the output of the following programs for the below mentioned inputs
         std::string name;
         std::getline(std::cin, name);
 
-        std::cout << "Hello, " << name << ", you entered " << choice << '.\n';
+        std::cout << "Hello, " << name << ", you entered " << number << ".\n";
 
         return 0;
     }
     ```
+
+    **Input Test Cases:**
+
+    ```v
+    // #1
+    number: 98
+    name: Magan
+
+    // #2
+    number: 98
+    name: Magan Chhapri
+    ```
+    
+    <br>
 
 - c)
   
@@ -88,6 +105,20 @@ What will be the output of the following programs for the below mentioned inputs
         return 0;
     }
     ```
+
+    **Input Test Cases:**
+
+    ```v
+    // #1
+    name: Lagan
+    color: black
+
+    // #2
+    name: Lagan Khelaiya
+    color: black
+    ```
+    
+    <br>
 
 ---
 

@@ -112,6 +112,10 @@ body.dark .dynamic-stroke {
 
 /* un-ordered list styles */
 
+.square-ul {
+    list-style-type: square;   
+}
+
 .dash-ul {
     list-style-type: none;
 }

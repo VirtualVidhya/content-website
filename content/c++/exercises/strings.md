@@ -12,7 +12,7 @@ What will be the output of the following programs for the mentioned input test c
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a)
+- #### I.
   
     ```cpp
     #include <iostream>
@@ -48,7 +48,7 @@ What will be the output of the following programs for the mentioned input test c
     
     <br>
 
-- b)
+- #### II.
   
     ```cpp
     #include <iostream>
@@ -84,7 +84,7 @@ What will be the output of the following programs for the mentioned input test c
     
     <br>
 
-- c)
+- #### III.
   
     ```cpp
     #include <iostream>

@@ -48,7 +48,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a) 
+- #### I.
     ```cpp
     #include <iostream>
 
@@ -63,7 +63,7 @@ What will be the output of the following programs?
     }
     ```
 
-- b) 
+- #### II.
     ```cpp
     #include <iostream>
 
@@ -78,7 +78,7 @@ What will be the output of the following programs?
     }
     ```
 
-- c) 
+- #### III.
     ```cpp
     #include <iostream>
 
@@ -93,7 +93,7 @@ What will be the output of the following programs?
     }
     ```
 
-- d) 
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -110,7 +110,7 @@ What will be the output of the following programs?
     }
     ```
 
-- e) 
+- #### V.
     ```cpp
     #include <iostream>
 
@@ -127,7 +127,7 @@ What will be the output of the following programs?
     }
     ```
 
-- f) 
+- #### VI.
     ```cpp
     #include <iostream>
 
@@ -152,7 +152,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a) 
+- #### I. 
     ```cpp
     #include <iostream>
 
@@ -168,7 +168,7 @@ What will be the output of the following programs?
     }
     ```
 
-- b) 
+- #### II.
     ```cpp
     #include <iostream>
 
@@ -184,7 +184,7 @@ What will be the output of the following programs?
     }
     ```
 
-- c) 
+- #### III.
     ```cpp
     #include <iostream>
 
@@ -202,7 +202,7 @@ What will be the output of the following programs?
     }
     ```
 
-- d) 
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -242,7 +242,7 @@ Predict the output of the following programs for the given input values.
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a) 
+- #### I.
     ```cpp
     #include <iostream>
 
@@ -262,13 +262,15 @@ Predict the output of the following programs for the given input values.
     ```
 
     If as input, user enters:
-    - `1`
-    - `true`
-    - `TRUE`
-    - `false`
-    - `8`
+    <ul class="square-ul">
+        <li><code>1</code></li>
+        <li><code>true</code></li>
+        <li><code>TRUE</code></li>
+        <li><code>false</code></li>
+        <li><code>8</code></li>
+    </ul>
 
-- b) 
+- #### II.
     ```cpp
     #include <iostream>
 
@@ -288,13 +290,15 @@ Predict the output of the following programs for the given input values.
     ```
 
     If as input, user enters:
-    - `1`
-    - `true`
-    - `TRUE`
-    - `false`
-    - `8`
+    <ul class="square-ul">
+        <li><code>1</code></li>
+        <li><code>true</code></li>
+        <li><code>TRUE</code></li>
+        <li><code>false</code></li>
+        <li><code>8</code></li>
+    </ul>
 
-- c)
+- #### III.
     ```cpp
     #include <iostream>
 
@@ -311,11 +315,13 @@ Predict the output of the following programs for the given input values.
     ```
 
     If as input, user enters:
-    - `a`
-    - `97`
-    - `abc`
+    <ul class="square-ul">
+        <li><code>a</code></li>
+        <li><code>97</code></li>
+        <li><code>abc</code></li>
+    </ul>
 
-- d) _**(Adv.)**_
+- #### IV. _**(Adv.)**_
     ```cpp
     #include <iostream>
 
@@ -335,8 +341,10 @@ Predict the output of the following programs for the given input values.
     ```
 
     If as input, user enters:
-    - `a` and then `b`
-    - `abcd` and then `efgh`
+    <ul class="square-ul">
+        <li><code>a</code> and then <code>b</code></li>
+        <li><code>abcd</code> and then <code>efgh</code></li>
+    </ul>
 
 ---
 

@@ -12,7 +12,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a) 
+- #### I. 
     ```cpp
     #include <iostream>
 
@@ -30,7 +30,7 @@ What will be the output of the following programs?
     }
     ```
 
-- b) 
+- #### II.
     ```cpp
     #include <iostream>
 
@@ -42,7 +42,7 @@ What will be the output of the following programs?
     }
     ```
 
-- c) 
+- #### III.
     ```cpp
     #include <iostream>
 
@@ -54,7 +54,7 @@ What will be the output of the following programs?
     }
     ```
 
-- d) 
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -66,7 +66,7 @@ What will be the output of the following programs?
     }
     ```
 
-- e) 
+- #### V.
     ```cpp
     #include <iostream>
 
@@ -94,7 +94,7 @@ What will be the output of the following programs?
     }
     ```
 
-- f) 
+- #### VI.
     ```cpp
     #include <iostream>
 
@@ -114,7 +114,7 @@ What will be the output of the following programs?
     }
     ```
 
-- g) _**(Adv.)**_
+- #### VII. _**(Adv.)**_
     ```cpp
     #include <iostream>
 
@@ -131,7 +131,7 @@ What will be the output of the following programs?
     }
     ```
 
-- h) 
+- #### VIII.
     ```cpp
     #include <iostream>
 
@@ -150,7 +150,7 @@ What will be the output of the following programs?
     }
     ```
 
-- i) 
+- #### IX.
     ```cpp
     #include <iostream>
 
@@ -250,13 +250,12 @@ int main()
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-a. 9.8
-
-b. Compile-time error
-
-c. Run-time error
-
-d. 9
+<ol class="lower-alpha-ol">
+    <li>9.8</li>
+    <li>Compile-time error</li>
+    <li>Run-time error</li>
+    <li>9</li>
+</ol>
 
 ---
 
@@ -283,13 +282,12 @@ int main()
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-a. 55
-
-b. Compile-time error
-
-c. 75
-
-d. 76
+<ol class="lower-alpha-ol">
+    <li>55</li>
+    <li>Compile-time error</li>
+    <li>75</li>
+    <li>76</li>
+</ol>
 
 ---
 

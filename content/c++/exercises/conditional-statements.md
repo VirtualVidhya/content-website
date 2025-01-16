@@ -10,7 +10,7 @@ weight: 4
 
 Consider the following programs:
 
-- a)
+- #### I.
     ```cpp
     #include <iostream>
 
@@ -26,7 +26,7 @@ Consider the following programs:
     }
     ```
 
-- b)
+- #### II.
     ```cpp
     #include <iostream>
 
@@ -47,10 +47,12 @@ What will be the output in the console for the programs given above?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-1. Hi
-2. Bye
-3. Error
-4. None
+<ol class="lower-alpha-ol">
+    <li>Hi</li>
+    <li>Bye</li>
+    <li>Error</li>
+    <li>None</li>
+</ol>
 
 ---
 
@@ -83,10 +85,12 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-1. x is 10 and y is 20
-2. x is 10 but y is not 20
-3. x is not 10
-4. No output due to an error
+<ol class="lower-alpha-ol">
+    <li>x is 10 and y is 20</li>
+    <li>x is 10 but y is not 20</li>
+    <li>x is not 10</li>
+    <li>No output due to an error</li>
+</ol>
 
 ---
 
@@ -111,10 +115,12 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-1. Adult
-2. Teenager
-3. Child
-4. Toddler
+<ol class="lower-alpha-ol">
+    <li>Adult</li>
+    <li>Teenager</li>
+    <li>Child</li>
+    <li>Toddler</li>
+</ol>
 
 ---
 
@@ -138,10 +144,12 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-1. A
-2. B
-3. C
-4. No output due to an error
+<ol class="lower-alpha-ol">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>No output due to an error</li>
+</ol>
 
 ---
 

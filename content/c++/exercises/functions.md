@@ -12,7 +12,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a)
+- #### I.
 
   ```cpp
   #include <iostream>
@@ -30,7 +30,7 @@ What will be the output of the following programs?
   }
   ```
 
-- b)
+- #### II.
 
   ```cpp
   #include <iostream>
@@ -48,7 +48,7 @@ What will be the output of the following programs?
   }
   ```
 
-- c)
+- #### III.
 
   ```cpp
   #include <iostream>
@@ -66,7 +66,7 @@ What will be the output of the following programs?
   }
   ```
 
-- d)
+- #### IV.
 
   ```cpp
   #include <iostream>
@@ -96,7 +96,7 @@ What will be the output of the following programs?
   }
   ```
 
-- e)
+- #### V.
 
   ```cpp
   #include <iostream>
@@ -146,7 +146,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a)
+- #### I.
 
   ```cpp
   #include <iostream>
@@ -170,7 +170,7 @@ What will be the output of the following programs?
   }
   ```
 
-- b)
+- #### II.
 
   ```cpp
   #include <iostream>
@@ -194,7 +194,7 @@ What will be the output of the following programs?
   }
   ```
 
-- c)
+- #### III.
 
   ```cpp
   #include <iostream>
@@ -214,7 +214,7 @@ What will be the output of the following programs?
   }
   ```
 
-- d)
+- #### IV.
 
   ```cpp
   #include <iostream>
@@ -234,7 +234,7 @@ What will be the output of the following programs?
   }
   ```
 
-- e)
+- #### V.
 
   ```cpp
   #include <iostream>
@@ -260,7 +260,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a)
+- #### I.
 
   ```cpp
   #include <iostream>
@@ -283,7 +283,7 @@ What will be the output of the following programs?
   }
   ```
 
-- b)
+- #### II.
 
   ```cpp
   #include <iostream>
@@ -307,7 +307,7 @@ What will be the output of the following programs?
   }
   ```
 
-- c)
+- #### III.
 
   ```cpp
   #include <iostream>
@@ -330,7 +330,7 @@ What will be the output of the following programs?
   }
   ```
 
-- d)
+- #### IV.
 
   ```cpp
   #include <iostream>
@@ -348,7 +348,7 @@ What will be the output of the following programs?
   }
   ```
 
-- e)
+- #### V.
 
   ```cpp
   #include <iostream>
@@ -383,8 +383,7 @@ What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- a)
-
+- #### I.
   ```cpp
   #include <iostream>
 
@@ -404,8 +403,7 @@ What will be the output of the following programs?
   }
   ```
 
-- b)
-
+- #### II.
   ```cpp
   #include <iostream>
 
@@ -425,8 +423,7 @@ What will be the output of the following programs?
   }
   ```
 
-- c)
-
+- #### III.
   ```cpp
   #include <iostream>
 
@@ -446,7 +443,7 @@ What will be the output of the following programs?
   }
   ```
 
-- d)
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -474,7 +471,7 @@ What will be the output of the following programs?
     }
     ```
 
-- e) **_(Adv.)_**
+- #### V. **_(Adv.)_**
     ```cpp
     #include <iostream>
 

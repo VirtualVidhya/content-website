@@ -8,6 +8,32 @@ weight: 1
 
 #### Q1.
 
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+  
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, કેમ છો?\n";
+
+    return 0;
+}
+```
+
+<ol class="lower-alpha-ol">
+    <li>Hello, </li>
+    <li>"Hello, કેમ છો?\n"</li>
+    <li>Hello, કેમ છો?</li>
+    <li>Hello, how are you?</li>
+</ol>
+
+---
+
+#### Q2.
+
 Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
 - int sum;
@@ -22,7 +48,7 @@ Based on how you should name a variable, indicate whether each variable name men
 
 ---
 
-#### Q2.
+#### Q3.
 
 What will be the output of the following program when run multiple times?
 
@@ -50,7 +76,7 @@ int main()
 
 ---
 
-#### Q3.
+#### Q4.
 
 Write a program that takes an integer number from user and then prints the doubled & tripled value of that number.
 
@@ -64,7 +90,7 @@ Triple of 4: 12
 
 ---
 
-#### Q4.
+#### Q5.
 
 Write a program that asks the user to enter three integer values, then print these values. Add an appropriate comment above function `main()`.
 

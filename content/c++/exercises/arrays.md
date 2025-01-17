@@ -283,20 +283,19 @@ score: 70
 
 #### Q8. _**(Adv.)**_
 
-You are shopping for `N` items, each with a known price. 
+You are shopping for `5` items, each with a known price. 
 The store offers a discount coupon that costs `X` rupees and reduces the price of every item by `Y` rupees. 
 If an item's price is `Y` or less, it becomes free.  
 
 Decide whether you should buy the coupon or not. You should buy it only if the total cost after applying the discount 
 (including the coupon's price) is strictly less than the total cost without the coupon.  
 
-Write a program that takes `N`, `X`, and `Y` as input, followed by the prices of `N` items, and prints `"DO use coupon"` if buying the coupon is beneficial, otherwise `"DO NOT use coupon"`.
+Write a program that takes `X`, and `Y` as input, followed by the prices of `5` items, and prints `"DO use coupon"` if buying the coupon is beneficial, otherwise `"DO NOT use coupon"`.
 
 **Expected Outut:**
 
 ```v
 // #input
-Enter the amount of items: 5
 Enter the coupon price (rs): 30
 Enter the discount price of the coupon (rs): 15
 

@@ -201,14 +201,15 @@ Write a program that allows a teacher to enter a student's marks for 5 subjects,
 
 ```v
 // #input
-Enter marks of subject1: 75
-Enter marks of subject2: 65
-Enter marks of subject3: 80
-Enter marks of subject4: 67
-Enter marks of subject5: 73
+Enter marks of
+subject1: 75
+subject2: 65
+subject3: 80
+subject4: 67
+subject5: 73
 
 // #output
-Marks:
+Student Marks for
 subject1: 75
 subject2: 65
 subject3: 80
@@ -233,16 +234,17 @@ Allow the user to enter the temperatures and then:
 
 ```v
 // #input
-Enter day1 temp (°C): 31
-Enter day2 temp (°C): 29
-Enter day3 temp (°C): 33
-Enter day4 temp (°C): 27
-Enter day5 temp (°C): 30
-Enter day6 temp (°C): 25
-Enter day7 temp (°C): 28
+Enter the temperature (°C) for
+day1: 31
+day2: 29
+day3: 33
+day4: 27
+day5: 30
+day6: 25
+day7: 28
 
 // #output
-Temperatures:
+Temperatures for
 day1: 31°C
 day2: 29°C
 day3: 33°C
@@ -269,14 +271,14 @@ The correct answers are stored in an array. The teacher then inputs a student's 
 
 ```v
 // correct answers
-correct_answers: 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B'
+correct-answers: 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B'
 
 // #input
 Enter student answers: A B D D A C C D B B
 
 // #output
-correct answers: 7
-score: 70
+Total correct answers: 7
+Score: 70
 ```
 
 ---
@@ -299,7 +301,7 @@ Write a program that takes `X`, and `Y` as input, followed by the prices of `5` 
 Enter the coupon price (rs): 30
 Enter the discount price of the coupon (rs): 15
 
-Enter item prices (rs)
+Enter item prices (rs) of
 item1: 10
 item2: 40
 item3: 100

@@ -260,7 +260,7 @@ Highest Temperature of the week (°C): 33 on day3
 
 #### Q7.
 
-A teacher wants to analyze how students performed in a multiple-choice test with 10 questions. 
+A teacher wants to analyze how students performed in a multiple-choice test with 10 questions.
 The correct answers are stored in an array. The teacher then inputs a student's answers into another array. Your program should:
 - Display how many answers are correct.
 - Give the student's score. (Each correct answer is worth 10 marks.)

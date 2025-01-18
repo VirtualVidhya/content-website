@@ -36,15 +36,17 @@ int main()
 
 Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
-- int sum;
-- int _apples;
-- int VALUE;
-- int my variable name;
-- int TotalCustomers;
-- int void;
-- int numFruit;
-- int 3some;
-- int meters_of_pipe;
+<ol class="upper-roman-ol">
+    <li>int sum;</li>
+    <li>int _apples;</li>
+    <li>int VALUE;</li>
+    <li>int my variable name;</li>
+    <li>int TotalCustomers;</li>
+    <li>int void;</li>
+    <li>int numFruit;</li>
+    <li>int 3some;</li>
+    <li>int meters_of_pipe;</li>
+</ol>
 
 ---
 

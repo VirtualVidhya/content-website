@@ -301,7 +301,7 @@ Write a program that takes `X`, and `Y` as input, followed by the prices of `5` 
 Enter the coupon price (rs): 30
 Enter the discount price of the coupon (rs): 15
 
-Enter item prices (rs) of
+Enter prices (rs) of
 item1: 10
 item2: 40
 item3: 100

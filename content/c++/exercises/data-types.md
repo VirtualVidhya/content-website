@@ -30,15 +30,17 @@ Predict the output that results when you enter the following types of input:
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-- A letter, such as h.
-- A number with a fractional part (e.g. 3.2). Try numbers with fractional parts less than 0.5 and greater than 0.5 (e.g. 3.2 and 3.7).
-- A small negative integer, such as -3.
-- A word, such as Hello.
-- A really big number (at least 3 billion (300 crores) i.e. 3000000000 (3 with nine zeros)).
-- A small number followed by some letters, such as 123abc.
-- A few letters followed by a small number, such as abc123.
-- +5 (three spaces, followed by a plus symbol, and a 5).
-- 5b6.
+<ol class="upper-roman-ol">
+    <li> A letter, such as h. </li>
+    <li> A number with a fractional part (e.g. 3.2). Try numbers with fractional parts less than 0.5 and greater than 0.5 (e.g. 3.2 and 3.7). </li>
+    <li> A small negative integer, such as -3. </li>
+    <li> A word, such as Hello. </li>
+    <li> A really big number (at least 300 crores i.e. 3000000000 (3 with nine zeros)). </li>
+    <li> A small number followed by some letters, such as 123abc. </li>
+    <li> A few letters followed by a small number, such as abc123. </li>
+    <li> +5 (three spaces, followed by a plus symbol, and a 5). </li>
+    <li> 5b6. </li>
+</ol>
 
 ---
 

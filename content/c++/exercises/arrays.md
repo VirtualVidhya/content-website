@@ -169,6 +169,25 @@ What will be the output of the following programs?
     ```cpp
     #include <iostream>
 
+    int main()
+    {
+        int arr[] = {1, 2, 3};
+
+        std::cout << arr[1] << '\n';
+
+        arr = {4, 5, 6};
+
+        std::cout << arr[1] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### V.
+  
+    ```cpp
+    #include <iostream>
+
     int main() 
     {
         int arr[5] = {1, 4, 9, 16};

@@ -8,6 +8,21 @@ weight: 2
 
 #### Q1.
 
+Pick the appropriate data type for a variable in each of the following situations. Be as specific as possible.
+
+<ol class="upper-roman-ol bold-li">
+    <li>The age of the user (in years)</li>
+    <li>Whether the user wants the application to check for updates</li>
+    <li>pi (3.14159265)</li>
+    <li>The number of pages in a textbook</li>
+    <li>The length of a couch in feet, to 2 decimal places</li>
+    <li>A user selecting an option from a menu by letter</li>
+</ol>
+
+---
+
+#### Q2.
+
 Consider the following program:
 
 ```cpp
@@ -30,7 +45,7 @@ Predict the output that results when you enter the following types of input:
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-<ol class="upper-roman-ol">
+<ol class="upper-roman-ol bold-li">
     <li> A letter, such as h. </li>
     <li> A number with a fractional part (e.g. 3.2). Try numbers with fractional parts less than 0.5 and greater than 0.5 (e.g. 3.2 and 3.7). </li>
     <li> A small negative integer, such as -3. </li>
@@ -44,7 +59,7 @@ Predict the output that results when you enter the following types of input:
 
 ---
 
-#### Q2.
+#### Q3.
 
 What will be the output of the following programs?
 
@@ -148,7 +163,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q3.
+#### Q4.
 
 What will be the output of the following programs?
 
@@ -222,7 +237,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q4.
+#### Q5.
 
 Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
 
@@ -238,7 +253,7 @@ Is user willing to give a tip: false
 
 ---
 
-#### Q5.
+#### Q6.
 
 Predict the output of the following programs for the given input values.
 
@@ -350,7 +365,7 @@ Predict the output of the following programs for the given input values.
 
 ---
 
-#### Q6.
+#### Q7.
 
 Write a program where the user is asked to enter a single character. Print the value of the character and its ASCII code, using `static_cast`.
 

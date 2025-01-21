@@ -282,7 +282,7 @@ int main()
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>55</li>
     <li>Compile-time error</li>
     <li>75</li>

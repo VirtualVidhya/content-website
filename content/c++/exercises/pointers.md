@@ -371,10 +371,12 @@ Which of the following statement is correct for the above program?
 
 (**NOTE:** You have to predict this result without running/executing the code.)
 
-1. The address value for all `x`, `val`, `ref` will be same.
-2. The address value for `x` and `ref` will be same but for `val` will be different.
-3. The address value for all `x`, `val`, `ref` will be different.
-4. This cannot be predetermined.
+<ol class="lower-alpha-ol bold-li">
+    <li>The address value for all <code>x</code>, <code>val</code>, <code>ref</code> will be same.</li>
+    <li>The address value for <code>x</code> and <code>ref</code> will be same but for <code>val</code> will be different.</li>
+    <li>The address value for all <code>x</code>, <code>val</code>, <code>ref</code> will be different.</li>
+    <li>This cannot be predetermined.</li>
+</ol>
 
 ---
 

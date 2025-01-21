@@ -47,7 +47,7 @@ What will be the output in the console for the programs given above?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>Hi</li>
     <li>Bye</li>
     <li>Error</li>
@@ -85,7 +85,7 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>x is 10 and y is 20</li>
     <li>x is 10 but y is not 20</li>
     <li>x is not 10</li>
@@ -115,7 +115,7 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>Adult</li>
     <li>Teenager</li>
     <li>Child</li>
@@ -144,7 +144,7 @@ What will be the output in the console?
 
 (**NOTE:** you have to predict the output yourself without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>A</li>
     <li>B</li>
     <li>C</li>

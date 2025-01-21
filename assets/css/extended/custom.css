@@ -147,3 +147,7 @@ body.dark .dynamic-stroke {
 .upper-roman-ol {
     list-style-type: upper-roman;
 }
+
+.bold-li > li::marker {
+    font-weight: bold;
+}

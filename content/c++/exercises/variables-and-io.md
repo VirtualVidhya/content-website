@@ -23,7 +23,7 @@ int main()
 }
 ```
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>Hello, </li>
     <li>"Hello, કેમ છો?\n"</li>
     <li>Hello, કેમ છો?</li>
@@ -36,7 +36,7 @@ int main()
 
 Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
-<ol class="upper-roman-ol">
+<ol class="upper-roman-ol bold-li">
     <li>int sum;</li>
     <li>int _apples;</li>
     <li>int VALUE;</li>
@@ -69,7 +69,7 @@ int main()
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
-<ol class="lower-alpha-ol">
+<ol class="lower-alpha-ol bold-li">
     <li>always 0</li>
     <li>always -1</li>
     <li>any random garbage value but consistently</li>

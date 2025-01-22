@@ -119,7 +119,7 @@ What will be the output of the following programs?
 
     int main()
     {
-        const int arr = {1, 3, 5, 7, 9};
+        const int arr[] = {1, 3, 5, 7, 9};
         
         std::cout << arr[0] << '\n';
 

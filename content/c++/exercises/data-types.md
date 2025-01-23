@@ -239,22 +239,6 @@ What will be the output of the following programs?
 
 #### Q5.
 
-Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
-
-(**NOTE**: User should be able to give their response in form of `true` or `false` keywords and the response should also be printed in that form.)
-
-**Expected Output:**
-
-```v
-Would you like to give a tip: false // (user input)
-
-Is user willing to give a tip: false
-```
-
----
-
-#### Q6.
-
 Predict the output of the following programs for the given input values.
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
@@ -362,6 +346,22 @@ Predict the output of the following programs for the given input values.
         <li><code>a</code> and then <code>b</code></li>
         <li><code>abcd</code> and then <code>efgh</code></li>
     </ul>
+
+---
+
+#### Q6.
+
+Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
+
+(**NOTE**: User should be able to give their response in form of `true` or `false` keywords and the response should also be printed in that form.)
+
+**Expected Output:**
+
+```v
+Would you like to give a tip: false // (user input)
+
+Is user willing to give a tip: false
+```
 
 ---
 

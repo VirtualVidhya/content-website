@@ -8,6 +8,131 @@ weight: 10
 
 #### Q1.
 
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[][] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        std::cout << arr[2][3] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### II.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[3][] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        std::cout << arr[2][2] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### III.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[][3] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        std::cout << arr[1][2] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[3][3] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        std::cout << arr[3][2] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### V.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[3][2] = {
+            {1, 2, 3},
+            {4, 5, 6},
+        };
+
+        std::cout << arr[1][3] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### VI.
+  
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[4][4] = {
+            {1, 2, 3},
+            {4, 5, 6, 7},
+            {8, 9},
+        };
+
+        for (int i = 0; i < 4; ++i)
+        {
+            for (int j = 0; j < 4; ++j)
+            {
+                std::cout << arr[i][j] << " ";
+            }
+
+            std::cout << '\n';
+        }
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q2.
+
 A group of friends is playing a classic Tic-Tac-Toe game. 
 The game is played on a 3x3 grid, where each cell can either be empty (`.`), filled with `X` or `O`.
 
@@ -30,14 +155,14 @@ X  .  .
 
 - Your task is to: Store this current state into a game data-set and display it on the screen.
 
-Now, it's Player O's turn, and they want to place their mark in the second row, middle position i.e. cell number 5.
+Now, it's Player O's turn, and they want to place their mark in the middle row, first position i.e. cell number 4.
 
 - Your next task is to: Update the board with the new move and again display the updated game board after the move.
 
 
 ---
 
-#### Q2.
+#### Q3.
 
 A weather monitoring station records the temperature of your city at four different times of the day: morning, noon, evening, and night. The station collects this data every day for a full week.
 
@@ -115,12 +240,12 @@ Coldest temperature of the week: 21°C on Day 1 (Night)
 
 ---
 
-#### Q3. _**(Adv.)**_
+#### Q4. _**(Adv.)**_
 
 A small cinema hall has a fixed seating arrangement with multiple rows (`5`) and columns (`6`). Some seats are already booked, while others are available.
 
 Develop a seat booking system where:
-- The user can check seat availability before selling a ticket. (Initially all seats are available.)
+- The user can check seat availability before buying a ticket. (Initially all seats are available.)
 - A user can select a seat, and if it's available, it gets booked automatically. (Ensure that your system does not allow booking of an already occupied seat.)
 - Display the updated seating chart after each booking.
 
@@ -227,7 +352,7 @@ Exiting the system.
 
 ---
 
-#### Q4. _**(Adv.)**_
+#### Q5. _**(Adv.)**_
 
 A hospital consists of multiple floors (`3`), each with a certain number of rooms (`2`), and each room has a fixed number of beds (`4`). Due to rising patient intake, the hospital administration wants to efficiently manage the availability of beds across all floors.
 

@@ -342,10 +342,9 @@ Where,
 **Expected Output:**
 
 ```v
-Enter the starting population (in crores): 140
-Enter the percentage rate of growth (in &): 0.65 
+Enter the starting population (in crores): 142
+Enter the percentage rate of growth (in %): 0.875
 Enter the time (in years): 5
 
-Total population after given time (in crores): 144.6095
+Total population after given time (in crores): 148.322
 ```
-

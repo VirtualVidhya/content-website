@@ -124,6 +124,37 @@ What will be the output of the following programs?
   }
   ```
 
+- #### VI.
+
+  ```cpp
+  #include <iostream>
+
+  void funcA()
+  {
+      std::cout << "In funcA()\n";
+
+      funcB();
+  }
+
+  void funcB()
+  {
+      std::cout << "In funcB()\n";
+  }
+
+
+  int main()
+  {
+      std::cout << "Starting main()\n";
+
+      funcB();
+      funcA();
+
+      std::cout << "Ending main()\n";
+
+      return 0;
+  }
+  ```
+
 ---
 
 #### Q2.

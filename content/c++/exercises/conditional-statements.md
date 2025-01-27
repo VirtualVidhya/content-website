@@ -14,15 +14,18 @@ Consider the following programs:
     ```cpp
     #include <iostream>
 
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    if (x = 10) 
-    {
-        std::cout << "Hi";
-    } 
-    else 
-    {
-        std::cout << "Bye";
+        if (x = 10) 
+        {
+            std::cout << "Hi";
+        } 
+        else 
+        {
+            std::cout << "Bye";
+        }
     }
     ```
 
@@ -30,15 +33,18 @@ Consider the following programs:
     ```cpp
     #include <iostream>
 
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    if (x == 5) 
-    {
-        std::cout << "Hi";
-    } 
-    else 
-    {
-        std::cout << "Bye";
+        if (x == 5) 
+        {
+            std::cout << "Hi";
+        } 
+        else 
+        {
+            std::cout << "Bye";
+        }
     }
     ```
 
@@ -61,23 +67,28 @@ What will be the output in the console for the programs given above?
 Consider the following program:
 
 ```cpp
-int x = 10; 
-int y = 20;
+#include <iostream>
 
-if (x == 10) 
-{     
-    if (y == 20) 
-    {   
-        std::cout << "x is 10 and y is 20";     
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    if (x == 10)
+    {
+        if (y == 30)
+        {
+            std::cout << "x is 10 and y is 20";
+        }
+        else
+        {
+            std::cout << "x is 10 but y is not 20";
+        }
     }
-    else 
-    {   
-        std::cout << "x is 10 but y is not 20";     
-    } 
-}  
-else 
-{  
-    std::cout << "x is not 10"; 
+    else
+    {
+        std::cout << "x is not 10";
+    }
 }
 ```
 
@@ -96,60 +107,136 @@ What will be the output in the console?
 
 #### Q3.
 
-Consider the following program:
+What will be the output of the following programs?
 
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
 ```cpp
-int age = 25;
+#include <iostream>
 
-if (age > 18)
-    std::cout << "Adult";
-else if (age > 12)
-    std::cout << "Teenager";
-else if (age > 5)
-    std::cout << "Child";
-else
-    std::cout << "Toddler";
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    if (x > 5)
+        std::cout << 'A';
+    else if (y > 15)
+        std::cout << 'B';
+    else
+        std::cout << 'C';
+}
 ```
 
-What will be the output in the console?
+- #### II.
+```cpp
+#include <iostream>
 
-(**NOTE:** you have to predict the output yourself without running/executing the code.)
+int main()
+{
+    int age = 25;
 
-<ol class="lower-alpha-ol bold-li">
-    <li>Adult</li>
-    <li>Teenager</li>
-    <li>Child</li>
-    <li>Toddler</li>
-</ol>
+    if (age > 18)
+        std::cout << "Adult";
+    else if (age > 12)
+        std::cout << "Teenager";
+    else if (age > 5)
+        std::cout << "Child";
+    else
+        std::cout << "Toddler";
+}
+```
+
+- #### III.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int marks = 90;
+
+    if (marks > 35)
+        std::cout << "C";
+    else if (marks > 55)
+        std::cout << "B";
+    else if (marks > 85)
+        std::cout << "A";
+    else
+        std::cout << "F";
+}
+```
 
 ---
 
 #### Q4.
 
-Consider the following program:
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
 
 ```cpp
-int x = 10;
-int y = 20;
+#include <iostream>
 
-if (x > 5)
-    std::cout << 'A';
-else if (y > 15)
-    std::cout << 'B';
-else
-    std::cout << 'C';
+int main()
+{
+    char grade = 'B';
+
+    switch (grade)
+    {
+    case 'A':
+        std::cout << "Excellent performance\n";
+    case 'B':
+        std::cout << "Good performance\n";
+    case 'C':
+        std::cout << "Average performance\n";
+    case 'D':
+        std::cout << "Bad performance\n";
+    case 'F':
+        std::cout << "Unacceptable performance\n";
+    default:
+        break;
+    }
+}
 ```
 
-What will be the output in the console?
+- #### II.
 
-(**NOTE:** you have to predict the output yourself without running/executing the code.)
+```cpp
+#include <iostream>
 
-<ol class="lower-alpha-ol bold-li">
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-    <li>No output due to an error</li>
-</ol>
+int main()
+{
+    int response_code = 200;
+
+    switch (response_code)
+    {
+    case 200:
+        std::cout << "Response: OK\n";
+        break;
+    case 400:
+        std::cout << "Response: Bad Request\n";
+        break;
+    case 403:
+        std::cout << "Response: Forbidden\n";
+        break;
+    case 404:
+        std::cout << "Response: Not Found\n";
+        break;
+    case 500:
+        std::cout << "Response: Internal Server Error\n";
+        break;
+    case 404:
+        std::cout << "Response: Bad Gateway\n";
+        break;
+    default:
+        std::cout << "Response: None\n";
+        break;
+    }
+}
+```
 
 ---
 
@@ -213,6 +300,8 @@ Here, the list for price per bucket-size is given -
 - ‘M’ : price is rs.100
 - ‘S’ : price is rs.50
 
+(NOTE: The conditional logic of the program needs to be written using `switch` here.)
+
 **Expected Output:**
 
 ```v
@@ -246,7 +335,7 @@ It's a good condition for paragliding.
 
 Create a program to make a mini-calculator.
 
-Take 2 numbers and the operator sign as input from the user, then give the result based on those taken values.
+Take 2 integer numbers and the operator sign as input from the user, then give the result based on those taken values.
 
 **Expected Output:**
 
@@ -259,4 +348,4 @@ operator_chosen : *
 output: 5 * 3 = 15
 ```
 
-(**NOTE:** All the arithmetic operators should be covered, i.e. + , - , * , / , %, power)
+(**NOTE:** All the arithmetic operators should be covered, i.e. `+` , `-` , `*` , `/` , `%`, `^` (power).)   

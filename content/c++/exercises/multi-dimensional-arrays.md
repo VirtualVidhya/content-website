@@ -159,7 +159,6 @@ Now, it's Player O's turn, and they want to place their mark in the middle row, 
 
 - Your next task is to: Update the board with the new move and again display the updated game board after the move.
 
-
 ---
 
 #### Q3.
@@ -172,8 +171,9 @@ Write a program for this, your program should:
 - Allow a user to check the average temperature for any given day.
 - Identify the hottest and coldest temperature recorded during the week and display at what time of the day they occurred.
 
-**Expected Outut:**
+<!-- **Expected Outut:** -->
 
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 Enter temperature readings for each day and time:
 -------------------------------------------------
@@ -237,6 +237,7 @@ Average temperature on Day 4: 27°C
 Hottest temperature of the week: 33°C on Day 5 (Noon)
 Coldest temperature of the week: 21°C on Day 1 (Night)
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -249,8 +250,9 @@ Develop a seat booking system where:
 - A user can select a seat, and if it's available, it gets booked automatically. (Ensure that your system does not allow booking of an already occupied seat.)
 - Display the updated seating chart after each booking.
 
-**Expected Outut:**
+<!-- **Expected Outut:** -->
 
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 # Options:
 1. Display Seating Chart
@@ -349,6 +351,7 @@ Enter your choice: 4
 
 Exiting the system.
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -363,8 +366,9 @@ Your task is to develop a program that:
 
 The hospital needs a solution to avoid overbooking beds and improve efficiency.
 
-**Expected Outut:**
+<!-- **Expected Outut:** -->
 
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 ----------------
 # Options:
@@ -485,3 +489,4 @@ Enter your choice: 5
 
 Exiting the system.
 ```
+{{< /collapsible-codesection >}}

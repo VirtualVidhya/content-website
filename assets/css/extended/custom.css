@@ -110,6 +110,13 @@ body.dark .dynamic-stroke {
     background: var(--code-bg) !important;
 }
 
+/* code-expected-output */
+.code-expected-output-title {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 7.5px;
+}
+
 /* un-ordered list styles */
 
 .square-ul {

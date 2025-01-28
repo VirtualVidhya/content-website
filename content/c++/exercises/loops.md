@@ -12,8 +12,7 @@ Print first 25 whole numbers one-by-one in new line.
 
 (**NOTE:** Write this program using `while` loop.)
 
-**Expected Output:**
-
+<!-- {{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 0
 1
@@ -25,6 +24,7 @@ Print first 25 whole numbers one-by-one in new line.
 .
 24
 ```
+{{< /collapsible-codesection >}} -->
 
 ---
 
@@ -50,6 +50,7 @@ Print the multiplication table of 7.
 
 (**NOTE:** Write this program using all types of loops i.e. `while`, `do-while`, `for` one by one.)
 
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 7
 14
@@ -61,6 +62,7 @@ Print the multiplication table of 7.
 .
 70
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -193,8 +195,7 @@ The rules of the game are simple: Starting at 1, and counting upward, replace an
 
 Take 2 numbers as user input and then print all the numbers starting from first given number, incrementing one by one, to second given number at last, but for any number divisible only by 3 print the word “fizz”, any number only divisible by 5 print the word “buzz” and any number divisible by both 3 and 5 print the word “fizzbuzz”.
 
-**Expected Output:**
-
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 Enter first number: 9
 Enter Second number: 28
@@ -218,6 +219,7 @@ fizz
 .
 28
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -317,8 +319,7 @@ What will be the output of the following programs?
 
 Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
-**Expected Output:**
-
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 1
 2
@@ -333,6 +334,7 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 .
 50
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -342,8 +344,7 @@ Take 10 numbers as input from user one by one and then give the sum of all the n
 The user can stop the asking loop at any point by entering 0 as an input, in that case, give the sum of all numbers the user
 has entered upto that point.
 
-**Expected Output:**
-
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 Enter a number to add, or 0 to exit: 5
 Enter a number to add, or 0 to exit: 2
@@ -353,6 +354,7 @@ Enter a number to add, or 0 to exit: 0
 The sum of all the numbers you entered is: 8
 // 5 + 2 + 1 = 8
 ```
+{{< /collapsible-codesection >}}
 
 ---
 
@@ -380,8 +382,7 @@ To help the player, provide hints after each guess:
 
 This feedback allows the player to narrow down their guesses and find the lucky number.
 
-**Expected Output:**
-
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 // lucky number: 25
 
@@ -401,3 +402,4 @@ Guess the lucky number: 25
 
 Congratulations, you have guessed the lucky number.
 ```
+{{< /collapsible-codesection >}}

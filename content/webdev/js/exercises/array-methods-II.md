@@ -1,5 +1,5 @@
 ---
-title: "Array Methods 2"
+title: "Array Methods II"
 draft: false
 weight: 13
 ---

@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-<!-- ---
+---
 
 #### Q6. _**(Adv.)**_
 
@@ -189,32 +189,172 @@ A user wants to organize their music collection by creating different playlists 
 ```v
 Music Playlist Organizer
 
-Create a new playlist (Enter genre): Pop  
-Playlist "Pop" created!  
+----------------
+# Options:
 
-Add a song to "Pop": Blinding Lights  
-"Blinding Lights" added to Pop playlist!  
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 1
 
-Add a song to "Pop": Levitating  
-"Levitating" added to Pop playlist!  
+Enter genre: classical
 
-Create a new playlist (Enter genre): Rock  
-Playlist "Rock" created!  
+Playlist "classical" created!
 
-Add a song to "Rock": Bohemian Rhapsody  
-"Bohemian Rhapsody" added to Rock playlist!  
+----------------
+# Options:
 
-Remove a song from "Pop": Levitating  
-"Levitating" removed from Pop playlist!  
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 2
+
+Enter playlist genre: rock            
+
+Playlist "rock" does not exist!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 2
+
+Enter playlist genre: classical
+
+Enter song name: maula mere maula
+
+"maula mere maula" added to classical playlist!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 2
+
+Enter playlist genre: classical
+
+Enter song name: o re piya
+
+"o re piya" added to classical playlist!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 4
 
 Your Playlists:
-Pop  
-- Blinding Lights  
-Rock  
-- Bohemian Rhapsody  
+classical
+   - maula mere maula
+   - o re piya
 
-Summary: 
-- Total Playlists: 2  
-- Playlist with the most songs: Rock  
+Summary:
+- Total Playlists: 1
+- Playlist with the most songs: classical
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 1
+
+Enter genre: ghazal
+
+Playlist "ghazal" created!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 2                   
+
+Enter playlist genre: ghazal
+
+Enter song name: jhuki jhuki si nazar
+
+"jhuki jhuki si nazar" added to ghazal playlist!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 4
+
+Your Playlists:
+classical
+   - maula mere maula
+   - o re piya
+ghazal
+   - jhuki jhuki si nazar
+
+Summary:
+- Total Playlists: 2
+- Playlist with the most songs: classical
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 3
+
+Enter playlist genre: ghazal
+
+Enter song name to remove: jhuki jhuki si nazar
+
+"jhuki jhuki si nazar" removed from ghazal playlist!
+
+----------------
+# Options:
+
+1. Create a new playlist
+2. Add a song to a playlist
+3. Remove a song from a playlist
+4. View all playlists
+5. Exit
+----------------
+Enter your choice: 5
+
+Goodbye! Keep enjoying your music!
 ```
-{{< /collapsible-codesection >}} -->
+{{< /collapsible-codesection >}}

@@ -1,7 +1,7 @@
 ---
 title: "Vectors"
 draft: false
-weight: 11
+weight: 12
 ---
 
 ---
@@ -85,6 +85,7 @@ A user is adding items to a shopping basket one by one.
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
 // user input
+Add items to your shopping basket (type "done" to finish):
 Add item: butter
 Add item: honey
 Add item: green-tea

@@ -12,13 +12,13 @@ Write a JS program to delete all occurrences of a given number in a given array.
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
-arr: [1, 2, 3, 4, 5, 6, 2, 3]
+arr: 1, 2, 3, 4, 5, 6, 2, 3
 
 // input
 num: 2
 
 // output 
-arr: [1, 3, 4, 5, 6, 3]
+arr: 1, 3, 4, 5, 6, 3
 
 // Notice that all 2's (num) are removed from array
 ```
@@ -53,7 +53,7 @@ Find the largest number in a given array with only positive numbers.
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
 ```v
-numbers: [23, 59, 17, 61, 34, 46, 8]
+numbers: 23, 59, 17, 61, 34, 46, 8
 
 // output
 largest number: 61
@@ -100,7 +100,7 @@ number: 287152;
 
 // output
 sum: 25
-// sum of all digits of the given number 287152 [2 + 8 + 7 + 1 + 5 + 2]
+// sum of all digits of the given number 287152 (2 + 8 + 7 + 1 + 5 + 2)
 
 // #2
 // input

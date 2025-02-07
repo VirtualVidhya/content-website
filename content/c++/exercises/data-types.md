@@ -375,3 +375,26 @@ Write a program where the user is asked to enter a single character. Print the v
 Enter a single character: A
 You entered 'A', which has an ASCII code 65.
 ```
+
+---
+
+#### Q8.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+```cpp
+#include <iostream>
+
+int main() 
+{
+    int a = b;
+    int b = 2;
+    
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+    
+    return 0;
+}
+```

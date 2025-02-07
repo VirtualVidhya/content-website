@@ -100,9 +100,31 @@ What will be the output of the following programs?
     {
         int count = 1;
 
-        while (count <= 10)
+        do
         {
             std::cout << count << ' ';
+                
+            ++count;
+        }
+        while(count <= 10)
+
+        std::cout << "loop end!\n";
+
+        return 0;
+    }
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int count = 1;
+
+        while (count <= 10);
+        {
+            std::cout << count << ' ';
+            ++count;
         }
 
         std::cout << "loop end!\n";
@@ -111,7 +133,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### III.
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -128,7 +150,26 @@ What will be the output of the following programs?
     }
     ```
 
-- #### IV.
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int count = 1;
+
+        while (count <= 10)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
+    }
+    ```
+
+- #### VI.
     ```cpp
     #include <iostream>
 
@@ -145,7 +186,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### V.
+- #### VII.
     ```cpp
     #include <iostream>
 
@@ -165,7 +206,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### VI.
+- #### VIII.
     ```cpp
     #include <iostream>
 

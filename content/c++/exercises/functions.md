@@ -502,7 +502,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### V. **_(Adv.)_**
+- #### V.
     ```cpp
     #include <iostream>
 
@@ -524,6 +524,26 @@ What will be the output of the following programs?
         func(x);
 
         std::cout << "main: x = " << x << " y = " << y << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### VI.
+    ```cpp
+    #include <iostream>
+
+    void printNumbers(int a, int b)
+    {
+        std::cout << "a: " << a << ", b:" << b << '\n';
+    }
+
+    int main()
+    {
+        int a = 3;
+        int b = 5;
+
+        printNumbers(b, a);
 
         return 0;
     }

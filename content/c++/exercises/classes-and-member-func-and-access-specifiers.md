@@ -332,7 +332,7 @@ Write a class named `Point3d` to represent a point in 3D cartesian coordinates.
 
 - #### II.
 
-    - Add a function named isEqual() to your `Point3d` class. The following code should run correctly:
+    - Add a function named `isEqual()` for checking if two points are equal or not, to your `Point3d` class. The following code should run correctly:
 
     ```cpp
     int main()

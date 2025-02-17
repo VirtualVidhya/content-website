@@ -81,7 +81,7 @@ public:
         std::cout << "Foo(" << x << ", " << y << ") constructed\n";
     }
 
-    void print() const
+    void print()
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
     }
@@ -113,7 +113,7 @@ public:
         m_y = y;
     }
 
-    void print() const
+    void print()
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
     }
@@ -145,7 +145,7 @@ public:
         std::cout << "Foo(" << x << ", " << y << ") constructed\n";
     }
 
-    void print() const
+    void print()
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
     }
@@ -178,7 +178,7 @@ public:
         std::cout << "Foo(" << x << ", " << y << ") constructed\n";
     }
 
-    void print() const
+    void print()
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
     }
@@ -299,8 +299,8 @@ public:
     }
 
     Foo(int x = 0, int y = 0)
-        : m_x{x}
-        , m_y{y}
+        : m_x{ x }
+        , m_y{ y }
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
     }
@@ -327,8 +327,8 @@ private:
 
 public:
     Foo(int x, int y)
-        : m_x{x}
-        , m_y{y}
+        : m_x{ x }
+        , m_y{ y }
     {
         std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
     }

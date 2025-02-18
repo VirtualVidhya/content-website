@@ -12,7 +12,7 @@ A bank wants to manage customer accounts efficiently.
 
 Create a program that:
 
-- Store an account holder’s name, account number, and balance.
+- Store an account holder's name, account number, and balance.
 - Allow depositing and withdrawing money.
 - Prevent withdrawals if the balance is insufficient.
 - Display the account details.
@@ -554,5 +554,151 @@ Error: Cannot switch to Sport Mode. Battery is too low.
 Drive Mode: Normal Mode (Balanced)
 Battery Level: 60%
 Car Status: Car is running smoothly.
+```
+{{< /collapsible-codesection >}}
+
+---
+
+#### Q6.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
+```cpp
+#include <iostream>
+
+class Foo
+{
+    ~Foo()
+    {
+        std::cout << "Destructor called.\n";
+    }
+};
+
+int main()
+{
+    Foo foo;
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+class User
+{
+private:
+    int m_id {};
+
+public:
+    User(int id)
+        : m_id { id }
+    {
+        std::cout << "Constructing User Object: " << m_id << '\n';
+    }
+
+    ~User()
+    {
+        std::cout << "Destructing User Object: " << m_id << '\n';
+    }
+
+    int getID() const { return m_id; }
+};
+
+int main()
+{
+    User user1{1001};
+    User user2{1010};
+
+    return 0;
+}
+```
+
+---
+
+#### Q7.
+
+A text editor should ensure that users do not lose their progress, whether they manually save or forget to do so. The system should always create a backup in case of an unexpected shutdown.
+
+{{< collapsible-codesection title="Instructions" >}}
+Design a TextEditor class that manages a document's lifecycle. The system should:
+- Display a message when a new document is created.
+- Allow the user to write and edit the document.
+- Provide an option to manually exit the editor.
+- When exiting, prompt the user to save manually or not.
+    - If the user chooses to save, save the document normally.
+    - If the user chooses not to save, still create a backup save for safety.
+- If the program closes unexpectedly, the destructor should automatically perform a backup save to prevent data loss.
+{{< /collapsible-codesection >}}
+
+<br>
+
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
+```v
+// Case 1: User chooses to manually save
+Document 'ProjectNotes.txt' created.
+Editing document...
+User exits the editor.
+Do you want to save manually? (y/n): y
+Document saved successfully!
+Backup save created.
+Closing the text editor...
+System exited.
+
+// Case 2: User chooses not to save
+Document 'ProjectNotes.txt' created.
+Editing document...
+User exits the editor.
+Do you want to save manually? (y/n): n
+Backup save created.
+Closing the text editor...
+System exited.
+
+// Case 3: Unexpected shutdown
+Document 'ProjectNotes.txt' created.
+Editing document...
+Unexpected shutdown detected!
+Auto-saving unsaved changes...
+Backup save created.
+System exited.
+```
+{{< /collapsible-codesection >}}
+
+---
+
+#### Q8.
+
+A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
+
+{{< collapsible-codesection title="Instructions" >}}
+Create a VendingMachine class that allows users to:
+- Insert money into the machine.
+- Select a product (if enough money is inserted).
+- Dispense the product and return any change.
+- Automatically return the money if the user does not select a product before exiting or if the machine shuts down unexpectedly.
+{{< /collapsible-codesection >}}
+
+<br>
+
+{{< collapsible-codesection title="Expected Output" lang="v" >}}
+```v
+// Case 1: Successful Purchase
+Inserted ₹50 into the vending machine.
+Selected: Chips (₹30)
+Product dispensed. Change returned: ₹20
+
+// Case 2: User exits without selecting a product
+Inserted ₹50 into the vending machine.
+User exited without selecting a product.
+Money returned: ₹50
+
+// Case 3: Unexpected Shutdown
+Inserted ₹100 into the vending machine.
+Unexpected shutdown detected! Returning ₹100 to the user.
+System exited.
 ```
 {{< /collapsible-codesection >}}

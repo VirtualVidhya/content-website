@@ -152,6 +152,8 @@ Create a program that:
 - Displays the phone's details.
 
 {{< collapsible-codesection title="Instructions" >}}
+<div class="instruction-section-space"></div>
+
 - Create a class for Mobile-Phone.
 - The class should store the following details:
     - Brand name (e.g., Samsung, Apple)
@@ -192,6 +194,8 @@ Create a program that:
 - Displays the book's details.
 
 {{< collapsible-codesection title="Instructions" >}}
+<div class="instruction-section-space"></div>
+
 - Create a class for Book.
 - The class should store the following details:
     - Title (e.g., "The Book of Mirdad", "Siddhartha")

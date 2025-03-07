@@ -18,43 +18,47 @@ Create a program that:
 - Display the account details.
 
 {{< collapsible-codesection title="Instructions" >}}
-- Create a class for BankAccount to store:
-    - Account Holder's Name (e.g., Ramesh Panipuriwala)
-    - Account Number (e.g., 78563249)
-    - Balance (e.g., rs.50000)
+<div class="instruction-section-space"></div>
 
-- Implement member functions to:
-    - Set account details.
-    - Deposit money into the account.
-    - Withdraw money (if there is enough balance).
+- Create a class for BankAccount to store:
+  - Account Holder's Name (e.g., Ramesh Panipuriwala)
+  - Account Number (e.g., 78563249)
+  - Balance (e.g., rs.50000)
+
+- Implement member functions to: 
+    - Set account details. 
+    - Deposit money into the account. 
+    - Withdraw money (if there is enough balance). 
     - Display the account details.
 {{< /collapsible-codesection >}}
 
 <br>
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
+
 ```v
 // Before transactions:
-Account Details:  
+Account Details:
 Name: Ramesh Panipuriwala
 Account Number: 78563249
-Balance: rs.50000  
+Balance: rs.50000
 
 // After depositing rs.10000:
-Account Details:  
+Account Details:
 Name: Ramesh Panipuriwala
-Account Number: 123456789  
-Balance: rs.60000  
+Account Number: 123456789
+Balance: rs.60000
 
 // After withdrawing rs.20000:
-Account Details:  
+Account Details:
 Name: Ramesh Panipuriwala
-Account Number: 123456789  
-Balance: rs.40000  
+Account Number: 123456789
+Balance: rs.40000
 
 // Attempting to withdraw rs.50000 (insufficient balance):
 Insufficient balance! Withdrawal failed.
 ```
+
 {{< /collapsible-codesection >}}
 
 ---
@@ -66,6 +70,7 @@ What will be the output of the following programs?
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
 - #### I.
+
 ```cpp
 #include <iostream>
 
@@ -97,6 +102,7 @@ int main()
 ```
 
 - #### II.
+
 ```cpp
 #include <iostream>
 
@@ -128,6 +134,7 @@ int main()
 ```
 
 - #### III.
+
 ```cpp
 #include <iostream>
 
@@ -161,6 +168,7 @@ int main()
 ```
 
 - #### IV.
+
 ```cpp
 #include <iostream>
 
@@ -194,6 +202,7 @@ int main()
 ```
 
 - #### V.
+
 ```cpp
 #include <iostream>
 
@@ -235,6 +244,7 @@ What will be the output of the following programs?
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
 - #### I.
+
 ```cpp
 #include <iostream>
 
@@ -255,6 +265,7 @@ int main()
 ```
 
 - #### II.
+
 ```cpp
 #include <iostream>
 
@@ -283,6 +294,7 @@ int main()
 ```
 
 - #### III.
+
 ```cpp
 #include <iostream>
 
@@ -316,6 +328,7 @@ int main()
 ```
 
 - #### IV.
+
 ```cpp
 #include <iostream>
 
@@ -361,6 +374,7 @@ A Smart Thermostat is installed in a home to maintain a comfortable and safe roo
   - The energy-saving mode status, which activates if the temperature is within an efficient range.
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
+
 ```v
 // --- Initializing Thermostat with 18°C ---
 Current Temperature: 18°C
@@ -388,6 +402,7 @@ Current Temperature: 16°C
 Status: Heating Mode ON (Room is too cold)
 Energy-Saving Mode: OFF
 ```
+
 {{< /collapsible-codesection >}}
 
 ---
@@ -399,6 +414,7 @@ What will be the output of the following programs?
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
 - #### I. _**(Adv.)**_
+
 ```cpp
 #include <iostream>
 
@@ -455,6 +471,7 @@ int main()
 ```
 
 - #### II.
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -513,6 +530,7 @@ A Smart Car Energy Management System is designed to optimize battery usage and a
   - The car's status (e.g., low battery warning or driving condition).
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
+
 ```v
 // --- Initializing Smart Car with 50% Battery ---
 Drive Mode: Normal Mode (Balanced)
@@ -555,6 +573,7 @@ Drive Mode: Normal Mode (Balanced)
 Battery Level: 60%
 Car Status: Car is running smoothly.
 ```
+
 {{< /collapsible-codesection >}}
 
 ---
@@ -566,6 +585,7 @@ What will be the output of the following programs?
 (**NOTE:** You have to predict the output result without running/executing the code.)
 
 - #### I.
+
 ```cpp
 #include <iostream>
 
@@ -586,6 +606,7 @@ int main()
 ```
 
 - #### II.
+
 ```cpp
 #include <iostream>
 
@@ -625,19 +646,23 @@ int main()
 A text editor should ensure that users do not lose their progress, whether they manually save or forget to do so. The system should always create a backup in case of an unexpected shutdown.
 
 {{< collapsible-codesection title="Instructions" >}}
+<div class="instruction-section-space"></div>
+
 Design a TextEditor class that manages a document's lifecycle. The system should:
+
 - Display a message when a new document is created.
 - Allow the user to write and edit the document.
 - Provide an option to manually exit the editor.
 - When exiting, prompt the user to save manually or not.
-    - If the user chooses to save, save the document normally.
-    - If the user chooses not to save, still create a backup save for safety.
+  - If the user chooses to save, save the document normally.
+  - If the user chooses not to save, still create a backup save for safety.
 - If the program closes unexpectedly, the destructor should automatically perform a backup save to prevent data loss.
 {{< /collapsible-codesection >}}
 
 <br>
 
 {{< collapsible-codesection title="Expected Output" lang="v" >}}
+
 ```v
 // Case 1: User chooses to manually save
 Document 'ProjectNotes.txt' created.
@@ -666,6 +691,7 @@ Auto-saving unsaved changes...
 Backup save created.
 System exited.
 ```
+
 {{< /collapsible-codesection >}}
 
 ---
@@ -675,7 +701,10 @@ System exited.
 A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
 
 {{< collapsible-codesection title="Instructions" >}}
+<div class="instruction-section-space"></div>
+
 Create a VendingMachine class that allows users to:
+
 - Insert money into the machine.
 - Select a product (if enough money is inserted).
 - Dispense the product and return any change.

@@ -407,7 +407,7 @@ Energy-Saving Mode: OFF
 
 ---
 
-#### Q4.
+#### Q5.
 
 What will be the output of the following programs?
 
@@ -427,8 +427,8 @@ private:
 public:
     User() {}
 
-    int a() const { return m_a; }
-    int b() const { return m_b; }
+    int a() { return m_a; }
+    int b() { return m_b; }
 };
 
 class Default
@@ -440,8 +440,8 @@ private:
 public:
     Default() = default;
 
-    int a() const { return m_a; }
-    int b() const { return m_b; }
+    int a() { return m_a; }
+    int b() { return m_b; }
 };
 
 class Implicit
@@ -451,8 +451,8 @@ private:
     int m_b = 0;
 
 public:
-    int a() const { return m_a; }
-    int b() const { return m_b; }
+    int a() { return m_a; }
+    int b() { return m_b; }
 };
 
 int main()
@@ -513,7 +513,7 @@ int main()
 
 ---
 
-#### Q5.
+#### Q6.
 
 A Smart Car Energy Management System is designed to optimize battery usage and adjust driving modes for efficient performance.
 
@@ -578,7 +578,7 @@ Car Status: Car is running smoothly.
 
 ---
 
-#### Q6.
+#### Q7.
 
 What will be the output of the following programs?
 
@@ -627,7 +627,7 @@ public:
         std::cout << "Destructing User Object: " << m_id << '\n';
     }
 
-    int getID() const { return m_id; }
+    int getID() { return m_id; }
 };
 
 int main()
@@ -641,7 +641,7 @@ int main()
 
 ---
 
-#### Q7.
+#### Q8.
 
 A text editor should ensure that users do not lose their progress, whether they manually save or forget to do so. The system should always create a backup in case of an unexpected shutdown.
 
@@ -696,7 +696,7 @@ System exited.
 
 ---
 
-#### Q8.
+#### Q9.
 
 A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
 

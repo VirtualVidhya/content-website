@@ -164,3 +164,8 @@ body.dark .dynamic-stroke {
 .bold-li > li::marker {
   font-weight: bold;
 }
+
+/* i-frames */
+.scratch-project-preview-container {
+  margin-top: 30px;
+}

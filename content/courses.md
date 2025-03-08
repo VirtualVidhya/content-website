@@ -8,4 +8,6 @@ title: Courses
 
 ### [C++](/c++/)
 
+### [Scratch](/scratch/)
+
 <!-- ### [Python](/python/) -->

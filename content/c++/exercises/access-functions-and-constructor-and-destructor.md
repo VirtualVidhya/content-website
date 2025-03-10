@@ -128,6 +128,7 @@ public:
 int main()
 {
     Foo foo{5, true};
+    foo.print();
 
     return 0;
 }
@@ -301,8 +302,8 @@ int main()
 class Foo
 {
 private:
-    int m_x{};
-    int m_y{};
+    int m_x;
+    int m_y;
 
 public:
     Foo()
@@ -335,8 +336,8 @@ int main()
 class Foo
 {
 private:
-    int m_x{};
-    int m_y{};
+    int m_x;
+    int m_y;
 
 public:
     Foo(int x, int y)

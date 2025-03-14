@@ -512,6 +512,42 @@ int main()
 }
 ```
 
+- #### III.
+
+```cpp
+#include <iostream>
+#include <string>
+
+class Player
+{
+private:
+    std::string m_name;
+    int m_health;
+
+public:
+    Player(std::string name, int health)
+        : m_name{name}, m_health{health}
+    {
+    }
+
+    void print()
+    {
+        std::cout << "Player(" << m_name << ", " << m_health << ")\n";
+    }
+};
+
+int main()
+{
+    Player p1{"Jinie", 100};
+    p1.print();
+
+    Player p2{};
+    p2.print();
+
+    return 0;
+}
+```
+
 ---
 
 #### Q6.

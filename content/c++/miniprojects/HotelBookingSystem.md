@@ -36,8 +36,8 @@ automatically when the system shuts down and reloaded when it restarts to preven
 - ### Main Lessons
 
 <ul class="dash-ul">
-    <li>This project is to practically understand and implement the real world business logic.</li>
-    <li>A basic save and load system.</li>
+    <li>This project is to practically understand and implement the real world business logic</li>
+    <li>A basic save and load system</li>
 </ul>
 
 ---

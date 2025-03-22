@@ -1,7 +1,7 @@
 ---
 title: 'Hotel Booking System'
 draft : false
-weight: 1
+weight: 2
 ---
 
 ---

@@ -34,6 +34,21 @@ int main()
 
 #### Q2.
 
+Write a program that asks the user to enter an integer number, and then enter a second integer number. The program should tell the user what the result of adding and subtracting those two numbers is.
+
+**Expected Output:**
+
+```v
+Enter the first integer number: 6 // (user enters this number on console)
+Enter the second integer number: 4 // (user enters this number on console)
+6 + 4 = 10
+6 - 4 = 2
+```
+
+---
+
+#### Q3.
+
 Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
 
 <ol class="upper-roman-ol bold-li">
@@ -50,7 +65,7 @@ Based on how you should name a variable, indicate whether each variable name men
 
 ---
 
-#### Q3.
+#### Q4.
 
 What will be the output of the following program when run multiple times?
 
@@ -78,7 +93,7 @@ int main()
 
 ---
 
-#### Q4.
+#### Q5.
 
 Write a program that takes an integer number from user and then prints the doubled & tripled value of that number.
 
@@ -92,15 +107,13 @@ Triple of 4: 12
 
 ---
 
-#### Q5.
+#### Q6.
 
-Write a program that asks the user to enter three integer values, then print these values. Add an appropriate comment above function `main()`.
+Write a program that asks the user to enter three integer values, then print the average of these values.
 
 **Expected Output:**
 
 ```v
-// (when run with input values 4, 5, and 6)
-
 Enter three numbers: 4 5 6 // (user enters these numbers on console)
-You entered 4, 5, and 6.
+The average of  4, 5, and 6 is 5.
 ```

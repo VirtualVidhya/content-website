@@ -183,5 +183,5 @@ Write a program that asks the user to enter three integer values, then print the
 
 ```v
 Enter three numbers: 4 5 6 // (user enters these numbers on console)
-The average of  4, 5, and 6 is 5.
+The average of 4, 5, and 6 is 5.
 ```

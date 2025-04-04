@@ -120,6 +120,22 @@ What will be the output of the following programs?
 int main()
 {
     int a = 5;
+    b = a;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
 
     std::cout << "a: " << a << '\n';
 
@@ -133,7 +149,7 @@ int main()
 }
 ```
 
-- #### II.
+- #### III.
 ```cpp
 #include <iostream>
 
@@ -157,7 +173,7 @@ int main()
 }
 ```
 
-- #### III.
+- #### IV.
 ```cpp
 int main()
 {

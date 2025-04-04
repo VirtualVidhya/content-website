@@ -157,6 +157,22 @@ int main()
 }
 ```
 
+- #### III.
+```cpp
+int main()
+{
+    int a = 5;
+    int b = a + 10;
+    int c = b + 10;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+    std::cout << "c: " << c << '\n';
+
+    return 0;
+}
+```
+
 ---
 
 #### Q7.

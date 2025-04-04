@@ -59,7 +59,7 @@ Based on how you should name a variable, indicate whether each variable name men
     <li>int TotalCustomers;</li>
     <li>int void;</li>
     <li>int numFruit;</li>
-    <li>int 3some;</li>
+    <li>int 3subject;</li>
     <li>int meters_of_pipe;</li>
 </ol>
 
@@ -108,6 +108,58 @@ Triple of 4: 12
 ---
 
 #### Q6.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+
+    std::cout << "a: " << a << '\n';
+
+    int b = a;
+    a = 7;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+
+    std::cout << "a: " << a << '\n';
+
+    int b = 2 * a;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    int a = 2 * b;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+---
+
+#### Q7.
 
 Write a program that asks the user to enter three integer values, then print the average of these values.
 

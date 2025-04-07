@@ -23,43 +23,58 @@ Pick the appropriate data type for a variable in each of the following situation
 
 #### Q2.
 
-Consider the following program:
+Write a program where the user is asked to enter marks for 5 subjects. Calculate and print the total marks and percentage.
 
-```cpp
-#include <iostream>
+**Expected Output:**
 
-int main()
-{
-    std::cout << "Enter a number: ";
-    int x;
-    std::cin >> x;
-    std::cout << "You entered " << x << '\n';
+```v
+Enter marks for 5 subjects: 85 90 78 92 88
 
-    return 0;
-}
+Total marks: 433
+Percentage: 86.60%
 ```
-
-The program expects you to enter an integer value, that user input value will be put into an integer variabled as `x`.
-
-Predict the output that results when you enter the following types of input:
-
-(**NOTE:** You have to predict the output result without running/executing the code.)
-
-<ol class="upper-roman-ol bold-li">
-    <li> A letter, such as h. </li>
-    <li> A number with a fractional part (e.g. 3.2). Try numbers with fractional parts less than 0.5 and greater than 0.5 (e.g. 3.2 and 3.7). </li>
-    <li> A small negative integer, such as -3. </li>
-    <li> A word, such as Hello. </li>
-    <li> A really big number (at least 300 crores i.e. 3000000000 (3 with nine zeros)). </li>
-    <li> A small number followed by some letters, such as 123abc. </li>
-    <li> A few letters followed by a small number, such as abc123. </li>
-    <li> +5 (three spaces, followed by a plus symbol, and a 5). </li>
-    <li> 5b6. </li>
-</ol>
 
 ---
 
 #### Q3.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+```cpp
+#include <iostream>
+
+int main() 
+{
+    int a = b;
+    int b = 2;
+    
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+    
+    return 0;
+}
+```
+
+---
+
+#### Q4.
+
+Write a program where the user is asked to enter distance (in kilometers) and time (in hours). Print the calculated speed.
+
+**Expected Output:**
+
+```v
+Enter distance (in km): 120
+Enter time (in hours): 2
+
+Speed: 60 km/h
+```
+
+---
+
+#### Q5.
 
 What will be the output of the following programs?
 
@@ -163,7 +178,24 @@ What will be the output of the following programs?
 
 ---
 
-#### Q4.
+#### Q6.
+
+Write a program where the user is asked to enter their weight (in kg) and height (in meters). Print the value of BMI.
+
+The formula for BMI is: `BMI = weight / (height * height)`
+
+**Expected Output:**
+
+```v
+Enter weight (kg): 70
+Enter height (m): 1.75
+
+Your BMI: 22.86
+```
+
+---
+
+#### Q7.
 
 What will be the output of the following programs?
 
@@ -237,7 +269,23 @@ What will be the output of the following programs?
 
 ---
 
-#### Q5.
+#### Q8.
+
+Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
+
+(**NOTE**: User should be able to give their response in form of `true` or `false` keywords and the response should also be printed in that form.)
+
+**Expected Output:**
+
+```v
+Would you like to give a tip: false // (user input)
+
+Is user willing to give a tip: false
+```
+
+---
+
+#### Q9.
 
 Predict the output of the following programs for the given input values.
 
@@ -349,23 +397,7 @@ Predict the output of the following programs for the given input values.
 
 ---
 
-#### Q6.
-
-Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
-
-(**NOTE**: User should be able to give their response in form of `true` or `false` keywords and the response should also be printed in that form.)
-
-**Expected Output:**
-
-```v
-Would you like to give a tip: false // (user input)
-
-Is user willing to give a tip: false
-```
-
----
-
-#### Q7.
+#### Q10.
 
 Write a program where the user is asked to enter a single character. Print the value of the character and its ASCII code, using `static_cast`.
 
@@ -378,23 +410,38 @@ You entered 'A', which has an ASCII code 65.
 
 ---
 
-#### Q8.
+#### Q11.
 
-What will be the output of the following programs?
-
-(**NOTE:** You have to predict the output result without running/executing the code.)
+Consider the following program:
 
 ```cpp
 #include <iostream>
 
-int main() 
+int main()
 {
-    int a = b;
-    int b = 2;
-    
-    std::cout << "a: " << a << '\n';
-    std::cout << "b: " << b << '\n';
-    
+    std::cout << "Enter a number: ";
+    int x;
+    std::cin >> x;
+    std::cout << "You entered " << x << '\n';
+
     return 0;
 }
 ```
+
+The program expects you to enter an integer value, that user input value will be put into an integer variabled as `x`.
+
+Predict the output that results when you enter the following types of input:
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+<ol class="upper-roman-ol bold-li">
+    <li> A letter, such as h. </li>
+    <li> A number with a fractional part (e.g. 3.2). Try numbers with fractional parts less than 0.5 and greater than 0.5 (e.g. 3.2 and 3.7). </li>
+    <li> A small negative integer, such as -3. </li>
+    <li> A word, such as Hello. </li>
+    <li> A really big number (at least 300 crores i.e. 3000000000 (3 with nine zeros)). </li>
+    <li> A small number followed by some letters, such as 123abc. </li>
+    <li> A few letters followed by a small number, such as abc123. </li>
+    <li> +5 (three spaces, followed by a plus symbol, and a 5). </li>
+    <li> 5b6. </li>
+</ol>

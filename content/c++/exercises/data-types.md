@@ -66,10 +66,10 @@ Write a program where the user is asked to enter distance (in kilometers) and ti
 **Expected Output:**
 
 ```v
-Enter distance (in km): 120
-Enter time (in hours): 2
+Enter distance (in km): 110
+Enter time (in hours): 4
 
-Speed: 60 km/h
+Speed: 27.5 km/h
 ```
 
 ---
@@ -251,7 +251,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### IV.
+- #### IV. _**(Adv.)**_
     ```cpp
     #include <iostream>
 

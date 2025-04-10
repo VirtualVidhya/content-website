@@ -197,6 +197,43 @@ Your BMI: 22.86
 
 #### Q7.
 
+You are part of a school where students are grouped into divisions like A, B, C, etc.
+Write a program that asks the user to enter the division they are in (as a single character), and then prints the entered division.
+
+**Expected Output:**
+
+```v
+Enter your division (A, B, C, etc): B   // (user input) 
+You are in Division B.
+```
+
+---
+
+#### Q8.
+
+Some forms ask you to mention whether you are a student or not.
+Write a program that asks the user if they are a student, stores the answer, and displays the same.
+
+Make sure your program works with both types of responses:
+- 1 for Yes and 0 for No
+- true for Yes and false for No
+
+**Expected Output:**
+
+```v
+// case: 1
+Are you a student? (1 for Yes, 0 for No): 1   // (user input) 
+Student status: 1
+
+// case: 2
+Are you a student? (true for Yes, false for No): false   // (user input)
+Student status: false
+```
+
+---
+
+#### Q9.
+
 What will be the output of the following programs?
 
 (**NOTE:** You have to predict the output result without running/executing the code.)
@@ -269,7 +306,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q8.
+#### Q10.
 
 Write a program that asks a user whether they want to give a tip at the restaurant or not and then prints their response on the bill.
 
@@ -278,14 +315,14 @@ Write a program that asks a user whether they want to give a tip at the restaura
 **Expected Output:**
 
 ```v
-Would you like to give a tip: false // (user input)
+Would you like to give a tip: false   // (user input)
 
 Is user willing to give a tip: false
 ```
 
 ---
 
-#### Q9.
+#### Q11.
 
 Predict the output of the following programs for the given input values.
 
@@ -397,20 +434,20 @@ Predict the output of the following programs for the given input values.
 
 ---
 
-#### Q10.
+#### Q12.
 
 Write a program where the user is asked to enter a single character. Print the value of the character and its ASCII code, using `static_cast`.
 
 **Expected Output:**
 
 ```v
-Enter a single character: A
+Enter a single character: A   // (user input)
 You entered 'A', which has an ASCII code 65.
 ```
 
 ---
 
-#### Q11.
+#### Q13.
 
 Consider the following program:
 

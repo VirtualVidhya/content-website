@@ -1,7 +1,7 @@
 ---
 title: "Access functions, Constructor & Destructor (OOP)"
 draft: false
-weight: 15
+weight: 16
 ---
 
 ---

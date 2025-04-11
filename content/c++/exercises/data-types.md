@@ -215,8 +215,8 @@ Some forms ask you to mention whether you are a student or not.
 Write a program that asks the user if they are a student, stores the answer, and displays the same.
 
 Make sure your program works with both types of responses:
-- 1 for Yes and 0 for No
-- true for Yes and false for No
+- `1` for Yes and `0` for No
+- `true` for Yes and `false` for No
 
 **Expected Output:**
 

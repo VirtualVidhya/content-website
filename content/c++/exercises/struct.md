@@ -9,7 +9,8 @@ weight: 14
 #### Q1.
 
 A small bookstore wants to keep a simple record of a book.
-Write a program that stores the details of a book — its title, author name, price, and category 
+
+Write a program that stores the details of a book - its title, author name, price and category 
 (a predefined set of categories such as Fiction, Non-Fiction, Science, History etc.).
 Once the book details are stored, display them on the screen.
 

@@ -175,13 +175,14 @@ What will be the output of the following programs?
 
 #### Q2.
 
-Write a program that takes three integer numbers from user and then prints the average of those three numbers.
+Ask the user to enter two integers. Display the remainder when the first number is divided by the second.
 
 **Expected Output:**
 
 ```v
-Enter three numbers: 5 9 16 // (user enters these numbers on console)
-The average of 5, 9, and 16 is 10. // (5 + 9 + 16) / 3 = 10
+Enter first number: 10   // (user input)
+Enter second number: 3   // (user input)  
+Remainder: 1
 ```
 
 ---

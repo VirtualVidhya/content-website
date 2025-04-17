@@ -218,14 +218,18 @@ What will be the output of the following programs?
 
 #### Q4.
 
-Ask the user to enter two integers. Display the remainder when the first number is divided by the second.
+There are 10 seats placed in a circle for an event, numbered from 1 to 10. People are arriving and standing in a waiting line (queue). Each person is given a seat based on their position in the line.
+
+Write a program where the user enters their position in the waiting line (queue) and the program tells them which seat number they will get.
+
+(For e.g. If someone is the 11th in line, they should get seat 1 again (because the seats are arranged in a circle). If someone is 12th, they get seat 2, and so on.)
 
 **Expected Output:**
 
 ```v
-Enter first number: 10   // (user input)
-Enter second number: 3   // (user input)  
-Remainder: 1
+Enter your queue number: 23   // (user input)
+
+Your seat number is: 3
 ```
 
 ---

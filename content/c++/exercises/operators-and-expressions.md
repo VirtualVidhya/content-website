@@ -100,6 +100,49 @@ What will be the output of the following programs?
 
     int main() 
     {
+        int x = 50;
+        float y = 4.5;
+
+        std::cout << x % y << '\n';
+        
+        return 0;
+    }
+    ```
+
+---
+
+#### Q2.
+
+Write a program to calculate the perimeter and the area of a rectangle.
+Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
+
+(**NOTE:** You can safely assume that the value of length and width will always be an integer.)
+
+**Expected Output:**
+
+```v
+Enter the length & width of a rectangle: 10 5 // (user input)
+Perimeter: 30
+Area: 50
+
+// Perimeter = 2 * (l + w) = 2 * (10 + 5) = 30
+// Area = l * w = 10 * 5 = 50
+```
+
+---
+
+#### Q3.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
         int x = 10;
         int y = 5;
 
@@ -114,7 +157,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### VII. _**(Adv.)**_
+- #### II. _**(Adv.)**_
     ```cpp
     #include <iostream>
 
@@ -131,7 +174,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### VIII.
+- #### III.
     ```cpp
     #include <iostream>
 
@@ -150,7 +193,7 @@ What will be the output of the following programs?
     }
     ```
 
-- #### IX.
+- #### IV.
     ```cpp
     #include <iostream>
 
@@ -173,7 +216,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q2.
+#### Q4.
 
 Ask the user to enter two integers. Display the remainder when the first number is divided by the second.
 
@@ -187,27 +230,7 @@ Remainder: 1
 
 ---
 
-#### Q3.
-
-Write a program to calculate the perimeter and the area of a rectangle.
-Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
-
-(**NOTE:** You can safely assume that the value of length and width will always be an integer.)
-
-**Expected Output:**
-
-```v
-Enter the length & width of a rectangle: 10 5 // (user input)
-Perimeter: 30
-Area: 50
-
-// Perimeter = 2 * (l + w) = 2 * (10 + 5) = 30
-// Area = l * w = 10 * 5 = 50
-```
-
----
-
-#### Q4.
+#### Q5.
 
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
@@ -231,7 +254,7 @@ Total Bill: 153.4
 
 ---
 
-#### Q5.
+#### Q6.
 
 What will be the output of the following program?
 
@@ -260,7 +283,7 @@ int main()
 
 ---
 
-#### Q6.
+#### Q7.
 
 What will be the output of the following program?
 
@@ -292,7 +315,7 @@ int main()
 
 ---
 
-#### Q7.
+#### Q8.
 
 Write a program that takes a value of radius from user, then find the circumference and area of a circle for a given radius.
 
@@ -311,9 +334,13 @@ Area: 78.5
 
 ---
 
-#### Q8.
+#### Q9.
 
 Write a program that takes a value of temperature in Celsius from user, then convert it into Kelvin and Fahrenheit.
+
+The formulas for Celsius to Kelvin and Celsius to Fahrenheit are -
+- <code>Kelvin = Celsius + 273</code>
+- <code>Fahrenheit = 9/5 * Celsius + 32</code>
 
 **Expected Output:**
 
@@ -328,7 +355,7 @@ temperature in Fahrenheit: 86
 
 ---
 
-#### Q9.
+#### Q10.
 
 Population growth can be calculated by looking at the change in population over time. The formula for population growth is -
 

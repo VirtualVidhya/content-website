@@ -21,9 +21,6 @@ Build a text‑based Hangman game where the player first selects a word category
 - Track wrong guesses and, after each miss, add one part to the ASCII‑art hangman.
 - Always show: the current word state, letters guessed so far, and the evolving hangman drawing.
 - The player wins by uncovering the entire word before the hangman is complete; loses if the figure is finished first.
-
-<br>
-
 - ASCII Art Example:
 ```v
 Initial Stage:
@@ -44,6 +41,8 @@ Final Stage:
       |
 =========
 ```
+
+- The parts of this stick figure (i.e. head, body, left-right arm, left-right leg) can be broken into stages and revealed one piece per wrong guess.
 {{< /collapsible-codesection >}}
 
 ---

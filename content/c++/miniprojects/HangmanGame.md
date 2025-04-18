@@ -1,0 +1,68 @@
+---
+title: "Hangman Game"
+draft: false
+weight: 2
+---
+
+---
+
+- ### Task
+
+Build a text‑based Hangman game where the player first selects a word category (e.g., Animals, Countries, Fruits etc.). The program then picks a random word from a pre-defined set of words for that category and the player guesses it one letter at a time. After each wrong guess, display an ASCII‑art stick figure that progresses toward a full figure (i.e. hangman). The game ends when the player either uncovers the entire word or the stick figure is fully uncovered i.e. "hung".
+
+{{< collapsible-codesection title="Instructions" >}}
+
+<div class="instruction-section-space"></div>
+
+- Let the player choose from a few word categories.
+- The program secretly picks one word at random from the chosen category.
+- Display the word as underscores (one for each letter).
+- Each turn the player guesses a single letter; correct letters are revealed in place.
+- Track wrong guesses and, after each miss, add one part to the ASCII‑art hangman.
+- Always show: the current word state, letters guessed so far, and the evolving hangman drawing.
+- The player wins by uncovering the entire word before the hangman is complete; loses if the figure is finished first.
+
+<br>
+
+- ASCII Art Example:
+```v
+Initial Stage:
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Final Stage:
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+```
+{{< /collapsible-codesection >}}
+
+---
+
+- ### Main Lessons
+
+<ul class="dash-ul">
+    <li>Choosing randomly from a predefined set of words</li>
+    <li>Managing and updating multiple game states</li>
+    <li>Validating and processing single‑letter input</li>
+    <li>Displaying dynamic ASCII graphics for feedback</li>
+</ul>
+
+---
+
+- ### Guidelines
+
+Feel free to implement additional features to enhance the gameplay such as,
+<ul class="dash-ul">
+    <li>A “hint” feature that reveals one letter after a threshold of wrong guesses</li>
+    <li>A round‑counter and cumulative score across multiple games</li>
+</ul>

@@ -354,7 +354,7 @@ temperature in Kelvin: 303
 temperature in Fahrenheit: 86
 
 // Kelvin = Celsius + 273 = 30 + 273 = 303
-// Fahrenheit = (9/5) * Celsius + 32 = (9/5) * 30 + 32 = 86
+// Fahrenheit = 9/5 * Celsius + 32 = 9/5 * 30 + 32 = 86
 ```
 
 ---

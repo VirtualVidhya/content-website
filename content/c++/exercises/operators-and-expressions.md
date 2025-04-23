@@ -361,21 +361,23 @@ temperature in Fahrenheit: 86
 
 #### Q10.
 
-Population growth can be calculated by looking at the change in population over time. The formula for population growth is -
+You’re helping a government planning department analyze how a country’s population is expected to grow over time. Based on the current population, an estimated annual growth rate and a time period in years, you need to calculate what the population will be at the end of that period.
 
-<code>P = P0 x (1 + r)<sup>t</sup></code>
+{{< newtabref  href="https://calculator.academy/population-growth-calculator/" title="Population growth" >}} can be calculated by looking at the change in population over time. The formula for population growth is -
+
+<code>pt = p0 x (1 + r)<sup>t</sup></code>
 
 Where, 
-- `P` = Total population after time t
-- `P0` = Starting population
-- `r` = Percentage rate of the growth
-- `t` = time in years or hours
+- `pt` - total population after time t
+- `p0` - initial population
+- `r` - rate of growth
+- `t` - total time in years
 
 **Expected Output:**
 
 ```v
-Enter the starting population (in crores): 142
-Enter the percentage rate of growth (in %): 0.875
+Enter the initial population (in crores): 142
+Enter the rate of growth (in %): 0.875
 Enter the time (in years): 5
 
 Total population after given time (in crores): 148.322

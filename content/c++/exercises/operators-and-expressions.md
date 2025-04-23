@@ -252,7 +252,7 @@ GST Amount : 23.4
 Total Bill: 153.4
 
 // Total Cost = 50 + 20 + 60 = 130
-// GST Amount = Total Cost * (18 / 100) = 130 * (18 / 100) = 23.4
+// GST Amount = Total Cost * 18 / 100 = 130 * 18 / 100 = 23.4
 // Total Bill = Total Cost + GST Amount = 130 + 23.4 = 153.4
 ```
 

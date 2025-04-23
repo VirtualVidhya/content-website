@@ -247,7 +247,7 @@ Write a program that takes an integer from user and checks if that number is div
 **Expected Output:**
 
 ```v
-Enter a number: 98
+Enter a number: 98   // (user input)
 
 98 is not divisible by 3.
 ```
@@ -263,7 +263,7 @@ Write a program that takes an integer from user and checks if that number is eve
 **Expected Output:**
 
 ```v
-Enter a number: 9
+Enter a number: 9   // (user input)
 
 9 is an odd number.
 ```
@@ -284,7 +284,7 @@ Write a program that takes student percentage as user input and gives student's 
 **Expected Output:**
 
 ```v
-Enter student percentage: 65
+Enter student percentage: 65   // (user input)
 
 Result: Pass with Merit
 ```
@@ -305,7 +305,7 @@ Here, the list for price per bucket-size is given -
 **Expected Output:**
 
 ```v
-Enter the popcorn-bucket size: M
+Enter the popcorn-bucket size: M   // (user input)
 
 Price: 100
 ```
@@ -323,8 +323,8 @@ Write a program that checks if it's a good condition for paragliding or not base
 **Expected Output:**
 
 ```v
-Is it raining? : false
-Wind speeds (km/h) : 12
+Is it raining? : false   // (user input)
+Wind speeds (km/h) : 12   // (user input)
 
 It's a good condition for paragliding.
 ```
@@ -340,10 +340,10 @@ Take 2 integer numbers and the operator sign as input from the user, then give t
 **Expected Output:**
 
 ```v
-first_number : 3
-second_number : 5
+first_number : 3   // (user input)
+second_number : 5   // (user input)
 
-operator_chosen : *
+operator_chosen : *   // (user input)
 
 output: 5 * 3 = 15
 ```

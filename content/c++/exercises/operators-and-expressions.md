@@ -133,91 +133,6 @@ Area: 50
 
 #### Q3.
 
-What will be the output of the following programs?
-
-(**NOTE:** You have to predict the output result without running/executing the code.)
-
-- #### I.
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        int x = 10;
-        int y = 5;
-
-        std::cout << std::boolalpha;
-
-        std::cout << ((x - 3) == (y + 2)) << '\n';
-        std::cout << ((x - 5) >= (y + 2)) << '\n';
-        std::cout << ((x - 4) != (y + 2)) << '\n';
-        std::cout << !(y - 5) << '\n';
-        
-        return 0;
-    }
-    ```
-
-- #### II. _**(Adv.)**_
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        double d1 = (100.0 - 99.99);
-        double d2 = (10.0 - 9.99);
-
-        std::cout << (d1 == d2) << '\n';
-        std::cout << (d1 < d2) << '\n';
-        std::cout << (d1 > d2) << '\n';
-
-        return 0;
-    }
-    ```
-
-- #### III.
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        int x = 10;
-        int y = 5;
-        int z = 15;
-
-        std::cout << std::boolalpha;
-
-        std::cout << ((x > 20) && (y < 10)) << '\n';
-        std::cout << ((x > 20) || (y < 10)) << '\n';
-        
-        return 0;
-    }
-    ```
-
-- #### IV.
-    ```cpp
-    #include <iostream>
-
-    int main() 
-    {
-        bool w = true;
-        bool x = false;
-        bool y = false;
-        bool z = false;
-        
-        std::cout << std::boolalpha;
-        
-        std::cout << (w || x || y && z) << '\n';
-        std::cout << ((w || x || y) && z) << '\n';
-        std::cout << (w || x || y) && z << '\n';
-        
-        return 0;
-    }
-    ```
-
----
-
-#### Q4.
-
 There are 10 seats placed in a circle for an event, numbered from 1 to 10. People are arriving and standing in a waiting line (queue). Each person is given a seat based on their position in the line.
 
 Write a program where the user enters their position in the waiting line (queue) and the program tells them which seat number they will get.
@@ -234,7 +149,7 @@ Your seat number is: 3
 
 ---
 
-#### Q5.
+#### Q4.
 
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
 - print the **Total Cost** of the items
@@ -258,7 +173,7 @@ Total Bill: 153.4
 
 ---
 
-#### Q6.
+#### Q5.
 
 What will be the output of the following program?
 
@@ -287,7 +202,7 @@ int main()
 
 ---
 
-#### Q7.
+#### Q6.
 
 What will be the output of the following program?
 
@@ -319,7 +234,7 @@ int main()
 
 ---
 
-#### Q8.
+#### Q7.
 
 Write a program that takes a value of radius from user, then find the circumference and area of a circle for a given radius.
 
@@ -338,7 +253,7 @@ Area: 78.5
 
 ---
 
-#### Q9.
+#### Q8.
 
 Write a program that takes a value of temperature in Celsius from user, then convert it into Kelvin and Fahrenheit.
 
@@ -359,7 +274,7 @@ temperature in Fahrenheit: 86
 
 ---
 
-#### Q10.
+#### Q9.
 
 You’re helping a government planning department analyze how a country’s population is expected to grow over time. Based on the current population, an estimated annual growth rate and a time period in years, you need to calculate what the population will be at the end of that period.
 
@@ -382,3 +297,88 @@ Enter the time (in years): 5
 
 Total population after given time (in crores): 148.322
 ```
+
+---
+
+#### Q10.
+
+What will be the output of the following programs?
+
+(**NOTE:** You have to predict the output result without running/executing the code.)
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int x = 10;
+        int y = 5;
+
+        std::cout << std::boolalpha;
+
+        std::cout << ((x - 3) == (y + 2)) << '\n';
+        std::cout << ((x - 5) >= (y + 2)) << '\n';
+        std::cout << ((x - 4) != (y + 2)) << '\n';
+        std::cout << !(y - 5) << '\n';
+        
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int x = 10;
+        int y = 5;
+        int z = 15;
+
+        std::cout << std::boolalpha;
+
+        std::cout << ((x > 20) && (y < 10)) << '\n';
+        std::cout << ((x > 20) || (y < 10)) << '\n';
+        
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        bool w = true;
+        bool x = false;
+        bool y = false;
+        bool z = false;
+        
+        std::cout << std::boolalpha;
+        
+        std::cout << (w || x || y && z) << '\n';
+        std::cout << ((w || x || y) && z) << '\n';
+        std::cout << (w || x || y) && z << '\n';
+        
+        return 0;
+    }
+    ```
+
+- #### IV. _**(Adv.)**_
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        double d1 = (100.0 - 99.99);
+        double d2 = (10.0 - 9.99);
+
+        std::cout << (d1 == d2) << '\n';
+        std::cout << (d1 < d2) << '\n';
+        std::cout << (d1 > d2) << '\n';
+
+        return 0;
+    }
+    ```

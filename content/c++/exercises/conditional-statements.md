@@ -64,6 +64,43 @@ What will be the output in the console for the programs given above?
 
 #### Q2.
 
+At a stationery shop, pens are packed in boxes of five. Write a program that asks the user for the total number of pens they have and then 
+tells the user whether all the pens will fit into complete boxes or how many pens will be left over after packing.
+
+**Expected Output:**
+
+```v
+// case 1
+Enter the total number of pens sold today: 20   // user input
+All pens fit into complete boxes - no leftovers!
+
+// case 2
+Enter the total number of pens sold today: 23   // user input
+You have 4 pen(s) left unpacked.
+```
+
+---
+
+#### Q3.
+
+The bank has a policy where if a customer deposits ₹1000 or more in a single day, they don’t have to pay any transaction fee. However, if the deposit amount is less than ₹1000, a small transaction fee will be applied. Write a program that asks the customer how much amount they want to deposit and based on the amount, tell them whether a transaction fee will be applied or not.
+
+**Expected Output:**
+
+```v
+// case 1
+Enter total deposits today: 750   // user input
+A transaction fee will be applied.
+
+// case 2
+Enter total deposits today: 2650   // user input
+A transaction fee will not be applied.
+```
+
+---
+
+#### Q4.
+
 Consider the following program:
 
 ```cpp
@@ -105,7 +142,40 @@ What will be the output in the console?
 
 ---
 
-#### Q3.
+#### Q5.
+
+At the airport cargo counter, packages are checked based on their size. Instead of actual weight, they use a volumetric weight formula to decide if the package is too heavy to ship. Write a program that ask the user to enter the length, breadth, and height of the package in cm, then calculate the volumetric weight in kg and
+finally tells if the package is accepted for shipping or not.
+  
+- The formula for the calculation is -
+
+  `Volumetric Weight = (Length × Breadth × Height) / 5000`
+
+- If the package's volumetric weight is more than 20 kg then it's considered too heavy for air shipping.
+
+**Expected Output:**
+
+```v
+// case 1
+Enter the length of the package (in cm): 40   // user input
+Enter the breadth of the package (in cm): 30   // user input
+Enter the height of the package (in cm): 20   // user input
+
+Volumetric weight: 4.8 kg  
+Package accepted for shipping.
+
+// case 2
+Enter the length of the package (in cm): 100   // user input
+Enter the breadth of the package (in cm): 80   // user input
+Enter the height of the package (in cm): 50   // user input
+
+Volumetric weight: 80.0 kg  
+Package too heavy for air shipping!
+```
+
+---
+
+#### Q6.
 
 What will be the output of the following programs?
 
@@ -169,7 +239,23 @@ int main()
 
 ---
 
-#### Q4.
+#### Q7.
+
+Write a program that takes an integer from user and checks if that number is even or odd.
+
+(**NOTE:** The conditional logic of the program needs to be written using ternary operator here.)
+
+**Expected Output:**
+
+```v
+Enter a number: 9   // (user input)
+
+9 is an odd number.
+```
+
+---
+
+#### Q8.
 
 What will be the output of the following programs?
 
@@ -240,37 +326,7 @@ int main()
 
 ---
 
-#### Q5.
-
-Write a program that takes an integer from user and checks if that number is divisible by 3 or not.
-
-**Expected Output:**
-
-```v
-Enter a number: 98   // (user input)
-
-98 is not divisible by 3.
-```
-
----
-
-#### Q6.
-
-Write a program that takes an integer from user and checks if that number is even or odd.
-
-(**NOTE:** The conditional logic of the program needs to be written using ternary operator here.)
-
-**Expected Output:**
-
-```v
-Enter a number: 9   // (user input)
-
-9 is an odd number.
-```
-
----
-
-#### Q7.
+#### Q9.
 
 A college professor wants to make a student result declaration system.
 Write a program that takes student percentage as user input and gives student's result status.
@@ -291,7 +347,7 @@ Result: Pass with Merit
 
 ---
 
-#### Q8.
+#### Q10.
 
 Create a system to calculate popcorn prices based on the bucket size customer asks for:
 
@@ -312,7 +368,7 @@ Price: 100
 
 ---
 
-#### Q9.
+#### Q11.
 
 For a good and safe paragliding experience as a begineer, certain weather conditions need to be met.
 - No raining
@@ -331,7 +387,7 @@ It's a good condition for paragliding.
 
 ---
 
-#### Q10.
+#### Q12.
 
 Create a program to make a mini-calculator.
 

@@ -71,11 +71,11 @@ tells the user whether all the pens will fit into complete boxes or how many pen
 
 ```v
 // case 1
-Enter the total number of pens sold today: 20   // user input
+Enter the total number of pens: 20   // user input
 All pens fit into complete boxes - no leftovers!
 
 // case 2
-Enter the total number of pens sold today: 23   // user input
+Enter the total number of pens: 64   // user input
 You have 4 pen(s) left unpacked.
 ```
 
@@ -364,8 +364,8 @@ Write a program that takes student percentage as user input and gives student's 
 
 - If a student has less than 35% then he/she fails.
 - If a student has more than that there are different achievement levels.
-    - for more than 75% : Pass with "Distinction"
-    - 60-75% : Pass with "Merit"
+    - for more than 75% : Pass with Distinction
+    - 60-75% : Pass with Merit
     - 35-60% : Pass
 
 **Expected Output:**
@@ -491,3 +491,11 @@ Electricity Bill: ₹950
 // Remaining 50 units: 50 × ₹5 = ₹250
 // Total = ₹300 + ₹400 + ₹250 = ₹950
 ```
+
+<!-- ---
+
+#### Q16.
+
+At an international airport’s travel help desk, travelers often want to know the value of their Indian Rupees (INR) in different currencies.
+Write a program that helps a traveler by converting their amount in INR into a currency of their choice. -->
+

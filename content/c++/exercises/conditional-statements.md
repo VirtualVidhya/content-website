@@ -147,9 +147,7 @@ What will be the output in the console?
 At the airport cargo counter, packages are checked based on their size. Instead of actual weight, they use a volumetric weight formula to decide if the package is too heavy to ship. Write a program that ask the user to enter the length, breadth, and height of the package in cm, then calculate the volumetric weight in kg and
 finally tells if the package is accepted for shipping or not.
   
-- The formula for the calculation is -
-
-  `Volumetric Weight = (Length × Breadth × Height) / 5000`
+- The formula is: `Volumetric Weight = (Length × Breadth × Height) / 5000`
 
 - If the package's volumetric weight is more than 20 kg then it's considered too heavy for air shipping.
 
@@ -243,7 +241,7 @@ int main()
 
 Write a program that takes an integer from user and checks if that number is even or odd.
 
-(**NOTE:** The conditional logic of the program needs to be written using ternary operator here.)
+(**NOTE:** The conditional logic of the program needs to be written using `ternary operator` here.)
 
 **Expected Output:**
 
@@ -356,7 +354,7 @@ Here, the list for price per bucket-size is given -
 - ‘M’ : price is rs.100
 - ‘S’ : price is rs.50
 
-(NOTE: The conditional logic of the program needs to be written using `switch` here.)
+(**NOTE:** The conditional logic of the program needs to be written using `switch` here.)
 
 **Expected Output:**
 

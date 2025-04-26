@@ -148,7 +148,6 @@ At the airport cargo counter, packages are checked based on their size. Instead 
 finally tells if the package is accepted for shipping or not.
   
 - The formula is: `Volumetric Weight = (Length × Breadth × Height) / 5000`
-
 - If the package's volumetric weight is more than 20 kg then it's considered too heavy for air shipping.
 
 **Expected Output:**
@@ -246,7 +245,7 @@ Write a program that takes an integer from user and checks if that number is eve
 **Expected Output:**
 
 ```v
-Enter a number: 9   // (user input)
+Enter a number: 9   // user input
 
 9 is an odd number.
 ```
@@ -254,6 +253,40 @@ Enter a number: 9   // (user input)
 ---
 
 #### Q8.
+
+At the college library, books can be borrowed and returned by students. To manage everything efficiently, they need a system to check students' borrowing history and pending dues.
+Write a program that,
+
+- Asks the user if they have borrowed any book or not.
+- If they haven’t borrowed any book, they are immediately allowed to borrow a new one.
+- If they have borrowed a book, the system then asks how many days it has been since they borrowed it.
+    - If the number of days is 14 or less, they are allowed to borrow another book.
+    - If the number of days is more than 14, they are told the number of overdue days and asked to pay a fine of ₹1 per day before they can borrow a new book.
+
+Write a program for this.
+
+**Expected Output:**
+
+```v
+// case 1
+Did you borrow any book previously? (yes/no): no   // user input
+You can borrow a new book. No pending returns.
+
+// case 2
+Did you borrow any book previously? (yes/no): yes   // user input
+How many days ago did you borrow the book?: 10   // user input
+Book returned within allowed time. You can borrow a new book.
+
+// case 3
+Did you borrow any book previously? (yes/no): yes   // user input
+How many days ago did you borrow the book?: 20   // user input
+Your book return is overdue. You have a pending fine of ₹6.
+Please clear the fine before borrowing a new book.
+```
+
+---
+
+#### Q9.
 
 What will be the output of the following programs?
 
@@ -324,7 +357,7 @@ int main()
 
 ---
 
-#### Q9.
+#### Q10.
 
 A college professor wants to make a student result declaration system.
 Write a program that takes student percentage as user input and gives student's result status.
@@ -338,14 +371,14 @@ Write a program that takes student percentage as user input and gives student's 
 **Expected Output:**
 
 ```v
-Enter student percentage: 65   // (user input)
+Enter student percentage: 65   // user input
 
 Result: Pass with Merit
 ```
 
 ---
 
-#### Q10.
+#### Q11.
 
 Create a system to calculate popcorn prices based on the bucket size customer asks for:
 
@@ -359,16 +392,40 @@ Here, the list for price per bucket-size is given -
 **Expected Output:**
 
 ```v
-Enter the popcorn-bucket size: M   // (user input)
+Enter the popcorn-bucket size: M   // user input
 
 Price: 100
 ```
 
 ---
 
-#### Q11.
+#### Q12.
 
-For a good and safe paragliding experience as a begineer, certain weather conditions need to be met.
+At a city's traffic control system, drivers are monitored for speed violations. The city has a strict speed policy - if a driver stays within the speed limit, they can continue without any fine. However, if they exceed the limit, fines are imposed depending on how much they overspeed.
+
+Write a program that asks the driver for their current speed and informs them if they are safe or what fine they need to pay.
+
+- If the speed is 60 km/h or below, no fine is issued.
+- If the speed is between 61 and 80 km/h, a fine of ₹500 is issued.
+- If the speed is above 80 km/h, a fine of ₹1000 is issued.
+
+**Expected Output:**
+
+```v
+// case 1
+Enter your current speed (in km/h): 75   // user input
+You have exceeded the speed limit. A fine of ₹500 is applicable.
+
+// case 2
+Enter your current speed (in km/h): 95   // user input
+You have exceeded the speed limit. A fine of ₹1000 is applicable.
+```
+
+---
+
+#### Q13.
+
+For a good and safe paragliding experience as a beginner, certain weather conditions need to be met.
 - No raining
 - Wind speeds between 5 and 20 km/h
 
@@ -377,15 +434,15 @@ Write a program that checks if it's a good condition for paragliding or not base
 **Expected Output:**
 
 ```v
-Is it raining? : false   // (user input)
-Wind speeds (km/h) : 12   // (user input)
+Is it raining? : false   // user input
+Wind speeds (km/h) : 12   // user input
 
 It's a good condition for paragliding.
 ```
 
 ---
 
-#### Q12.
+#### Q14.
 
 Create a program to make a mini-calculator.
 
@@ -394,12 +451,43 @@ Take 2 integer numbers and the operator sign as input from the user, then give t
 **Expected Output:**
 
 ```v
-first_number : 3   // (user input)
-second_number : 5   // (user input)
+first_number : 3   // user input
+second_number : 5   // user input
 
-operator_chosen : *   // (user input)
+operator_chosen : *   // user input
 
 output: 5 * 3 = 15
 ```
 
-(**NOTE:** All the arithmetic operators should be covered, i.e. `+` , `-` , `*` , `/` , `%`, `^` (power).)   
+(**NOTE:** All the arithmetic operators should be covered, i.e. `+` , `-` , `*` , `/` , `%`, `^` (power).)
+
+---
+
+#### Q15.
+
+At the city’s electricity board, household electricity bills are calculated based on the number of units consumed in a month. The board follows a slab system where different rates apply based on consumption levels.
+
+Write a program that asks the user to enter the total number of electricity units consumed for the month, then calculates and displays the final bill amount according to the following rules:
+
+- For the first 100 units, the charge is ₹3 per unit.
+- For the next 100 units (units 101 to 200), the charge is ₹4 per unit.
+- For any units beyond 200, the charge is ₹5 per unit.
+
+**Expected Output:**
+
+```v
+// case 1
+Enter total electricity units consumed: 150   // user input
+Electricity Bill: ₹500
+
+// First 100 units: 100 × ₹3 = ₹300, Next 50 units: 50 × ₹4 = ₹200
+// Total = ₹300 + ₹200 = ₹500
+
+// case 2
+Enter total electricity units consumed: 250   // user input
+Electricity Bill: ₹950
+
+// First 100 units: 100 × ₹3 = ₹300, Next 100 units: 100 × ₹4 = ₹400, 
+// Remaining 50 units: 50 × ₹5 = ₹250
+// Total = ₹300 + ₹400 + ₹250 = ₹950
+```

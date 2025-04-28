@@ -83,18 +83,18 @@ You have 4 pen(s) left unpacked.
 
 #### Q3.
 
-The bank has a policy where if a customer deposits ₹1000 or more in a single day, they don’t have to pay any transaction fee. However, if the deposit amount is less than ₹1000, a small transaction fee will be applied. Write a program that asks the customer how much amount they want to deposit and based on the amount, tell them whether a transaction fee will be applied or not.
+The bank has a policy where if a customer deposits rs.1000 or more in a single day, they don’t have to pay any transaction fee. However, if the deposit amount is less than rs.1000, a small transaction fee will be applied. Write a program that asks the customer how much amount they want to deposit and based on the amount, tell them whether a transaction fee will be applied or not.
 
 **Expected Output:**
 
 ```v
 // case 1
 Enter total deposits today: 750   // user input
-A transaction fee will be applied.
+A transaction fee will not be applied.
 
 // case 2
 Enter total deposits today: 2650   // user input
-A transaction fee will not be applied.
+A transaction fee will be applied.
 ```
 
 ---
@@ -261,7 +261,7 @@ Write a program that,
 - If they haven’t borrowed any book, they are immediately allowed to borrow a new one.
 - If they have borrowed a book, the system then asks how many days it has been since they borrowed it.
     - If the number of days is 14 or less, they are allowed to borrow another book.
-    - If the number of days is more than 14, they are told the number of overdue days and asked to pay a fine of ₹1 per day before they can borrow a new book.
+    - If the number of days is more than 14, they are told the number of overdue days and asked to pay a fine of rs.1 per day before they can borrow a new book.
 
 Write a program for this.
 
@@ -280,7 +280,7 @@ Book returned within allowed time. You can borrow a new book.
 // case 3
 Did you borrow any book previously? (yes/no): yes   // user input
 How many days ago did you borrow the book?: 20   // user input
-Your book return is overdue. You have a pending fine of ₹6.
+Your book return is overdue. You have a pending fine of rs.6.
 Please clear the fine before borrowing a new book.
 ```
 
@@ -406,19 +406,19 @@ At a city's traffic control system, drivers are monitored for speed violations. 
 Write a program that asks the driver for their current speed and informs them if they are safe or what fine they need to pay.
 
 - If the speed is 60 km/h or below, no fine is issued.
-- If the speed is between 61 and 80 km/h, a fine of ₹500 is issued.
-- If the speed is above 80 km/h, a fine of ₹1000 is issued.
+- If the speed is between 61 and 80 km/h, a fine of rs.500 is issued.
+- If the speed is above 80 km/h, a fine of rs.1000 is issued.
 
 **Expected Output:**
 
 ```v
 // case 1
 Enter your current speed (in km/h): 75   // user input
-You have exceeded the speed limit. A fine of ₹500 is applicable.
+You have exceeded the speed limit. A fine of rs.500 is applicable.
 
 // case 2
 Enter your current speed (in km/h): 95   // user input
-You have exceeded the speed limit. A fine of ₹1000 is applicable.
+You have exceeded the speed limit. A fine of rs.1000 is applicable.
 ```
 
 ---
@@ -469,33 +469,48 @@ At the city’s electricity board, household electricity bills are calculated ba
 
 Write a program that asks the user to enter the total number of electricity units consumed for the month, then calculates and displays the final bill amount according to the following rules:
 
-- For the first 100 units, the charge is ₹3 per unit.
-- For the next 100 units (units 101 to 200), the charge is ₹4 per unit.
-- For any units beyond 200, the charge is ₹5 per unit.
+- For the first 100 units, the charge is rs.3 per unit.
+- For the next 100 units (units 101 to 200), the charge is rs.4 per unit.
+- For any units beyond 200, the charge is rs.5 per unit.
 
 **Expected Output:**
 
 ```v
 // case 1
 Enter total electricity units consumed: 150   // user input
-Electricity Bill: ₹500
+Electricity Bill: rs.500
 
-// First 100 units: 100 × ₹3 = ₹300, Next 50 units: 50 × ₹4 = ₹200
-// Total = ₹300 + ₹200 = ₹500
+// First 100 units: 100 × rs.3 = rs.300, Next 50 units: 50 × rs.4 = rs.200
+// Total = rs.300 + rs.200 = rs.500
 
 // case 2
 Enter total electricity units consumed: 250   // user input
-Electricity Bill: ₹950
+Electricity Bill: rs.950
 
-// First 100 units: 100 × ₹3 = ₹300, Next 100 units: 100 × ₹4 = ₹400, 
-// Remaining 50 units: 50 × ₹5 = ₹250
-// Total = ₹300 + ₹400 + ₹250 = ₹950
+// First 100 units: 100 × rs.3 = rs.300, Next 100 units: 100 × rs.4 = rs.400, 
+// Remaining 50 units: 50 × rs.5 = rs.250
+// Total = rs.300 + rs.400 + rs.250 = rs.950
 ```
 
 <!-- ---
 
 #### Q16.
 
-At an international airport’s travel help desk, travelers often want to know the value of their Indian Rupees (INR) in different currencies.
-Write a program that helps a traveler by converting their amount in INR into a currency of their choice. -->
+At an international airport’s travel help desk, travellers often want to know the value of their Indian Rupees (INR) in different currencies.
+Write a program that helps a traveller by converting their amount in INR into a currency of their choice.
 
+- Ask the traveller to enter the amount in INR.
+- Then, ask which currency they want to convert to by selecting an option:
+    - 1 - US Dollar (USD)
+    - 2 - Euro (EUR)
+    - 3 - British Pound (GBP)
+    - 4 - Chinese Yuan (CNY)
+    - 5 - Russian Ruble (RUB)
+
+- Based on their selection, display the converted amount. Use the following fixed conversion rates:
+    - 1 INR = 0.012 USD
+    - 1 INR = 0.011 EUR
+    - 1 INR = 0.0095 GBP
+    - 1 INR = 1.67 JPY
+    - 1 INR = 0.087 CNY
+    - 1 INR = 1.06 RUB -->

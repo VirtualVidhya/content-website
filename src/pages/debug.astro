@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+const posts = await getCollection("blog");
+const indexes = await getCollection("list");
+
+const paths = posts.map(post => ({
+  id: post.id,
+  filePath: post.filePath,
+  url: getPath(post.id, post.filePath),
+}));
+---
+
+<pre>
+  {JSON.stringify({ paths }, null, 2)}
+</pre>

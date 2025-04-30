@@ -1,0 +1,89 @@
+---
+import IconBulb from "./Icons/IconBulb.astro";
+import IconCircleExclamation from "./Icons/IconCircleExclamation.astro";
+import IconTriangleExclamation from "./Icons/IconTriangleExclamation.astro";
+
+interface Props {
+  variant: "note" | "hint" | "caution" | "info";
+  title: string;
+}
+
+let { variant, title } = Astro.props as Props;
+
+if (title == null) title = variant;
+---
+
+<div
+  id="admonition"
+  class:list={[
+    "flex w-full flex-col items-start justify-start gap-2 rounded-md border-2 border-b-6 px-6 py-3 transition-all prose-p:m-0",
+    {
+      "border-font-color-blue-dark bg-font-color-blue dark:border-font-color-blue-dark dark:bg-font-color-blue-extra-dark":
+        variant === "note",
+    },
+    {
+      "border-font-color-pink-dark bg-font-color-pink dark:border-font-color-pink-dark dark:bg-font-color-pink-extra-dark":
+        variant === "hint",
+    },
+    {
+      "border-font-color-red-dark bg-font-color-red dark:border-font-color-red-dark dark:bg-font-color-red-extra-dark":
+        variant === "caution",
+    },
+    {
+      "border-font-color-blue-dark bg-font-color-blue dark:border-font-color-blue-dark dark:bg-font-color-blue-extra-dark":
+        variant === "info",
+    },
+  ]}
+>
+  <div
+    aria-hidden="true"
+    class:list={[
+      "flex flex-row items-center justify-start gap-2",
+      {
+        "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+          variant == "note",
+      },
+      {
+        "!text-font-color-pink-extra-dark dark:!text-font-color-pink":
+          variant == "hint",
+      },
+      {
+        "!text-font-color-red-extra-dark dark:!text-font-color-red":
+          variant == "caution",
+      },
+      {
+        "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+          variant == "info",
+      },
+    ]}
+  >
+    {variant === "note" && <IconCircleExclamation styleClass="h-6 w-6" />}
+    {variant === "hint" && <IconBulb styleClass="h-6 w-6" />}
+    {variant === "caution" && <IconTriangleExclamation styleClass="h-6 w-6" />}
+    {variant === "info" && <IconCircleExclamation styleClass="h-6 w-6" />}
+    <p
+      class:list={[
+        "font-bold",
+        {
+          "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+            variant == "note",
+        },
+        {
+          "!text-font-color-pink-extra-dark dark:!text-font-color-pink":
+            variant == "hint",
+        },
+        {
+          "!text-font-color-red-extra-dark dark:!text-font-color-red":
+            variant == "caution",
+        },
+        {
+          "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+            variant == "info",
+        },
+      ]}
+    >
+      {title.toUpperCase()}
+    </p>
+  </div>
+  <slot />
+</div>

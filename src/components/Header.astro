@@ -1,0 +1,183 @@
+---
+// import Hr from "./Hr.astro";
+// import IconSearch from "@/assets/icons/IconSearch.svg";
+// import IconArchive from "@/assets/icons/IconArchive.svg";
+// import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+// import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
+// import LinkButton from "./LinkButton.astro";
+import { SITE } from "@/config";
+import VvidhyaLogo from "./VvidhyaLogo.astro";
+import SocialLinks from "./SocialLinks.astro";
+import IconSun from "./Icons/IconSun.astro";
+import IconMoon from "./Icons/IconMoon.astro";
+
+// const { pathname } = Astro.url;
+
+// Remove trailing slash from current pathname if exists
+// const currentPath =
+//   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+
+// const isActive = (path: string) => {
+//   const currentPathArray = currentPath.split("/").filter(p => p.trim());
+//   const pathArray = path.split("/").filter(p => p.trim());
+
+//   return currentPath === path || currentPathArray[0] === pathArray[0];
+// };
+
+const { navSection } = Astro.props;
+---
+
+<header class="header">
+  <a href="/">
+    <div class="flex flex-row items-center gap-1 text-foreground md:gap-2">
+      <VvidhyaLogo logoClass="header-logo-svg" />
+
+      <p class="header-logo-text">V.Vidhya</p>
+    </div>
+  </a>
+
+  <button
+    id="topbar-menu-btn"
+    data-topbarmenu-state="close"
+    class="mx-2 flex cursor-pointer items-center justify-center text-2xl sm:hidden"
+    aria-label="Toggle Navigation Menu"
+  >
+    <svg
+      data-state="open"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      class="util-icon"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-width="15"
+      aria-hidden="true"
+    >
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+      ></path></svg
+    >
+    <svg
+      data-state="close"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"
+      name="open"
+      class="util-icon"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-width="30"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+      ></path></svg
+    >
+  </button>
+
+  <div
+    class="topbar-menu absolute top-[50px] left-[-640px] z-10 box-border h-dvh w-full bg-navbar opacity-0 transition-all duration-200 ease-in sm:static sm:z-auto sm:box-content sm:flex sm:h-auto sm:w-auto sm:opacity-100 sm:transition-none"
+  >
+    <nav
+      class="mx-4 mt-10 flex flex-col items-start gap-3 text-base font-bold sm:mx-0 sm:mt-0 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 md:space-x-4 md:text-xl"
+    >
+      <a
+        href="/"
+        class={`flex items-center header-navmenu-hover ${
+          navSection === "home"
+            ? "underline"
+            : "link-interaction-underline-effect"
+        }`}
+      >
+        Home
+      </a>
+      <div class="group sm:relative">
+        <span
+          data-cousemenu-state="close"
+          class={`submenu-trigger h-full flex flex-row items-center cursor-pointer header-navmenu-hover ${
+            navSection === "courses"
+              ? "underline"
+              : "link-interaction-underline-effect"
+          }`}
+        >
+          Courses
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            class="util-icon"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="15"
+          >
+            <path
+              d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+            ></path></svg
+          >
+        </span>
+        <div
+          class="sub-menu hidden min-w-max flex-col gap-4 rounded-md bg-navbar py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pt-6 sm:pb-4"
+        >
+          <a href="/courses/" class="link-interaction-effect">All Courses</a>
+          <a href="/courses/multimedia/" class="link-interaction-effect"
+            >Multimedia Courses</a
+          >
+          <a href="/courses/programming/" class="link-interaction-effect"
+            >Programming Courses</a
+          >
+          <a href="/courses/kids/" class="link-interaction-effect"
+            >Kids Courses</a
+          >
+          <a href="/courses/literacy/" class="link-interaction-effect"
+            >Literacy Courses</a
+          >
+        </div>
+      </div>
+
+      <!-- <li class="col-span-1 flex items-center justify-center">
+        <LinkButton
+          href="/search"
+          class:list={[
+            "focus-outline flex p-3 sm:p-1",
+            { "[&>svg]:stroke-accent": isActive("/search") },
+          ]}
+          ariaLabel="search"
+          title="Search"
+        >
+          <IconSearch />
+          <span class="sr-only">Search</span>
+        </LinkButton>
+      </li> -->
+      {
+        SITE.lightAndDarkMode && (
+          // <li class="col-span-1 flex items-center justify-center">
+          <button
+            id="theme-btn"
+            class="focus-outline relative h-4 w-4 px-4 sm:h-auto sm:w-auto hover:[&>svg]:stroke-accent"
+            title="Toggles light & dark"
+            aria-label="auto"
+            aria-live="polite"
+          >
+            {/* {
+                navSection !== "home" && (
+                <IconMoon styleClass="link-interaction-effect absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                <IconSun styleClass="link-interaction-effect absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                )
+              } */}
+            <IconMoon styleClass="link-interaction-effect absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+            <IconSun styleClass="link-interaction-effect absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          </button>
+          // </li>
+        )
+      }
+    </nav>
+
+    <div
+      class="fixed bottom-20 box-border w-full px-2 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0"
+    >
+      <hr class="side-navmenu-border" />
+
+      <div class="flex items-center space-x-4 px-4">
+        <SocialLinks />
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,75 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Hangman Game
+slug: hangman-game
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 20
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ### Task
+
+Build a text-based Hangman game where the player first selects a word category (e.g., Animals, Countries, Fruits etc.). The program then picks 
+a random word from a pre-defined set of words for that category and the player guesses it one letter at a time. After each wrong guess, display an 
+ASCII-art stick figure that progresses toward a full figure (i.e. hangman). The game ends when the player either uncovers the entire word or the 
+stick figure is fully uncovered i.e. "hung".
+
+<CollapsibleSection title="Instructions">
+- Let the player choose from a few word categories.
+- The program secretly picks one word at random from the chosen category.
+- Display the word as underscores (one for each letter).
+- Each turn the player guesses a single letter; correct letters are revealed in place.
+- Track wrong guesses and, after each miss, add one part to the ASCII-art hangman.
+- Always show: the current word state, letters guessed so far, and the evolving hangman drawing.
+- The player wins by uncovering the entire word before the hangman is complete; loses if the figure is finished first.
+- ASCII Art Example:
+```ansi
+Initial Stage:
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+
+Final Stage:
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+```
+
+- The parts of this stick figure (i.e. head, body, left-right arm, left-right leg) can be broken into stages and revealed one piece per wrong guess.
+</CollapsibleSection>
+
+---
+
+- ### Main Lessons
+
+<ul class="list-[circle]">
+    <li>Choosing randomly from a predefined set of words</li>
+    <li>Managing and updating multiple game states</li>
+    <li>Validating and processing single-letter input</li>
+    <li>Displaying dynamic ASCII graphics for feedback</li>
+</ul>
+
+---
+
+- ### Guidelines
+
+Feel free to implement additional features to enhance the gameplay such as,
+
+<ul class="list-[circle]">
+    <li>A “hint” feature that reveals one letter after a threshold of wrong guesses</li>
+    <li>A round-counter and cumulative score across multiple games</li>
+</ul>

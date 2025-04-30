@@ -1,0 +1,43 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Basic Operators
+slug: basic-operators
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 20
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+Apply the right assignment operator, which will result in x being 20
+
+<Admonition variant="note" title="note">
+    In the blank, only an assignment operator can be added, any extra variable isn't allowed to be added here. 
+i.e. this can't be done: **_x = x + y_**
+</Admonition>
+
+<div class="w-full my-8"></div>
+
+```jsx
+x = 15;
+y = 5;
+x __ y;
+```
+
+---
+
+#### Q2.
+
+Apply the right assignment operator, which will result in x being 30
+
+```jsx
+x = 10;
+y = 3;
+x __ y;
+```

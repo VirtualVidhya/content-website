@@ -1,5 +1,0 @@
----
-title: Final Projects
----
-
----

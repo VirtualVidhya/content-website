@@ -1,0 +1,42 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Scope in Functions
+slug: functions-scope
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 260
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+What will be the output of the following code?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<div class="w-full my-8"></div>
+
+```jsx
+let greet = "hello";
+
+function outerGreet() {
+    let greet = "hi";
+
+    console.log(greet);
+
+    function innerGreet() {
+        console.log(greet);
+    }
+}
+
+console.log(greet);
+
+outerGreet();
+```

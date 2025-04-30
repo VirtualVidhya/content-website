@@ -1,0 +1,206 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import fs from "node:fs";
+import * as yaml from "js-yaml";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import PostCard from "@/components/PostCard.astro";
+import { getPath } from "@/utils/getPath";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+
+interface SubdirectoryData {
+  name: string;
+  title: string;
+  order: number;
+}
+
+export interface Props {
+  indexConfig?: CollectionEntry<"list">;
+  subdirectories: SubdirectoryData[];
+  posts: CollectionEntry<"blog">[];
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const indexes = await getCollection("list");
+
+  console.log("Total posts:", posts.length);
+  posts.forEach(element => {
+    console.log("Post ID:", element.id, element.filePath);
+  });
+  // console.log("Total indexes:", indexes.length);
+  // console.log("All posts:", Array.from(posts));
+  // console.log("All indexes:", Array.from(indexes));
+
+  // const getDirPath = (id: string, filePath: string) => getPath(id, filePath, false, true);
+
+  // Get all unique directory paths
+  const allPaths = new Set<string>();
+  allPaths.add(""); // Root path
+
+  // Add paths from both posts and indexes
+  [...posts, ...indexes].forEach(entry => {
+    // const path = getDirPath(entry.id);
+    const path = getPath(entry.id, entry.filePath, false, true);
+    console.log("Processing path:", path, "from entry:", entry.id);
+    if (path) {
+      let currentPath = "";
+      path.split("/").forEach(segment => {
+        currentPath = currentPath ? `${currentPath}/${segment}` : segment;
+        allPaths.add(currentPath);
+      });
+    }
+  });
+
+  console.log("All paths:", Array.from(allPaths));
+
+  // Generate paths for all directories
+  const paths = Array.from(allPaths).map(dirPath => {
+    // const indexConfig = indexes.find(index => getDirPath(index.id) === dirPath);
+    // const dirPosts = posts.filter(post => getDirPath(post.id) === dirPath);
+    const indexConfig = indexes.find(
+      index => getPath(index.id, index.filePath, false, true) === dirPath
+    );
+    // Filter posts for the current directory, excluding drafts and hidden posts
+    const dirPosts = posts.filter(
+      post => getPath(post.id, post.filePath, false, true) === dirPath && !post.data.hidden
+    );
+
+    // Sort posts: prioritize 'order' field (ascending)
+    dirPosts.sort((a, b) => {
+      const orderA = a.data.order ?? Infinity;
+      const orderB = b.data.order ?? Infinity;
+
+      if (orderA !== orderB) {
+        return orderA - orderB;
+      }
+      
+      // Fallback to date sorting (newest first) if order is the same or not present
+      return b.data.pubDatetime.valueOf() - a.data.pubDatetime.valueOf();
+    });
+
+    console.log("For directory:", dirPath);
+    console.log("- Found config:", indexConfig?.id);
+    console.log(
+      "- Found posts:",
+      dirPosts.map(p => p.id)
+    );
+
+    const subdirs = new Set<string>();
+    [...posts, ...indexes].forEach(entry => {
+      // const entryPath = getDirPath(entry.id, entry.filePath);
+      const entryPath = getPath(entry.id, entry.filePath, false, true);
+      if (
+        entryPath.startsWith(dirPath ? `${dirPath}/` : "") &&
+        entryPath !== dirPath
+      ) {
+        const remainingPath = entryPath.slice(dirPath ? dirPath.length + 1 : 0);
+        const firstSubdir = remainingPath.split("/")[0];
+        if (firstSubdir) subdirs.add(firstSubdir);
+      }
+    });
+
+    // Read title and order from _index.yaml for each subdir and sort
+    const subdirsWithData = Array.from(subdirs).map(subdir => {
+      const fullSubdirPath = dirPath ? `${dirPath}/${subdir}` : subdir;
+      // Find the corresponding index config entry from the 'list' collection
+      const subdirIndexConfig = indexes.find(
+        index => getPath(index.id, index.filePath, false, true) === fullSubdirPath
+      );
+
+      // Use title from indexConfig if found, otherwise default to subdir name
+      const title = subdirIndexConfig?.data.title || subdir;
+      // Use order from indexConfig if found, otherwise default to Infinity
+      const order = subdirIndexConfig?.data.order ?? Infinity;
+
+      return { name: subdir, title: title, order: order };
+    });
+
+    subdirsWithData.sort((a, b) => a.order - b.order);
+    // Keep the full data object (name, title, order)
+    const sortedSubdirectoryData = subdirsWithData; 
+
+    console.log("- Found subdirs (sorted):", sortedSubdirectoryData);
+
+    return {
+      params: { slug: dirPath || undefined },
+      props: {
+        indexConfig,
+        subdirectories: sortedSubdirectoryData, // Pass the array of objects
+        posts: dirPosts,
+      },
+    };
+  });
+
+  return paths;
+}
+
+const { indexConfig, subdirectories = [], posts = [] } = Astro.props;
+const currentPath = Astro.params.slug || "";
+
+console.log("Rendering path:", currentPath);
+console.log(
+  "Got posts:",
+  posts.map(p => p.id)
+);
+console.log("Got subdirs:", subdirectories);
+---
+
+<Layout title={indexConfig?.data.title || "Courses"}>
+  <Header />
+  <Breadcrumb />
+  
+  <main
+  class="mx-auto mb-24 flex w-full max-w-mdsm flex-col items-center justify-center gap-3 px-6 sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl"
+  >
+    {
+      indexConfig && (
+        <div class="mb-2 self-start">
+          <h1 class="text-3xl font-bold">{indexConfig.data.title}</h1>
+          {/* {indexConfig.data.description && (
+            <p class="mt-2">{indexConfig.data.description}</p>
+          )} */}
+        </div>
+        <hr class="border-1 border-solid border-color-border-pri opacity-75 w-full mb-6" />
+      )
+    }
+    <section
+      class="mx-auto w-full max-w-mdsm px-6 sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl"
+    >
+      {
+        subdirectories.length > 0 && (
+          <div class="mb-12 w-full">
+            {/* <h2 class="mb-4 text-2xl font-semibold">Categories</h2> */}
+            <ul class="flex flex-col items-center justify-center gap-6">
+              {subdirectories.map(subdirData => (
+                <li class="w-full">
+                  <a
+                    href={`/courses/${currentPath ? currentPath + "/" : ""}${subdirData.name}`}
+                    class="card-btn border-border bg-navbar w-full block"
+                  >
+                    {subdirData.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      {
+        posts.length > 0 && (
+          <div>
+            {/* <h2 class="mb-4 text-2xl font-semibold">Posts</h2> */}
+            <ul class="flex flex-col items-center justify-center gap-6">
+              {posts.map(post => (
+                <PostCard {...post} />
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </section>
+  </main>
+  <Footer />
+</Layout>

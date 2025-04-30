@@ -1,0 +1,182 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: if-else (Conditional Statements)
+slug: if-else-conditional-statements
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 60
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+Consider the following program:
+
+```jsx
+let x = 5;
+
+if (x == 6) {
+    console.log("Hello");
+} 
+else {
+    console.log("Hi");
+}
+```
+
+What will be the output in the console?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ul class="list-[lower-alpha] bold-li">
+    <li>Hello</li>
+    <li>Hi</li>
+    <li>Error</li>
+</ul>
+
+---
+
+#### Q2.
+
+Consider the following program:
+
+```jsx
+let x = 10; 
+let y = 20;
+
+if (x == 10) {     
+    if (y == 20) {   
+        console.log("x is 10 and y is 20");     
+    }
+    else {   
+        console.log("x is 10 but y is not 20");     
+    } 
+}  
+else {  
+    console.log("x is not 10"); 
+}
+```
+
+What will be the output in the console?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ul class="list-[lower-alpha] bold-li">
+    <li>x is 10 and y is 20</li>
+    <li>x is 10 but y is not 20</li>
+    <li>x is not 10</li>
+    <li>No output due to an error</li>
+</ul>
+
+---
+
+#### Q3.
+
+Consider the following program:
+
+```jsx
+let age = 25;
+
+if (age > 18)
+    console.log("Adult");
+else if (age > 12)
+    console.log("Teenager");
+else if (age > 5)
+    console.log("Child");
+else
+    console.log("Toddler");
+```
+
+What will be the output in the console?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ul class="list-[lower-alpha] bold-li">
+    <li>Adult</li>
+    <li>Teenager</li>
+    <li>Child</li>
+    <li>Toddler</li>
+</ul>
+
+---
+
+#### Q4.
+
+```jsx
+let x = 10;
+let y = 20;
+
+if (x > 5)
+    console.log("A");
+else if (y > 15)
+    console.log("B");
+else
+    console.log("C");
+```
+
+What will be the output?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ul class="list-[lower-alpha] bold-li">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>No output due to an error</li>
+</ul>
+
+---
+
+#### Q5.
+
+Create a system to calculate popcorn prices based on the bucket size customer asks for:
+
+Here, the list for price per bucket-size is given - 
+- ‘XL’ : price is rs.250
+- ‘L’ : price is rs.200
+- ‘M’ : price is rs.100
+- ‘S’ : price is rs.50
+
+**Expected Output:**
+
+```cpp
+Enter the popcorn-bucket size: M
+
+Price: 100
+```
+
+---
+
+#### Q6.
+
+Create a program to make a mini-calculator.
+
+Take 2 numbers and the operator sign as input from the user, then give the result based on those taken values.
+
+for e.g.
+
+```jsx
+number1 : 3
+number2 : 5
+
+operator : *
+
+// expected output
+5 * 3 = 15
+```
+
+<Admonition variant="note" title="note">
+    All the operators should be covered, i.e. **+**, **-**, **_*_**, **/**, **%**, **_**_**.
+</Admonition>

@@ -39,42 +39,58 @@ const { noMarginTop = false } = Astro.props;
   </div>
 </footer>
 
-<script>
+<script is:inline> // Added is:inline to ensure it's processed correctly by Astro
   // Check if the device supports touch events
   function isTouchDevice() {
-    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    // Ensure window is defined (for SSR safety, though less critical for is:inline)
+    return typeof window !== 'undefined' && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }
 
   // Function to handle touch interactions
   function handleTouchInteractions() {
-    // Get all interactive elements
+    // Get all interactive elements currently on the page
     const interactiveElements = document.querySelectorAll(
-      // ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .scroll-up-btn, .explore-courses-btn, .view-all-btn, .course-card, .enroll-btn, .form-submit-btn"
       ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .scroll-up-btn, .card-btn, .course-card, .copy-code, .post-navigation-block"
     );
 
-    // console.log(interactiveElements);
-
     // Add event listeners for touch devices
     interactiveElements.forEach(element => {
-      element.addEventListener("touchstart", () => {
-        // Add a class to simulate hover/active state
-        element.classList.add("touch");
-      });
+      // --- Cleanup potential old listeners (optional but good practice) ---
+      // If we previously stored handlers, remove them. Requires storing handlers.
+      // For simplicity here, we'll rely on elements being replaced by Astro,
+      // but be aware this might add duplicate listeners if elements persist across navigations.
 
-      element.addEventListener("touchend", () => {
-        // Remove the class after a short delay to mimic hover effect
+      // --- Add new listeners ---
+      const touchStartHandler = () => {
+        element.classList.add("touch");
+      };
+      const touchEndHandler = () => {
         setTimeout(() => {
           element.classList.remove("touch");
-        }, 150); // Adjust delay as needed
-      });
+        }, 150);
+      };
+
+      element.addEventListener("touchstart", touchStartHandler, { passive: true }); // Use passive for potential scroll performance
+      element.addEventListener("touchend", touchEndHandler);
+
+      // Optional: Store handlers for potential future removal if needed
+      // element._touchStartHandler = touchStartHandler;
+      // element._touchEndHandler = touchEndHandler;
     });
   }
 
-  // Execute only on touch devices
-  if (isTouchDevice()) {
-    handleTouchInteractions();
+  // Function to initialize touch interactions
+  function initializeTouchInteractions() {
+    if (isTouchDevice()) {
+      handleTouchInteractions();
+    }
   }
+
+  // Run on initial load
+  initializeTouchInteractions();
+
+  // Run after Astro navigations
+  document.addEventListener("astro:page-load", initializeTouchInteractions);
 </script>
 <script src="../scripts/common/course-sub-menu.js"></script>
 <script src="../scripts/common/navbar-menu.js"></script>

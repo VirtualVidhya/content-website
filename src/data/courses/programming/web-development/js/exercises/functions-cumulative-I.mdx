@@ -1,0 +1,88 @@
+---
+pubDatetime: 2025-04-30T15:57:52.737Z
+modDatetime: 2025-04-30T15:57:52.737Z
+
+title: Functions Cumulative I
+slug: functions-cumulative-I
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 250
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+Create a function that returns the sum of numbers from 1 to `n`
+
+---
+
+#### Q2.
+
+Create a function that returns the concatenation of all strings in an array
+
+---
+
+#### Q3.
+
+Create a function to convert temperature from Kelvin to Celsius and then Celsius to Fahrenheit.
+
+(**HINT:** `Celsius = Kelvin - 273` & `Fahrenheit = (9/5) * Celsius + 32`) 
+
+(**TIP:** Create separate functions for both the functionalities. First user will give input in Kelvin, convert it to Celsius then user will give input in Celsius, convert it to Fahrenheit.)
+
+---
+
+#### Q4. _(Adv.)_
+
+There’s a garments shop. They want to have a digital solution which helps them find if a particular product (shirt/t-shirt/pant etc.) is available in a particular size and color or not.
+
+Make a function that gives us the availability status of a product on providing a particular size and color.
+
+<Admonition variant="hint" title="hint">
+    The data set for available sizes and colors for a particular product is being stored already. 
+    So choose the data structure appropriately to keep track of that.
+</Admonition>
+
+<div class="w-full my-8"></div>
+
+<Admonition variant="note" title="note">
+    Currently for the simplicity, just consider the program for a single product only.
+</Admonition>
+
+**Expected Output:**
+
+```ansi
+[2;3m// let's say if user asks for a M size & black color
+// (Think how will user provide this info using input.)
+
+// output[0m
+The M size black colored Jersey is available.
+```
+
+---
+
+#### Q5. _(Adv.)_
+
+Create a full system with different set of functions that takes student name, standard & different subject marks as input then calculates the 
+percentage of a student based on different subject marks & declares the status in terms of PASS or FAIL with respective grade based on the percentage.
+
+**Expected Output:**
+
+```ansi
+Student Name: Lorem
+Standard: 7
+
+Subject1: 30
+Subject2: 40
+Subject3: 50
+
+Percentage: 40%
+
+Result: PASS
+Grade: C
+
+Congratulations, Lorem! You have been promoted to standard 8.
+```

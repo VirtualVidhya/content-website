@@ -1,0 +1,82 @@
+---
+// import Hr from "./Hr.astro";
+// import Socials from "./Socials.astro";
+import SocialLinks from "./SocialLinks.astro";
+
+const currentYear = new Date().getFullYear();
+
+export interface Props {
+  noMarginTop?: boolean;
+}
+
+const { noMarginTop = false } = Astro.props;
+---
+
+<footer
+  class="mt-auto flex w-full flex-col items-center justify-center gap-5 bg-navbar py-10"
+>
+  <div
+    class="flex w-full flex-col items-center justify-between gap-3 px-10 text-center md:flex-row md:gap-8 xl:px-24"
+  >
+    <div class="order-3 md:order-1">
+      <p>&#169; {currentYear}, V.Vidhya</p>
+    </div>
+
+    <!-- <div class="order-2 md:order-2">
+      <a
+        class="link-interaction-effect link-interaction-underline-effect underline-offset-8"
+        href="/privacy-policy/"
+        rel="noopener noreferrer"
+        title="Privacy Policy">Privacy Policy</a
+      >
+    </div> -->
+
+    <div
+      class="order-1 flex flex-row items-center justify-center space-x-4 text-xl md:order-3 md:text-2xl"
+    >
+      <SocialLinks />
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Check if the device supports touch events
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  }
+
+  // Function to handle touch interactions
+  function handleTouchInteractions() {
+    // Get all interactive elements
+    const interactiveElements = document.querySelectorAll(
+      // ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .scroll-up-btn, .explore-courses-btn, .view-all-btn, .course-card, .enroll-btn, .form-submit-btn"
+      ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .scroll-up-btn, .card-btn, .course-card, .copy-code, .post-navigation-block"
+    );
+
+    // console.log(interactiveElements);
+
+    // Add event listeners for touch devices
+    interactiveElements.forEach(element => {
+      element.addEventListener("touchstart", () => {
+        // Add a class to simulate hover/active state
+        element.classList.add("touch");
+      });
+
+      element.addEventListener("touchend", () => {
+        // Remove the class after a short delay to mimic hover effect
+        setTimeout(() => {
+          element.classList.remove("touch");
+        }, 150); // Adjust delay as needed
+      });
+    });
+  }
+
+  // Execute only on touch devices
+  if (isTouchDevice()) {
+    handleTouchInteractions();
+  }
+</script>
+<script src="../scripts/common/course-sub-menu.js"></script>
+<script src="../scripts/common/navbar-menu.js"></script>
+<script src="../scripts/common/scroll-handler.js"></script>
+<!-- <script src="../scripts/common/data.js"></script> -->

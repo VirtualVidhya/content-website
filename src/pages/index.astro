@@ -1,0 +1,233 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import VvidhyaLogo from "@/components/VvidhyaLogo.astro";
+---
+
+<Layout>
+  <Header navSection="home" />
+  <main
+    id="main-content"
+    data-layout="index"
+    class="mb-24 flex w-full flex-col items-center justify-center gap-3"
+  >
+    <section
+      class="mt-10 flex flex-col items-center justify-center text-center"
+    >
+      <div class="mb-20 flex flex-col items-center xs:flex-row xs:gap-2">
+        <VvidhyaLogo logoClass="home-logo-svg" />
+
+        <div
+          class="mt-2 flex flex-col justify-around xs:mt-3 xs:gap-1 sm:gap-2 lg:gap-4 xl:mt-4 xl:gap-5"
+        >
+          <h1
+            class="text-4xl font-black text-foreground xs:text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+          >
+            V.Vidhya
+          </h1>
+
+          <h2
+            class="text-base font-bold text-font-color-sec md:text-xl lg:text-2xl xl:text-3xl"
+          >
+            Your virtual path to knowledge
+          </h2>
+        </div>
+      </div>
+
+      <a href="#course-categories" class="explore-courses-btn mb-8 sm:mb-16"
+        >Start Learning</a
+      >
+
+      <img
+        src="/images/doodles/co-working.svg"
+        alt="Young students brainstorming a project idea"
+        class="ind-course-illus"
+        decoding="async"
+      />
+    </section>
+
+    <div class="relative my-20 w-full" id="course-categories">
+      <div class="-z-10 rotate-180">
+        <svg
+          viewBox="0 0 1400 150"
+          xmlns="http://www.w3.org/2000/svg"
+          style="enable-background: new 0 0 1400 980"
+        >
+          <g
+            transform="matrix(0.7291666865348816, 0, 0, 0.7291666865348816, -1.1985733086016808, -446.088623046875)"
+          >
+            <path
+              class="home-stroke-path"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1920 0C1920 0 1920 621.488 1920 715.001C1873.26
+724.257 1817.52 702.41 1768.95 711.55C1720.82 720.606 1678.56 762.275 1628.44 769.586C1579.8 776.68
+1525 749.226 1474.67 754.595C1425.65 759.824 1379.58 798.09 1329.13 801.608C1279.84 805.046 1227.72
+773.669 1177.22 775.404C1127.76 777.103 1078.47 812 1028 812C977.532 812 928.254 777.103 878.792
+775.404C828.3 773.669 776.181 805.047 726.895 801.61C676.446 798.092 630.37 759.825 581.353
+754.597C531.023 749.228 476.226 776.682 427.587 769.589C377.46 762.278 335.198 720.61 287.067
+711.553C237.247 702.179 179.877 725.023 132.416 713.874C83.398 702.36 46.107 657.775 0 644.001C0
+610.918 0 0 0 0H1920Z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="bg-navbar">
+        <section
+          class="mx-auto max-w-mdsm px-6 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:px-0 2xl:max-w-6xl"
+        >
+          <h3
+            class="mb-8 text-center text-3xl font-extrabold text-font-color-sec sm:mb-14 md:text-5xl"
+          >
+            Course Categories
+          </h3>
+          <div class="flex w-full flex-col items-center justify-start gap-10">
+            <a
+              href="/courses/programming/"
+              class="card-btn border-font-color-pink-dark bg-font-color-pink text-font-color-pink-dark hover:!border-foreground active:!border-foreground"
+              >Programming</a
+            >
+            <a
+              href="/courses/multimedia/"
+              class="card-btn border-font-color-purple-dark bg-font-color-purple text-font-color-purple-dark"
+              >Multimedia</a
+            >
+            <a
+              href="#"
+              class="card-btn border-font-color-orange bg-font-color-yellow text-font-color-orange"
+              >Literacy</a
+            >
+            <a
+              href="/courses/kids/"
+              class="card-btn border-font-color-blue-dark bg-font-color-blue text-font-color-blue-dark"
+              >Kids</a
+            >
+          </div>
+        </section>
+      </div>
+
+      <div class="-z-10 w-full">
+        <svg
+          viewBox="0 0 1400 150"
+          xmlns="http://www.w3.org/2000/svg"
+          style="enable-background: new 0 0 1400 980"
+        >
+          <g
+            transform="matrix(0.7291666865348816, 0, 0, 0.7291666865348816, -1.1985733086016808, -446.088623046875)"
+          >
+            <path
+              class="home-stroke-path"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1920 0C1920 0 1920 621.488 1920 715.001C1873.26
+724.257 1817.52 702.41 1768.95 711.55C1720.82 720.606 1678.56 762.275 1628.44 769.586C1579.8 776.68
+1525 749.226 1474.67 754.595C1425.65 759.824 1379.58 798.09 1329.13 801.608C1279.84 805.046 1227.72
+773.669 1177.22 775.404C1127.76 777.103 1078.47 812 1028 812C977.532 812 928.254 777.103 878.792
+775.404C828.3 773.669 776.181 805.047 726.895 801.61C676.446 798.092 630.37 759.825 581.353
+754.597C531.023 749.228 476.226 776.682 427.587 769.589C377.46 762.278 335.198 720.61 287.067
+711.553C237.247 702.179 179.877 725.023 132.416 713.874C83.398 702.36 46.107 657.775 0 644.001C0
+610.918 0 0 0 0H1920Z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- <section id="hero" class="pt-8 pb-6">
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+        V.Vidhya
+      </h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="inline-block"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <IconRss
+          width={20}
+          height={20}
+          class="scale-125 stroke-accent stroke-3"
+        />
+        <span class="sr-only">RSS Feed</span>
+      </a>
+
+      <p>
+        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
+        blog theme. This theme follows best practices and provides accessibility
+        out of the box. Light and dark mode are supported by default. Moreover,
+        additional color schemes can also be configured.
+      </p>
+      <p class="mt-2">
+        Read the blog posts or check
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="https://github.com/satnaing/astro-paper#readme"
+        >
+          README
+        </LinkButton> for more info.
+      </p>
+      {
+        // only display if at least one social link is enabled
+        SOCIALS.length > 0 && (
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <Hr />
+
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured" class="pt-12 pb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+            <ul>
+              {featuredPosts.map(data => (
+                <Card variant="h3" {...data} />
+              ))}
+            </ul>
+          </section>
+          {recentPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <ul>
+            {recentPosts.map(
+              (data, index) =>
+                index < SITE.postPerIndex && <Card variant="h3" {...data} />
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-8 text-center">
+      <LinkButton href="/posts/">
+        All Posts
+        <IconArrowRight class="inline-block" />
+      </LinkButton>
+    </div> -->
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset?.layout;
+    if (indexLayout) {
+      sessionStorage.setItem("backUrl", "/");
+    }
+  });
+</script>

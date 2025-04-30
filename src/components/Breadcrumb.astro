@@ -1,0 +1,172 @@
+---
+import { getCollection } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+// Fetch index data to get directory titles
+const indexes = await getCollection("list");
+// Fetch blog data to get post titles
+const posts = await getCollection("blog");
+
+const pathTitleMap = new Map<string, string>();
+
+// Add directory titles to the map
+indexes.forEach(index => {
+  const path = getPath(index.id, index.filePath, true, false); // Get directory path like "courses/programming"
+  if (path) {
+    pathTitleMap.set(path, index.data.title);
+  }
+});
+
+// Add post titles to the map, removing the leading slash
+posts.forEach(post => {
+  let path = getPath(post.id, post.filePath, true, false); // Get full post path like "courses/programming/post-title"
+  if (path.startsWith("/")) {
+    path = path.slice(1); // Remove the leading slash
+  }
+  pathTitleMap.set(path, post.data.title);
+});
+
+// Add base path if needed, assuming 'courses' has a title
+const coursesIndex = indexes.find(
+  index => getPath(index.id, index.filePath, false, true) === "courses"
+);
+
+if (coursesIndex) {
+  pathTitleMap.set("courses", coursesIndex.data.title);
+} else {
+  pathTitleMap.set("courses", "Courses"); // Fallback title
+}
+
+// Remove current url path and remove trailing slash if exists
+const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
+
+// Get url array from path
+// eg: /tags/tailwindcss => ['tags', 'tailwindcss']
+const breadcrumbList = currentUrlPath.split("/").slice(1);
+
+// console.log("BreadCrumbList: ", breadcrumbList);
+
+// if breadcrumb is Home > Posts > 1 <etc>
+// replace Posts with Posts (page number)
+if (breadcrumbList[0] === "posts") {
+  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+}
+
+// if breadcrumb is Home > Tags > [tag] > [page] <etc>
+// replace [tag] > [page] with [tag] (page number)
+if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
+  breadcrumbList.splice(
+    1,
+    3,
+    `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
+  );
+}
+
+let cumulativePath = ""; // To build paths like "courses", "courses/programming"
+let pathToSegment = "/"; // For href links
+
+// console.log("pathTitleMap:", pathTitleMap);
+---
+
+<nav
+  class="mx-auto my-8 w-full max-w-mdsm px-6 sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl"
+  aria-label="breadcrumb"
+>
+  <ul
+    class="font-normal [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
+  >
+    <li>
+      <a href="/" class="link-interaction-effect opacity-85">Home</a>
+      <!-- <span aria-hidden="true" class="opacity-80">&raquo;</span> -->
+      <span aria-hidden="true" class="opacity-80">&nbsp;/&nbsp;</span>
+    </li>
+    {
+      breadcrumbList.map((segment, index) => {
+        // Build cumulative path for title lookup
+        cumulativePath = cumulativePath
+          ? `${cumulativePath}/${segment}`
+          : `${segment}`;
+        // Build path for href links
+        pathToSegment = pathToSegment + segment + "/";
+
+        // Get title from map, fallback to segment (slug)
+        // Decode URI component for display, handle capitalization later if needed
+        const displayTitle =
+          pathTitleMap.get(cumulativePath) || decodeURIComponent(segment);
+
+        // console.log("cumulativePath:", cumulativePath, "displayTitle:", displayTitle);
+
+        // Special handling for pagination remains
+        if (segment.startsWith("Posts (page") || segment.includes("(page ")) {
+          // Use the pre-formatted pagination string directly
+          return index + 1 === breadcrumbList.length ? (
+            <li>
+              <span class="opacity-75" aria-current="page">
+                {segment}
+              </span>
+            </li>
+          ) : (
+            <li>
+              <a
+                href={pathToSegment}
+                class="link-interaction-effect opacity-75"
+              >
+                {segment}
+              </a>
+              <span aria-hidden="true">&nbsp;/&nbsp;</span>
+            </li>
+          );
+        }
+
+        // Regular breadcrumb item
+        return index + 1 === breadcrumbList.length ? (
+          <li>
+            <span class="opacity-75" aria-current="page">
+              {displayTitle}
+            </span>
+          </li>
+        ) : (
+          <li>
+            <a href={pathToSegment} class="link-interaction-effect opacity-70">
+              {displayTitle}
+            </a>
+            <span aria-hidden="true">&nbsp;/&nbsp;</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<!-- <nav class="mx-auto my-8 px-6 w-full max-w-mdsm sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl" aria-label="breadcrumb">
+  <ul
+    class="font-normal [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
+  >
+    <li>
+      <a href="/" class="opacity-80">Home</a>
+      <span aria-hidden="true" class="opacity-80">&raquo;</span>
+    </li>
+    {
+      breadcrumbList.map((breadcrumb, index) => 
+        index + 1 === breadcrumbList.length ? (
+          <li>
+            <span
+              class:list={["capitalize opacity-75", { lowercase: index > 0 }]}
+              aria-current="page"
+            >
+              {/* make the last part lowercase in Home > Tags > some-tag */}
+              {decodeURIComponent(breadcrumb)}
+            </span>
+          </li>
+        ) : (
+          <li>
+            <a href={`/${breadcrumb}/`} class="capitalize opacity-70">
+              {breadcrumb}
+            </a>
+            <span aria-hidden="true">&raquo;</span>
+          </li>
+        )
+      )
+    }
+  </ul>
+</nav> -->

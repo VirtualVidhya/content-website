@@ -1,0 +1,43 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+  categoryDetails: {
+    name: string;
+    image: string;
+    imgAlt: string;
+  };
+}
+
+const { categoryDetails } = Astro.props;
+---
+
+<Layout>
+  <Header />
+
+  <main class="main-combine-course-section">
+    <section class="w-full">
+      <div class="mb-20 flex flex-col items-center justify-center">
+        <h2
+          class="text-center text-3xl font-extrabold text-font-color-sec md:text-5xl"
+        >
+          {categoryDetails.name}
+        </h2>
+
+        <img
+          src={categoryDetails.image}
+          alt={categoryDetails.imgAlt}
+          class="illus mt-10"
+          decoding="async"
+        />
+      </div>
+
+      <slot />
+      <!-- <section class="mb-20"></section> -->
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

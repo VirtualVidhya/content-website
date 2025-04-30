@@ -1,0 +1,759 @@
+---
+pubDatetime: 2025-04-30T15:57:52.737Z
+modDatetime: 2025-04-30T15:57:52.737Z
+
+title: Access functions, Constructor & Destructor (OOP)
+slug: access-functions-and-constructor-and-destructor
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 160
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+A bank wants to manage customer accounts efficiently.
+
+Create a program that:
+
+- Store an account holder's name, account number, and balance.
+- Allow depositing and withdrawing money.
+- Prevent withdrawals if the balance is insufficient.
+- Display the account details.
+
+<CollapsibleSection title="Instructions">
+- Create a class for BankAccount to store:
+    - Account Holder's Name (e.g., Ramesh Panipuriwala)
+    - Account Number (e.g., 78563249)
+    - Balance (e.g., rs.50000)
+
+- Implement member functions to: 
+    - Set account details. 
+    - Deposit money into the account. 
+    - Withdraw money (if there is enough balance). 
+    - Display the account details.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// Before transactions:[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 78563249
+Balance: rs.50000
+
+[2;3m// After depositing rs.10000:[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 123456789
+Balance: rs.60000
+
+[2;3m// After withdrawing rs.20000:[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 123456789
+Balance: rs.40000
+
+[2;3m// Attempting to withdraw rs.50000 (insufficient balance):[0m
+Insufficient balance! Withdrawal failed.
+```
+</CollapsibleSection>
+
+---
+
+#### Q2.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x, int y)
+    {
+        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+    }
+
+    void print()
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+    }
+};
+
+int main()
+{
+    Foo foo{6, 7};
+    foo.print();
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x, int y)
+    {
+        m_x = x;
+        m_y = y;
+    }
+
+    void print()
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+    }
+};
+
+int main()
+{
+    Foo foo{5, true};
+    foo.print();
+
+    return 0;
+}
+```
+
+- #### III.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x, int y)
+        : m_x{ x }
+        , m_y{ y }
+    {
+        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+    }
+
+    void print()
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+    }
+};
+
+int main()
+{
+    Foo foo{6, 7};
+    foo.print();
+
+    return 0;
+}
+```
+
+- #### IV.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x, int y)
+        : m_y{ x }
+        , m_x{ m_y }
+    {
+        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+    }
+
+    void print()
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+    }
+};
+
+int main()
+{
+    Foo foo{6, 7};
+    foo.print();
+
+    return 0;
+}
+```
+
+- #### V.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y = 2;
+    int m_z;
+
+public:
+    Foo(int x)
+        : m_x{ x }
+    {
+        std::cout << "Foo constructed\n";
+    }
+
+    void print() const
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ", " << m_z << ")\n";
+    }
+};
+
+int main()
+{
+    Foo foo{6};
+    foo.print();
+
+    return 0;
+}
+```
+
+---
+
+#### Q3.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+```cpp
+#include <iostream>
+
+class Foo
+{
+    Foo()
+    {
+        std::cout << "Foo default constructed\n";
+    }
+};
+
+int main()
+{
+    Foo foo;
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x = 0, int y = 0)
+        : m_x{x}
+        , m_y{y}
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+    }
+};
+
+int main()
+{
+    Foo foo1;
+    Foo foo2{6, 7};
+
+    return 0;
+}
+```
+
+- #### III.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo()
+    {
+        std::cout << "Foo constructed\n";
+    }
+
+    Foo(int x = 0, int y = 0)
+        : m_x{ x }
+        , m_y{ y }
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+    }
+};
+
+int main()
+{
+    Foo foo1;
+    Foo foo2{6, 7};
+
+    return 0;
+}
+```
+
+- #### IV.
+```cpp
+#include <iostream>
+
+class Foo
+{
+private:
+    int m_x;
+    int m_y;
+
+public:
+    Foo(int x, int y)
+        : m_x{ x }
+        , m_y{ y }
+    {
+        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+    }
+};
+
+int main()
+{
+    Foo foo;
+
+    return 0;
+}
+```
+
+---
+
+#### Q4.
+
+A Smart Thermostat is installed in a home to maintain a comfortable and safe room temperature.
+
+- The temperature should always stay within a reasonable limit to ensure comfort and efficiency (i.e. 10°C to 40°C).
+- Users can check the current temperature and set a new one.
+- If the user tries to set a temperature outside the allowed range, the system should automatically adjust it to the nearest valid temperature and warn the user.
+- The thermostat should indicate whether heating or cooling is active based on the following logic:
+  - If the temperature is below 20°C, Heating mode should turn ON.
+  - If the temperature is above 30°C, Cooling mode should turn ON.
+  - If the temperature is between 20°C and 30°C, the room is comfortable, so no heating or cooling is required.
+- The users can get useful information from thermostat, such as:
+  - The current temperature.
+  - Whether heating or cooling is required based on the set temperature.
+  - The energy-saving mode status, which activates if the temperature is within an efficient range.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// --- Initializing Thermostat with 18°C ---[0m
+Current Temperature: 18°C
+Status: Heating Mode ON (Room is too cold)
+Energy-Saving Mode: OFF
+
+[2;3m// --- Attempting to Set Temperature to 32°C ---[0m
+Warning: Temperature too high! Setting to maximum 30°C.
+
+Current Temperature: 30°C
+Status: Cooling Mode ON (Room is too warm)
+Energy-Saving Mode: OFF
+
+[2;3m// --- Attempting to Set Temperature to 22°C ---[0m
+Temperature set to 22°C.
+
+Current Temperature: 22°C
+Status: Temperature is comfortable. No heating or cooling needed.
+Energy-Saving Mode: ON
+
+[2;3m// --- Attempting to Set Temperature to 10°C ---[0m
+Warning: Temperature too low! Setting to minimum 16°C.
+
+Current Temperature: 16°C
+Status: Heating Mode ON (Room is too cold)
+Energy-Saving Mode: OFF
+```
+</CollapsibleSection>
+
+---
+
+#### Q5.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I. _**(Adv.)**_
+```cpp
+#include <iostream>
+
+class User
+{
+private:
+    int m_a;
+    int m_b = 0;
+
+public:
+    User() {}
+
+    int a() { return m_a; }
+    int b() { return m_b; }
+};
+
+class Default
+{
+private:
+    int m_a;
+    int m_b = 0;
+
+public:
+    Default() = default;
+
+    int a() { return m_a; }
+    int b() { return m_b; }
+};
+
+class Implicit
+{
+private:
+    int m_a;
+    int m_b = 0;
+
+public:
+    int a() { return m_a; }
+    int b() { return m_b; }
+};
+
+int main()
+{
+    User user{};
+    std::cout << user.a() << ' ' << user.b() << '\n';
+
+    Default def{};
+    std::cout << def.a() << ' ' << def.b() << '\n';
+
+    Implicit imp{};
+    std::cout << imp.a() << ' ' << imp.b() << '\n';
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+#include <string>
+
+class Employee
+{
+private:
+    std::string m_name;
+    int m_id;
+
+public:
+    Employee()
+    {
+    }
+
+    Employee(std::string name, int id)
+        : m_name{name}
+        , m_id{id}
+    {
+    }
+
+    void print()
+    {
+        std::cout << "Employee(" << m_name << ", " << m_id << ")\n";
+    }
+};
+
+int main()
+{
+    Employee e1{"Jinie", 135};
+    e1.print();
+
+    Employee e2{};
+    e2.print();
+
+    return 0;
+}
+```
+
+- #### III.
+```cpp
+#include <iostream>
+#include <string>
+
+class Player
+{
+private:
+    std::string m_name;
+    int m_health;
+
+public:
+    Player(std::string name, int health)
+        : m_name{name}, m_health{health}
+    {
+    }
+
+    void print()
+    {
+        std::cout << "Player(" << m_name << ", " << m_health << ")\n";
+    }
+};
+
+int main()
+{
+    Player p1{"Jinie", 100};
+    p1.print();
+
+    Player p2{};
+    p2.print();
+
+    return 0;
+}
+```
+
+---
+
+#### Q6.
+
+A Smart Car Energy Management System is designed to optimize battery usage and adjust driving modes for efficient performance.
+
+- The battery level should always remain between 0% and 100%.
+- The system should display warnings when the battery is low (below 15%) and prevent driving when the battery is at 0%.
+- The car can also boost the battery, but the level cannot exceed 100%.
+- Users can manually switch the drive mode:
+  - Sport Mode requires at least 50% battery. It cannot be activated if the battery is below this threshold.
+  - If the battery level drops below 30%, the system automatically switches to Eco Mode unless manually overridden. The user can only override it to 
+  Normal Mode (not Sport Mode).
+  - Normal Mode has no specific battery requirements, meaning it can be set at any battery level.
+- Users can get useful information from the system, such as:
+  - The current drive mode.
+  - The current battery level.
+  - The car's status (e.g., low battery warning or driving condition).
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// --- Initializing Smart Car with 50% Battery ---[0m
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 50%
+Car Status: Car is running smoothly.
+
+[2;3m// --- Attempting to switch to Sport Mode ---[0m
+Error: Sport Mode requires at least 50% battery to activate.
+
+[2;3m// --- Driving 10 km in Normal Mode ---[0m
+Drove 10 km. Battery consumed: 30%.
+Drive Mode: Eco Mode (Energy Saving)
+
+Drive Mode: Eco Mode (Energy Saving)
+Battery Level: 20%
+Car Status: Low battery! Recharge soon.
+
+[2;3m// --- Boosting Battery by 40% ---[0m
+Boosted battery by 40%. Current level: 60%.
+Drive Mode: Normal Mode (Balanced)
+
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 60%
+Car Status: Car is running smoothly.
+
+[2;3m// --- Driving 30 km in Normal Mode ---[0m
+Drove 30 km. Battery consumed: 90%.
+Drive Mode: Eco Mode (Energy Saving)
+
+Drive Mode: Eco Mode (Energy Saving)
+Battery Level: 15%
+Car Status: Low battery! Recharge soon.
+
+[2;3m// --- Attempting to switch to Sport Mode ---[0m
+Error: Sport Mode requires at least 50% battery to activate.
+
+[2;3m// --- Attempting to override to Sport Mode while in Eco Mode ---[0m
+Error: Cannot switch to Sport Mode. Battery is too low.
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 60%
+Car Status: Car is running smoothly.
+```
+</CollapsibleSection>
+
+---
+
+#### Q7.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+```cpp
+#include <iostream>
+
+class Foo
+{
+    ~Foo()
+    {
+        std::cout << "Destructor called.\n";
+    }
+};
+
+int main()
+{
+    Foo foo;
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+class User
+{
+private:
+    int m_id {};
+
+public:
+    User(int id)
+        : m_id { id }
+    {
+        std::cout << "Constructing User Object: " << m_id << '\n';
+    }
+
+    ~User()
+    {
+        std::cout << "Destructing User Object: " << m_id << '\n';
+    }
+
+    int getID() { return m_id; }
+};
+
+int main()
+{
+    User user1{1001};
+    User user2{1010};
+
+    return 0;
+}
+```
+
+---
+
+#### Q8.
+
+A text editor should ensure that users do not lose their progress, whether they manually save or forget to do so. The system should always create a backup in case of an unexpected shutdown.
+
+<CollapsibleSection title="Instructions">
+Design a TextEditor class that manages a document's lifecycle. The system should:
+
+- Display a message when a new document is created.
+- Allow the user to write and edit the document.
+- Provide an option to manually exit the editor.
+- When exiting, prompt the user to save manually or not.
+  - If the user chooses to save, save the document normally.
+  - If the user chooses not to save, still create a backup save for safety.
+- If the program closes unexpectedly, the destructor should automatically perform a backup save to prevent data loss.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1: User chooses to manually save[0m
+Document 'ProjectNotes.txt' created.
+Editing document...
+User exits the editor.
+Do you want to save manually? (y/n): y
+Document saved successfully!
+Backup save created.
+Closing the text editor...
+System exited.
+
+[2;3m// case 2: User chooses not to save[0m
+Document 'ProjectNotes.txt' created.
+Editing document...
+User exits the editor.
+Do you want to save manually? (y/n): n
+Backup save created.
+Closing the text editor...
+System exited.
+
+[2;3m// case 3: Unexpected shutdown[0m
+Document 'ProjectNotes.txt' created.
+Editing document...
+Unexpected shutdown detected!
+Auto-saving unsaved changes...
+Backup save created.
+System exited.
+```
+</CollapsibleSection>
+
+---
+
+#### Q9.
+
+A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
+
+<CollapsibleSection title="Instructions">
+Create a VendingMachine class that allows users to:
+
+- Insert money into the machine.
+- Select a product (if enough money is inserted).
+- Dispense the product and return any change.
+- Automatically return the money if the user does not select a product before exiting or if the machine shuts down unexpectedly.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1: Successful Purchase[0m
+Inserted ₹50 into the vending machine.
+Selected: Chips (₹30)
+Product dispensed. Change returned: ₹20
+
+[2;3m// case 2: User exits without selecting a product[0m
+Inserted ₹50 into the vending machine.
+User exited without selecting a product.
+Money returned: ₹50
+
+[2;3m// case 3: Unexpected Shutdown[0m
+Inserted ₹100 into the vending machine.
+Unexpected shutdown detected! Returning ₹100 to the user.
+System exited.
+```
+</CollapsibleSection>

@@ -1,0 +1,46 @@
+---
+pubDatetime: 2025-04-30T15:57:52.737Z
+modDatetime: 2025-04-30T15:57:52.737Z
+
+title: TicTacToe Game
+slug: tictactoe-game
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 10
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ### Task
+
+Develop a simple text-based Tic-Tac-Toe game where two players take turns placing `X` and `O` on a 3x3 board. The game should determine the winner or declare a draw.
+
+<CollapsibleSection title="Instructions">
+- The game is played on a 3x3 grid.
+- Two players take turns marking a square (Player 1: `X`, Player 2: `O`).
+- A player wins if they get three of their marks in a row (horizontally, vertically, or diagonally).
+- If the board fills up without a winner, the game ends in a draw.
+- The system should: 
+    - Display the board before each move. 
+    - Prompt the current player to enter a move (1-9). 
+    - Validate the move (ensure the chosen cell is empty). 
+    - Check for a winner or a draw after every move.
+</CollapsibleSection>
+
+---
+
+- ### Main Lessons
+
+<ul class="list-[circle]">
+    <li>Understanding turn-based gameplay logic</li>
+    <li>Implementing user input validation</li>
+    <li>Handling game status checks dynamically</li>
+</ul>
+
+---
+
+- ### Guidelines
+
+Feel free to implement additional features to enhance the gameplay.

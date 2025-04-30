@@ -1,0 +1,43 @@
+---
+import IconCaretRight from './Icons/IconCaretRight.astro';
+import IconCaretDown from './Icons/IconCaretDown.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<style>
+  details > summary {
+    list-style: none; /* Hide default marker */
+  }
+  details > summary::-webkit-details-marker {
+    display: none; /* Hide default marker for Safari */
+  }
+  details > summary .icon-caret-down {
+    display: none;
+  }
+  details[open] > summary .icon-caret-right {
+    display: none;
+  }
+  details[open] > summary .icon-caret-down {
+    display: inline-block;
+  }
+</style>
+
+<details class="w-full prose-ul:!my-2 group transition-all ">
+  <summary class="font-semibold cursor-pointer flex items-center gap-3">
+    <span class="icon-caret-right inline-block" aria-hidden="true">
+      <IconCaretRight styleClass="" />
+    </span>
+    <span class="icon-caret-down" aria-hidden="true">
+      <IconCaretDown styleClass="" />
+    </span>
+    <span>{title}</span>
+  </summary>
+  <div class="pl-5"> {/* Optional: Add padding to align content with title */}
+    <slot />
+  </div>
+</details>

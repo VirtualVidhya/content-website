@@ -1,0 +1,350 @@
+---
+pubDatetime: 2025-04-30T15:57:52.737Z
+modDatetime: 2025-04-30T15:57:52.737Z
+
+title: Arrays
+slug: arrays
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 100
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr1[0];
+        
+        std::cout << arr1[0] << '\n';
+
+        int arr2[-1];
+
+        std::cout << arr2[0] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int length = 5;
+        int arr[length] = {1, 3, 5, 7, 9};
+        
+        std::cout << arr[0] << '\n';
+
+        return 0;
+    }
+    ```
+    
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr[] = [1, 3, 5, 7, 9];
+        
+        std::cout << arr[2] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr = {1, 3, 5, 7, 9};
+        
+        std::cout << arr[3] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr[] = {1, 3, 5, 7, 9};
+        
+        std::cout << arr[5] << '\n';
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q2.
+
+Create a simple program to store the prices of 5 grocery items in an array and then display the price of the 2nd item.
+
+---
+
+#### Q3.
+
+Create a simple program to store the names of 5 grocery items in an array and then display the name of the last item.
+
+---
+
+#### Q4.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        const int arr[] = {1, 3, 5, 7, 9};
+        
+        std::cout << arr[0] << '\n';
+
+        arr[0] = 11;
+
+        std::cout << arr[0] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        const int length = 5;
+        int arr[length] = {1, 3, 5, 7, 9};
+        
+        std::cout << arr[0] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr[] = {1, 3, 5, 7, 9};
+        
+        arr[5] = 11;
+
+        std::cout << arr[5] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int arr[] = {1, 2, 3};
+
+        std::cout << arr[1] << '\n';
+
+        arr = {4, 5, 6};
+
+        std::cout << arr[1] << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    int main() 
+    {
+        int arr[5] = {1, 4, 9, 16};
+
+        for(int i = 0; i < 5; i++)
+        {
+            std::cout << arr[i] << " ";
+        }
+
+        std::cout << '\n';
+
+        arr[4] = 25;
+
+        for(int i = 0; i < 5; i++)
+        {
+            std::cout << arr[i] << " ";
+        }
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q5.
+
+Write a program that allows a teacher to enter a student's marks for 5 subjects, then displays all the marks, total and percentage.
+
+**Expected Output:**
+
+```ansi
+[2;3m// input[0m
+Enter marks of
+subject1: 75
+subject2: 65
+subject3: 80
+subject4: 67
+subject5: 73
+
+[2;3m// output[0m
+Student Marks for
+subject1: 75
+subject2: 65
+subject3: 80
+subject4: 67
+subject5: 73
+
+Total: 360
+Percentage: 72
+```
+
+---
+
+#### Q6.
+
+Write a program that stores the temperatures (in celsius) of a city for a week (7 days) in an array.
+Allow the user to enter the temperatures and then:
+- Display all recorded temperatures.
+- Find and display the average temperature.
+- Identify and display the highest and lowest temperatures.
+
+**Expected Output:**
+
+```ansi
+[2;3m// input[0m
+Enter the temperature (°C) for
+day1: 31
+day2: 29
+day3: 33
+day4: 27
+day5: 30
+day6: 25
+day7: 28
+
+[2;3m// output[0m
+Temperatures for
+day1: 31°C
+day2: 29°C
+day3: 33°C
+day4: 27°C
+day5: 30°C
+day6: 25°C
+day7: 28°C
+
+Average Temperature (°C): 29
+Lowest Temperature of the week (°C): 25 on day6
+Highest Temperature of the week (°C): 33 on day3
+```
+
+---
+
+#### Q7.
+
+A teacher wants to analyze how students performed in a multiple-choice test with 10 questions.
+The correct answers are stored in an array. The teacher then inputs a student's answers into another array. Your program should:
+- Display how many answers are correct.
+- Give the student's score. (Each correct answer is worth 10 marks.)
+
+**Expected Output:**
+
+```ansi
+[2;3m// correct answers[0m
+correct-answers: 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B'
+
+[2;3m// input[0m
+Enter student answers: A B D D A C C D B B
+
+[2;3m// output[0m
+Total correct answers: 7
+Score: 70
+```
+
+---
+
+#### Q8. _**(Adv.)**_
+
+You are shopping for `5` items, each with a known price. 
+The store offers a discount coupon that costs `X` rupees and reduces the price of every item by `Y` rupees. 
+If an item's price is `Y` or less, it becomes free.  
+
+Decide whether you should buy the coupon or not. You should buy it only if the total cost after applying the discount 
+(including the coupon's price) is strictly less than the total cost without the coupon.  
+
+Write a program that takes `X`, and `Y` as input, followed by the prices of `5` items, and prints `"DO use coupon"` if buying the coupon is beneficial, otherwise `"DO NOT use coupon"`.
+
+**Expected Outut:**
+
+```ansi
+[2;3m// input[0m
+Enter the coupon price (rs): 30
+Enter the discount price of the coupon (rs): 15
+
+Enter prices (rs) of
+item1: 10
+item2: 40
+item3: 100
+item4: 25
+item5: 65
+
+[2;3m// output[0m
+DO use coupon
+
+[2;3m// explanation[0m
+[2;3m// Total cost of items: 10 + 40 + 100 + 25 + 65 = 240[0m
+
+[2;3m// Total cost (after applying coupon):[0m
+[2;3m// item1: (10 - 15) = free[0m
+[2;3m// item2: (40 - 15) = 25[0m
+[2;3m// item3: (100 - 15) = 85[0m
+[2;3m// item4: (25 - 15) = 10[0m
+[2;3m// item5: (65 - 15) = 50[0m
+[2;3m// 0 + 25 + 85 + 10 + 50 = 170[0m
+
+[2;3m// Total cost with discount + coupon price = 170 + 30 = 200[0m
+
+[2;3m// Total cost without coupon: 240[0m
+
+[2;3m// 200 < 240, so it is beneficial to use the coupon.[0m
+```

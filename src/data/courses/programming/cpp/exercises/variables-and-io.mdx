@@ -1,0 +1,221 @@
+---
+pubDatetime: 2025-04-30T15:57:52.737Z
+modDatetime: 2025-04-30T15:57:52.737Z
+
+title: Variables & User I/O
+slug: variables-and-io
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 10
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<div class="w-full my-8"></div>
+  
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, કેમ છો?\n";
+
+    return 0;
+}
+```
+
+<ol class="list-[lower-alpha] bold-li">
+    <li>Hello,</li>
+    <li>"Hello, કેમ છો?\n"</li>
+    <li>Hello, કેમ છો?</li>
+    <li>Hello, how are you?</li>
+</ol>
+
+---
+
+#### Q2.
+
+Write a program that asks the user to enter an integer number and then enter a second integer number. The program should tell the user what the result of adding and subtracting those two numbers is.
+
+**Expected Output:**
+
+```ansi
+Enter the first integer number: 6   [2;3m// user input[0m
+Enter the second integer number: 4   [2;3m// user input[0m
+
+6 + 4 = 10
+6 - 4 = 2
+```
+
+---
+
+#### Q3.
+
+Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
+
+<ol class="list-[upper-roman] bold-li">
+    <li>int sum;</li>
+    <li>int _apples;</li>
+    <li>int VALUE;</li>
+    <li>int my variable name;</li>
+    <li>int TotalCustomers;</li>
+    <li>int void;</li>
+    <li>int numFruit;</li>
+    <li>int 3subject;</li>
+    <li>int meters_of_pipe;</li>
+</ol>
+
+---
+
+#### Q4.
+
+What will be the output of the following program when run multiple times?
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int x;
+    
+    std::cout << x << '\n';
+
+    return 0;
+}
+```
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ol class="list-[lower-alpha] bold-li">
+    <li>always 0</li>
+    <li>always -1</li>
+    <li>any random garbage value but consistently</li>
+    <li>undefined</li>
+</ol>
+
+---
+
+#### Q5.
+
+Write a program that takes an integer number from user and then prints the doubled and tripled value of that number.
+
+**Expected Output:**
+
+```ansi
+Enter an integer: 4   [2;3m// user input[0m
+
+Double of 4: 8
+Triple of 4: 12
+```
+
+---
+
+#### Q6.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+    b = a;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+- #### II.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+
+    std::cout << "a: " << a << '\n';
+
+    int b = a;
+    a = 7;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+- #### III.
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+
+    std::cout << "a: " << a << '\n';
+
+    int b = 2 * a;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    int a = 2 * b;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+
+    return 0;
+}
+```
+
+- #### IV.
+```cpp
+int main()
+{
+    int a = 5;
+    int b = a + 10;
+    int c = b + 10;
+
+    std::cout << "a: " << a << '\n';
+    std::cout << "b: " << b << '\n';
+    std::cout << "c: " << c << '\n';
+
+    return 0;
+}
+```
+
+---
+
+#### Q7.
+
+Write a program that asks the user to enter three integer values and then print the average of these values.
+
+**Expected Output:**
+
+```ansi
+Enter three numbers: 3 9 24   [2;3m// user input[0m
+
+The average of 3, 9 and 24 is 12.
+```

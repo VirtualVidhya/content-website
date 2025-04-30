@@ -68,22 +68,40 @@ const layoutProps = {
 };
 
 /* ========== Prev/Next Posts ========== */
+// console.log(`--- Debugging Post: ${post.id} ---`);
+// console.log(`  File Path: ${post.filePath}`);
+// console.log(`  Total posts received: ${posts.length}`);
 
 const currentDirPath = getPath(post.id, post.filePath, false, true); //Get directory path of the current post
+// console.log(`  Calculated currentDirPath: ${currentDirPath}`);
+
 const allPosts = posts
-  .filter(p => getPath(p.id, p.filePath, false, true) === currentDirPath) // Filter for posts within the same directory
-  .map(({ data: { title }, id }) => ({
+  .filter(p => {
+    const postDirPath = getPath(p.id, p.filePath, false, true);
+    // console.log(`    Checking post ${p.id}: path=${postDirPath}, match=${postDirPath === currentDirPath}`); // Uncomment for very verbose logging
+    return postDirPath === currentDirPath;
+  }) // Filter for posts within the same directory
+  .map(({ data: { title }, id, filePath }) => ({ // Include filePath in the map
     slug: id,
     title,
+    filePath, // Add filePath here
   }));
 
-const currentPostIndex = allPosts.findIndex(a => a.slug === post.id);
+// console.log(`  Filtered posts in same directory (allPosts): ${allPosts.length}`);
+// console.log(allPosts.map(p => p.slug)); // Uncomment to log all slugs in the directory
 
-const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const currentPostIndex = allPosts.findIndex(a => a.slug === post.id);
+// console.log(`  Current post index in filtered list: ${currentPostIndex}`);
+
+const prevPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null; // Fix: should be > 0
 const nextPost =
-  currentPostIndex !== allPosts.length - 1
+  currentPostIndex !== -1 && currentPostIndex < allPosts.length - 1 // Fix: check index validity
     ? allPosts[currentPostIndex + 1]
     : null;
+
+// console.log(`  Prev Post: ${prevPost ? prevPost.slug : 'null'}`);
+// console.log(`  Next Post: ${nextPost ? nextPost.slug : 'null'}`);
+// console.log(`--- End Debugging Post: ${post.id} ---`);
 
 // const allPosts = posts.map(({ data: { title }, id }) => ({
 //   slug: id,
@@ -165,7 +183,7 @@ const nextPost =
           //   class="flex w-full gap-1 hover:opacity-75"
           // >
           <a
-            href={getPath(prevPost.slug, undefined)}
+            href={getPath(prevPost.slug, prevPost.filePath, true)}
             class="post-navigation-block justify-start"
           >
             <IconChevronLeftArrow styleClass="inline-block flex-none" />
@@ -183,7 +201,7 @@ const nextPost =
           //   class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           // >
           <a
-            href={getPath(nextPost.slug, undefined)}
+            href={getPath(nextPost.slug, nextPost.filePath, true)}
             class="post-navigation-block justify-end text-right sm:col-start-2"
           >
             <div class="flex flex-col gap-1">

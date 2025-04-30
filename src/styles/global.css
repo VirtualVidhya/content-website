@@ -249,11 +249,11 @@ html[data-theme="dark"] {
     fill: var(--navbar);
   }
 
-  .explore-courses-btn {
+  .home-page-action-btn {
     @apply rounded-lg border-2 border-b-6 border-font-color-blue-dark bg-font-color-blue px-6 py-3 text-lg font-bold text-font-color-white transition-all hover:border-font-color-pri hover:text-font-color-pri active:border-font-color-pri active:text-font-color-pri sm:px-8 sm:py-4 sm:text-xl;
   }
 
-  .explore-courses-btn.touch {
+  .home-page-action-btn.touch {
     @apply border-font-color-pri text-font-color-pri;
   }
 

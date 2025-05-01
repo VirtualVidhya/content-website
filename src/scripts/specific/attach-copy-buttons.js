@@ -75,8 +75,16 @@ function initializeCopyButtons() {
   }
 }
 
-// Run initialization on initial load
-initializeCopyButtons();
+// Run initialization after the DOM is fully loaded for the initial page load
+// Use 'interactive' or 'complete' readyState check for safety
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", initializeCopyButtons);
+} else {
+  // `DOMContentLoaded` has already fired or state is 'interactive'/'complete'
+  initializeCopyButtons();
+}
+
 
 // Run initialization after Astro navigations
 document.addEventListener("astro:page-load", initializeCopyButtons);

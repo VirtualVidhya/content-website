@@ -49,4 +49,5 @@ export default defineConfig({
     responsiveImages: true,
     preserveScriptOrder: true,
   },
+  trailingSlash: 'always', // Ensure URLs always have a trailing slash
 });

@@ -1,6 +1,6 @@
 export const SITE = {
   website: "https://learn.vvidhya.com/",
-  author: "kharva",
+  author: "vvidhya",
   profile: "https://www.vvidhya.com/",
   desc: "Learn top computer courses at V.Vidhya in Surat. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
   title: "V.Vidhya",

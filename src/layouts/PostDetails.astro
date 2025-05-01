@@ -218,7 +218,9 @@ const nextPost =
   <Footer />
 </Layout>
 
-<script is:inline data-astro-rerun>
+<script src="../scripts/specific/attach-copy-buttons.js"></script>
+
+<script is:inline> // Keep is:inline for this script block
   // Progress bar logic moved to src/scripts/common/global-scroll-handler.js
 
   /** Attaches links to headings in the document,
@@ -228,6 +230,10 @@ const nextPost =
       document.querySelectorAll("h2, h3, h4, h5, h6")
     );
     for (const heading of headings) {
+       // Check if link already exists
+      if (heading.querySelector("a.heading-link")) {
+        continue; // Skip if already processed
+      }
       heading.classList.add("group");
       const link = document.createElement("a");
       link.className =
@@ -241,49 +247,22 @@ const nextPost =
       heading.appendChild(link);
     }
   }
-  addHeadingLinks();
+  // Don't call immediately, call within initialize function
 
-  /** Attaches copy buttons to code blocks in the document,
-   * allowing users to copy code easily. */
-  function attachCopyButtons() {
-    const copyButtonLabel = "Copy";
-    const codeBlocks = Array.from(document.querySelectorAll("pre"));
-
-    for (const codeBlock of codeBlocks) {
-      const wrapper = document.createElement("div");
-      wrapper.style.position = "relative";
-
-      const copyButton = document.createElement("button");
-      copyButton.className =
-        "copy-code";
-      copyButton.innerHTML = copyButtonLabel;
-      codeBlock.setAttribute("tabindex", "0");
-      codeBlock.appendChild(copyButton);
-
-      // wrap codebock with relative parent element
-      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-      wrapper.appendChild(codeBlock);
-
-      copyButton.addEventListener("click", async () => {
-        await copyCode(codeBlock, copyButton);
-      });
-    }
-
-    async function copyCode(block, button) {
-      const code = block.querySelector("code");
-      const text = code?.innerText;
-
-      await navigator.clipboard.writeText(text ?? "");
-
-      // visual feedback that task is completed
-      button.innerText = "Copied";
-
-      setTimeout(() => {
-        button.innerText = copyButtonLabel;
-      }, 1250);
+  // --- Initialization Function for this inline script ---
+  function initializeHeadingLinks() {
+    // Only run if headings exist
+    if (document.querySelector("h2, h3, h4, h5, h6")) {
+        addHeadingLinks();
     }
   }
-  attachCopyButtons();
+
+  // Run initialization on initial load
+  initializeHeadingLinks();
+
+  // Run initialization after Astro navigations
+  document.addEventListener("astro:page-load", initializeHeadingLinks);
+
 
   /** Scrolls the document to the top when
    * the "Back to Top" button is clicked. */

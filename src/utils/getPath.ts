@@ -11,11 +11,15 @@ export function getPath(
 
   // For raw directory paths (used in directory listing)
   if (raw) {
-    return filePath
+    let path = filePath
       .replace(BLOG_PATH + "/", "")
       .split("/")
       .slice(0, -1)
       .join("/");
+    // if (path !== "" && !path.endsWith("/")) {
+    //   path += "/";
+    // }
+    return path;
   }
 
   // Remove base path and split
@@ -41,7 +45,7 @@ export function getPath(
     //   .filter(Boolean)
     //   .map(part => slugifyStr(part))
     //   .join("/");
-    
+
     const pathSegments = filePath
       ?.replace(BLOG_PATH, "")
       .split("/")
@@ -61,17 +65,25 @@ export function getPath(
       return [basePath, slug].join("/");
     }
 
-    return [basePath, ...pathSegments, slug].join("/");
+    let path = [basePath, ...pathSegments, slug].join("/");
+    // if (path !== "/" && !path.endsWith("/")) {
+    //   path += "/";
+    // }
+    return path;
   }
 
   // For directories
-  return [
+  let path = [
     includeBase ? "courses" : "",
     ...parts.filter(part => !part.startsWith("_")),
   ]
     .filter(Boolean)
     .map(part => slugifyStr(part))
     .join("/");
+  // if (path !== "" && !path.endsWith("/")) {
+  //   path += "/";
+  // }
+  return path;
 }
 
 // /**

@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
-import { remarkInjectTimestamps } from "./src/utils/remark-inject-timestamps.mjs"; // Import the new plugin
+import { remarkInjectTimestamps } from "./src/utils/remark-inject-timestamps.mjs";
 import { SITE } from "./src/config";
 import mdx from "@astrojs/mdx";
 
@@ -42,10 +42,10 @@ export default defineConfig({
   image: {
     // Used for all Markdown images; not configurable per-image
     // Used for all `<Image />` and `<Picture />` components unless overridden with a prop
-    experimentalLayout: "responsive",
+    // experimentalLayout: "responsive",
   },
   experimental: {
-    svg: true,
+    // svg: true,
     responsiveImages: true,
     preserveScriptOrder: true,
   },

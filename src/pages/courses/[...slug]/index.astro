@@ -176,7 +176,7 @@ console.log("Got subdirs:", subdirectories);
               {subdirectories.map(subdirData => (
                 <li class="w-full">
                   <a
-                    href={`/courses/${currentPath ? currentPath + "/" : ""}${subdirData.name}`}
+                    href={`/courses/${currentPath ? currentPath + "/" : ""}${subdirData.name}/`}
                     class="card-btn border-border bg-navbar w-full block"
                   >
                     {subdirData.title}

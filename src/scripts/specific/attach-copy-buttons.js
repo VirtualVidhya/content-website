@@ -93,3 +93,4 @@ if (document.readyState === "loading") {
 
 // Run initialization after Astro navigations
 document.addEventListener("astro:page-load", initializeCopyButtons);
+document.addEventListener("astro:after-swap", initializeCopyButtons);

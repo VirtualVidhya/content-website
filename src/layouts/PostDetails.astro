@@ -68,12 +68,8 @@ const layoutProps = {
 };
 
 /* ========== Prev/Next Posts ========== */
-// console.log(`--- Debugging Post: ${post.id} ---`);
-// console.log(`  File Path: ${post.filePath}`);
-// console.log(`  Total posts received: ${posts.length}`);
 
 const currentDirPath = getPath(post.id, post.filePath, false, true); //Get directory path of the current post
-// console.log(`  Calculated currentDirPath: ${currentDirPath}`);
 
 const allPosts = posts
   .filter(p => {
@@ -87,9 +83,6 @@ const allPosts = posts
     filePath, // Add filePath here
   }));
 
-// console.log(`  Filtered posts in same directory (allPosts): ${allPosts.length}`);
-// console.log(allPosts.map(p => p.slug)); // Uncomment to log all slugs in the directory
-
 const currentPostIndex = allPosts.findIndex(a => a.slug === post.id);
 // console.log(`  Current post index in filtered list: ${currentPostIndex}`);
 
@@ -98,10 +91,6 @@ const nextPost =
   currentPostIndex !== -1 && currentPostIndex < allPosts.length - 1 // Fix: check index validity
     ? allPosts[currentPostIndex + 1]
     : null;
-
-// console.log(`  Prev Post: ${prevPost ? prevPost.slug : 'null'}`);
-// console.log(`  Next Post: ${nextPost ? nextPost.slug : 'null'}`);
-// console.log(`--- End Debugging Post: ${post.id} ---`);
 
 // const allPosts = posts.map(({ data: { title }, id }) => ({
 //   slug: id,
@@ -217,9 +206,7 @@ const nextPost =
   </main>
   <Footer />
   
-  <script is:inline> // Keep is:inline for this script block
-    // Progress bar logic moved to src/scripts/common/global-scroll-handler.js
-  
+  <script is:inline data-astro-rerun>
     /** Attaches links to headings in the document,
      *  allowing sharing of sections easily */
     function addHeadingLinks() {
@@ -259,6 +246,50 @@ const nextPost =
   
     // Run initialization after Astro navigations
     document.addEventListener("astro:page-load", initializeHeadingLinks);
+
+    /** Attaches copy buttons to code blocks in the document,
+     * allowing users to copy code easily. */
+    function attachCopyButtons() {
+      const copyButtonLabel = "Copy";
+      const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+      for (const codeBlock of codeBlocks) {
+        const wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+
+        const copyButton = document.createElement("button");
+        copyButton.className =
+          "copy-code absolute right-3 -top-3 rounded bg-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
+        copyButton.innerHTML = copyButtonLabel;
+        codeBlock.setAttribute("tabindex", "0");
+        codeBlock.appendChild(copyButton);
+
+        // wrap codebock with relative parent element
+        codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+        wrapper.appendChild(codeBlock);
+
+        copyButton.addEventListener("click", async () => {
+          await copyCode(codeBlock, copyButton);
+        });
+      }
+
+      async function copyCode(block, button) {
+        const code = block.querySelector("code");
+        const text = code?.innerText;
+
+        await navigator.clipboard.writeText(text ?? "");
+
+        // visual feedback that task is completed
+        button.innerText = "Copied";
+
+        setTimeout(() => {
+          button.innerText = copyButtonLabel;
+        }, 700);
+      }
+    }
+    attachCopyButtons();
+
+    document.addEventListener("astro:after-swap", attachCopyButtons);
   
     /** Scrolls the document to the top when
      * the "Back to Top" button is clicked. */
@@ -276,5 +307,5 @@ const nextPost =
     );
   </script>
   
-  <script src="../scripts/specific/attach-copy-buttons.js"></script>
+  <!-- <script src="../scripts/specific/attach-copy-buttons.js"></script> -->
 </Layout>

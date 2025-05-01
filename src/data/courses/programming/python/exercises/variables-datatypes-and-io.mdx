@@ -1,0 +1,233 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Variables, Data Types & User I/O
+slug: variables-datatypes-and-io
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 10
+---
+
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+What will be the output of the following program?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<div class="w-full my-8"></div>
+  
+```py
+print("Hello,", "કેમ છો?")
+```
+
+<ol class="list-[lower-alpha] bold-li">
+    <li>Hello,કેમ છો?</li>
+    <li>"Hello, કેમ છો?\n"</li>
+    <li>Hello, કેમ છો?</li>
+    <li>Hello, how are you?</li>
+</ol>
+
+---
+
+#### Q2.
+
+Write a program that asks the user to enter an integer number and then enter a second integer number. The program should tell the user what the result of adding and subtracting those two numbers is.
+
+**Expected Output:**
+
+```ansi
+Enter the first integer number: 6   [2;3m// user input[0m
+Enter the second integer number: 4   [2;3m// user input[0m
+
+6 + 4 = 10
+6 - 4 = 2
+```
+
+---
+
+#### Q3.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+
+```py
+x
+
+x = 5
+
+print(x)
+```
+
+{/* <ol class="list-[lower-alpha] bold-li">
+    <li>0</li>
+    <li>5</li>
+    <li>Error</li>
+    <li>-1</li>
+</ol> */}
+
+- #### II.
+
+```py
+message = 'Hi'
+
+print(message)
+
+message = 'Bye'
+
+print(message)
+```
+
+- #### III.
+
+```py
+a = 5
+
+print(a)
+
+b = 2 + a
+
+print(a, b)
+
+a = 2 - b
+
+print(a, b)
+```
+
+- #### IV.
+
+```py
+a = 'k'
+b = 0
+
+print (a * b)
+
+42 = a
+
+print (a * b)
+```
+
+---
+
+#### Q4.
+
+Write a program that takes an integer number from user and then prints the doubled and tripled value of that number.
+
+**Expected Output:**
+
+```ansi
+Enter an integer: 4   [2;3m// user input[0m
+
+Double of 4: 8
+Triple of 4: 12
+```
+
+---
+
+#### Q5.
+
+Based on how you should name a variable, indicate whether each variable name mentioned below is **conventional** _(follows best practices)_, **unconventional** _(compiler will accept but does not follow best practices)_, or **invalid** _(will not compile)_, and why.
+
+<ol class="list-[upper-roman] bold-li">
+    <li><code>sum</code></li>
+    <li><code>_apples</code></li>
+    <li><code>VALUE</code></li>
+    <li><code>my variable name</code></li>
+    <li><code>TotalCustomers</code></li>
+    <li><code>class</code></li>
+    <li><code>numFruit</code></li>
+    <li><code>3subject</code></li>
+    <li><code>meters_of_pipe</code></li>
+</ol>
+
+---
+
+#### Q6.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+```py
+a = 23
+n = 3
+
+print(a * n)
+
+a = 'lalala lala '
+
+print(a * n)
+```
+
+- #### II.
+```cpp
+a = 0
+b = 42.0
+
+print(a + b)
+
+b = 'k'
+
+print(a + b)
+```
+
+- #### III.
+```cpp
+x = 42
+y = 7
+
+print(x / y)
+
+z = y
+y = 2
+
+print(z / y)
+```
+
+- #### IV.
+```cpp
+a = 'chachi'
+b = "420"
+
+print(a + b)
+```
+
+---
+
+#### Q7.
+
+Write a program that prints the statement `Once a computer scientist, Frederik Brooks said - "What one programmer can do it in 1 week, 
+two programmers can do it in 2 weeks."`.
+
+---
+
+#### Q8.
+
+Write a program that prompts the user to input their name and marks of 3 subjects, then 
+calculates and displays their percentage.
+
+**Expected Output:**
+
+```ansi
+Enter your name: Honey   [2;3m// user input[0m
+
+Enter the marks of subject1: 75   [2;3m// user input[0m
+Enter the marks of subject2: 93   [2;3m// user input[0m
+Enter the marks of subject3: 87   [2;3m// user input[0m
+
+Honey, you have got 85.0%.
+```

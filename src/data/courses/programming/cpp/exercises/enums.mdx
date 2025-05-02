@@ -23,109 +23,109 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-enum Color
-{
-    red,
-    green,
-    blue,
-};
-
-int main()
-{
-    Color apple { red };
-    Color shirt { green };
-
-    Color socks { white };
-    Color hat { 2 };
-
-    return 0;
-}
-```
-
-- #### II.
-```cpp
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
-
-enum Color
-{
-    black,
-    red,
-    blue,
-};
-
-int main()
-{
-    Pet myPet { black };
-    Color shirt { pig };
-
-    return 0;
-}
-```
-
-- #### III.
-```cpp
-#include <iostream>
-
-enum Color
-{
-    red,
-    green,
-    blue,
-};
-
-enum Feeling
-{
-    happy,
-    tired,
-    blue,
-};
-
-int main()
-{
-    Color apple { red };
-    Feeling my_feeling { happy };
-
-    return 0;
-}
-```
-
-- #### IV.
-```cpp
-namespace Color
-{
+    ```cpp
     enum Color
     {
         red,
         green,
         blue,
     };
-}
 
-namespace Feeling
-{
+    int main()
+    {
+        Color apple { red };
+        Color shirt { green };
+
+        Color socks { white };
+        Color hat { 2 };
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
+
+    enum Color
+    {
+        black,
+        red,
+        blue,
+    };
+
+    int main()
+    {
+        Pet myPet { black };
+        Color shirt { pig };
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    enum Color
+    {
+        red,
+        green,
+        blue,
+    };
+
     enum Feeling
     {
         happy,
         tired,
         blue,
     };
-}
 
-int main()
-{
-    Color::Color paint { Color::blue };
-    Feeling::Feeling my_feeling { Feeling::blue };
+    int main()
+    {
+        Color apple { red };
+        Feeling my_feeling { happy };
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    namespace Color
+    {
+        enum Color
+        {
+            red,
+            green,
+            blue,
+        };
+    }
+
+    namespace Feeling
+    {
+        enum Feeling
+        {
+            happy,
+            tired,
+            blue,
+        };
+    }
+
+    int main()
+    {
+        Color::Color paint { Color::blue };
+        Feeling::Feeling my_feeling { Feeling::blue };
+
+        return 0;
+    }
+    ```
 
 ---
 
@@ -145,111 +145,111 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Color
-{
-    red,
-    green,
-    blue,
-};
-
-int main()
-{
-    Color shirt { blue };
-
-    if (shirt == blue)
+    enum Color
     {
-        std::cout << "Your shirt is blue!";
-    }
-    else
-    {
-        std::cout << "Your shirt is not blue!";
-    }
+        red,
+        green,
+        blue,
+    };
 
-    return 0;
-}
-```
+    int main()
+    {
+        Color shirt { blue };
+
+        if (shirt == blue)
+        {
+            std::cout << "Your shirt is blue!";
+        }
+        else
+        {
+            std::cout << "Your shirt is not blue!";
+        }
+
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Color
-{
-    black = -3,
-    red,
-    blue,
-    green = 5,
-    white,
-};
+    enum Color
+    {
+        black = -3,
+        red,
+        blue,
+        green = 5,
+        white,
+    };
 
-int main()
-{
-    Color shirt1 { blue };
-    Color shirt2 { white };
+    int main()
+    {
+        Color shirt1 { blue };
+        Color shirt2 { white };
 
-    std::cout << "Your shirt1 is " << shirt1 << '\n';
-    std::cout << "Your shirt2 is " << shirt2 << '\n';
+        std::cout << "Your shirt1 is " << shirt1 << '\n';
+        std::cout << "Your shirt2 is " << shirt2 << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Color
-{
-    black,
-    red,
-    blue = 5,
-    green = 5,
-    white,
-};
-
-int main()
-{
-    Color shirt1 { blue };
-    Color shirt2 { green };
-
-    if (shirt1 == shirt2)
+    enum Color
     {
-        std::cout << "Your shirts are the same color!\n";
-    }
-    else
-    {
-        std::cout << "Your shirts are not the same color!\n";
-    }
+        black,
+        red,
+        blue = 5,
+        green = 5,
+        white,
+    };
 
-    return 0;
-}
-```
+    int main()
+    {
+        Color shirt1 { blue };
+        Color shirt2 { green };
+
+        if (shirt1 == shirt2)
+        {
+            std::cout << "Your shirts are the same color!\n";
+        }
+        else
+        {
+            std::cout << "Your shirts are not the same color!\n";
+        }
+
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Color
-{
-    black,
-    red,
-    blue,
-    green,
-    white,
-};
+    enum Color
+    {
+        black,
+        red,
+        blue,
+        green,
+        white,
+    };
 
-int main()
-{
-    Color shirt { blue };
+    int main()
+    {
+        Color shirt { blue };
 
-    std::cout << "Your shirt is " << shirt << '\n';
+        std::cout << "Your shirt is " << shirt << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -277,73 +277,73 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
 
-int main()
-{
-    Pet pet { 2 };
+    int main()
+    {
+        Pet pet { 2 };
 
-    std::cout << "Your pet is: " << pet << '\n';
-    
-    pet = 3;
+        std::cout << "Your pet is: " << pet << '\n';
+        
+        pet = 3;
 
-    std::cout << "Your pet is: " << pet << '\n';
+        std::cout << "Your pet is: " << pet << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
 
-int main()
-{
-    Pet pet { static_cast<Pet>(2) };
+    int main()
+    {
+        Pet pet { static_cast<Pet>(2) };
 
-    std::cout << "Your pet is: " << pet << '\n';
+        std::cout << "Your pet is: " << pet << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
 
-int main()
-{
-    Pet pet { pig };
-    std::cin >> pet;
+    int main()
+    {
+        Pet pet { pig };
+        std::cin >> pet;
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -387,80 +387,80 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
 
-int main()
-{
-    Pet pet = dog + 3;
-    
-    std::cout << "Your pet is: " << pet << '\n';
+    int main()
+    {
+        Pet pet = dog + 3;
+        
+        std::cout << "Your pet is: " << pet << '\n';
 
-    pet = cat + pig;
+        pet = cat + pig;
 
-    std::cout << "Your pet is: " << pet << '\n';
+        std::cout << "Your pet is: " << pet << '\n';
 
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Pet
-{
-    cat,
-    dog,
-    pig,
-    whale,
-};
+    enum Pet
+    {
+        cat,
+        dog,
+        pig,
+        whale,
+    };
 
-int main()
-{
-    Pet pet = static_cast<Pet>(dog + 3);
-    
-    std::cout << "Your pet is: " << pet << '\n';
+    int main()
+    {
+        Pet pet = static_cast<Pet>(dog + 3);
+        
+        std::cout << "Your pet is: " << pet << '\n';
 
-    pet = static_cast<Pet>(cat + pig);
+        pet = static_cast<Pet>(cat + pig);
 
-    std::cout << "Your pet is: " << pet << '\n';
+        std::cout << "Your pet is: " << pet << '\n';
 
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-enum Day
-{
-    MON, TUE, WED, THUS, FRI, SAT, SUN
-};
-
-int main()
-{
-    for (Day day = MON; day <= SUN; day = static_cast<Day>(day + 1))
+    enum Day
     {
-        std::cout << day << ' ';
+        MON, TUE, WED, THUS, FRI, SAT, SUN
+    };
+
+    int main()
+    {
+        for (Day day = MON; day <= SUN; day = static_cast<Day>(day + 1))
+        {
+            std::cout << day << ' ';
+        }
+
+        std::cout << '\n';
+
+        return 0;
     }
-
-    std::cout << '\n';
-
-    return 0;
-}
-```
+    ```
 
 ---
 

@@ -96,45 +96,46 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 15;
-
-    while (count <= 10)
+    int main()
     {
-        std::cout << count << ' ';
-        ++count;
+        int count = 15;
+
+        while (count <= 10)
+        {
+            std::cout << count << ' ';
+            ++count;
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    do
+    int main()
     {
-        std::cout << count << ' ';
-            
-        ++count;
+        int count = 1;
+
+        do
+        {
+            std::cout << count << ' ';
+                
+            ++count;
+        }
+        while(count <= 10)
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-    while(count <= 10)
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
+    ```
 
 - #### III.
     ```cpp
@@ -157,98 +158,98 @@ int main()
     ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    for (int count = 10; count < 0; --count)
+    int main()
     {
-        std::cout << count << ' ';
+        for (int count = 10; count < 0; --count)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    while (count <= 10)
+    int main()
     {
-        std::cout << count << ' ';
+        int count = 1;
+
+        while (count <= 10)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
     ```
 
 - #### VI.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    for (int count = 10; count > 0; ++count)
+    int main()
     {
-        std::cout << count << ' ';
+        for (int count = 10; count > 0; ++count)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### VII.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    while (count > 10)
+    int main()
     {
-        std::cout << count << ' ';
-        --count;
+        int count = 1;
+
+        while (count > 10)
+        {
+            std::cout << count << ' ';
+            --count;
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### VIII.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    do
+    int main()
     {
-        std::cout << count << ' ';
-        --count;
+        int count = 1;
+
+        do
+        {
+            std::cout << count << ' ';
+            --count;
+        }
+        while (count > 10);
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-    while (count > 10);
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 ---
 
@@ -296,92 +297,92 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    while (count <= 10)
+    int main()
     {
-        std::cout << count << ' ';
+        int count = 1;
 
-        if (count == 3)
-            break;
+        while (count <= 10)
+        {
+            std::cout << count << ' ';
 
-        ++count;
+            if (count == 3)
+                break;
+
+            ++count;
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int count = 1;
-
-    do
+    int main()
     {
-        std::cout << count << ' ';
+        int count = 1;
 
-        if (count == 3)
-            continue;
-            
-        ++count;
+        do
+        {
+            std::cout << count << ' ';
+
+            if (count == 3)
+                continue;
+                
+            ++count;
+        }
+        while(count <= 10);
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-    while(count <= 10);
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    for (int count = 1; count <= 10; ++count)
+    int main()
     {
-        std::cout << count << ' ';
+        for (int count = 1; count <= 10; ++count)
+        {
+            std::cout << count << ' ';
 
-        if (count == 3)
-            return 0;
+            if (count == 3)
+                return 0;
+        }
+
+        std::cout << "loop end!\n";
+
+        return 0;
     }
-
-    std::cout << "loop end!\n";
-
-    return 0;
-}
-```
+    ```
 
 - #### IV. **_(Adv.)_**
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int i, sum = 0;
-    
-    for (i = 0; i < 5; i++);
+    int main()
     {
-        sum += i;
-    }
-    
-    std::cout << "sum: " << sum << '\n';
+        int i, sum = 0;
+        
+        for (i = 0; i < 5; i++);
+        {
+            sum += i;
+        }
+        
+        std::cout << "sum: " << sum << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 

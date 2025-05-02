@@ -22,141 +22,141 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
+    int main()
+    {
+        void func()
+        {
+            std::cout << "func!\n";
+        }
+
+        func();
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        func();
+
+        return 0;
+    }
+
+    void func()
+    {
+        std::cout << "func!\n";
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
     void func()
     {
         std::cout << "func!\n";
     }
 
-    func();
+    int main()
+    {
+        func;
 
-    return 0;
-}
-```
-
-- #### II.
-```cpp
-#include <iostream>
-
-int main()
-{
-    func();
-
-    return 0;
-}
-
-void func()
-{
-    std::cout << "func!\n";
-}
-```
-
-- #### III.
-```cpp
-#include <iostream>
-
-void func()
-{
-    std::cout << "func!\n";
-}
-
-int main()
-{
-    func;
-
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void funcB()
-{
-    std::cout << "In funcB()\n";
-}
+    void funcB()
+    {
+        std::cout << "In funcB()\n";
+    }
 
-void funcA()
-{
-    std::cout << "In funcA()\n";
+    void funcA()
+    {
+        std::cout << "In funcA()\n";
 
-    funcB();
-}
+        funcB();
+    }
 
-int main()
-{
-    std::cout << "Starting main()\n";
+    int main()
+    {
+        std::cout << "Starting main()\n";
 
-    funcA();
-    funcB();
+        funcA();
+        funcB();
 
-    std::cout << "Ending main()\n";
+        std::cout << "Ending main()\n";
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void funcB()
-{
-    std::cout << "In funcB()\n";
-}
+    void funcB()
+    {
+        std::cout << "In funcB()\n";
+    }
 
-void funcA()
-{
-    std::cout << "In funcA()\n";
-}
+    void funcA()
+    {
+        std::cout << "In funcA()\n";
+    }
 
-int main()
-{
-    std::cout << "Starting main()\n";
+    int main()
+    {
+        std::cout << "Starting main()\n";
 
-    funcA();
-    funcB();
+        funcA();
+        funcB();
 
-    std::cout << "Ending main()\n";
+        std::cout << "Ending main()\n";
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### VI.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void funcA()
-{
-    std::cout << "In funcA()\n";
+    void funcA()
+    {
+        std::cout << "In funcA()\n";
 
-    funcB();
-}
+        funcB();
+    }
 
-void funcB()
-{
-    std::cout << "In funcB()\n";
-}
+    void funcB()
+    {
+        std::cout << "In funcB()\n";
+    }
 
 
-int main()
-{
-    std::cout << "Starting main()\n";
+    int main()
+    {
+        std::cout << "Starting main()\n";
 
-    funcB();
-    funcA();
+        funcB();
+        funcA();
 
-    std::cout << "Ending main()\n";
+        std::cout << "Ending main()\n";
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -183,105 +183,105 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void getNumber()
-{
-    int n = 10;
+    void getNumber()
+    {
+        int n = 10;
 
-    return n;
-}
+        return n;
+    }
 
-int main()
-{
-    getNumber();
+    int main()
+    {
+        getNumber();
 
-    int num;
+        int num;
 
-    std::cout << num << '\n';
+        std::cout << num << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int getNumber()
-{
-    int n = 10;
+    int getNumber()
+    {
+        int n = 10;
 
-    return n;
-}
+        return n;
+    }
 
-int main()
-{
-    getNumber();
+    int main()
+    {
+        getNumber();
 
-    int num;
+        int num;
 
-    std::cout << num << '\n';
+        std::cout << num << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void printNumber()
-{
-    int n = 10;
+    void printNumber()
+    {
+        int n = 10;
 
-    std::cout << n;
-}
+        std::cout << n;
+    }
 
-int main()
-{
-    std::cout << printNumber() << '\n';
+    int main()
+    {
+        std::cout << printNumber() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-char getChar()
-{
-    char c = 'z';
+    char getChar()
+    {
+        char c = 'z';
 
-    return c;
-}
+        return c;
+    }
 
-int main()
-{
-    std::cout << getChar() << '\n';
+    int main()
+    {
+        std::cout << getChar() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int getNumber()
-{
-    int n = 10;
-}
+    int getNumber()
+    {
+        int n = 10;
+    }
 
-int main()
-{
-    std::cout << getNumber() << '\n';
+    int main()
+    {
+        std::cout << getNumber() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -294,107 +294,107 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int getFirstNum()
-{
-    return 7;
-}
-
-int getSecondNum()
-{
-    return 9;
-}
-
-int main()
-{
-    std::cout << getFirstNum() + getSecondNum() << '\n';
-
-    return 0;
-}
-```
-
-- #### II.
-```cpp
-#include <iostream>
-
-int getFirstNum()
-{
-    return 7;
-}
-
-int getSecondNum()
-{
-    return 9;
-}
-
-int main()
-{
-    getFirstNum();
-    getSecondNum();
-
-    return 0;
-}
-```
-
-- #### III.
-```cpp
-#include <iostream>
-
-int getFirstNum()
-{
-    return 7;
+    int getFirstNum()
+    {
+        return 7;
+    }
 
     int getSecondNum()
     {
         return 9;
     }
-}
 
-int main()
-{
-    std::cout << getFirstNum() + getSecondNum() << '\n';
+    int main()
+    {
+        std::cout << getFirstNum() + getSecondNum() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int getFirstNum()
+    {
+        return 7;
+    }
+
+    int getSecondNum()
+    {
+        return 9;
+    }
+
+    int main()
+    {
+        getFirstNum();
+        getSecondNum();
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int getFirstNum()
+    {
+        return 7;
+
+        int getSecondNum()
+        {
+            return 9;
+        }
+    }
+
+    int main()
+    {
+        std::cout << getFirstNum() + getSecondNum() << '\n';
+
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int getNumbers()
-{
-    return 7, 9;
-}
+    int getNumbers()
+    {
+        return 7, 9;
+    }
 
-int main()
-{
-    std::cout << getNumbers() << '\n';
+    int main()
+    {
+        std::cout << getNumbers() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int getNumbers()
-{
-    return 7;
-    return 9;
-}
+    int getNumbers()
+    {
+        return 7;
+        return 9;
+    }
 
-int main()
-{
-    std::cout << getNumbers() << '\n';
-    std::cout << getNumbers() << '\n';
+    int main()
+    {
+        std::cout << getNumbers() << '\n';
+        std::cout << getNumbers() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -414,139 +414,139 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int add(float a, float b)
-{
-    return a + b;
-}
+    int add(float a, float b)
+    {
+        return a + b;
+    }
 
-int main()
-{
-    int s1 = add(9.5, 6.3);
-    float s2 = add(5.6, 7.8);
+    int main()
+    {
+        int s1 = add(9.5, 6.3);
+        float s2 = add(5.6, 7.8);
 
-    std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
+        std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-float add(int a, int b)
-{
-    return a + b;
-}
+    float add(int a, int b)
+    {
+        return a + b;
+    }
 
-int main()
-{
-    int s1 = add(9.5, 6.3);
-    float s2 = add(5.6, 7.8);
+    int main()
+    {
+        int s1 = add(9.5, 6.3);
+        float s2 = add(5.6, 7.8);
 
-    std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
+        std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-float add(float a, float b)
-{
-    return a + b;
-}
+    float add(float a, float b)
+    {
+        return a + b;
+    }
 
-int main()
-{
-    int s1 = add(9.5, 6.3);
-    float s2 = add(5.6, 7.8);
+    int main()
+    {
+        int s1 = add(9.5, 6.3);
+        float s2 = add(5.6, 7.8);
 
-    std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
+        std::cout << "sum1: " << s1 << ", sum2: " << s2 << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void func(int x)
-{
-    int y = 4;
-    std::cout << "func: x = " << x << " y = " << y << '\n';
+    void func(int x)
+    {
+        int y = 4;
+        std::cout << "func: x = " << x << " y = " << y << '\n';
 
-    x = 3;
-    std::cout << "func: x = " << x << " y = " << y << '\n';
-}
+        x = 3;
+        std::cout << "func: x = " << x << " y = " << y << '\n';
+    }
 
-int main()
-{
-    int x = 1;
-    int y = 2;
+    int main()
+    {
+        int x = 1;
+        int y = 2;
 
-    std::cout << "main: x = " << x << " y = " << y << '\n';
+        std::cout << "main: x = " << x << " y = " << y << '\n';
 
-    func(x);
+        func(x);
 
-    std::cout << "main: x = " << x << " y = " << y << '\n';
+        std::cout << "main: x = " << x << " y = " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void func(int x)
-{
-    int x = 3;
-    int y = 4;
-    
-    std::cout << "func: x = " << x << " y = " << y << '\n';
-}
+    void func(int x)
+    {
+        int x = 3;
+        int y = 4;
+        
+        std::cout << "func: x = " << x << " y = " << y << '\n';
+    }
 
-int main()
-{
-    int x = 1;
-    int y = 2;
+    int main()
+    {
+        int x = 1;
+        int y = 2;
 
-    std::cout << "main: x = " << x << " y = " << y << '\n';
+        std::cout << "main: x = " << x << " y = " << y << '\n';
 
-    func(x);
+        func(x);
 
-    std::cout << "main: x = " << x << " y = " << y << '\n';
+        std::cout << "main: x = " << x << " y = " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### VI.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void printNumbers(int a, int b)
-{
-    std::cout << "a: " << a << ", b:" << b << '\n';
-}
+    void printNumbers(int a, int b)
+    {
+        std::cout << "a: " << a << ", b:" << b << '\n';
+    }
 
-int main()
-{
-    int a = 3;
-    int b = 5;
+    int main()
+    {
+        int a = 3;
+        int b = 5;
 
-    printNumbers(b, a);
+        printNumbers(b, a);
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 

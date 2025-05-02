@@ -76,166 +76,166 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x, int y)
+    class Foo
     {
-        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
-    }
+    private:
+        int m_x;
+        int m_y;
 
-    void print()
+    public:
+        Foo(int x, int y)
+        {
+            std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+        }
+
+        void print()
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        Foo foo{6, 7};
+        foo.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo{6, 7};
-    foo.print();
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x, int y)
+    class Foo
     {
-        m_x = x;
-        m_y = y;
-    }
+    private:
+        int m_x;
+        int m_y;
 
-    void print()
+    public:
+        Foo(int x, int y)
+        {
+            m_x = x;
+            m_y = y;
+        }
+
+        void print()
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        Foo foo{5, true};
+        foo.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo{5, true};
-    foo.print();
-
-    return 0;
-}
-```
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x, int y)
-        : m_x{ x }
-        , m_y{ y }
+    class Foo
     {
-        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
-    }
+    private:
+        int m_x;
+        int m_y;
 
-    void print()
+    public:
+        Foo(int x, int y)
+            : m_x{ x }
+            , m_y{ y }
+        {
+            std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+        }
+
+        void print()
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        Foo foo{6, 7};
+        foo.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo{6, 7};
-    foo.print();
-
-    return 0;
-}
-```
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x, int y)
-        : m_y{ x }
-        , m_x{ m_y }
+    class Foo
     {
-        std::cout << "Foo(" << x << ", " << y << ") constructed\n";
-    }
+    private:
+        int m_x;
+        int m_y;
 
-    void print()
+    public:
+        Foo(int x, int y)
+            : m_y{ x }
+            , m_x{ m_y }
+        {
+            std::cout << "Foo(" << x << ", " << y << ") constructed\n";
+        }
+
+        void print()
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ")\n";
+        Foo foo{6, 7};
+        foo.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo{6, 7};
-    foo.print();
-
-    return 0;
-}
-```
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y = 2;
-    int m_z;
-
-public:
-    Foo(int x)
-        : m_x{ x }
+    class Foo
     {
-        std::cout << "Foo constructed\n";
-    }
+    private:
+        int m_x;
+        int m_y = 2;
+        int m_z;
 
-    void print() const
+    public:
+        Foo(int x)
+            : m_x{ x }
+        {
+            std::cout << "Foo constructed\n";
+        }
+
+        void print() const
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ", " << m_z << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ", " << m_z << ")\n";
+        Foo foo{6};
+        foo.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo{6};
-    foo.print();
-
-    return 0;
-}
-```
+    ```
 
 ---
 
@@ -248,112 +248,112 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-    Foo()
+    class Foo
     {
-        std::cout << "Foo default constructed\n";
+        Foo()
+        {
+            std::cout << "Foo default constructed\n";
+        }
+    };
+
+    int main()
+    {
+        Foo foo;
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo;
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x = 0, int y = 0)
-        : m_x{x}
-        , m_y{y}
+    class Foo
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+    private:
+        int m_x;
+        int m_y;
+
+    public:
+        Foo(int x = 0, int y = 0)
+            : m_x{x}
+            , m_y{y}
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+        }
+    };
+
+    int main()
+    {
+        Foo foo1;
+        Foo foo2{6, 7};
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo1;
-    Foo foo2{6, 7};
-
-    return 0;
-}
-```
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo()
+    class Foo
     {
-        std::cout << "Foo constructed\n";
-    }
+    private:
+        int m_x;
+        int m_y;
 
-    Foo(int x = 0, int y = 0)
-        : m_x{ x }
-        , m_y{ y }
+    public:
+        Foo()
+        {
+            std::cout << "Foo constructed\n";
+        }
+
+        Foo(int x = 0, int y = 0)
+            : m_x{ x }
+            , m_y{ y }
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+        Foo foo1;
+        Foo foo2{6, 7};
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo1;
-    Foo foo2{6, 7};
-
-    return 0;
-}
-```
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-private:
-    int m_x;
-    int m_y;
-
-public:
-    Foo(int x, int y)
-        : m_x{ x }
-        , m_y{ y }
+    class Foo
     {
-        std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+    private:
+        int m_x;
+        int m_y;
+
+    public:
+        Foo(int x, int y)
+            : m_x{ x }
+            , m_y{ y }
+        {
+            std::cout << "Foo(" << m_x << ", " << m_y << ") constructed\n";
+        }
+    };
+
+    int main()
+    {
+        Foo foo;
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo;
-
-    return 0;
-}
-```
+    ```
 
 ---
 
@@ -414,135 +414,135 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I. _**(Adv.)**_
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class User
-{
-private:
-    int m_a;
-    int m_b = 0;
+    class User
+    {
+    private:
+        int m_a;
+        int m_b = 0;
 
-public:
-    User() {}
+    public:
+        User() {}
 
-    int a() { return m_a; }
-    int b() { return m_b; }
-};
+        int a() { return m_a; }
+        int b() { return m_b; }
+    };
 
-class Default
-{
-private:
-    int m_a;
-    int m_b = 0;
+    class Default
+    {
+    private:
+        int m_a;
+        int m_b = 0;
 
-public:
-    Default() = default;
+    public:
+        Default() = default;
 
-    int a() { return m_a; }
-    int b() { return m_b; }
-};
+        int a() { return m_a; }
+        int b() { return m_b; }
+    };
 
-class Implicit
-{
-private:
-    int m_a;
-    int m_b = 0;
+    class Implicit
+    {
+    private:
+        int m_a;
+        int m_b = 0;
 
-public:
-    int a() { return m_a; }
-    int b() { return m_b; }
-};
+    public:
+        int a() { return m_a; }
+        int b() { return m_b; }
+    };
 
-int main()
-{
-    User user{};
-    std::cout << user.a() << ' ' << user.b() << '\n';
+    int main()
+    {
+        User user{};
+        std::cout << user.a() << ' ' << user.b() << '\n';
 
-    Default def{};
-    std::cout << def.a() << ' ' << def.b() << '\n';
+        Default def{};
+        std::cout << def.a() << ' ' << def.b() << '\n';
 
-    Implicit imp{};
-    std::cout << imp.a() << ' ' << imp.b() << '\n';
+        Implicit imp{};
+        std::cout << imp.a() << ' ' << imp.b() << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
-#include <string>
+    ```cpp
+    #include <iostream>
+    #include <string>
 
-class Employee
-{
-private:
-    std::string m_name;
-    int m_id;
-
-public:
-    Employee()
+    class Employee
     {
-    }
+    private:
+        std::string m_name;
+        int m_id;
 
-    Employee(std::string name, int id)
-        : m_name{name}
-        , m_id{id}
+    public:
+        Employee()
+        {
+        }
+
+        Employee(std::string name, int id)
+            : m_name{name}
+            , m_id{id}
+        {
+        }
+
+        void print()
+        {
+            std::cout << "Employee(" << m_name << ", " << m_id << ")\n";
+        }
+    };
+
+    int main()
     {
+        Employee e1{"Jinie", 135};
+        e1.print();
+
+        Employee e2{};
+        e2.print();
+
+        return 0;
     }
-
-    void print()
-    {
-        std::cout << "Employee(" << m_name << ", " << m_id << ")\n";
-    }
-};
-
-int main()
-{
-    Employee e1{"Jinie", 135};
-    e1.print();
-
-    Employee e2{};
-    e2.print();
-
-    return 0;
-}
-```
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
-#include <string>
+    ```cpp
+    #include <iostream>
+    #include <string>
 
-class Player
-{
-private:
-    std::string m_name;
-    int m_health;
-
-public:
-    Player(std::string name, int health)
-        : m_name{name}, m_health{health}
+    class Player
     {
-    }
+    private:
+        std::string m_name;
+        int m_health;
 
-    void print()
+    public:
+        Player(std::string name, int health)
+            : m_name{name}, m_health{health}
+        {
+        }
+
+        void print()
+        {
+            std::cout << "Player(" << m_name << ", " << m_health << ")\n";
+        }
+    };
+
+    int main()
     {
-        std::cout << "Player(" << m_name << ", " << m_health << ")\n";
+        Player p1{"Jinie", 100};
+        p1.print();
+
+        Player p2{};
+        p2.print();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Player p1{"Jinie", 100};
-    p1.print();
-
-    Player p2{};
-    p2.print();
-
-    return 0;
-}
-```
+    ```
 
 ---
 
@@ -619,57 +619,57 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Foo
-{
-    ~Foo()
+    class Foo
     {
-        std::cout << "Destructor called.\n";
+        ~Foo()
+        {
+            std::cout << "Destructor called.\n";
+        }
+    };
+
+    int main()
+    {
+        Foo foo;
+
+        return 0;
     }
-};
-
-int main()
-{
-    Foo foo;
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class User
-{
-private:
-    int m_id {};
-
-public:
-    User(int id)
-        : m_id { id }
+    class User
     {
-        std::cout << "Constructing User Object: " << m_id << '\n';
-    }
+    private:
+        int m_id {};
 
-    ~User()
+    public:
+        User(int id)
+            : m_id { id }
+        {
+            std::cout << "Constructing User Object: " << m_id << '\n';
+        }
+
+        ~User()
+        {
+            std::cout << "Destructing User Object: " << m_id << '\n';
+        }
+
+        int getID() { return m_id; }
+    };
+
+    int main()
     {
-        std::cout << "Destructing User Object: " << m_id << '\n';
+        User user1{1001};
+        User user2{1010};
+
+        return 0;
     }
-
-    int getID() { return m_id; }
-};
-
-int main()
-{
-    User user1{1001};
-    User user2{1010};
-
-    return 0;
-}
-```
+    ```
 
 ---
 

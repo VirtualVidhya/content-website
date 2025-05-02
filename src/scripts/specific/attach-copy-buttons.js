@@ -1,7 +1,7 @@
 /** Attaches copy buttons to code blocks in the document,
  * allowing users to copy code easily. */
 function attachCopyButtons() {
-  console.log("attachCopyButtons called");
+  // console.log("attachCopyButtons called");
 
   const copyButtonLabel = "Copy";
   // Select only pre elements that don't already have a copy button inside
@@ -9,7 +9,7 @@ function attachCopyButtons() {
     document.querySelectorAll("pre:not(:has(button.copy-code))")
   );
 
-  console.log(codeBlocks);
+  // console.log(codeBlocks);
 
   // Define copyCode function here so it's accessible
   async function copyCode(block, button) {
@@ -82,11 +82,11 @@ function initializeCopyButtons() {
 // Run initialization after the DOM is fully loaded for the initial page load
 // Use 'interactive' or 'complete' readyState check for safety
 if (document.readyState === "loading") {
-  console.log("loading, calling after dom content loaded");
+  // console.log("loading, calling after dom content loaded");
   // Loading hasn't finished yet
   document.addEventListener("DOMContentLoaded", initializeCopyButtons);
 } else {
-  console.log("interactive/complete, dom content loaded already");
+  // console.log("interactive/complete, dom content loaded already");
   // `DOMContentLoaded` has already fired or state is 'interactive'/'complete'
   initializeCopyButtons();
 }

@@ -22,103 +22,103 @@ What will be the output of the following programs for the mentioned input test c
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
-#include <string>
+    ```cpp
+    #include <iostream>
+    #include <string>
 
-int main()
-{
-    std::cout << "Enter your full name: ";
-    std::string name;
-    std::cin >> name;
+    int main()
+    {
+        std::cout << "Enter your full name: ";
+        std::string name;
+        std::cin >> name;
 
-    std::cout << "Enter your favorite color: ";
-    std::string color;
-    std::cin >> color;
+        std::cout << "Enter your favorite color: ";
+        std::string color;
+        std::cin >> color;
 
-    std::cout << "Your name is " << name << " and your favorite color is " << color << '\n';
+        std::cout << "Your name is " << name << " and your favorite color is " << color << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
-**Input Test Cases:**
+    **Input Test Cases:**
 
-```ansi
-[2;3m// #1[0m
-name: Lagan
-color: black
+    ```ansi
+    [2;3m// #1[0m
+    name: Lagan
+    color: black
 
-[2;3m// #2[0m
-name: Lagan Khelaiya
-color: black
-```
+    [2;3m// #2[0m
+    name: Lagan Khelaiya
+    color: black
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
-#include <string>
+    ```cpp
+    #include <iostream>
+    #include <string>
 
-int main()
-{
-    std::cout << "Enter a number: ";
-    int number;
-    std::cin >> number;
+    int main()
+    {
+        std::cout << "Enter a number: ";
+        int number;
+        std::cin >> number;
 
-    std::cout << "Now enter your name: ";
-    std::string name;
-    std::getline(std::cin, name);
+        std::cout << "Now enter your name: ";
+        std::string name;
+        std::getline(std::cin, name);
 
-    std::cout << "Hello, " << name << ", you entered " << number << ".\n";
+        std::cout << "Hello, " << name << ", you entered " << number << ".\n";
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
-**Input Test Cases:**
+    **Input Test Cases:**
 
-```ansi
-[2;3m// #1[0m
-number: 98
-name: Magan
+    ```ansi
+    [2;3m// #1[0m
+    number: 98
+    name: Magan
 
-[2;3m// #2[0m
-number: 98
-name: Magan Chhapri
-```
+    [2;3m// #2[0m
+    number: 98
+    name: Magan Chhapri
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
-#include <string>
+    ```cpp
+    #include <iostream>
+    #include <string>
 
-int main()
-{
-    std::cout << "Enter your full name: ";
-    std::string name;
-    std::getline(std::cin >> std::ws, name);
+    int main()
+    {
+        std::cout << "Enter your full name: ";
+        std::string name;
+        std::getline(std::cin >> std::ws, name);
 
-    std::cout << "Enter your favorite color: ";
-    std::string color;
-    std::getline(std::cin >> std::ws, color);
+        std::cout << "Enter your favorite color: ";
+        std::string color;
+        std::getline(std::cin >> std::ws, color);
 
-    std::cout << "Your name is " << name << " and your favorite color is " << color << '\n';
+        std::cout << "Your name is " << name << " and your favorite color is " << color << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
-**Input Test Cases:**
+    **Input Test Cases:**
 
-```ansi
-[2;3m// #1[0m
-name: Lagan
-color: black
+    ```ansi
+    [2;3m// #1[0m
+    name: Lagan
+    color: black
 
-[2;3m// #2[0m
-name: Lagan Khelaiya
-color: black
-```
+    [2;3m// #2[0m
+    name: Lagan Khelaiya
+    color: black
+    ```
 
 ---
 

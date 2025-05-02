@@ -41,84 +41,84 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I. 
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    int* ptr = x;
+        int* ptr = x;
 
-    std::cout << "*ptr: " << *ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    int* ptr;
+        int* ptr;
 
-    std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
+        std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    int* ptr = 5;
+        int* ptr = 5;
 
-    std::cout << "*ptr: " << *ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
+    int main()
+    {
+        int x = 5;
 
-    int* ptr = 0x0012FF7C;
+        int* ptr = 0x0012FF7C;
 
-    std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
+        std::cout << "ptr: " << ptr << ", *ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    double x = 5.5;
+    int main()
+    {
+        double x = 5.5;
 
-    int* ptr = &x;
+        int* ptr = &x;
 
-    std::cout << "*ptr: " << *ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -153,84 +153,84 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    *ptr = &y;
+        int y = 6;
+        *ptr = &y;
 
-    std::cout << x << *ptr << '\n';
+        std::cout << x << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    *ptr = y;
+        int y = 6;
+        *ptr = y;
 
-    std::cout << x  << " " << *ptr << '\n';
+        std::cout << x  << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    ptr = y;
+        int y = 6;
+        ptr = y;
 
-    std::cout << x  << " " << *ptr << '\n';
+        std::cout << x  << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    ptr = &y;
+        int y = 6;
+        ptr = &y;
 
-    std::cout << x  << " " << *ptr << '\n';
+        std::cout << x  << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -244,70 +244,70 @@ What will be the output of the following programs?
 
 - #### I.
 ```cpp
-#include <iostream>
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int& ref = x;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int& ref = x;
+        int* ptr = &x;
 
-    std::cout << x << " " << ref << " " << *ptr << '\n';
+        std::cout << x << " " << ref << " " << *ptr << '\n';
 
-    x = 6;
-    std::cout << x << " " << ref << " " << *ptr << '\n';
+        x = 6;
+        std::cout << x << " " << ref << " " << *ptr << '\n';
 
-    ref = 7;
-    std::cout << x << " " << ref << " " << *ptr << '\n';
+        ref = 7;
+        std::cout << x << " " << ref << " " << *ptr << '\n';
 
-    *ptr = 8;
-    std::cout << x << " " << ref << " " << *ptr << '\n';
+        *ptr = 8;
+        std::cout << x << " " << ref << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-// assume int is 4 bytes and the program is running on a 64-bit machine
+    ```cpp
+    // assume int is 4 bytes and the program is running on a 64-bit machine
 
-#include <iostream>
+    #include <iostream>
 
-int main()
-{
-    int x = 7; // assume x is getting stored at memory-address: 0012FF60
-    int y = 3; // assume y is getting stored at memory-address: 0012FF54
+    int main()
+    {
+        int x = 7; // assume x is getting stored at memory-address: 0012FF60
+        int y = 3; // assume y is getting stored at memory-address: 0012FF54
 
-    int* ptr{ &x };
+        int* ptr{ &x };
 
-    std::cout << "&x: " << &x << '\n';
-    std::cout << "x: " << x << '\n';
-    std::cout << "ptr: " << ptr << '\n';
-    std::cout << "*ptr*: " << *ptr << '\n';
-    std::cout << '\n';
+        std::cout << "&x: " << &x << '\n';
+        std::cout << "x: " << x << '\n';
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr*: " << *ptr << '\n';
+        std::cout << '\n';
 
-    *ptr = 9;
+        *ptr = 9;
 
-    std::cout << "&x: " << &x << '\n';
-    std::cout << "x: " << x << '\n';
-    std::cout << "ptr: " << ptr << '\n';
-    std::cout << "*ptr*: " << *ptr << '\n';
-    std::cout << '\n';
+        std::cout << "&x: " << &x << '\n';
+        std::cout << "x: " << x << '\n';
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr*: " << *ptr << '\n';
+        std::cout << '\n';
 
-    ptr = &y;
+        ptr = &y;
 
-    std::cout << "&x: " << &x << '\n';
-    std::cout << "x: " << x << '\n';
-    std::cout << "ptr: " << ptr << '\n';
-    std::cout << "*ptr*: " << *ptr << '\n';
-    std::cout << '\n';
+        std::cout << "&x: " << &x << '\n';
+        std::cout << "x: " << x << '\n';
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr*: " << *ptr << '\n';
+        std::cout << '\n';
 
-    std::cout << "sizeof ptr: " << sizeof(ptr) << '\n';
-    std::cout << "sizeof *ptr: " << sizeof(*ptr) << '\n';
+        std::cout << "sizeof ptr: " << sizeof(ptr) << '\n';
+        std::cout << "sizeof *ptr: " << sizeof(*ptr) << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -395,75 +395,75 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
-
-    std::cout << *ptr << '\n';
-
-    if (x > 0)
+    int main()
     {
-        int y = 6;
-        ptr = &y;
+        int x = 5;
+        int* ptr = &x;
 
         std::cout << *ptr << '\n';
+
+        if (x > 0)
+        {
+            int y = 6;
+            ptr = &y;
+
+            std::cout << *ptr << '\n';
+        }
+
+        std::cout << *ptr << '\n';
+
+        return 0;
     }
-
-    std::cout << *ptr << '\n';
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
-
-    std::cout << *ptr << '\n';
-
-    if (x > 0)
+    int main()
     {
-        int y = 6;
-        ptr = &y;
+        int x = 5;
+        int* ptr = &x;
 
         std::cout << *ptr << '\n';
+
+        if (x > 0)
+        {
+            int y = 6;
+            ptr = &y;
+
+            std::cout << *ptr << '\n';
+        }
+
+        ptr = nullptr;
+        std::cout << *ptr << '\n';
+
+        return 0;
     }
-
-    ptr = nullptr;
-    std::cout << *ptr << '\n';
-
-    return 0;
-}
-```
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* ptr = &x;
 
-    std::cout << "ptr: " << ptr << '\n';
-    std::cout << "*ptr: " << *ptr << '\n';
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
-    ptr = nullptr;
-    std::cout << "ptr: " << ptr << '\n';
-    std::cout << "*ptr: " << *ptr << '\n';
+        ptr = nullptr;
+        std::cout << "ptr: " << ptr << '\n';
+        std::cout << "*ptr: " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -518,142 +518,142 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    const int x = 5;
-    int* ptr = &x;
+    int main()
+    {
+        const int x = 5;
+        int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    *ptr = 7;
+        *ptr = 7;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    const int* ptr = &x;
+    int main()
+    {
+        int x = 5;
+        const int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    x = 6;
+        x = 6;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    *ptr = 7;
+        *ptr = 7;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    const int x = 5;
-    const int* ptr = &x;
+    int main()
+    {
+        const int x = 5;
+        const int* ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    ptr = &y;
+        int y = 6;
+        ptr = &y;
 
-    std::cout << x << " " << *ptr << " " << y << '\n';
+        std::cout << x << " " << *ptr << " " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* const ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* const ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    x = 6;
+        x = 6;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    *ptr = 7;
+        *ptr = 7;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    ptr = &y;
+        int y = 6;
+        ptr = &y;
 
-    std::cout << x << " " << *ptr << " " << y << '\n';
+        std::cout << x << " " << *ptr << " " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### V.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    int* const ptr = &x;
+    int main()
+    {
+        int x = 5;
+        int* const ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 6;
-    ptr = &y;
+        int y = 6;
+        ptr = &y;
 
-    std::cout << x << " " << *ptr << " " << y << '\n';
+        std::cout << x << " " << *ptr << " " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### VI.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-int main()
-{
-    int x = 5;
-    const int* const ptr = &x;
+    int main()
+    {
+        int x = 5;
+        const int* const ptr = &x;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    x = 6;
+        x = 6;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    *ptr = 7;
+        *ptr = 7;
 
-    std::cout << x << " " << *ptr << '\n';
+        std::cout << x << " " << *ptr << '\n';
 
-    int y = 8;
-    ptr = &y;
+        int y = 8;
+        ptr = &y;
 
-    std::cout << x << " " << *ptr << " " << y << '\n';
+        std::cout << x << " " << *ptr << " " << y << '\n';
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 ---
 
@@ -666,94 +666,94 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void updateValue(int* ptr)
-{
-    (*ptr)++;
-    std::cout << *ptr << '\n';
-}
+    void updateValue(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
 
-int main()
-{
-    int x = 5;
-    
-    updateValue(x);
-    
-    std::cout << x << '\n';
-    
-    return 0;
-}
-```
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void updateValue(int* ptr)
-{
-    *ptr++;
-    std::cout << *ptr << '\n';
-}
+    void updateValue(int* ptr)
+    {
+        *ptr++;
+        std::cout << *ptr << '\n';
+    }
 
-int main()
-{
-    int x = 5;
-    
-    updateValue(&x);
-    
-    std::cout << x << '\n';
-    
-    return 0;
-}
-```
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void updateValue(const int* ptr)
-{
-    (*ptr)++;
-    std::cout << *ptr << '\n';
-}
+    void updateValue(const int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
 
-int main()
-{
-    int x = 5;
-    
-    updateValue(&x);
-    
-    std::cout << x << '\n';
-    
-    return 0;
-}
-```
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
 
 - #### IV.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void updateValue(int* ptr)
-{
-    (*ptr)++;
-    std::cout << *ptr << '\n';
-}
+    void updateValue(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
 
-int main()
-{
-    int x = 5;
-    
-    int* ptr = nullptr;
+    int main()
+    {
+        int x = 5;
+        
+        int* ptr = nullptr;
 
-    updateValue(ptr);
+        updateValue(ptr);
 
-    std::cout << x << '\n';
-    
-    return 0;
-}
-```
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```
     
 ---
 
@@ -766,43 +766,43 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-void updateValue(int val)
-{
-    val++;
-    std::cout << val << '\n';
-}
+    void updateValue(int val)
+    {
+        val++;
+        std::cout << val << '\n';
+    }
 
-void updateValueByReference(int& ref)
-{
-    ref++;
-    std::cout << ref << '\n';
-}
+    void updateValueByReference(int& ref)
+    {
+        ref++;
+        std::cout << ref << '\n';
+    }
 
-void updateValueByAddress(int* ptr)
-{
-    (*ptr)++;
-    std::cout << *ptr << '\n';
-}
+    void updateValueByAddress(int* ptr)
+    {
+        (*ptr)++;
+        std::cout << *ptr << '\n';
+    }
 
-int main()
-{
-    int x = 5;
-    
-    updateValue(x);
-    
-    std::cout << x << '\n';
-    
-    updateValueByReference(x);
-    
-    std::cout << x << '\n';
-    
-    updateValueByAddress(&x);
-    
-    std::cout << x << '\n';
-    
-    return 0;
-}
-```
+    int main()
+    {
+        int x = 5;
+        
+        updateValue(x);
+        
+        std::cout << x << '\n';
+        
+        updateValueByReference(x);
+        
+        std::cout << x << '\n';
+        
+        updateValueByAddress(&x);
+        
+        std::cout << x << '\n';
+        
+        return 0;
+    }
+    ```

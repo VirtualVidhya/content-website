@@ -19,56 +19,56 @@ import Admonition from '@/components/Admonition.astro';
 Analyze the given programs below, predict their outputs and determine whether they follow the principles of object-oriented programming correctly.
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Date
-{
-public:
-    int m_day;
-    int m_month;
-    int m_year;
-};
-
-void printDate(Date date)
-{
-    std::cout << date.m_day << '/' << date.m_month << '/' << date.m_year;
-}
-
-int main()
-{
-    Date date{ 4, 10, 21 };
-    printDate(date);
-
-    return 0;
-}
-```
-
-- #### II.
-```cpp
-#include <iostream>
-
-class Date
-{
-public:
-    int m_day;
-    int m_month;
-    int m_year;
+    class Date
+    {
+    public:
+        int m_day;
+        int m_month;
+        int m_year;
+    };
 
     void printDate(Date date)
     {
         std::cout << date.m_day << '/' << date.m_month << '/' << date.m_year;
     }
-};
 
-int main()
-{
-    Date date{ 4, 10, 21 };
-    date.printDate(date);
+    int main()
+    {
+        Date date{ 4, 10, 21 };
+        printDate(date);
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    class Date
+    {
+    public:
+        int m_day;
+        int m_month;
+        int m_year;
+
+        void printDate(Date date)
+        {
+            std::cout << date.m_day << '/' << date.m_month << '/' << date.m_year;
+        }
+    };
+
+    int main()
+    {
+        Date date{ 4, 10, 21 };
+        date.printDate(date);
+
+        return 0;
+    }
+    ```
 
 ---
 
@@ -81,74 +81,74 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Message
-{
-    std::string msg_str = "Welcome!";
-
-public:
-    void greetUser()
+    class Message
     {
-        std::cout << msg_str << '\n';
+        std::string msg_str = "Welcome!";
+
+    public:
+        void greetUser()
+        {
+            std::cout << msg_str << '\n';
+        }
+    };
+
+    int main()
+    {
+        Message.greetUser();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Message.greetUser();
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Coordinate
-{
-public:
-    int x;
-    int y;
-
-    void printCoordinates()
+    class Coordinate
     {
-        std::cout << "(x, y): " << x << ", " << y << '\n';
+    public:
+        int x;
+        int y;
+
+        void printCoordinates()
+        {
+            std::cout << "(x, y): " << x << ", " << y << '\n';
+        }
     }
-}
 
-int main()
-{
-    Coordinate coord = {4, 7};
-    coord.printCoordinates();
+    int main()
+    {
+        Coordinate coord = {4, 7};
+        coord.printCoordinates();
 
-    return 0;
-}
-```
+        return 0;
+    }
+    ```
 
 - #### III.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Message
-{
-public:
-    void greetUser()
+    class Message
     {
-        std::cout << "Welcome!\n";
+    public:
+        void greetUser()
+        {
+            std::cout << "Welcome!\n";
+        }
+    };
+
+    int main()
+    {
+        Message message;
+        message.greetUser();
+
+        return 0;
     }
-};
-
-int main()
-{
-    Message message;
-    message.greetUser();
-
-    return 0;
-}
-```
+    ```
 
 ---
 
@@ -254,62 +254,62 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Date
-{
-    int m_day;
-    int m_month;
-    int m_year;
-
-    void printDate()
+    class Date
     {
-        std::cout << m_day << '/' << m_month << '/' << m_year;
+        int m_day;
+        int m_month;
+        int m_year;
+
+        void printDate()
+        {
+            std::cout << m_day << '/' << m_month << '/' << m_year;
+        }
+    };
+
+
+    int main()
+    {
+        Date date{ 4, 10, 21 };
+        date.printDate();
+
+        return 0;
     }
-};
-
-
-int main()
-{
-    Date date{ 4, 10, 21 };
-    date.printDate();
-
-    return 0;
-}
-```
+    ```
 
 - #### II.
-```cpp
-#include <iostream>
+    ```cpp
+    #include <iostream>
 
-class Date
-{
-    int m_day;
-    int m_month;
-    int m_year;
-
-public:
-    void printDate()
+    class Date
     {
-        std::cout << m_day << '/' << m_month << '/' << m_year;
+        int m_day;
+        int m_month;
+        int m_year;
+
+    public:
+        void printDate()
+        {
+            std::cout << m_day << '/' << m_month << '/' << m_year;
+        }
+    };
+
+
+    int main()
+    {
+        Date date;
+
+        date.m_day = 11;
+        date.m_month = 02;
+        date.m_year = 2025;
+
+        date.printDate();
+
+        return 0;
     }
-};
-
-
-int main()
-{
-    Date date;
-
-    date.m_day = 11;
-    date.m_month = 02;
-    date.m_year = 2025;
-
-    date.printDate();
-
-    return 0;
-}
-```
+    ```
 
 ---
 

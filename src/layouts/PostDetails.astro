@@ -172,7 +172,7 @@ const nextPost =
           //   class="flex w-full gap-1 hover:opacity-75"
           // >
           <a
-            href={getPath(prevPost.slug, prevPost.filePath, true)}
+            href=`${getPath(prevPost.slug, prevPost.filePath, true)}/`
             class="post-navigation-block justify-start"
           >
             <IconChevronLeftArrow styleClass="inline-block flex-none" />
@@ -190,13 +190,13 @@ const nextPost =
           //   class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           // >
           <a
-            href={getPath(nextPost.slug, nextPost.filePath, true)}
+            href=`${getPath(nextPost.slug, nextPost.filePath, true)}/`
             class="post-navigation-block justify-end text-right sm:col-start-2"
           >
             <div class="flex flex-col gap-1">
               <span class="text-sm">Next Post</span>
               <div class="font-semibold text-font-color-green">{nextPost.title}</div>
-              <!-- <div class="font-semibold text-accent/85">{nextPost.title}</div> -->
+              {/* <div class="font-semibold text-accent/85">{nextPost.title}</div> */}
             </div>
             <IconChevronRightArrow styleClass="inline-block flex-none" />
           </a>
@@ -205,107 +205,6 @@ const nextPost =
     </div>
   </main>
   <Footer />
-  
-  <script is:inline data-astro-rerun>
-    /** Attaches links to headings in the document,
-     *  allowing sharing of sections easily */
-    function addHeadingLinks() {
-      const headings = Array.from(
-        document.querySelectorAll("h2, h3, h4, h5, h6")
-      );
-      for (const heading of headings) {
-         // Check if link already exists
-        if (heading.querySelector("a.heading-link")) {
-          continue; // Skip if already processed
-        }
-        heading.classList.add("group");
-        const link = document.createElement("a");
-        link.className =
-          "heading-link ml-2 opacity-0 group-hover:opacity-100 focus:opacity-100";
-        link.href = "#" + heading.id;
-  
-        const span = document.createElement("span");
-        span.ariaHidden = "true";
-        span.innerText = "#";
-        link.appendChild(span);
-        heading.appendChild(link);
-      }
-    }
-    // Don't call immediately, call within initialize function
-  
-    // --- Initialization Function for this inline script ---
-    function initializeHeadingLinks() {
-      // Only run if headings exist
-      if (document.querySelector("h2, h3, h4, h5, h6")) {
-          addHeadingLinks();
-      }
-    }
-  
-    // Run initialization on initial load
-    initializeHeadingLinks();
-  
-    // Run initialization after Astro navigations
-    document.addEventListener("astro:page-load", initializeHeadingLinks);
 
-    /** Attaches copy buttons to code blocks in the document,
-     * allowing users to copy code easily. */
-    function attachCopyButtons() {
-      const copyButtonLabel = "Copy";
-      const codeBlocks = Array.from(document.querySelectorAll("pre"));
-
-      for (const codeBlock of codeBlocks) {
-        const wrapper = document.createElement("div");
-        wrapper.style.position = "relative";
-
-        const copyButton = document.createElement("button");
-        copyButton.className =
-          "copy-code absolute right-3 -top-3 rounded bg-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
-        copyButton.innerHTML = copyButtonLabel;
-        codeBlock.setAttribute("tabindex", "0");
-        codeBlock.appendChild(copyButton);
-
-        // wrap codebock with relative parent element
-        codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-        wrapper.appendChild(codeBlock);
-
-        copyButton.addEventListener("click", async () => {
-          await copyCode(codeBlock, copyButton);
-        });
-      }
-
-      async function copyCode(block, button) {
-        const code = block.querySelector("code");
-        const text = code?.innerText;
-
-        await navigator.clipboard.writeText(text ?? "");
-
-        // visual feedback that task is completed
-        button.innerText = "Copied";
-
-        setTimeout(() => {
-          button.innerText = copyButtonLabel;
-        }, 700);
-      }
-    }
-    attachCopyButtons();
-
-    document.addEventListener("astro:after-swap", attachCopyButtons);
-  
-    /** Scrolls the document to the top when
-     * the "Back to Top" button is clicked. */
-    // function backToTop() {
-    //   document.querySelector("#back-to-top")?.addEventListener("click", () => {
-    //     document.body.scrollTop = 0; // For Safari
-    //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    //   });
-    // }
-    // backToTop();
-  
-    /* Go to page start after page swap */
-    document.addEventListener("astro:after-swap", () =>
-      window.scrollTo({ left: 0, top: 0, behavior: "instant" })
-    );
-  </script>
-  
-  <!-- <script src="../scripts/specific/attach-copy-buttons.js"></script> -->
+  <script src="../scripts/specific/post-details-init.js"></script>
 </Layout>

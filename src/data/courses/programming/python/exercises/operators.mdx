@@ -1,0 +1,315 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Operators
+slug: operators
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 20
+---
+
+import Admonition from '@/components/Admonition.astro';
+import LinkMd from '@/components/LinkMd.astro';
+
+#### Q1.
+
+Write a program to calculate the perimeter and the area of a rectangle.
+Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
+
+{/* <Admonition variant="note" title="note">
+    You can safely assume that the value of length and width will always be an integer.
+</Admonition> */}
+
+**Expected Output:**
+
+```ansi
+Enter the length of a rectangle: 10   [2;3m// user input[0m
+Enter the width of a rectangle: 5   [2;3m// user input[0m
+
+Perimeter: 30
+Area: 50
+
+[2;3m// Perimeter = 2 * (l + w) = 2 * (10 + 5) = 30[0m
+[2;3m// Area = l * w = 10 * 5 = 50[0m
+```
+
+---
+
+#### Q2.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    print(6 + 5 * 4 % 3)
+    ```
+
+- #### II. 
+    ```py
+    a = 3
+    a += 1
+
+    print(a)
+
+    a /= 2
+
+    print(a)
+    ```
+
+- #### III. 
+    ```py
+    x = '420'
+    y = '96'
+
+    print(x + y)
+    ```
+
+- #### IV. 
+    ```py
+    x = 9
+    y = 2
+
+    z = x // y
+
+    print(z)
+
+    x = z % y
+
+    print(x)
+
+    y = z ** x
+
+    print(y)
+    ```
+
+- #### V.
+    ```py
+    i = 5 * 2; print(i);
+
+    j = i * i
+    print(j)
+    ```
+
+---
+
+#### Q3.
+
+There are 10 seats placed in a circle for an event, numbered from 1 to 10. People are arriving and standing in a waiting line (queue). Each person is given a seat based on their position in the line.
+
+Write a program where the user enters their position in the waiting line (queue) and the program tells them which seat number they will get.
+
+(For e.g. if someone is the 11th in line, they should get seat 1 again because the seats are arranged in a circle. If someone is 12th, they get seat 2
+and so on.)
+
+**Expected Output:**
+
+```ansi
+Enter your queue number: 23   [2;3m// user input[0m
+
+Your seat number is: 3
+```
+
+---
+
+#### Q4.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    message1 = "Linus Torvalds, the creator of the linux kernel once said -"
+    message2 = "Most of the good programmers do programming not because they expect to get paid or get adulation by the public,"
+    message3 = "but because it is fun to program."
+
+    print(message1)
+    print('{} {}'.format(message2, message3))
+    ```
+
+- #### II. 
+    ```py
+    show_name = "Monty Python's Flying Circus"
+
+    print("The name of the Python programming language comes from an old BBC television comedy sketch series called -", end=' ')
+    print(show_name)
+    ```
+
+- #### III. 
+    ```py
+    fname = "Guido"
+    mname = "van"
+    lname = "Rossum"
+
+    print('{1} {2} {3}'.format(fname, mname, lname))
+    ```
+
+- #### IV.
+    ```py
+    name = "Albert Einstein"
+
+    quote = '"Computers are incredibly fast, accurate, and stupid. Human beings are ' \
+    'incredibly slow, inaccurate, and brilliant. Together they are powerful beyond imagination."'
+
+        print(quote)
+
+    print('-', name)
+    ```
+
+---
+
+#### Q5.
+
+Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone). Then 
+- Print the **Total Cost** of the items
+- Then calculate a 18% GST (tax) on the total cost of the items and print that **GST Amount**
+- Finally print the **Total Bill** amount, adding Total Cost & GST Amount
+
+{/* (**TIP:** Decide the data types of the variables needed in the program with proper logical consideration so that no data loss occur in the output.) */}
+{/* <Admonition variant="hint" title="tip">
+    Decide the data types of the variables needed in the program with proper logical consideration so that no data loss occur in the output.
+</Admonition> */}
+
+**Expected Output:**
+
+```ansi
+Enter the cost of 3 food items: 50 20 60   [2;3m// user input[0m
+Total Cost: 130
+GST Amount : 23.4
+Total Bill: 153.4
+
+[2;3m// Total Cost = 50 + 20 + 60 = 130[0m
+[2;3m// GST Amount = Total Cost * 18 / 100 = 130 * 18 / 100 = 23.4[0m
+[2;3m// Total Bill = Total Cost + GST Amount = 130 + 23.4 = 153.4[0m
+```
+
+---
+
+#### Q6.
+
+Write a program that takes a value of radius from user, then find the circumference and area of a circle for a given radius.
+
+{/* (**NOTE:** Take 3.14 as the value of pi.) */}
+<Admonition variant="note" title="note">
+    Take **_3.14_** as the value of **_pi_**.
+</Admonition>
+
+**Expected Output:**
+
+```ansi
+Enter the value of radius: 5   [2;3m// user input[0m
+
+Circumference: 31.4
+Area: 78.5
+
+[2;3m// Circumference = 2 * pi * r = 2 * 3.14 * 5 = 31.4
+// Area = pi * r * r = 3.14 * 5 * 5 = 78.5
+```
+
+---
+
+#### Q7.
+
+Write a program that takes a value of temperature in Celsius from user, then convert it into Kelvin and Fahrenheit.
+
+The formulas for Celsius to Kelvin and Celsius to Fahrenheit are -
+- <code>Kelvin = Celsius + 273</code>
+- <code>Fahrenheit = 9/5 * Celsius + 32</code>
+
+**Expected Output:**
+
+```ansi
+Enter the value of temperature in Celsius: 30   [2;3m// user input[0m
+temperature in Kelvin: 303
+temperature in Fahrenheit: 86
+
+[2;3m// Kelvin = Celsius + 273 = 30 + 273 = 303
+// Fahrenheit = 9/5 * Celsius + 32 = 9/5 * 30 + 32 = 86
+```
+
+---
+
+#### Q8.
+
+You're helping a government planning department analyze how a country's population is expected to grow over time. Based on the current population, 
+an estimated annual growth rate and a time period in years, you need to calculate what the population will be at the end of that period.
+
+<LinkMd href="https://calculator.academy/population-growth-calculator/" title="Population growth" /> can be calculated by looking at the change in population over time. The formula for population growth is -
+
+<code>pt = p0 x (1 + r)<sup>t</sup></code>
+
+Where, 
+- `pt` - total population after time t
+- `p0` - initial population
+- `r` - rate of growth
+- `t` - total time in years
+
+**Expected Output:**
+
+```ansi
+Enter the initial population (in crores): 142   [2;3m// user input[0m
+Enter the rate of growth (in %): 0.875   [2;3m// user input[0m
+Enter the time (in years): 5   [2;3m// user input[0m
+
+Total population after given time (in crores): 148.322
+```
+
+---
+
+#### Q9.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    x = 10
+    y = 5
+
+    print((x - 3) == (y + 2))
+    print((x - 5) >= (y + 2))
+    print((x - 4) != (y + 2))
+    ```
+
+- #### II.
+    ```py
+    x = 10
+    y = 5
+
+    print(((x > 20) & (y < 10)))
+    print(((x > 20) | (y < 10)))
+    ```
+
+- #### III.
+    ```py
+    w = True
+    x = False
+    y = False
+    z = False
+
+    print((w | x | y & z))
+    print(((w | x | y) & z))
+    print((w | x | y) & z)
+    ```
+
+- #### IV. _**(Adv.)**_
+    ```py
+    x = (100.0 - 99.99)
+    y = (10.0 - 9.99)
+
+    print(x == y)
+    print(x < y)
+    print(x > y)
+    ```

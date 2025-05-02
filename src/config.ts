@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://www.vvidhya.com/",
   desc: "Learn top computer courses at V.Vidhya in Surat. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
   title: "V.Vidhya",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "/assets/og-images/vvidhya-og.png",
   lightAndDarkMode: true,
   postPerIndex: 20,
   postPerPage: 20,

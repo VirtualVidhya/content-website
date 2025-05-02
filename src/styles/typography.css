@@ -1,6 +1,7 @@
 @plugin '@tailwindcss/typography';
 
 @layer base {
+  /* #region FONTS */
   @font-face {
     font-family: "NotoSans";
     font-style: normal;
@@ -105,6 +106,7 @@
     src: url(/fonts/noto-sans-v37-latin-900italic.woff2) format("woff2");
     font-display: swap;
   }
+  /* #endregion */
 
   .prose {
     /* @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-h3:italic prose-p:!text-foreground prose-a:!text-foreground prose-a:!decoration-dashed prose-a:underline-offset-6 hover:prose-a:text-accent prose-blockquote:!border-l-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-foreground prose-figcaption:opacity-70 prose-strong:!text-foreground prose-code:rounded prose-code:bg-muted/75 prose-code:p-1 prose-code:!text-foreground prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-foreground prose-ul:overflow-x-clip prose-ul:!text-foreground prose-li:marker:!text-accent prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border prose-img:mx-auto prose-img:!my-2 prose-img:border-2 prose-img:border-border prose-hr:!border-border; */
@@ -136,7 +138,19 @@
     @apply hidden;
   }
 
-  /* ===== Code Blocks & Syntax Highlighting ===== */
+  .bold-li > li::marker {
+    @apply !font-semibold;
+  }
+
+  .prose li > p {
+    @apply !my-2;
+  }
+
+  .prose #admonition ul {
+    @apply !m-0;
+  }
+
+  /* #region CODE BLOCKS & SYNTAX HIGHLIGHTING */
   pre:has(code) {
     @apply border border-border !mt-5 !mb-8;
     background-color: var(--color-codeblock) !important;
@@ -194,16 +208,5 @@
     color: var(--color-border);
     opacity: 0.5;
   }
-
-  .bold-li > li::marker {
-    @apply !font-semibold;
-  }
-
-  .prose li > p {
-    @apply !my-2;
-  }
-
-  .prose #admonition ul {
-    @apply !m-0;
-  }
+  /* #endregion */
 }

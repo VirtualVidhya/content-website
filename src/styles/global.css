@@ -5,23 +5,6 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* :root,
-html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
-}
-
-html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60bf;
-  --border: #ab4b08;
-} */
-
 :root,
 html[data-theme="light"] {
   --background: #f9f8f4;
@@ -77,7 +60,6 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    /* @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background; */
     @apply flex min-h-svh flex-col bg-background font-notosans text-foreground selection:bg-accent/75 selection:text-background;
   }
   a,
@@ -91,10 +73,6 @@ html[data-theme="dark"] {
   /* section {
     @apply mx-auto max-w-3xl px-4;
   } */
-}
-
-.active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
 @layer components {
@@ -112,7 +90,6 @@ html[data-theme="dark"] {
 
   .header-logo-svg .body-outline {
     stroke-width: 11.25;
-    /* @apply stroke-font-color-pri; */
   }
 
   .header-logo-svg .eyes-outline {
@@ -121,12 +98,10 @@ html[data-theme="dark"] {
 
   .header-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    /* @apply stroke-font-color-pri; */
   }
 
   .header-logo-svg .brain-curves {
     stroke-width: 4.15;
-    /* @apply stroke-font-color-pri; */
   }
 
   /* home-logo */
@@ -136,7 +111,6 @@ html[data-theme="dark"] {
 
   .home-logo-svg .body-outline {
     stroke-width: 9.5;
-    /* @apply stroke-font-color-pri; */
   }
 
   .home-logo-svg .eyes-outline {
@@ -145,12 +119,10 @@ html[data-theme="dark"] {
 
   .home-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    /* @apply stroke-font-color-pri; */
   }
 
   .home-logo-svg .brain-curves {
     stroke-width: 3.5;
-    /* @apply stroke-font-color-pri; */
   }
 
   /* footer-logo */
@@ -169,16 +141,18 @@ html[data-theme="dark"] {
 
   .footer-logo-svg .brain-divider-line {
     stroke-width: 6.25;
-    /* @apply stroke-font-color-pri; */
   }
 
   .footer-logo-svg .brain-curves {
     stroke-width: 4.15;
-    /* @apply stroke-font-color-pri; */
   }
   /* #endregion */
 
   /* #region GENERAL */
+  .active-nav {
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+
   .card-btn {
     @apply w-4/5 rounded-lg border-2 border-b-6 px-6 py-4 text-lg font-bold transition-all hover:!border-borderhover active:!border-borderhover sm:px-8 sm:py-6 sm:text-xl;
   }
@@ -212,6 +186,14 @@ html[data-theme="dark"] {
   input:focus {
     outline: none;
   }
+
+  .scroll-up-btn {
+    @apply fixed right-4 bottom-4 z-[5] hidden h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri;
+  }
+
+  .scroll-up-btn.touch {
+    @apply text-font-color-pri;
+  }
   /* #endregion */
 
   /* #region HEADER */
@@ -231,14 +213,6 @@ html[data-theme="dark"] {
     @apply text-font-color-green;
   }
 
-  .scroll-up-btn {
-    @apply fixed right-4 bottom-4 z-[5] hidden h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri;
-  }
-
-  .scroll-up-btn.touch {
-    @apply text-font-color-pri;
-  }
-
   .side-navmenu-border {
     @apply my-3 border-[1px] border-solid border-font-color-pri md:my-5;
   }
@@ -256,229 +230,11 @@ html[data-theme="dark"] {
   .home-page-action-btn.touch {
     @apply border-font-color-pri text-font-color-pri;
   }
-
-  /* .lottie-placeholder {
-    transition: opacity 0.2s ease-in-out;
-  } */
   /* #endregion */
 
-  /* COMBINE COURSE PAGE */
-  .main-combine-course-section {
-    @apply mx-4 mt-10 mb-20 flex flex-col items-center justify-center gap-24 2xl:mx-10;
-  }
-
-  /* INDIVIDUAL COURSE PAGE */
-  .ind-course-main-section {
-    @apply mx-auto mt-10 mb-20 flex max-w-mdsm flex-col gap-3 px-6 md:max-w-2xl lg:max-w-4xl lg:px-0 2xl:max-w-6xl;
-  }
-
-  .ind-course-header-section {
-    @apply flex flex-col items-center justify-center gap-3;
-  }
-
-  .ind-course-heading {
-    @apply mb-10 text-center text-3xl font-extrabold text-font-color-pri md:text-5xl;
-  }
-
-  .enroll-btn {
-    @apply rounded-lg border-2 border-b-6 border-font-color-green-dark bg-font-color-green px-6 py-3 text-lg font-bold text-font-color-white transition-all hover:border-font-color-pri hover:text-font-color-pri active:border-font-color-pri active:text-font-color-pri sm:px-8 sm:text-xl;
-  }
-
-  .enroll-btn.touch {
-    @apply border-font-color-pri text-font-color-pri;
-  }
-
-  .ind-course-duration {
-    @apply mt-5 mb-10 flex flex-row items-center justify-center gap-2 text-base font-semibold sm:text-lg;
-  }
-
-  .ind-course-overview-section {
-    @apply mb-24;
-  }
-
-  .ind-course-section-heading {
-    @apply mt-3 mb-5 text-left text-2xl font-extrabold text-font-color-green md:text-3xl;
-  }
-
-  .ind-course-illus {
-    @apply mb-10 h-auto max-h-[225px] w-auto sm:max-h-[300px] md:max-h-[425px] lg:max-h-[500px];
-  }
-
-  /* .ind-course-overview-heading {
-    @apply text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5;
-  } */
-
-  .ind-course-curriculum-section {
-    @apply mb-24;
-  }
-
-  /* .ind-course-curriculum-heading {
-    @apply text-center text-font-color-sec text-xl md:text-3xl font-extrabold mt-3 mb-5;
-  } */
-
-  .ind-course-imp-text {
-    @apply text-lg font-extrabold text-font-color-blue;
-  }
-
-  .ind-course-sublist {
-    @apply mx-auto mb-5 list-outside list-disc pl-5;
-  }
-
-  /* FOOTER */
-
-  /* ILLUSTRATIONS */
+  /* #region ILLUSTRATIONS */
   .illus {
     @apply h-auto max-h-[225px] w-auto sm:max-h-[300px] md:max-h-[425px] lg:max-h-[500px];
-  }
-
-  /* CONTACT */
-  .contact-section-heading {
-    @apply mb-3 text-2xl font-extrabold text-font-color-green md:text-4xl;
-  }
-
-  .form-submit-btn {
-    @apply cursor-pointer rounded-md bg-font-color-green px-6 py-3 font-bold text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri;
-  }
-
-  .form-submit-btn.touch {
-    @apply text-font-color-pri;
-  }
-
-  .form-fieldbox {
-    @apply w-full rounded-lg border-1 border-solid border-color-border-pri bg-mainbg-color p-3 transition-all focus:border-font-color-pri focus:outline-1 focus:outline-font-color-pri active:border-font-color-pri;
-  }
-
-  .form-label {
-    @apply mb-1 text-base font-semibold md:text-lg;
-  }
-
-  .form-sublabel {
-    @apply text-sm font-normal;
-  }
-
-  .form-req-label {
-    @apply text-font-color-red-dark;
-  }
-
-  /* #region ALL COURSES PAGE   */
-  .view-all-btn {
-    @apply rounded-lg bg-font-color-green px-5 py-2 text-base font-bold text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri sm:px-7 sm:py-3 sm:text-lg;
-  }
-
-  .view-all-btn.touch {
-    @apply text-font-color-pri;
-  }
-
-  .course-card-grid {
-    @apply mb-24 grid [grid-template-columns:repeat(1,300px)] place-content-center justify-center justify-items-center gap-x-5 gap-y-5 sm:gap-y-[30px] md:[grid-template-columns:repeat(2,320px)] md:gap-x-10 md:gap-y-10 lg:[grid-template-columns:repeat(2,345px)] xl:[grid-template-columns:repeat(3,365px)] 2xl:[grid-template-columns:repeat(auto-fit,minmax(380px,max-content))];
-  }
-
-  /* .course-carousel-container {
-      @apply relative overflow-hidden [scroll-snap-type:x,mandatory] mx-auto mb-10 w-[300px] md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
-    } */
-
-  .course-carousel-container {
-    @apply mx-auto mb-10 w-[300px] overflow-hidden md:w-[680px] lg:w-[730px] xl:w-[1175px] 2xl:w-[1220px];
-  }
-
-  .course-carousel {
-    @apply flex flex-row gap-x-5 overflow-x-auto [scroll-behavior:smooth] transition-transform duration-500 ease-in-out [scrollbar-width:none] md:gap-x-10;
-  }
-
-  .course-card {
-    @apply box-border flex h-full w-[300px] flex-shrink-0 flex-col items-center justify-between gap-2 rounded-xl border-2 border-b-6 border-color-border-pri bg-navbar-color-pri p-5 hover:border-font-color-pri active:border-font-color-pri md:w-[320px] lg:w-[345px] xl:w-[365px] 2xl:w-[380px];
-  }
-
-  .course-card.touch {
-    @apply border-font-color-pri;
-  }
-
-  .course-card-image {
-    @apply h-auto w-24 md:w-32;
-  }
-
-  .course-card-heading {
-    @apply mb-3 text-center text-xl font-extrabold text-font-color-sec md:text-2xl;
-  }
-
-  /* .course-card-border {
-      @apply w-full border-solid border-[0.25px] border-color-border-pri mb-3;
-    } */
-
-  .course-card-desc {
-    @apply mb-2 text-center text-[14px] md:text-base;
-  }
-
-  .course-card-duration {
-    @apply flex flex-row items-center justify-center gap-2 text-[14px] md:text-base;
-  }
-
-  .course-card-tags-container {
-    @apply flex flex-row flex-wrap items-center justify-center gap-3;
-  }
-
-  .course-card-tags {
-    @apply rounded-md bg-font-color-blue px-2 py-1 text-[14px] font-semibold text-font-color-white md:text-base;
-  }
-
-  /* Hide scrollbar for Chrome/Safari/Edge */
-  /* .course-carousel::-webkit-scrollbar {
-      @apply hidden;
-    } */
-
-  .swiper-slide {
-    @apply !h-auto;
-  }
-
-  .swiper-slide.insufficient-slide {
-    @apply !w-min;
-  }
-
-  .swiper-wrapper.insufficient-slides {
-    justify-content: center;
-  }
-
-  .swiper-button-prev:after,
-  .swiper-button-next:after {
-    content: "" !important;
-  }
-
-  .carousel-nextBtn,
-  .carousel-prevBtn {
-    @apply flex items-center justify-center text-3xl md:text-4xl;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    margin-top: 0px !important;
-    z-index: 5 !important;
-    color: inherit !important;
-  }
-
-  .swiper-horizontal > .swiper-scrollbar,
-  .swiper-scrollbar.swiper-scrollbar-horizontal {
-    position: static !important;
-    z-index: 5 !important;
-    height: 5px !important;
-    width: 35% !important;
-  }
-
-  .progress-bar-container {
-    @apply h-[5px] w-[35%] rounded-lg bg-color-border-pri;
-  }
-
-  .swiper-scrollbar {
-    @apply !rounded-lg !bg-color-border-pri;
-    position: static !important;
-    touch-action: none;
-  }
-
-  .swiper-scrollbar-drag {
-    @apply !bg-font-color-pri;
-    border-radius: inherit !important;
   }
   /* #endregion */
 

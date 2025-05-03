@@ -165,6 +165,13 @@ What will be the output of the following programs?
     print(f"- {name}")
     ```
 
+- #### V.
+    ```py
+    print(1,00,000)
+
+    print(1_00_000)
+    ```
+
 ---
 
 #### Q5.
@@ -313,3 +320,49 @@ What will be the output of the following programs?
     print(x < y)
     print(x > y)
     ```
+
+----
+
+#### Q10.
+
+A bank wants to alert its customers when their daily balance swing is large.
+
+- Ask the user for their opening balance and closing balance for the day.
+- Calculate the **absolute change** in balance and print it.
+
+**Expected Output:**
+
+```ansi
+[2;3m// case 1[0m
+Enter opening balance (rs.): 2500.00   [2;3m// user input[0m
+Enter closing balance (rs.): 1200.75   [2;3m// user input[0m
+
+Alert! Your balance swung by rs.1299.25 today.
+
+[2;3m// case 2[0m
+Enter opening balance (rs.): 1300.00   [2;3m// user input[0m
+Enter closing balance (rs.): 2600.75   [2;3m// user input[0m
+
+Alert! Your balance swung by rs.1300.75 today.
+```
+
+---
+
+#### Q11.
+
+Your car's onboard computer needs a quick summary of mileage. Write a program that -
+- Asks for distance traveled (in km) and fuel consumed (in liters).
+- Calculates fuel efficiency as km per liter and displays it.
+
+<Admonition variant="note" title="note">
+    Display the calculated result **_rounded to two decimal places_**.
+</Admonition>
+
+**Expected Output:**
+
+```ansi
+Enter distance travelled (km): 512.3   [2;3m// user input[0m
+Enter fuel used (L): 36.8   [2;3m// user input[0m
+
+Your fuel efficiency is 13.92 km/L.
+```

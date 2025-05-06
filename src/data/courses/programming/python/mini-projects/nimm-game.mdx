@@ -1,0 +1,48 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Nimm Game
+slug: nimm-game
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 10
+---
+
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ### Task
+
+Create a text-based <LinkMd href="https://en.wikipedia.org/wiki/Nim" title="Nimm Game" /> for two players who alternately take stones from a shared pile. 
+In this version, the player who takes the last stone loses.
+
+<CollapsibleSection title="Instructions">
+- Start with a pile of 20 stones.
+- Players alternate turns (Player 1 goes first). 
+- On each turn, a player may remove **1** or **2** stones.
+- Before each move, display the number of stones remaining.
+- Prompt the current player to enter how many stones to take.
+- Validate the input: it must be `1` or `2` and not exceed the stones left.
+- Subtract the chosen amount from the pile.
+- When the pile reaches zero, declare the **other** player (not the one who just moved) as the winner.
+</CollapsibleSection>
+
+---
+
+- ### Main Lessons
+
+<ul class="list-[circle]">
+    <li>Implementing turn-based game flow</li>
+    <li>Validating user input against game rules</li>
+    <li>Managing and updating shared game state in a loop</li>
+    <li>Handling win/lose conditions based on move outcomes</li>
+</ul>
+
+---
+
+- ### Guidelines
+
+Feel free to implement additional features to enhance the gameplay.

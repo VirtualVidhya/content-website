@@ -14,7 +14,7 @@ order: 10
 import LinkMd from '@/components/LinkMd.astro';
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
 
-- ### Task
+- ## Task
 
 Create a text-based strategy game called <LinkMd href="https://en.wikipedia.org/wiki/Nim" title="Nim" />, where two players alternately take stones 
 from a shared pile until there are no stones left, the last one to take a stone loses.
@@ -32,9 +32,58 @@ from a shared pile until there are no stones left, the last one to take a stone 
 {/* - When the pile reaches zero, declare the **other** player (not the one who just moved) as the winner. */}
 </CollapsibleSection>
 
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Welcome to Nim (take 1 or 2 stones, last to take loses)!
+
+Stones remaining: 20
+Player 1, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 18
+Player 2, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 16
+Player 1, how many stones will you take? (1 or 2): 1
+
+Stones remaining: 15
+Player 2, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 13
+Player 1, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 11
+Player 2, how many stones will you take? (1 or 2): 1
+
+Stones remaining: 10
+Player 1, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 8
+Player 2, how many stones will you take? (1 or 2): -1
+Invalid choice. You may take only 1 or 2 stones at a time. Please try again: 2
+
+Stones remaining: 6
+Player 1, how many stones will you take? (1 or 2): 7
+Invalid choice. You may take only 1 or 2 stones at a time. Please try again: 2
+
+Stones remaining: 4
+Player 2, how many stones will you take? (1 or 2): 2
+
+Stones remaining: 2
+Player 1, how many stones will you take? (1 or 2): 1
+
+Stones remaining: 1
+Player 2, how many stones will you take? (1 or 2): 1
+
+Player 2 took the last stone and loses!
+Player 1 wins the game. Congratulations!
+```
+</CollapsibleSection>
+
 ---
 
-- ### Main Lessons
+- ## Main Lessons
 
 <ul class="list-[circle]">
     <li>Implementing turn-based game flow</li>
@@ -45,6 +94,6 @@ from a shared pile until there are no stones left, the last one to take a stone 
 
 ---
 
-- ### Guidelines
+- ## Guidelines
 
 Feel free to implement additional features to enhance the gameplay.

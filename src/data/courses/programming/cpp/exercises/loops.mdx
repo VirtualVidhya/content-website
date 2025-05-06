@@ -436,7 +436,7 @@ Create a "Guess the Lucky Number" game in C++.
 As the admin, set a "lucky number" between 1 and 100 in the program. The user (player) will attempt to guess this number.
 
 <div>
-The program should repeatedly prompt the user for a guess until they either:
+    The program should repeatedly prompt the user for a guess until they either:
     <ul>
         <li>Correctly match the lucky number.</li>
         <li>Enter 0 to exit the game (at any time).</li>
@@ -444,7 +444,7 @@ The program should repeatedly prompt the user for a guess until they either:
 </div>
 
 <div>
-To help the player, provide hints after each guess:
+    To help the player, provide hints after each guess:
     <ul>
         <li>If the guess is larger than the lucky number, display a message indicating it is too high.</li>
         <li>If the guess is smaller, indicate it is too low.</li>
@@ -468,5 +468,54 @@ Your guessed number is larger than the lucky number. Try Again.
 
 Guess the lucky number: 25   [2;3m// user input[0m
 Congratulations, you have guessed the lucky number.
+```
+</CollapsibleSection>
+
+---
+
+#### Q11. _**(Adv.)**_
+
+{/* A fruit wholesaler uses two suppliers on different schedules. Supplier-1 delivers `A` apple crates every `X` days and Supplier-2 delivers `B` orange crates every `Y` days. */}
+{/* A fruit wholesaler receives apple and orange crates on regular schedules. Shipments of apples arrive every `X` days and oranges arrive every `Y` days.  */}
+{/* Each time both shipments arrive on the same day, the wholesaler wants to pack mixed fruit baskets using all crates from that day's delivery, without leaving any leftover. */}
+{/* Whenever both apple and orange trucks arrive on the same day, the wholesaler wants to unpack that day's full delivery and pack mixed baskets so that: - Each basket contains the same number of apple and orange crates. - No crates are left over from that day's delivery. */}
+
+A fruit wholesaler receives apple crates every `X` days and orange crates every `Y` days. Each apple delivery brings `A` crates and each orange delivery brings `B` crates. 
+The wholesaler stores all incoming crates and wants to pack mixed baskets so that every basket has the same number of apple and orange crates, using up the entire stock 
+on one of the pack-days.
+
+{/* To prepare for this, the wholesaler needs to know: - The largest number of apple and orange crates per basket so that each basket has the same number of crates for each fruit and none go unused. - The number of days after which both apple and orange trucks will arrive together again. */}
+
+To solve the fruit wholesaler's problem, write a program that asks the user to enter:
+- Days between apple deliveries - `X`
+- Number of apple crates per delivery - `A`
+- Days between orange deliveries - `Y`
+- Number of orange crates per delivery - `B`
+{/* write a program that asks for the two delivery intervals (in days) - `X` for apples and `Y` for oranges,  */}
+Then calculate and display:
+- The maximum crates per basket (the largest equal number of apple and orange crates you can pack into each basket without leftovers).
+- The days until the next full pack-day (after how many days the wholesaler will have exactly matching totals of stored apples and oranges to pack into those baskets).
+{/* - The maximum number of crates of each fruit that fit into one mixed basket without leftovers. The number of days until the next time both shipments arrive on the same day. */}
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter apple delivery interval (days): 12  
+Enter apple crates per delivery: 36  
+Enter orange delivery interval (days): 15  
+Enter orange crates per delivery: 45  
+
+Maximum crates per basket: 9  
+Next matching delivery in: 60 days
+
+
+[2;3m// case 2[0m
+Enter apple delivery interval (days): 9  
+Enter apple crates per delivery: 25
+Enter orange delivery interval (days): 6
+Enter orange crates per delivery: 10
+
+Maximum crates per basket: 5
+Next matching delivery in: 18 days
 ```
 </CollapsibleSection>

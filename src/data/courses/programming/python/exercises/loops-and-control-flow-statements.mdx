@@ -2,13 +2,13 @@
 pubDatetime: 2025-04-28T15:57:52.737Z
 modDatetime: 2025-04-28T15:57:52.737Z
 
-title: Loops
-slug: loops
+title: Loops & Control Flow Statements
+slug: loops-and-control-flow-statements
 featured: false
 ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
 
-order: 50
+order: 40
 ---
 
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
@@ -23,7 +23,7 @@ Print first 25 <LinkMd href="https://www.cuemath.com/numbers/whole-numbers/" tit
     Write this program using **_while_** loop.
 </Admonition>
 
-<div class="w-full my-5"></div>
+{/* <div class="w-full my-5"></div> */}
 
 {/* <CollapsibleSection title="Expected Output">
 ```ansi
@@ -46,7 +46,7 @@ Print first 25 <LinkMd href="https://www.cuemath.com/numbers/whole-numbers/" tit
 Print all even numbers between 4 and 60.
 
 <Admonition variant="note" title="note">
-    Write this program using **_do-while_** loop.
+    Write this program using **_for_** loop.
 </Admonition>
 
 ---
@@ -56,7 +56,7 @@ Print all even numbers between 4 and 60.
 Print all odd numbers between 1 and 50 in reverse order.
 
 <Admonition variant="note" title="note">
-    Write this program using **_for_** loop.
+    Write this program using both **_while_** and **_for_** loop.
 </Admonition>
 
 ---
@@ -66,10 +66,10 @@ Print all odd numbers between 1 and 50 in reverse order.
 Print the multiplication table of 7.
 
 <Admonition variant="note" title="note">
-    Write this program using all types of loops i.e. **_while_**, **_do-while_**, **_for_** one by one.
+    Write this program using both **_while_** and **_for_** loop.
 </Admonition>
 
-<div class="w-full my-5"></div>
+{/* <div class="w-full my-5"></div> */}
 
 {/* <CollapsibleSection title="Expected Output">
 ```ansi
@@ -96,159 +96,59 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-    ```cpp
-    #include <iostream>
+    ```py
+    count = 20
 
-    int main()
-    {
-        int count = 15;
+    while count >= 10:
+        print(count, end=' ')
+        count -= 1
 
-        while (count <= 10)
-        {
-            std::cout << count << ' ';
-            ++count;
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### II.
-    ```cpp
-    #include <iostream>
+    ```py
+    for i in range(10, 0, -2):
+        print(i)
 
-    int main()
-    {
-        int count = 1;
-
-        do
-        {
-            std::cout << count << ' ';
-                
-            ++count;
-        }
-        while(count <= 10)
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### III.
-    ```cpp
-    #include <iostream>
+    ```py
+    count = 1
 
-    int main()
-    {
-        int count = 1;
+    while count <= 10:
+        print(count)
 
-        while (count <= 10);
-        {
-            std::cout << count << ' ';
-            ++count;
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### IV.
-    ```cpp
-    #include <iostream>
+    ```py
+    for i in range(10, 0):
+        print(i, end=' ')
 
-    int main()
-    {
-        for (int count = 10; count < 0; --count)
-        {
-            std::cout << count << ' ';
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### V.
-    ```cpp
-    #include <iostream>
+    ```py
+    count = 15
 
-    int main()
-    {
-        int count = 1;
+    while count <= 10:
+        count += 1
+        print(count)
 
-        while (count <= 10)
-        {
-            std::cout << count << ' ';
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("End of Loop")
     ```
 
 - #### VI.
-    ```cpp
-    #include <iostream>
+    ```py
+    for i in range(1, 25, 4):
+        print(i, end=' ')
 
-    int main()
-    {
-        for (int count = 10; count > 0; ++count)
-        {
-            std::cout << count << ' ';
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VII.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int count = 1;
-
-        while (count > 10)
-        {
-            std::cout << count << ' ';
-            --count;
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VIII.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int count = 1;
-
-        do
-        {
-            std::cout << count << ' ';
-            --count;
-        }
-        while (count > 10);
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 ---
@@ -297,179 +197,70 @@ What will be the output of the following programs?
 </Admonition>
 
 - #### I.
-    ```cpp
-    #include <iostream>
+    ```py
+    count = 0
 
-    int main()
-    {
-        int count = 0;
+    while count < 10:
+        count += 1
 
-        while (count < 10)
-        {
-            ++count;
-            
-            if (count % 3 == 0)
-                continue;
-            
-            std::cout << count << ' ';
-        }
+        if count % 3 == 0:
+            continue
 
-        std::cout << "\nEnd of Loop!\n";
-
-        return 0;
-    }
+        print(count, end=' ')
+        
+    print("\nEnd of Loop")
     ```
 
 - #### II.
-    ```cpp
-    #include <iostream>
+    ```py
+    for i in range(-3, 5):
+        print(i, end=' ')
 
-    int main()
-    {
-        for (int count = -3; count < 5; ++count)
-        {
-            std::cout << count << ' ';
+        if i / 2 == 1:
+            break
 
-            if (count / 2 == 1)
-                break;
-        }
-
-        std::cout << "\nEnd of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### III.
-    ```cpp
-    #include <iostream>
+    ```py
+    for i in range(-5, 5):
+        if ((i + i) >= (i * i)):
+            continue
 
-    int main()
-    {
-        int count = 1;
+        print(i, end=' ')
 
-        do
-        {
-            std::cout << count << ' ';
-
-            if (count == 3)
-                continue;
-                
-            ++count;
-        }
-        while(count <= 10);
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
+    print("\nEnd of Loop")
     ```
 
 - #### IV.
-    ```cpp
-    #include <iostream>
+    ```py
+    count = 1
 
-    int main()
-    {
-        int count = 1;
+    while count <= 10:
+        print(count, end=' ')
 
-        while (count <= 10)
-        {
-            std::cout << count << ' ';
-            
-            if (count == 3)
-                break;
-            
-            ++count;
-        }
+        if count == 3:
+            break
 
-        std::cout << "\nEnd of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### V.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        for (int i = -5; i < 5; ++i)
-        {
-            if ((i + i) >= (i * i))
-                continue;
-
-            std::cout << i << ' ';
-        }
-
-        std::cout << "\nEnd of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VI. **_(Adv.)_**
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int i = 50;
-
-        while (i > 0 || (i + i == i * i))
-        {
-            std::cout << i << ' ';
-            
-            if (i % 6 == 0)
-                continue;
-            
-            i -= 4;
-        }
-
-        std::cout << "\nEnd of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VII.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        for (int count = 1; count <= 10; ++count)
-        {
-            std::cout << count << ' ';
-
-            if (count == 3)
-                return 0;
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VIII. **_(Adv.)_**
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int i, sum = 0;
+        count += 1
         
-        for (i = 0; i < 5; i++);
-        {
-            sum += i;
-        }
-        
-        std::cout << "sum: " << sum << '\n';
+    print("\nEnd of Loop")
+    ```
 
-        return 0;
-    }
+- #### V. **_(Adv.)_**
+    ```py
+    i = 50
+
+    while (i > 0 or (i + i == i * i)):
+        print(i, end=' ')
+
+        if i % 6 == 0:
+            continue
+
+        i -= 4
+
+    print("\nEnd of Loop")
     ```
 
 ---

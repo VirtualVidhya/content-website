@@ -33,7 +33,7 @@ Consider the following programs:
 
     if x == 5:
         print("Hi")
-    else:
+    else
         print("Bye")
     ```
 
@@ -55,6 +55,24 @@ Consider the following programs:
         print("Hi")
     else:
         print("Bye")
+    ```
+
+- #### V.
+    ```py
+    x = 5
+
+    if x > 10:
+        
+    else:
+        print("Bye")
+    ```
+
+- #### VI.
+    ```py
+    x = 5
+
+    if x + 2 > 10:
+        print("Hi")
     ```
 
 What will be the output for the programs given above?
@@ -166,34 +184,72 @@ You have 4 pen(s) left unpacked.
 
 #### Q5.
 
-Consider the following program:
-
-```py
-x = 10
-y = 20
-
-if x == 10:
-    if y == 30:
-        print("x is 10 and y is 20")
-    else:
-        print("x is 10 but y is not 20")
-else:
-    print("x is not 10")
-
-```
-
-What will be the output of this program?
+{/* Consider the following program: */}
+What will be the output of the following programs?
 
 <Admonition variant="caution" title="caution">
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-<ol class="list-[lower-alpha] bold-li">
+- #### I.
+    ```py
+    x = 10
+    y = 30
+
+    if x == 10:
+        if y == 20:
+            print("x is 10 and y is 20")
+        else:
+            print("x is 10 but y is not 20")
+    else:
+        print("x is not 10")
+
+    ```
+
+- #### II.
+    ```py
+    x = 30
+
+    if x >= 0:
+        if x <= 20:
+            print(x, "is between 0 and 20")
+    else:
+        print(x, " is negative")
+    ```
+
+- #### III.
+    ```py
+    x = -30
+
+    if x >= 0:
+        print(f"{x} is positive")
+    else:
+        if (x >= -20):
+            print(f"{x} is between -20 and 0")
+        else:
+            print(f"{x} is less than -20")
+    ```
+
+- #### IV.
+    ```py
+    x = 15
+    y = 30
+
+    if x == 10:
+        if y == 20:
+            print("x is 10 and y is 20")
+        else:
+            print("x is 10 but y is not 20")
+    ```
+
+{/* What will be the output of this program? */}
+
+{/* <ol class="list-[lower-alpha] bold-li">
     <li>x is 10 and y is 20</li>
     <li>x is 10 but y is not 20</li>
     <li>x is not 10</li>
     <li>No output due to an error</li>
-</ol>
+</ol> */}
 
 ---
 

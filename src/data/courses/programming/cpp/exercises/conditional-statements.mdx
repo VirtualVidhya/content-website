@@ -93,6 +93,39 @@ Consider the following programs:
     }
     ```
 
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+
+        if (x > 10)
+        {
+        }
+        else 
+        {
+            std::cout << "Bye";
+        }
+    }
+    ```
+
+- #### VI.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int x = 5;
+
+        if (x + 2 > 10)
+        {
+            std::cout << "Hi";
+        }
+    }
+    ```
+
 What will be the output for the programs given above?
 
 <Admonition variant="caution" title="caution">
@@ -216,11 +249,11 @@ Consider the following program:
 int main()
 {
     int x = 10;
-    int y = 20;
+    int y = 30;
 
     if (x == 10)
     {
-        if (y == 30)
+        if (y == 20)
         {
             std::cout << "x is 10 and y is 20";
         }
@@ -560,6 +593,48 @@ You have exceeded the speed limit. A fine of rs.1000 is applicable.
 
 #### Q14.
 
+Consider the following program:
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int x = 30;
+
+    if (x >= 0)
+        if (x <= 20)
+            std::cout << x << " is between 0 and 20\n";
+        else
+            std::cout << x << " is negative\n";
+
+    return 0;
+}
+```
+
+What will be the output of this program?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+<ol class="list-[lower-alpha] bold-li">
+    <li>30 is negative</li>
+    <li>No output</li>
+    <li>30 is between 0 and 20</li>
+    <li>Error</li>
+</ol>
+
+<Admonition variant="hint" title="tip">
+    In practice, it is a bad coding style to nest _**if**_ statements this way. 
+    This question is just for realising the side effects of writing _**nested if**_ statements this way and understanding 
+    the importance of good coding style while using _**nested if**_ statements. 
+</Admonition>
+
+---
+
+#### Q15.
+
 For a good and safe paragliding experience as a beginner, certain weather conditions need to be met.
 - No raining
 - Wind speeds between 5 and 20 km/h
@@ -577,7 +652,7 @@ It's a good condition for paragliding.
 
 ---
 
-#### Q15.
+#### Q16.
 
 Create a program to make a mini-calculator.
 
@@ -600,7 +675,7 @@ output: 5 * 3 = 15
 
 ---
 
-#### Q16. _**(Adv.)**_
+#### Q17. _**(Adv.)**_
 
 At the city's electricity board, household electricity bills are calculated based on the number of units consumed in a month. The board follows a slab system where different rates apply based on consumption levels.
 
@@ -631,7 +706,7 @@ Electricity Bill: rs.950
 
 ---
 
-#### Q17.
+#### Q18.
 
 At an international airport's travel help desk, travellers often want to know the value of their Indian Rupees (INR) in different currencies.
 Write a program that helps a traveller by converting their amount in INR into a currency of their choice.

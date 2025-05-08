@@ -25,10 +25,10 @@ export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
   const indexes = await getCollection("list");
 
-  console.log("Total posts:", posts.length);
-  posts.forEach(element => {
-    console.log("Post ID:", element.id, element.filePath);
-  });
+  // console.log("Total posts:", posts.length);
+  // posts.forEach(element => {
+  //   console.log("Post ID:", element.id, element.filePath);
+  // });
   // console.log("Total indexes:", indexes.length);
   // console.log("All posts:", Array.from(posts));
   // console.log("All indexes:", Array.from(indexes));
@@ -43,7 +43,8 @@ export async function getStaticPaths() {
   [...posts, ...indexes].forEach(entry => {
     // const path = getDirPath(entry.id);
     const path = getPath(entry.id, entry.filePath, false, true);
-    console.log("Processing path:", path, "from entry:", entry.id);
+    // console.log("Processing path:", path, "from entry:", entry.id);
+
     if (path) {
       let currentPath = "";
       path.split("/").forEach(segment => {
@@ -53,7 +54,7 @@ export async function getStaticPaths() {
     }
   });
 
-  console.log("All paths:", Array.from(allPaths));
+  // console.log("All paths:", Array.from(allPaths));
 
   // Generate paths for all directories
   const paths = Array.from(allPaths).map(dirPath => {
@@ -80,12 +81,12 @@ export async function getStaticPaths() {
       return b.data.pubDatetime.valueOf() - a.data.pubDatetime.valueOf();
     });
 
-    console.log("For directory:", dirPath);
-    console.log("- Found config:", indexConfig?.id);
-    console.log(
-      "- Found posts:",
-      dirPosts.map(p => p.id)
-    );
+    // console.log("For directory:", dirPath);
+    // console.log("- Found config:", indexConfig?.id);
+    // console.log(
+    //   "- Found posts:",
+    //   dirPosts.map(p => p.id)
+    // );
 
     const subdirs = new Set<string>();
     [...posts, ...indexes].forEach(entry => {
@@ -121,7 +122,7 @@ export async function getStaticPaths() {
     // Keep the full data object (name, title, order)
     const sortedSubdirectoryData = subdirsWithData; 
 
-    console.log("- Found subdirs (sorted):", sortedSubdirectoryData);
+    // console.log("- Found subdirs (sorted):", sortedSubdirectoryData);
 
     return {
       params: { slug: dirPath || undefined },
@@ -139,12 +140,12 @@ export async function getStaticPaths() {
 const { indexConfig, subdirectories = [], posts = [] } = Astro.props;
 const currentPath = Astro.params.slug || "";
 
-console.log("Rendering path:", currentPath);
-console.log(
-  "Got posts:",
-  posts.map(p => p.id)
-);
-console.log("Got subdirs:", subdirectories);
+// console.log("Rendering path:", currentPath);
+// console.log(
+//   "Got posts:",
+//   posts.map(p => p.id)
+// );
+// console.log("Got subdirs:", subdirectories);
 ---
 
 <Layout title={indexConfig?.data.title || "Courses"}>

@@ -323,8 +323,9 @@ What will be the output of the following programs?
     z = False
 
     print((w or x or y and z))
+    print((x or w and y or z))
     print(((w or x or y) and z))
-    print(((w or x or y) and z))
+    print((w or (x or not y and z)))
     ```
 
 - #### IV. _**(Adv.)**_

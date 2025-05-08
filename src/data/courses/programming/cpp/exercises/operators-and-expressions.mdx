@@ -373,6 +373,7 @@ What will be the output of the following programs?
 
         std::cout << ((x > 20) && (y < 10)) << '\n';
         std::cout << ((x > 20) || (y < 10)) << '\n';
+        std::cout << ((x > 20) || !(y < 10)) << '\n';
         
         return 0;
     }
@@ -392,7 +393,9 @@ What will be the output of the following programs?
         std::cout << std::boolalpha;
         
         std::cout << (w || x || y && z) << '\n';
+        std::cout << (x || w && y || z) << '\n';
         std::cout << ((w || x || y) && z) << '\n';
+        std::cout << (w || (x || !y && z)) << '\n';
         std::cout << (w || x || y) && z << '\n';
         
         return 0;

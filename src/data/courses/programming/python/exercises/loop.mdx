@@ -344,25 +344,59 @@ What will be the output of the following programs?
 
 #### Q10.
 
-Take 10 numbers as input from user one by one and then give the sum of all the numbers the user entered. 
-The user can stop the asking loop at any point by entering 0 as an input, in that case, give the sum of all numbers the user
-has entered upto that point.
+At a grocery checkout, the cashier enters each item's price one by one. Write a program that:
+- Keeps on asking the user for the price of the next item.
+- Stops when the cashier enters 0 (indicating there are no more items).
+- Prints the total of all the entered prices as a bill.
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-Enter a number to add, or 0 to exit: 5   [2;3m// user input[0m
-Enter a number to add, or 0 to exit: 2   [2;3m// user input[0m
-Enter a number to add, or 0 to exit: 1   [2;3m// user input[0m
-Enter a number to add, or 0 to exit: 0   [2;3m// user input[0m
+Enter price of item (or 0 to exit): 120   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 85   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 40   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 55   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 0   [2;3m// user input[0m
 
-The sum of all the numbers you entered is: 8
-[2;3m// 5 + 2 + 1 = 8
+Total Bill: rs.300
 ```
 </CollapsibleSection>
 
 ---
 
-#### Q11.
+#### Q11. _**(Adv.)**_
+
+A popular music festival is happening in town, and the organizer has invited `N` different bands to perform on the main stage. Since the event has only one stage, 
+the performances will happen one after the other — no two bands can perform at the same time.
+
+Now, the organizer wants to explore all the possible ways these bands could be scheduled throughout the day. This is important because the sequence in which the bands 
+perform can impact the audience experience, energy levels, and crowd engagement.
+
+For example, should the high-energy band go first, or last? Should the acoustic group follow the rock band, or should they go earlier? To make these decisions wisely, 
+the organizer first wants to know:
+“In how many different ways can I arrange the performance order for today's bands?”
+
+Write a program that:
+
+- Asks the organizer about how many bands are performing today?
+- Calculates and displays the total number of possible lineups (schedules).
+
+<CollapsibleSection title="Expected Output">
+```ansi
+ [2;3m// case 1[0m
+Enter the number of bands:: 4   [2;3m// user input[0m
+
+Total possible lineups: 24
+
+[2;3m// case 2[0m
+Enter the number of bands:: 6   [2;3m// user input[0m
+
+Total possible lineups: 720
+```
+</CollapsibleSection>
+
+---
+
+#### Q12.
 
 Create a "Guess the Lucky Number" game in C++.
 
@@ -406,7 +440,7 @@ Congratulations, you have guessed the lucky number.
 
 ---
 
-#### Q12. _**(Adv.)**_
+#### Q13. _**(Adv.)**_
 
 {/* A fruit wholesaler uses two suppliers on different schedules. Supplier-1 delivers `A` apple crates every `X` days and Supplier-2 delivers `B` orange crates every `Y` days. */}
 {/* A fruit wholesaler receives apple and orange crates on regular schedules. Shipments of apples arrive every `X` days and oranges arrive every `Y` days.  */}

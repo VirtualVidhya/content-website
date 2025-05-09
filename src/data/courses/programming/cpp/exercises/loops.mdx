@@ -63,6 +63,144 @@ Print all odd numbers between 1 and 50 in reverse order.
 
 #### Q4.
 
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        for (int count = 25; count < 5; --count)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int count = 7;
+
+        while (count <= 13)
+        {
+            std::cout << count << ' ';
+            ++count;
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        for (int i = -15; i <= 5; i += 3)
+        {
+            std::cout << i << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int j = 15;
+
+        while (j >= -5)
+        {
+            std::cout << j << ' ';
+            j -= 4;
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int count = 1;
+
+        do
+        {
+            std::cout << count << ' ';
+                
+            ++count;
+        }
+        while(count <= 10)
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### VI.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        for (int count = -10; count > -20; ++count)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+    {/* ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        for (i = 0; i <= 15; i += 5)
+        {
+            std::cout << i << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ``` */}
+
+---
+
+#### Q5.
+
 Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
 <CollapsibleSection title="Expected Output">
@@ -84,7 +222,7 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 
 ---
 
-#### Q5.
+#### Q6.
 
 Print the multiplication table of 7.
 
@@ -110,7 +248,7 @@ Print the multiplication table of 7.
 
 ---
 
-#### Q6.
+#### Q7.
 
 What will be the output of the following programs?
 
@@ -124,15 +262,16 @@ What will be the output of the following programs?
 
     int main()
     {
-        int count = 15;
+        int i = 10;
 
-        while (count <= 10)
+        for (int i = 2; i < 10; i *= 2)
         {
-            std::cout << count << ' ';
-            ++count;
+            std::cout << i << ' ';
         }
 
-        std::cout << "End of Loop!\n";
+        std::cout << "\nEnd of Loop!\n";
+
+        std::cout << i << '\n';
 
         return 0;
     }
@@ -144,17 +283,15 @@ What will be the output of the following programs?
 
     int main()
     {
-        int count = 1;
+        int count = 15;
 
-        do
+        while (count <= 10)
         {
             std::cout << count << ' ';
-                
             ++count;
         }
-        while(count <= 10)
 
-        std::cout << "End of Loop!\n";
+        std::cout << "\nEnd of Loop!\n";
 
         return 0;
     }
@@ -166,15 +303,15 @@ What will be the output of the following programs?
 
     int main()
     {
-        int count = 1;
+        int items_tracker = 0;
+        int total_items = 10;
 
-        while (count <= 10);
+        for (items_tracker = 1; items_tracker <= total_items; ++items_tracker)
         {
-            std::cout << count << ' ';
-            ++count;
+            std::cout << "item" << items_tracker << '\n';
         }
 
-        std::cout << "End of Loop!\n";
+        std::cout << "\nTotal Items Counted: " << items_tracker << "\n";
 
         return 0;
     }
@@ -186,74 +323,21 @@ What will be the output of the following programs?
 
     int main()
     {
-        for (int count = 10; count < 0; --count)
+        int i = 1;
+
+        while (i < 10);
         {
-            std::cout << count << ' ';
+            std::cout << i << ' ';
+            i *= 2;
         }
 
-        std::cout << "End of Loop!\n";
+        std::cout << "\nEnd of Loop!\n";
 
         return 0;
     }
     ```
 
 - #### V.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int count = 1;
-
-        while (count <= 10)
-        {
-            std::cout << count << ' ';
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VI.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        for (int count = 10; count > 0; ++count)
-        {
-            std::cout << count << ' ';
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VII.
-    ```cpp
-    #include <iostream>
-
-    int main()
-    {
-        int count = 1;
-
-        while (count > 10)
-        {
-            std::cout << count << ' ';
-            --count;
-        }
-
-        std::cout << "End of Loop!\n";
-
-        return 0;
-    }
-    ```
-
-- #### VIII.
     ```cpp
     #include <iostream>
 
@@ -268,15 +352,68 @@ What will be the output of the following programs?
         }
         while (count > 10);
 
-        std::cout << "End of Loop!\n";
+        std::cout << "\nEnd of Loop!\n";
 
         return 0;
     }
     ```
 
+- #### VI.
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        int count = 1;
+
+        while (count <= 10)
+        {
+            std::cout << count << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+- #### VII. **_(Adv.)_**
+    ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        for (int i = 2; i/2 < 10; i *= 2)
+        {
+            std::cout << i << ' ';
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ```
+
+    {/* ```cpp
+    #include <iostream>
+
+    int main()
+    {
+        while (int i <= 10)
+        {
+            std::cout << i << ' ';
+            ++i;
+        }
+
+        std::cout << "\nEnd of Loop!\n";
+
+        return 0;
+    }
+    ``` */}
+
 ---
 
-#### Q7.
+#### Q8.
 
 A local weather station logs the rainfall (in mm) for each month of the year. Write a program that:
 - Prompts the user to enter the rainfall for each of the 12 months.
@@ -304,7 +441,7 @@ Average monthly rainfall: 75.42 mm
 
 ---
 
-#### Q8.
+#### Q9.
 
 <LinkMd href="https://en.m.wikipedia.org/wiki/Fizz_buzz" title="Fizz Buzz" /> is a simple math game used to teach children about divisibility. It is also sometimes used as an interview question to assess basic programming skills.
 The rules of the game are simple: Starting at 1, and counting upward, replace any number divisible only by three with the word “fizz”, any number only divisible by five with the word “buzz”, and any number divisible by both 3 and 5 with the word “fizzbuzz”.)
@@ -339,7 +476,7 @@ fizz
 
 ---
 
-#### Q9.
+#### Q10.
 
 What will be the output of the following programs?
 
@@ -525,13 +662,30 @@ What will be the output of the following programs?
 
 ---
 
-#### Q10.
+#### Q11.
 
-Take 10 numbers as input from user one by one and then give the sum of all the numbers the user entered. 
-The user can stop the asking loop at any point by entering 0 as an input, in that case, give the sum of all numbers the user
-has entered upto that point.
+At a grocery checkout, the cashier enters each item's price one by one. Write a program that:
+- Keeps on asking the user for the price of the next item.
+- Stops when the cashier enters 0 (indicating there are no more items).
+- Prints the total of all the entered prices as a bill.
 
 <CollapsibleSection title="Expected Output">
+```ansi
+Enter price of item (or 0 to exit): 120   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 85   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 40   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 55   [2;3m// user input[0m
+Enter price of item(or 0 to exit): 0   [2;3m// user input[0m
+
+Total Bill: rs.300
+```
+</CollapsibleSection>
+
+{/* Take 10 numbers as input from user one by one and then give the sum of all the numbers the user entered. 
+The user can stop the asking loop at any point by entering 0 as an input, in that case, give the sum of all numbers the user
+has entered upto that point. */}
+
+{/* <CollapsibleSection title="Expected Output">
 ```ansi
 Enter a number to add, or 0 to exit: 5   [2;3m// user input[0m
 Enter a number to add, or 0 to exit: 2   [2;3m// user input[0m
@@ -541,11 +695,44 @@ Enter a number to add, or 0 to exit: 0   [2;3m// user input[0m
 The sum of all the numbers you entered is: 8
 [2;3m// 5 + 2 + 1 = 8
 ```
+</CollapsibleSection> */}
+
+---
+
+#### Q12. _**(Adv.)**_
+
+A popular music festival is happening in town, and the organizer has invited `N` different bands to perform on the main stage. Since the event has only one stage, 
+the performances will happen one after the other — no two bands can perform at the same time.
+
+Now, the organizer wants to explore all the possible ways these bands could be scheduled throughout the day. This is important because the sequence in which the bands 
+perform can impact the audience experience, energy levels, and crowd engagement.
+
+For example, should the high-energy band go first, or last? Should the acoustic group follow the rock band, or should they go earlier? To make these decisions wisely, 
+the organizer first wants to know:
+“In how many different ways can I arrange the performance order for today's bands?”
+
+Write a program that:
+
+- Asks the organizer about how many bands are performing today?
+- Calculates and displays the total number of possible lineups (schedules).
+
+<CollapsibleSection title="Expected Output">
+```ansi
+ [2;3m// case 1[0m
+Enter the number of bands:: 4   [2;3m// user input[0m
+
+Total possible lineups: 24
+
+[2;3m// case 2[0m
+Enter the number of bands:: 6   [2;3m// user input[0m
+
+Total possible lineups: 720
+```
 </CollapsibleSection>
 
 ---
 
-#### Q11.
+#### Q13.
 
 Create a "Guess the Lucky Number" game in C++.
 
@@ -589,7 +776,7 @@ Congratulations, you have guessed the lucky number.
 
 ---
 
-#### Q12. _**(Adv.)**_
+#### Q14. _**(Adv.)**_
 
 {/* A fruit wholesaler uses two suppliers on different schedules. Supplier-1 delivers `A` apple crates every `X` days and Supplier-2 delivers `B` orange crates every `Y` days. */}
 {/* A fruit wholesaler receives apple and orange crates on regular schedules. Shipments of apples arrive every `X` days and oranges arrive every `Y` days.  */}

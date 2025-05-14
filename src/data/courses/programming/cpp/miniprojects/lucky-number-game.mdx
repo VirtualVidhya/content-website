@@ -1,0 +1,79 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Lucky Number Game
+slug: lucky-number-game
+featured: false
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+order: 20
+---
+
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Create a "Guess the Lucky Number" game.
+
+As the admin, set a "lucky number" between 1 and 100 in your program. The user (player) will attempt to guess this number.
+
+<CollapsibleSection title="Instructions">
+<div>
+    The program should repeatedly prompt the user for a guess until they either:
+    <ul>
+        <li>Correctly match the lucky number.</li>
+        <li>Enter 0 to exit the game (at any time).</li>
+        <li>The player uses up all **10 allowed guesses**</li>
+    </ul>
+</div>
+
+<div>
+    To help the player, provide hints after each guess:
+    <ul>
+        <li>If the guess is larger than the lucky number, display a message indicating it is too high.</li>
+        <li>If the guess is smaller, indicate it is too low.</li>
+    </ul>
+</div>
+
+This feedback allows the player to narrow down their guesses and find the lucky number.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// lucky number: 25[0m
+
+Guess the lucky number: 87   [2;3m// user input[0m
+Your guessed number is larger than the lucky number. Try Again.   [2;3m// hint[0m
+
+Guess the lucky number: 17   [2;3m// user input[0m
+Your guessed number is smaller than the lucky number. Try Again.
+
+Guess the lucky number: 45   [2;3m// user input[0m
+Your guessed number is larger than the lucky number. Try Again.
+
+Guess the lucky number: 25   [2;3m// user input[0m
+Congratulations, you have guessed the lucky number.
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Designing a controlled game loop with a fixed number of attempts</li>
+    <li>Validating input and enforcing an exit command</li>
+    <li>Giving dynamic feedback with simple conditionals</li>
+    <li>Tracking and updating game state</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to enhance the gameplay.

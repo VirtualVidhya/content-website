@@ -65,6 +65,10 @@ Print all odd numbers between 1 and 50 in reverse order.
 
 Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
+<Admonition variant="note" title="note">
+    Write this program using both **_while_** and **_for_** loop.
+</Admonition>
+
 {/* <CollapsibleSection title="Expected Output">
 ```ansi
 1
@@ -86,11 +90,13 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 
 #### Q5.
 
-Print the multiplication table of 7.
+Write a program that -
 
-<Admonition variant="note" title="note">
-    Write this program using both **_while_** and **_for_** loop.
-</Admonition>
+- #### I.
+    Prints the multiplication table of 7.
+
+- #### II.
+    Asks the user to enter a number and prints the multiplication table of that number.
 
 {/* <div class="w-full my-5"></div> */}
 
@@ -344,6 +350,27 @@ What will be the output of the following programs?
 
 #### Q10.
 
+You need a quick black-and-white <LinkMd href="https://en.wikipedia.org/wiki/Checkerboard#:~:text=A%20checkerboard%20(American%20English)%20or,as%20English%20draughts)%20is%20played." title="checkerboard" /> 
+background for an old-school game screen.
+For it, write a program that asks the user for the board size `N` (an even number) and prints an `NxN` checkerboard of `X` and `O` characters, alternating each cell and each row.
+
+**Expected Output:**
+
+```ansi
+Enter board size (even number): 6   [2;3m// user input[0m
+
+X O X O X O
+O X O X O X
+X O X O X O
+O X O X O X
+X O X O X O
+O X O X O X
+```
+
+---
+
+#### Q11.
+
 At a grocery checkout, the cashier enters each item's price one by one. Write a program that:
 - Keeps on asking the user for the price of the next item.
 - Stops when the user enters 0 (indicating there are no more items).
@@ -363,7 +390,30 @@ Total Bill: rs.300
 
 ---
 
-#### Q11. _**(Adv.)**_
+#### Q12.
+
+A fitness app asks the user each day how many steps they walked, for a 7-day challenge. Write a program that:
+- Asks the user - the step count for each day of the week.
+- Counts how many days the user met or exceeded a target of 10,000 steps.
+- After the week, reports the number of goal-met days.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Day 1 steps: 12000
+Day 2 steps: 8000
+Day 3 steps: 10000
+Day 4 steps: 15000
+Day 5 steps: 5000
+Day 6 steps: 10000
+Day 7 steps: 11000
+
+You met your 10,000 steps goal on 5 out of 7 days.
+```
+</CollapsibleSection>
+
+---
+
+#### Q13. _**(Adv.)**_
 
 A popular music festival is happening in town, and the organizer has invited `N` different bands to perform on the main stage. Since the event has only one stage, 
 the performances will happen one after the other — no two bands can perform at the same time.
@@ -396,73 +446,117 @@ Total possible lineups: 720
 
 ---
 
-#### Q12.
+#### Q14.
 
-Create a "Guess the Lucky Number" game in C++.
+A new café wants a big, eye-catching sign around its name. To help them, write a program that asks the user for the width and 
+height of the sign, then draw a rectangular border of * characters of that size. The inside should be blank.
 
-As the admin, set a "lucky number" between 1 and 100 in the program. The user (player) will attempt to guess this number.
+**Expected Output:**
 
-<div>
-    The program should repeatedly prompt the user for a guess until they either:
-    <ul>
-        <li>Correctly match the lucky number.</li>
-        <li>Enter 0 to exit the game (at any time).</li>
-    </ul>
-</div>
+```ansi
+Enter width: 10   [2;3m// user input[0m
+Enter height: 5   [2;3m// user input[0m
 
-<div>
-    To help the player, provide hints after each guess:
-    <ul>
-        <li>If the guess is larger than the lucky number, display a message indicating it is too high.</li>
-        <li>If the guess is smaller, indicate it is too low.</li>
-    </ul>
-</div>
+* * * * * * * * * *
+*                 *
+*                 *
+*                 *
+* * * * * * * * * *
+```
 
-This feedback allows the player to narrow down their guesses and find the lucky number.
+---
+
+#### Q15.
+
+At an event entrance, the staff record the ages of attendees. The survey wants to know how many are minors (< 18) and how many are adults (≥ 18). 
+Write a program that:
+
+- That first asks for the number of attendees to survey and then asks for each attendee's age.
+- Keeps counts of both minors and adults.
+- Displays both counts at the end.
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// lucky number: 25[0m
+How many attendees to survey: 5
 
-Guess the lucky number: 87   [2;3m// user input[0m
-Your guessed number is larger than the lucky number. Try Again.   [2;3m// hint[0m
+Enter age of attendee 1: 16
+Enter age of attendee 2: 20
+Enter age of attendee 3: 18
+Enter age of attendee 4: 15
+Enter age of attendee 5: 30
 
-Guess the lucky number: 17   [2;3m// user input[0m
-Your guessed number is smaller than the lucky number. Try Again.
-
-Guess the lucky number: 45   [2;3m// user input[0m
-Your guessed number is larger than the lucky number. Try Again.
-
-Guess the lucky number: 25   [2;3m// user input[0m
-Congratulations, you have guessed the lucky number.
+Survey Results:
+Minors (under 18): 3
+Adults (18 and over): 2
 ```
 </CollapsibleSection>
 
 ---
 
-#### Q13. _**(Adv.)**_
+#### Q16.
 
-{/* A fruit wholesaler uses two suppliers on different schedules. Supplier-1 delivers `A` apple crates every `X` days and Supplier-2 delivers `B` orange crates every `Y` days. */}
-{/* A fruit wholesaler receives apple and orange crates on regular schedules. Shipments of apples arrive every `X` days and oranges arrive every `Y` days.  */}
-{/* Each time both shipments arrive on the same day, the wholesaler wants to pack mixed fruit baskets using all crates from that day's delivery, without leaving any leftover. */}
-{/* Whenever both apple and orange trucks arrive on the same day, the wholesaler wants to unpack that day's full delivery and pack mixed baskets so that: - Each basket contains the same number of apple and orange crates. - No crates are left over from that day's delivery. */}
+A coach wants a quick strike-rate report for every batsman in a small squad, each facing a fixed number of balls. To solve this problem, 
+write a program that:
+
+- Asks how many batsmen are there in the squad.
+- Asks how many balls each batsman faced.
+- For each batsman, asks how many runs they scored on each ball.
+- Then calculates and prints, the total runs scored and the strike rate for each batsman (Runs/Balls * 100).
+
+    `batting strike-rate = (total runs scored / total balls faced) * 100`
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Enter number of batsmen in the squad: 3
+Enter number of balls faced by each batsman: 6
+
+--- Squad Strike-Rate Report ---
+
+Runs scored by batsman-1 on ball 1: 1
+Runs scored by batsman-1 on ball 2: 4
+Runs scored by batsman-1 on ball 3: 0
+Runs scored by batsman-1 on ball 4: 2
+Runs scored by batsman-1 on ball 5: 3
+Runs scored by batsman-1 on ball 6: 0
+
+Batsman-1: Total Runs: 10, Strike Rate: 166.67%
+
+Runs scored by batsman-2 on ball 1: 0
+Runs scored by batsman-2 on ball 2: 2
+Runs scored by batsman-2 on ball 3: 6
+Runs scored by batsman-2 on ball 4: 4
+Runs scored by batsman-2 on ball 5: 2
+Runs scored by batsman-2 on ball 6: 4
+
+Batsman-2: Total Runs: 18, Strike Rate: 300.0%
+
+Runs scored by batsman-3 on ball 1: 4
+Runs scored by batsman-3 on ball 2: 1
+Runs scored by batsman-3 on ball 3: 0
+Runs scored by batsman-3 on ball 4: 0
+Runs scored by batsman-3 on ball 5: 2
+Runs scored by batsman-3 on ball 6: 1
+
+Batsman-3: Total Runs: 8, Strike Rate: 133.33%
+```
+</CollapsibleSection>
+
+---
+
+#### Q17. _**(Adv.)**_
 
 A fruit wholesaler receives apple crates every `X` days and orange crates every `Y` days. Each apple delivery brings `A` crates and each orange delivery brings `B` crates. 
 The wholesaler stores all incoming crates and wants to pack mixed baskets so that every basket has the same number of apple and orange crates, using up the entire stock 
 on one of the pack-days.
-
-{/* To prepare for this, the wholesaler needs to know: - The largest number of apple and orange crates per basket so that each basket has the same number of crates for each fruit and none go unused. - The number of days after which both apple and orange trucks will arrive together again. */}
 
 To solve the fruit wholesaler's problem, write a program that asks the user to enter:
 - Days between apple deliveries - `X`
 - Number of apple crates per delivery - `A`
 - Days between orange deliveries - `Y`
 - Number of orange crates per delivery - `B`
-{/* write a program that asks for the two delivery intervals (in days) - `X` for apples and `Y` for oranges,  */}
 Then calculate and display:
 - The maximum crates per basket (the largest equal number of apple and orange crates you can pack into each basket without leftovers).
 - The days until the next full pack-day (after how many days the wholesaler will have exactly matching totals of stored apples and oranges to pack into those baskets).
-{/* - The maximum number of crates of each fruit that fit into one mixed basket without leftovers. The number of days until the next time both shipments arrive on the same day. */}
 
 <CollapsibleSection title="Expected Output">
 ```ansi

@@ -67,7 +67,7 @@ const { noMarginTop = false } = Astro.props;
       const touchEndHandler = () => {
         setTimeout(() => {
           element.classList.remove("touch");
-        }, 300);
+        }, 500);
       };
 
       element.addEventListener("touchstart", touchStartHandler, { passive: true }); // Use passive for potential scroll performance

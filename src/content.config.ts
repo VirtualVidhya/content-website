@@ -10,6 +10,7 @@ const list = defineCollection({
   loader: glob({ pattern: "**/_index.yaml", base: `./${BLOG_PATH}` }),
   schema: z.object({
     title: z.string(),
+    metadata_title: z.string(),
     description: z.string().optional(),
     order: z.number().optional(),
   }),
@@ -24,6 +25,7 @@ const blog = defineCollection({
       pubDatetime: z.date(),
       modDatetime: z.date(),
       title: z.string(),
+      metadata_title: z.string(),
       featured: z.boolean().optional().default(false),
       draft: z.boolean().optional().default(false),
       tags: z.array(z.string()).default(["others"]),

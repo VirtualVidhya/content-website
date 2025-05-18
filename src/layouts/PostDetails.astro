@@ -25,6 +25,7 @@ const { post, posts } = Astro.props;
 
 const {
   title,
+  metadata_title,
   author,
   description,
   ogImage: initOgImage,
@@ -58,7 +59,8 @@ const ogImage = ogImageUrl
   : undefined;
 
 const layoutProps = {
-  title: `${title} | ${SITE.title}`,
+  title: `${title}`,
+  metadata_title: `${metadata_title}` || `${SITE.title}`,
   author,
   description,
   pubDatetime,

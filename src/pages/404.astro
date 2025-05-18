@@ -2,11 +2,20 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import LinkButton from "@/components/LinkButton.astro";
 import { SITE } from "@/config";
+// import LinkButton from "@/components/LinkButton.astro";
+
+const metadata = {
+  title: "Page Not Found - V.Vidhya | Computer Education for All",
+  description:
+    "Get in touch with V.Vidhya for the best computer education. Visit our institute, call us, or drop a message to learn more about offered courses.",
+};
 ---
 
-<Layout title={`404 Not Found | ${SITE.title}`}>
+<Layout
+  title={`${metadata.title}` || `${SITE.title}`}
+  description=`${metadata.description}`
+>
   <Header />
 
   <!-- <main

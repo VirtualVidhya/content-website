@@ -3,9 +3,20 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import VvidhyaLogo from "@/components/VvidhyaLogo.astro";
+import { SITE } from "@/config";
+
+const metadata = {
+  title:
+    "V.Vidhya - Your Virtual Path To Knowledge | Computer Education for All",
+  description:
+    "Learn top computer courses with V.Vidhya. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
+};
 ---
 
-<Layout>
+<Layout
+  title={`${metadata.title}` || `${SITE.title}`}
+  description=`${metadata.description}`
+>
   <Header navSection="home" />
   <main
     id="main-content"

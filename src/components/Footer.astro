@@ -39,11 +39,15 @@ const { noMarginTop = false } = Astro.props;
   </div>
 </footer>
 
-<script is:inline> // Added is:inline to ensure it's processed correctly by Astro
+<script is:inline>
+  // Added is:inline to ensure it's processed correctly by Astro
   // Check if the device supports touch events
   function isTouchDevice() {
     // Ensure window is defined (for SSR safety, though less critical for is:inline)
-    return typeof window !== 'undefined' && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+    return (
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+    );
   }
 
   // Function to handle touch interactions
@@ -70,7 +74,9 @@ const { noMarginTop = false } = Astro.props;
         }, 500);
       };
 
-      element.addEventListener("touchstart", touchStartHandler, { passive: true }); // Use passive for potential scroll performance
+      element.addEventListener("touchstart", touchStartHandler, {
+        passive: true,
+      }); // Use passive for potential scroll performance
       element.addEventListener("touchend", touchEndHandler);
 
       // Optional: Store handlers for potential future removal if needed

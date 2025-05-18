@@ -8,6 +8,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
+  metadata_title?: string;
   author?: string | null;
   profile?: string;
   description?: string;
@@ -20,6 +21,7 @@ export interface Props {
 
 const {
   title = SITE.title,
+  metadata_title = title,
   author = SITE.author,
   profile = SITE.profile,
   description = SITE.desc,
@@ -53,22 +55,29 @@ const structuredData = {
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
     <!-- <meta name="generator" content={Astro.generator} /> -->
 
     <!-- General Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
+    <title>{metadata_title}</title>
+    <meta name="title" content={metadata_title} />
     <meta name="description" content={description} />
     <!-- <meta name="author" content={author} /> -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={metadata_title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={metadata_title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
 
     <!-- Article Published/Modified time -->
     {
@@ -87,13 +96,6 @@ const structuredData = {
         />
       )
     }
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
 
     <!-- Google JSON-LD Structured data -->
     <script

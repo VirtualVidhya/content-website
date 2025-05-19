@@ -1,6 +1,6 @@
 ---
-import IconCaretRight from './Icons/IconCaretRight.astro';
-import IconCaretDown from './Icons/IconCaretDown.astro';
+import IconCaretRight from "./Icons/IconCaretRight.astro";
+import IconCaretDown from "./Icons/IconCaretDown.astro";
 
 interface Props {
   title: string;
@@ -10,6 +10,9 @@ const { title } = Astro.props as Props;
 ---
 
 <style>
+  /* details {
+    user-select: all !important;
+  } */
   details > summary {
     list-style: none; /* Hide default marker */
   }
@@ -25,10 +28,15 @@ const { title } = Astro.props as Props;
   details[open] > summary .icon-caret-down {
     display: inline-block;
   }
+
+  .section-details {
+    user-select: text !important;
+    cursor: text;
+  }
 </style>
 
-<details class="w-full prose-ul:!my-2 group transition-all ">
-  <summary class="font-semibold cursor-pointer flex items-center gap-3">
+<details class="group w-full transition-all prose-ul:!my-2">
+  <summary class="flex cursor-pointer items-center gap-3 font-semibold">
     <span class="icon-caret-right inline-block" aria-hidden="true">
       <IconCaretRight styleClass="" />
     </span>
@@ -37,7 +45,8 @@ const { title } = Astro.props as Props;
     </span>
     <span>{title}</span>
   </summary>
-  <div class="pl-5"> {/* Optional: Add padding to align content with title */}
+  <div class="section-details pl-5">
+    {/* Optional: Add padding to align content with title */}
     <slot />
   </div>
 </details>

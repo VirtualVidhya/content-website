@@ -1,0 +1,72 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Calendar
+metadata_title: Calendar - Python Programming | V.Vidhya
+slug: calendar
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Python Programming by making a utility program to generate a calendar for a given year.
+
+order: 40
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Build a console program that prints the full calendar for a user-specified year, showing each month laid out with weekday 
+headings and correctly aligned dates.
+
+{/* <CollapsibleSection title="Instructions">
+- The game is played on a 3x3 grid.
+- Two players take turns marking a square (Player 1: `X`, Player 2: `O`).
+- A player wins if they get three of their marks in a row (horizontally, vertically, or diagonally).
+- If the board fills up without a winner, the game ends in a draw.
+- The system should: 
+    - Display the board before each move. 
+    - Prompt the current player to enter a move (1-9). 
+    - Validate the move (ensure the chosen cell is empty). 
+    - Check for a winner or a draw after every move.
+</CollapsibleSection> */}
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Enter year for calendar: 2025
+
+# Month 1: January #
+Sun Mon Tue Wed Thu Fri Sat
+             1   2   3   4  
+ 5   6   7   8   9   10  11 
+ 12  13  14  15  16  17  18 
+ 19  20  21  22  23  24  25 
+ 26  27  28  29  30  31 
+
+# Month 2: February #
+Sun Mon Tue Wed Thu Fri Sat
+                         1  
+ 2   3   4   5   6   7   8  
+ 9   10  11  12  13  14  15 
+ 16  17  18  19  20  21  22 
+ 23  24  25  26  27  28
+
+[2;3m...
+(then Month #3 through Month #12 in the same layout)[0m
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Working with loops and modular arithmetic to align calendar dates</li>
+    <li>Decomposing a problem into small, reusable functions</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to polish the utility program.

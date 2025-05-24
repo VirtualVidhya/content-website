@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import VvidhyaLogo from "@/components/VvidhyaLogo.astro";
 import { SITE } from "@/config";
+import HomePageDoodle from "@/assets/images/doodles/co-working.svg";
 
 const metadata = {
   title:
@@ -51,7 +52,7 @@ const metadata = {
       >
 
       <img
-        src="/images/doodles/co-working.svg"
+        src={HomePageDoodle.src}
         alt="Young students brainstorming a project idea"
         class="illus mb-10"
         decoding="async"

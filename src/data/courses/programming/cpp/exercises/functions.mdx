@@ -9,10 +9,11 @@ featured: false
 # ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 description: Learn Functions in C++ Programming by practicing exercises based on real-world scenarios with V.Vidhya.
 
-order: 60
+order: 70
 ---
 
 import Admonition from '@/components/Admonition.astro';
+import LinkMd from '@/components/LinkMd.astro';
 
 #### Q1.
 
@@ -163,7 +164,9 @@ What will be the output of the following programs?
 
 #### Q2.
 
-You need to display the same error message in multiple places in your program. Instead of writing the same `std::cout` statement repeatedly, design a reusable solution that makes your code more efficient and easier to maintain. Write a function that prints the error message whenever it is called.
+You need to display the same error message in multiple places in your program. Instead of writing the same `std::cout` statement repeatedly, 
+design a reusable solution that makes your code more efficient and easier to maintain. 
+Write a function that prints the error message and then demonstrate it by calling the function twice.
 
 **Expected Output:**
 
@@ -288,6 +291,29 @@ What will be the output of the following programs?
 
 #### Q4.
 
+In a busy cafe, the barista needs to take orders from multiple customers, each time asking the number of cups for order and making sure
+it is a valid positive integer number.
+
+To solve this problem, write a program that defines a function that repeatedly prompts the user to enter the number of cups for their order
+until a valid positive integer is provided, then the function should return the valid number of cups once it is obtained.
+
+**Expected Output:**
+
+```ansi
+Enter the number of cups for your order: -3
+Invalid input! Please enter a positive integer.
+Enter the number of cups: 0
+Invalid input! Please enter a positive integer.
+Enter the number of cups: 2
+
+Thank you for your order!
+You have ordered for 2 cups of coffee.
+```
+
+---
+
+#### Q5.
+
 What will be the output of the following programs?
 
 <Admonition variant="caution" title="caution">
@@ -396,13 +422,6 @@ What will be the output of the following programs?
         return 0;
     }
     ```
-
----
-
-#### Q5.
-
-Imagine a scenario where your program needs to take an integer input from the user multiple times. Instead of writing the input logic
-repeatedly, create a function to handle this task efficiently and reuse it whenever needed.
 
 ---
 
@@ -621,4 +640,49 @@ Enter no of years: 2   [2;3m// user input[0m
 Simple Interest: 5000
 
 [2;3m// i = (p*r*n)/100
+```
+
+---
+
+#### Q11.
+
+Write a program to check whether a given year is a <LinkMd href="https://www.timeanddate.com/date/leapyear.html" title="leap year" /> or not.
+
+**Expected Output:**
+
+```ansi
+Enter year: 2024   [2;3m// user input[0m
+
+2024 is a leap year.
+```
+
+---
+
+#### Q12.
+
+In a digital calendar app, users enter meeting times in 24-hour format but you need to display them as 12-hour times with AM/PM.
+Write a program to convert a given 24-hour time to 12-hour format.
+
+**Expected Output:**
+
+```ansi
+Enter time in 24-hour format (HH MM): 14 30   [2;3m// user input[0m
+
+12-hour format: 02:30 PM
+```
+
+---
+
+#### Q13.
+
+On a remote island, treasure hunters find chests marked with numbers. Only the “magic chests” - those whose numbers can't be split 
+evenly into smaller piles, hold the rare gems. Write a program that asks the user for a chest number and then declares whether it's a magic 
+chest with a special treasure or just an ordinary chest.
+
+**Expected Output:**
+
+```ansi
+Enter chest number: 23   [2;3m// user input[0m
+
+Magic chest! You've uncovered the hidden gem.
 ```

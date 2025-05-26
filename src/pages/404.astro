@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE } from "@/config";
+import ErrorPageDoodle from "@/assets/images/doodles/404-error.svg";
 // import LinkButton from "@/components/LinkButton.astro";
 
 const metadata = {
@@ -47,7 +48,7 @@ const metadata = {
       </div>
 
       <img
-        src="/images/doodles/404-error.svg"
+        src={ErrorPageDoodle.src}
         alt="404 error illustration"
         class="ind-course-illus"
         decoding="async"

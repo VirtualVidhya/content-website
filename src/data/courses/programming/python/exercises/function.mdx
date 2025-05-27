@@ -283,6 +283,21 @@ What will be the output of the following programs?
 
 - #### VI.
     ```py
+    x = 0
+
+    def func():
+        print(x)
+
+        x = 2
+        print(x)
+
+    func()
+
+    print(x)
+    ```
+
+- #### VII.
+    ```py
     def func(a, b = 5, c = 10):
         print(f"a = {a}, b = {b}, c = {c}")
 
@@ -372,12 +387,9 @@ What will be the output of the following programs?
 
 - #### III.
     ```py
-    x = 0
+    x = 5
 
     def func():
-        print(x)
-
-        x = 2
         print(x)
 
     func()

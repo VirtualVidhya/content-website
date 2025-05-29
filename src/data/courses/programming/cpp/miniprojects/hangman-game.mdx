@@ -12,11 +12,12 @@ description: Learn C++ Programming by making a fun interactive text-based Hangma
 order: 40
 ---
 
+import LinkMd from '@/components/LinkMd.astro';
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
 
 - ## Task
 
-Build a text-based Hangman game where the player first selects a word category (e.g., Animals, Countries, Fruits etc.). The program then picks 
+Build a text-based <LinkMd href='https://en.wikipedia.org/wiki/Hangman_(game)' title='Hangman' /> game where the player first selects a word category (e.g., Animals, Countries, Fruits etc.). The program then picks 
 a random word from a pre-defined set of words for that category and the player guesses it one letter at a time. After each wrong guess, display an 
 ASCII-art stick figure that progresses toward a full figure (i.e. hangman). The game ends when the player either uncovers the entire word or the 
 stick figure is fully uncovered i.e. "hung".

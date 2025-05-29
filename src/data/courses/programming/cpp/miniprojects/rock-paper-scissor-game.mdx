@@ -1,0 +1,106 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Rock-Paper-Scissors Game
+metadata_title: Rock-Paper-Scissors Game - Python Programming | V.Vidhya
+slug: rock-paper-scissors-game
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Python Programming by building a fun interactive text-based Rock-Paper-Scissor game.
+
+order: 29
+---
+
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Build a text-based <LinkMd href='https://en.wikipedia.org/wiki/Rock_paper_scissors' title='Rock-Paper-Scissors' /> game where the player competes 
+against the computer.
+
+<CollapsibleSection title="Instructions">
+You will evolve your game program in stages gradually.
+
+<ul>
+    <li>
+        Unfair Computer:
+        <ul class="list-[circle]">
+            <li>Prompt the player to choose “rock,” “paper,” or “scissors.” and then computer make a choice based on the player's choice such 
+            that the computer always defeats the human player.</li>
+        </ul>
+    </li>
+    <li>
+        Fair Chances:
+        <ul class="list-[circle]">
+            <li>Now to make the game fair, computer should make a truly random choice.</li>
+        </ul>
+    </li>
+    <li>
+        Endless Game:
+        <ul class="list-[circle]">
+            <li>A single game is never enough. So, make the game such that the player can play indefinitely until they choose to quit.</li>
+            <li>Keep track of wins, losses and ties across rounds and display the running score after each round.</li>
+        </ul>
+    </li>
+</ul>
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+(Note: This is the full version of the game output with all the features implemented.)
+
+```ansi
+### Rock-Paper-Scissors ###
+(Type 'quit' at any time to exit.)
+
+Choose rock, paper, or scissors (or 'quit' to exit): rock
+Computer chose: rock
+This round is a tie.
+
+# Score #
+You: 0 | Computer: 0 | Ties: 1
+
+Choose rock, paper, or scissors (or 'quit' to exit): paper
+Computer chose: scissors
+You lose this round.
+
+# Score #
+You: 0 | Computer: 1 | Ties: 1
+
+Choose rock, paper, or scissors (or 'quit' to exit): lizard
+Invalid choice. Please enter rock, paper, or scissors.
+Choose rock, paper, or scissors (or 'quit' to exit): scissors
+Computer chose: paper
+You win this round!
+
+# Score #
+You: 1 | Computer: 1 | Ties: 1
+
+Choose rock, paper, or scissors (or 'quit' to exit): quit
+
+Thanks for playing!
+
+# Final Score #
+You: 1 | Computer: 1 | Ties: 1
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Designing incremental feature development</li>
+    <li>Implementing game logic and control flow</li>
+    <li>Managing loops and program state for multiple rounds</li>
+    <li>Creating a simple AI opponent to simulate computer play</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to enhance the gameplay.

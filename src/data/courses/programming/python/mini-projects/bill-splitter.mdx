@@ -1,0 +1,74 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Bill Splitter
+metadata_title: Bill Splitter - Python Programming | V.Vidhya
+slug: bill-splitter-tool
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Python Programming by building a Bill Splitter tool for your friends.
+
+order: 29
+---
+
+{/* // import LinkMd from '@/components/LinkMd.astro'; */}
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Everyone likes eating out with friends. The more friends, the better, but the bill time is always a bummer, to say the least.
+So, create a text-based Bill Splitter tool that lets a group of friends share a restaurant bill evenly—with an optional “Who Is Lucky?” 
+feature to excuse one random friend from paying.
+
+<CollapsibleSection title="Instructions">
+<ul>
+    <li>Prompt for the number of friends joining (including the user) and then based on that ask for the name of all friends.</li>
+    <li>Prompt for the total bill amount.</li> 
+    {/* Validate the input to ensure the total bill amount entered is a positive number; if the user enters zero or a negative value, prompt them again until they provide a valid amount. */}
+    <li>Ask whether to enable the “Who is lucky?” feature. If enabled, randomly pick one friend to pay nothing; if not, 
+    include everyone in the bill split.</li>
+    <li>Calculate the split amount and display the result.</li>
+</ul>
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+### Bill Splitter ###
+
+Enter the number of friends joining (including you): 5
+
+Enter friend #1 name: Rita
+Enter friend #2 name: Sita
+Enter friend #3 name: Gita
+Enter friend #4 name: Nita
+Enter friend #5 name: Mita
+
+Enter the total bill value: 5040
+Do you want to use the "Who is lucky?" feature? Write Yes/No: Yes
+
+Nita is the lucky one!
+Rita: 1260.0
+Sita: 1260.0
+Gita: 1260.0
+Nita: 0.0
+Mita: 1260.0
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Implementing conditional logic to toggle features</li>
+    <li>Managing data in a structured and relational manner</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to enhance the user experience.

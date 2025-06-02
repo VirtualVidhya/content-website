@@ -4,6 +4,7 @@ import VvidhyaLogo from "./VvidhyaLogo.astro";
 import SocialLinks from "./SocialLinks.astro";
 import IconSun from "./Icons/IconSun.astro";
 import IconMoon from "./Icons/IconMoon.astro";
+import LinkPage from "@/components/LinkPage.astro";
 
 // const { pathname } = Astro.url;
 
@@ -22,13 +23,20 @@ const { navSection } = Astro.props;
 ---
 
 <header class="header">
-  <a href="/">
+  <LinkPage href="/">
     <div class="flex flex-row items-center gap-1 text-foreground md:gap-2">
       <VvidhyaLogo logoClass="header-logo-svg" />
 
       <p class="header-logo-text">V.Vidhya</p>
     </div>
-  </a>
+  </LinkPage>
+  <!-- <a href="/">
+    <div class="flex flex-row items-center gap-1 text-foreground md:gap-2">
+      <VvidhyaLogo logoClass="header-logo-svg" />
+
+      <p class="header-logo-text">V.Vidhya</p>
+    </div>
+  </a> -->
 
   <button
     id="topbar-menu-btn"
@@ -74,7 +82,16 @@ const { navSection } = Astro.props;
     <nav
       class="mx-4 mt-10 flex flex-col items-start gap-3 text-base font-bold sm:mx-0 sm:mt-0 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 md:space-x-4 md:text-xl"
     >
-      <a
+      <LinkPage
+        href="/"
+        class={`flex items-center header-navmenu-hover ${
+          navSection === "home"
+            ? "underline"
+            : "link-interaction-underline-effect"
+        }`}
+        title="Home"
+      />
+      <!-- <a
         href="/"
         class={`flex items-center header-navmenu-hover ${
           navSection === "home"
@@ -83,7 +100,7 @@ const { navSection } = Astro.props;
         }`}
       >
         Home
-      </a>
+      </a> -->
       <div class="group sm:relative">
         <span
           data-cousemenu-state="close"
@@ -110,7 +127,27 @@ const { navSection } = Astro.props;
         <div
           class="sub-menu hidden min-w-max flex-col gap-4 rounded-md bg-navbar py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pt-6 sm:pb-4"
         >
-          <a href="/courses/" class="link-interaction-effect">All Courses</a>
+          <LinkPage
+            href="/courses/"
+            class="link-interaction-effect"
+            title="All Courses"
+          />
+          <LinkPage
+            href="/courses/multimedia/"
+            class="link-interaction-effect"
+            title="Multimedia Courses"
+          />
+          <LinkPage
+            href="/courses/programming/"
+            class="link-interaction-effect"
+            title="Programming Courses"
+          />
+          <LinkPage
+            href="/courses/kids/"
+            class="link-interaction-effect"
+            title="Kids Courses"
+          />
+          <!-- <a href="/courses/" class="link-interaction-effect">All Courses</a>
           <a href="/courses/multimedia/" class="link-interaction-effect"
             >Multimedia Courses</a
           >
@@ -122,7 +159,7 @@ const { navSection } = Astro.props;
           >
           <a href="/courses/literacy/" class="link-interaction-effect"
             >Literacy Courses</a
-          >
+          > -->
         </div>
       </div>
 

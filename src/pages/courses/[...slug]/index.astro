@@ -8,6 +8,7 @@ import Footer from "@/components/Footer.astro";
 import PostCard from "@/components/PostCard.astro";
 import { getPath } from "@/utils/getPath";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import LinkPage from "@/components/LinkPage.astro";
 import { SITE } from "@/config";
 
 interface SubdirectoryData {
@@ -178,12 +179,13 @@ const currentPath = Astro.params.slug || "";
             <ul class="flex flex-col items-center justify-center gap-6">
               {subdirectories.map(subdirData => (
                 <li class="w-full">
-                  <a
+                  <LinkPage href={`/courses/${currentPath ? currentPath + "/" : ""}${subdirData.name}/`} class="card-btn border-border bg-navbar w-full block" title={subdirData.title} />
+                  {/* <a
                     href={`/courses/${currentPath ? currentPath + "/" : ""}${subdirData.name}/`}
                     class="card-btn border-border bg-navbar w-full block"
                   >
                     {subdirData.title}
-                  </a>
+                  </a> */}
                 </li>
               ))}
             </ul>

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import VvidhyaLogo from "@/components/VvidhyaLogo.astro";
 import { SITE } from "@/config";
 import HomePageDoodle from "@/assets/images/doodles/co-working.svg";
+import LinkPage from "@/components/LinkPage.astro";
 
 const metadata = {
   title:
@@ -96,7 +97,27 @@ const metadata = {
             Course Categories
           </h3>
           <div class="flex w-full flex-col items-center justify-start gap-10">
-            <a
+            <LinkPage
+              href="/courses/programming/"
+              class="card-btn border-font-color-pink-dark bg-font-color-pink text-font-color-pink-dark"
+              title="Programming"
+            />
+            <LinkPage
+              href="/courses/multimedia/"
+              class="card-btn border-font-color-purple-dark bg-font-color-purple text-font-color-purple-dark"
+              title="Multimedia"
+            />
+            <LinkPage
+              href="/courses/literacy/"
+              class="card-btn border-font-color-orange bg-font-color-yellow text-font-color-orange"
+              title="Literacy"
+            />
+            <LinkPage
+              href="/courses/kids/"
+              class="card-btn border-font-color-blue-dark bg-font-color-blue text-font-color-blue-dark"
+              title="Kids"
+            />
+            <!-- <a
               href="/courses/programming/"
               class="card-btn border-font-color-pink-dark bg-font-color-pink text-font-color-pink-dark hover:!border-foreground active:!border-foreground"
               >Programming</a
@@ -115,7 +136,7 @@ const metadata = {
               href="/courses/kids/"
               class="card-btn border-font-color-blue-dark bg-font-color-blue text-font-color-blue-dark"
               >Kids</a
-            >
+            > -->
           </div>
         </section>
       </div>

@@ -16,6 +16,14 @@ export default defineConfig({
     }),
     mdx()
   ],
+  prefetch: {
+    // Automatically prefetch all links once the page loads.
+    // (If you prefer hover-only, set this to false and add data-astro-prefetch on each <a>.)
+    prefetchAll: false,
+
+    // Optionally override the default strategy for links without an explicit value.
+    // defaultStrategy: 'viewport',
+  },
   markdown: {
     remarkPlugins: [
       remarkInjectTimestamps,

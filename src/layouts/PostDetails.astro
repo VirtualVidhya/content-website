@@ -14,7 +14,8 @@ import { SITE } from "@/config";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import IconChevronLeftArrow from "@/components/Icons/IconChevronLeftArrow.astro";
 import IconChevronRightArrow from "@/components/Icons/IconChevronRightArrow.astro";
-import IconDownload from "@/components/Icons/IconDownload.astro";
+import LinkPage from "@/components/LinkPage.astro";
+// import IconDownload from "@/components/Icons/IconDownload.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -179,16 +180,23 @@ const nextPost =
           //   href={`/posts/${prevPost.slug}`}
           //   class="flex w-full gap-1 hover:opacity-75"
           // >
-          <a
-            href=`${getPath(prevPost.slug, prevPost.filePath, true)}/`
-            class="post-navigation-block justify-start"
-          >
+          <LinkPage href=`${getPath(prevPost.slug, prevPost.filePath, true)}/` class="post-navigation-block justify-start">
             <IconChevronLeftArrow styleClass="inline-block flex-none" />
             <div class="flex flex-col gap-1">
               <span class="text-sm">Prev Post</span>
               <div class="font-semibold text-font-color-green">{prevPost.title}</div>
             </div>
-          </a>
+          </LinkPage>
+          // <a
+          //   href=`${getPath(prevPost.slug, prevPost.filePath, true)}/`
+          //   class="post-navigation-block justify-start"
+          // >
+          //   <IconChevronLeftArrow styleClass="inline-block flex-none" />
+          //   <div class="flex flex-col gap-1">
+          //     <span class="text-sm">Prev Post</span>
+          //     <div class="font-semibold text-font-color-green">{prevPost.title}</div>
+          //   </div>
+          // </a>
         )
       }
       {
@@ -197,17 +205,24 @@ const nextPost =
           //   href={`/posts/${nextPost.slug}`}
           //   class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           // >
-          <a
-            href=`${getPath(nextPost.slug, nextPost.filePath, true)}/`
-            class="post-navigation-block justify-end text-right sm:col-start-2"
-          >
+          <LinkPage href=`${getPath(nextPost.slug, nextPost.filePath, true)}/` class="post-navigation-block justify-end text-right sm:col-start-2">
             <div class="flex flex-col gap-1">
               <span class="text-sm">Next Post</span>
               <div class="font-semibold text-font-color-green">{nextPost.title}</div>
-              {/* <div class="font-semibold text-accent/85">{nextPost.title}</div> */}
             </div>
             <IconChevronRightArrow styleClass="inline-block flex-none" />
-          </a>
+          </LinkPage>
+          // <a
+          //   href=`${getPath(nextPost.slug, nextPost.filePath, true)}/`
+          //   class="post-navigation-block justify-end text-right sm:col-start-2"
+          // >
+          //   <div class="flex flex-col gap-1">
+          //     <span class="text-sm">Next Post</span>
+          //     <div class="font-semibold text-font-color-green">{nextPost.title}</div>
+          //     {/* <div class="font-semibold text-accent/85">{nextPost.title}</div> */}
+          //   </div>
+          //   <IconChevronRightArrow styleClass="inline-block flex-none" />
+          // </a>
         )
       }
     </div>

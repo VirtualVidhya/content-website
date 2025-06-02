@@ -1,8 +1,9 @@
 ---
-import { slugifyStr } from "@/utils/slugify";
+// import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
-import Datetime from "./Datetime.astro";
+import LinkPage from "@/components/LinkPage.astro";
+// import Datetime from "./Datetime.astro";
 
 export interface Props extends CollectionEntry<"blog"> {
   variant?: "h2" | "h3";
@@ -19,12 +20,17 @@ const headerProps = {
 ---
 
 <li class="w-full">
-  <a
+  <LinkPage 
+    href=`${getPath(id, filePath)}/`
+    class="rounded-lg bg-navbar block w-full px-6 py-3 sm:px-8 sm:py-4 sm:text-xl text-lg font-bold decoration-dashed underline-offset-3 transition-all link-interaction-effect link-interaction-underline-effect"
+    title={title}
+  />
+  <!-- <a
     href=`${getPath(id, filePath)}/`
     class="rounded-lg bg-navbar block w-full px-6 py-3 sm:px-8 sm:py-4 sm:text-xl text-lg font-bold decoration-dashed underline-offset-3 transition-all link-interaction-effect link-interaction-underline-effect"
   >
     {title}
-  </a>
+  </a> -->
 
   <!-- <a
     href={getPath(id, filePath)}

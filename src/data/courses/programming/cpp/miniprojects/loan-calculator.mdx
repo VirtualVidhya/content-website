@@ -1,0 +1,102 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Loan Calculator
+metadata_title: Loan Calculator - C++ Programming | V.Vidhya
+slug: loan-calculator
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn C++ Programming by building a Loan Calculator tool for your friends.
+
+order: 28
+---
+
+{/* // import LinkMd from '@/components/LinkMd.astro'; */}
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Build a text based Loan Calculator, which based on the given loan's details by user, computes the down payment, monthly EMI, total payment over the loan 
+tenure and the overpayment amount.
+
+<CollapsibleSection title="Instructions">
+<ul>
+    <li>
+    Prompt user for
+        <ul class="list-[circle]">
+            <li>total loan amount (in rupees)</li>
+            <li>loan tenure (in years)</li>
+            <li>annual interest rate (in percent)</li>
+            <li>down payment rate (percentage of total loan, 0 if no down payment)</li>
+        </ul>
+    </li>
+    <li>
+    Calculate
+        <ul class="list-[circle]">
+            <li>down payment</li>
+            <li>
+            monthly EMI:
+                <ul class="list-[square]">
+                    <li>
+                        For monthly EMI, first the annual interest rate needs to be converted to monthly interest rate.
+
+                        ``` monthly_rate = (annual_interest_rate / 100) / 12 ```
+                    </li>
+                    <li>Then, the tenure in years needs to be converted to number of monthly installments.</li>
+                    <li>
+                        Now finally, calculate EMI using the standard formula:
+
+                        ``` EMI = [P x r x (1 + r)^n] / [ (1 + r)^n - 1 ] ```
+
+                        where, 
+                        
+                        `P` - financed principal amout after down payment 
+                        
+                        `r` - monthly interest rate a
+                        
+                        `n` - number of monthly installments.
+                    </li>
+                </ul>
+            </li>
+            <li>total payment over the loan tenure</li>
+            <li>overpayment amount (the extra amount compared to the original loan amount that is paid over the loan tenure)</li>
+        </ul>
+    </li>
+    <li>Display the calculated values in a user friendly manner.</li>
+</ul>
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+### Loan Calculator ###
+Enter total loan amount (rs.): 100000
+Enter loan tenure (in years): 1
+Enter annual interest rate (in %): 12
+Enter down payment rate (% of total amount, 0 if none): 10
+
+### Loan Repayment Details ###
+Down payment: rs.10000.00
+Financed principal: rs.90000.00
+Monthly EMI: rs.7996.36
+Total amount paid over 12 months: rs.105956.32
+Total overpayment (interest): rs.5956.32
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Performing various arithmetic operations and focusing on the data accuracy</li>
+    <li>Managing data heavy calculations with clear and reusable functions</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to enhance the user experience.

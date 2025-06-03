@@ -897,7 +897,7 @@ What will be the output of the following programs?
     int main()
     {
         Derived derived {};
-        derived.print(); // calls derived::print(), which is public
+        derived.print();
         return 0;
     }
     ```
@@ -922,7 +922,7 @@ What will be the output of the following programs?
         void identify() const
         {
             std::cout << "Derived::identify()\n";
-            Base::identify(); // note call to Base::identify() here
+            Base::identify();
         }
     };
 

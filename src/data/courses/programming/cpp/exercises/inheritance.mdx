@@ -1,0 +1,1275 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Inheritance (OOP)
+metadata_title: Inheritance (OOP) - C++ Programming | V.Vidhya
+slug: inheritance
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Inheritance (OOP) in C++ Programming by practicing exercises based on real-world scenarios with V.Vidhya.
+
+order: 170
+---
+
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+import Admonition from '@/components/Admonition.astro';
+
+#### Q1.
+
+Analyze the given programs below, predict their outputs and determine whether they follow the principles of object-oriented programming correctly.
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    class Vehicle
+    {
+    private:
+        int no_of_wheels;
+        int engine_power;
+        int seating_capacity;
+
+    public:
+        Vehicle(int wheels, int power, int capacity)
+            : no_of_wheels(wheels), engine_power(power), seating_capacity(capacity) {}
+
+        void displayInfo()
+        {
+            std::cout << "Number of wheels: " << no_of_wheels << '\n';
+            std::cout << "Engine power: " << engine_power << " HP" << '\n';
+            std::cout << "Seating capacity: " << seating_capacity << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return seating_capacity;
+        }
+    };
+
+    class Car
+    {
+    private:
+        int no_of_wheels;
+        int engine_power;
+        int seating_capacity;
+        int no_of_doors;
+        int storage_capacity;
+
+    public:
+        Car(int wheels, int power, int capacity, int doors, int storage)
+            : no_of_wheels(wheels), engine_power(power), seating_capacity(capacity), no_of_doors(doors), storage_capacity(storage) {}
+
+        void displayInfo()
+        {
+            std::cout << "Number of wheels: " << no_of_wheels << '\n';
+            std::cout << "Engine power: " << engine_power << " HP" << '\n';
+            std::cout << "Seating capacity: " << seating_capacity << '\n';
+            std::cout << "Number of doors: " << no_of_doors << '\n';
+            std::cout << "Storage capacity: " << storage_capacity << " liters" << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return seating_capacity;
+        }
+    };
+
+    class Bike
+    {
+    private:
+        int no_of_wheels;
+        int engine_power;
+        int seating_capacity;
+        bool has_sidecar;
+
+    public:
+        Bike(int wheels, int power, int capacity, bool sidecar)
+            : no_of_wheels(wheels), engine_power(power), seating_capacity(capacity), has_sidecar(sidecar) {}
+
+        void displayInfo()
+        {
+            std::cout << "Number of wheels: " << no_of_wheels << '\n';
+            std::cout << "Engine power: " << engine_power << " HP" << '\n';
+            std::cout << "Seating capacity: " << seating_capacity << '\n';
+            std::cout << "Has sidecar: " << (has_sidecar ? "Yes" : "No") << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return seating_capacity;
+        }
+    };
+
+    int main()
+    {
+        Vehicle vehicle(3, 150, 3);
+        std::cout << "# Vehicle Details #\n";
+        vehicle.displayInfo();
+        
+        Car car(4, 200, 5, 4, 500);
+        std::cout << "\n# Car Details #\n";
+        car.displayInfo();
+
+        Bike bike(2, 100, 2, false);
+        std::cout << "\n# Bike Details #\n";
+        bike.displayInfo();
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    class Vehicle
+    {
+    private:
+        int no_of_wheels;
+        int engine_power;
+        int seating_capacity;
+
+    public:
+        Vehicle(int wheels, int power, int capacity)
+            : no_of_wheels(wheels), engine_power(power), seating_capacity(capacity) {}
+
+        void displayInfo()
+        {
+            std::cout << "Number of wheels: " << no_of_wheels << '\n';
+            std::cout << "Engine power: " << engine_power << " HP" << '\n';
+            std::cout << "Seating capacity: " << seating_capacity << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return seating_capacity;
+        }
+    };
+
+    class Car
+    {
+    private:
+        Vehicle car_vehicle;
+        int no_of_doors;
+        int storage_capacity;
+
+    public:
+        Car (int wheels, int power, int capacity, int doors, int storage)
+            : car_vehicle(wheels, power, capacity), no_of_doors(doors), storage_capacity(storage)
+        {
+        }
+
+        void displayInfo()
+        {
+            car_vehicle.displayInfo();
+
+            std::cout << "Number of doors: " << no_of_doors << '\n';
+            std::cout << "Storage capacity: " << storage_capacity << " liters" << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return car_vehicle.getSeatingCapacity();
+        }
+    };
+
+    class Bike
+    {
+    private:
+        Vehicle bike_vehicle;
+        bool has_sidecar;
+
+    public:
+        Bike(int wheels, int power, int capacity, bool sidecar)
+            : bike_vehicle(wheels, power, capacity), has_sidecar(sidecar)
+        {
+        }   
+
+        void displayInfo()
+        {
+            bike_vehicle.displayInfo();
+
+            std::cout << "Has sidecar: " << (has_sidecar ? "Yes" : "No") << '\n';
+        }
+
+        int getSeatingCapacity()
+        {
+            return bike_vehicle.getSeatingCapacity();
+        }
+    };
+
+    int main()
+    {
+        Vehicle vehicle(3, 150, 3);
+        std::cout << "# Vehicle Details #\n";
+        vehicle.displayInfo();
+        
+        Car car(4, 200, 5, 4, 500);
+        std::cout << "\n# Car Details #\n";
+        car.displayInfo();
+
+        Bike bike(2, 100, 2, false);
+        std::cout << "\n# Bike Details #\n";
+        bike.displayInfo();
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q2.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base()
+        {
+            std::cout << "Constructing Base\n";
+        }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        Derived()
+        {
+            std::cout << "Constructing Derived\n";
+        }
+    };
+
+    int main()
+    {
+        std::cout << "Instantiating Base\n";
+        Base base;
+
+        std::cout << "Instantiating Derived\n";
+        Derived derived;
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        int m_id{};
+
+        Base(int id = 0)
+            : m_id{ id }
+        {
+        }
+
+        int getId() const { return m_id; }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        double m_cost{};
+
+        Derived(double cost = 0.0, int id = 0)
+            : m_cost{ cost }, m_id{ id }
+        {
+        }
+
+        double getCost() const { return m_cost; }
+    };
+
+    int main()
+    {
+        Base base{5};
+        Derived derived{1.3, 10};
+
+        std::cout << "base.m_id: " << base.getId() << '\n';
+        std::cout << "derived.m_id: " << derived.getId() << '\n';
+        std::cout << "derived.m_cost: " << derived.getCost() << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        int m_id{};
+
+        Base(int id = 0)
+            : m_id{id}
+        {
+        }
+
+        int getId() const { return m_id; }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        double m_cost{};
+
+        Derived(double cost = 0.0, int id = 0)
+            : m_cost{cost}
+        {
+            m_id = id;
+        }
+
+        double getCost() const { return m_cost; }
+    };
+
+    int main()
+    {
+        Base base{5};
+        Derived derived{1.3, 10};
+
+        std::cout << "base.m_id: " << base.getId() << '\n';
+        std::cout << "derived.m_id: " << derived.getId() << '\n';
+        std::cout << "derived.m_cost: " << derived.getCost() << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    private:
+        int m_id{};
+
+    public:
+
+        Base(int id = 0)
+            : m_id{id}
+        {
+        }
+
+        int getId() const { return m_id; }
+    };
+
+    class Derived : public Base
+    {
+    private:
+        double m_cost{};
+
+    public:
+
+        Derived(double cost = 0.0, int id = 0)
+            : m_cost{cost}
+        {
+            m_id = id;
+        }
+
+        double getCost() const { return m_cost; }
+    };
+
+    int main()
+    {
+        Base base{5};
+        Derived derived{1.3, 10};
+
+        std::cout << "base.m_id: " << base.getId() << '\n';
+        std::cout << "derived.m_id: " << derived.getId() << '\n';
+        std::cout << "derived.m_cost: " << derived.getCost() << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        const int m_id{};
+
+        Base(int id = 0)
+            : m_id{id}
+        {
+        }
+
+        int getId() const { return m_id; }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        double m_cost{};
+
+        Derived(double cost = 0.0, int id = 0)
+            : m_cost{cost}
+        {
+            m_id = id;
+        }
+
+        double getCost() const { return m_cost; }
+    };
+
+    int main()
+    {
+        Base base{5};
+        Derived derived{1.3, 10};
+
+        std::cout << "base.m_id: " << base.getId() << '\n';
+        std::cout << "derived.m_id: " << derived.getId() << '\n';
+        std::cout << "derived.m_cost: " << derived.getCost() << '\n';
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q3.
+
+Create a Fruit base class that contains two private members: a name (`std::string`), and a color (`std::string`). 
+Create an Apple class that inherits Fruit. Apple should have an additional private member: fiber (`double`). 
+Create a Banana class that also inherits Fruit. Banana has no additional members.
+
+The following program should run:
+
+```cpp
+#include <iostream>
+
+int main()
+{
+	Apple a{ "Red delicious", "red", 4.2 };
+	std::cout << a.printDetails() << '\n';
+
+	Banana b{ "Cavendish", "yellow" };
+	std::cout << b.printDetails() << '\n';
+
+	return 0;
+}
+```
+
+And print the following:
+
+```ansi
+Apple(Red delicious, red, 4.2)
+Banana(Cavendish, yellow)
+```
+
+---
+
+#### Q4.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    class A
+    {
+    public:
+        A()
+        {
+            std::cout << "Constructing A\n";
+        }
+    };
+
+    class B : public A
+    {
+    public:
+        B()
+        {
+            std::cout << "Constructing B\n";
+        }
+    };
+
+    class C : public B
+    {
+    public:
+        C()
+        {
+            std::cout << "Constructing C\n";
+        }
+    };
+
+    class D : public C
+    {
+    public:
+        D()
+        {
+            std::cout << "Constructing D\n";
+        }
+    };
+
+    int main()
+    {
+        std::cout << "Instantiating A: \n";
+        A a;
+
+        std::cout << "\nInstantiating B: \n";
+        B b;
+
+        std::cout << "\nInstantiating C: \n";
+        C c;
+
+        std::cout << "\nInstantiating D: \n";
+        D d;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        const int m_id{};
+
+        Base(int id = 0)
+            : m_id{id}
+        {
+        }
+
+        int getId() const { return m_id; }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        double m_cost{};
+
+        Derived(double cost = 0.0, int id = 0)
+            : Base {id}, m_cost{cost}
+        {
+        }
+
+        double getCost() const { return m_cost; }
+    };
+
+    int main()
+    {
+        Base base{5};
+        Derived derived{1.3, 10};
+
+        std::cout << "base.m_id: " << base.getId() << '\n';
+        std::cout << "derived.m_id: " << derived.getId() << '\n';
+        std::cout << "derived.m_cost: " << derived.getCost() << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        int m_public {};
+    protected:
+        int m_protected {};
+    private:
+        int m_private {};
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived()
+        {
+            m_public = 1;
+            m_protected = 2;
+            m_private = 3;
+        }
+    };
+
+    int main()
+    {
+        Base base;
+
+        std::cout << base.m_public << '\n';
+        std::cout << base.m_protected << '\n';
+        std::cout << base.m_private << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        int m_public {};
+    protected:
+        int m_protected {};
+    private:
+        int m_private {};
+    };
+
+    class Pub: public Base 
+    {
+    public:
+        Pub()
+        {
+            m_public = 1;
+            m_protected = 2;
+            m_private = 3;
+        }
+    };
+
+    int main()
+    {
+        Base base;
+        base.m_public = 1;
+        base.m_protected = 2;
+        base.m_private = 3;
+
+        Pub pub;
+        pub.m_public = 1;
+        pub.m_protected = 2;
+        pub.m_private = 3;
+
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        int m_public {};
+    protected:
+        int m_protected {};
+    private:
+        int m_private {};
+    };
+
+    class Pri: private Base
+    {
+    public:
+        Pri()
+        {
+            m_public = 1;
+            m_protected = 2;
+            m_private = 3;
+        }
+    };
+
+    int main()
+    {
+        Base base;
+        base.m_public = 1;
+        base.m_protected = 2;
+        base.m_private = 3;
+
+        Pri pri;
+        pri.m_public = 1;
+        pri.m_protected = 2;
+        pri.m_private = 3;
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q5.
+
+- #### I.
+
+Write an Apple class and a Banana class that are derived from a common Fruit class. Fruit should have two members: a name and a color.
+
+The following program should run:
+
+```cpp
+int main()
+{
+	Apple a{ "red" };
+	Banana b{};
+
+	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
+
+	return 0;
+}
+```
+
+And produce the result:
+
+```ansi
+My apple is red.
+My banana is yellow.
+```
+
+- #### II.
+
+Add a new class to the previous program called GrannySmith that inherits from Apple.
+
+The following program should run:
+
+```cpp
+int main()
+{
+	Apple a{ "red" };
+	Banana b;
+	GrannySmith c;
+
+	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
+	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
+
+	return 0;
+}
+```
+
+And produce the result:
+
+```ansi
+My apple is red.
+My banana is yellow.
+My Granny Smith apple is green.
+```
+
+---
+
+#### Q6.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output yourself without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    protected:
+        int m_value {};
+
+    public:
+        Base(int value)
+            : m_value { value }
+        {
+        }
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived(int value)
+            : Base { value }
+        {
+        }
+
+        int getValue() const { return m_value; }
+    };
+
+    int main()
+    {
+        Derived derived { 5 };
+        std::cout << "derived has value " << derived.getValue() << '\n';
+
+        Base base { 5 };
+        std::cout << "base has value " << base.getValue() << '\n';
+
+        return 0;
+    }
+    ```
+
+- #### II.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base() { }
+
+        void identify() const { std::cout << "Base::identify()\n"; }
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived() { }
+    };
+
+    int main()
+    {
+        Base base {};
+        base.identify();
+
+        Derived derived {};
+        derived.identify();
+
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base() { }
+
+        void identify() const { std::cout << "Base::identify()\n"; }
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived() { }
+
+        void identify() const { std::cout << "Derived::identify()\n"; }
+    };
+
+    int main()
+    {
+        Base base {};
+        base.identify();
+
+        Derived derived {};
+        derived.identify();
+
+        return 0;
+    }
+    ```
+
+- #### IV.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    private:
+        void print() const
+        {
+            std::cout << "Base";
+        }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        void print() const
+        {
+            std::cout << "Derived ";
+        }
+    };
+
+
+    int main()
+    {
+        Derived derived {};
+        derived.print(); // calls derived::print(), which is public
+        return 0;
+    }
+    ```
+
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base() { }
+
+        void identify() const { std::cout << "Base::identify()\n"; }
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived() { }
+
+        void identify() const
+        {
+            std::cout << "Derived::identify()\n";
+            Base::identify(); // note call to Base::identify() here
+        }
+    };
+
+    int main()
+    {
+        Base base {};
+        base.identify();
+
+        Derived derived {};
+        derived.identify();
+
+        return 0;
+    }
+    ```
+
+- #### VI.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base() {}
+
+        void identify() const { std::cout << "Base::identify()\n"; }
+    };
+
+    class Derived : public Base
+    {
+    public:
+        Derived() {}
+
+        void identify() const
+        {
+            std::cout << "Derived::identify()\n";
+            identify();
+        }
+    };
+
+    int main()
+    {
+        Base base{};
+        base.identify();
+
+        Derived derived{};
+        derived.identify();
+
+        return 0;
+    }
+    ```
+
+---
+
+#### Q7.
+
+A public library wants to catalog different types of media items (books and DVDs) using shared and unique information.
+
+Create a program that:
+
+- Store common media attributes: title, publication year, and unique item ID.
+- For books, store author and number of pages.
+- For DVDs, store director and duration in minutes.
+- Allow displaying full details for any media item.
+
+<CollapsibleSection title="Instructions">
+- Create a base class MediaItem to store:
+    - Title (e.g., "The Alchemist")
+    - Publication Year (e.g., 1988)
+    - Item ID (e.g., "B1001" for books, "D2002" for DVDs)
+    - Member functions to:
+        - Set common media details.
+        - Display common media details.
+- Create a derived class Book that inherits from MediaItem and adds:
+    - Author (e.g., "Paulo Coelho")
+    - Number of Pages (e.g., 208)
+    - Member functions to:
+        - Set book-specific details.
+        - Override display to show author and page count.
+- Create another derived class DVD that inherits from MediaItem and adds:
+    - Director (e.g., "Ustad Rashid Khan")
+    - Duration (e.g., 120 minutes)
+    - Member functions to:
+        - Set DVD-specific details.
+        - Override display to show director and duration.
+- In main(), demonstrate:
+    - Creating one Book object and one DVD object.
+    - Setting all relevant details.
+    - Displaying each media item's full details.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// Book details:[0m
+Media Item Details (Book):
+Title: The Alchemist
+Publication Year: 1988
+Item ID: B1001
+Author: Paulo Coelho
+Pages: 208
+
+[2;3m// DVD details:[0m
+Media Item Details (DVD):
+Title: The Maestro - Ustad Rashid Khan
+Publication Year: 2015
+Item ID: D2002
+Director: Ustad Rashid Khan
+Duration: 120 minutes
+```
+</CollapsibleSection>
+
+---
+
+#### Q8.
+
+An electronics store wants to manage its inventory with shared and specialized item categories.
+
+Create a program that:
+
+- Store common inventory item attributes: item code, name, and price.
+- For smartphones, store RAM size and storage capacity.
+- For laptops, store screen size and battery life (in hours).
+- Display full inventory details for any item.
+
+<CollapsibleSection title="Instructions">
+- Create a base class InventoryItem to store:
+    - Item Code (e.g., "SP1001" for smartphones, "LP2002" for laptops)
+    - Name (e.g., "iPhone 14", "Dell XPS 13")
+    - Price (e.g., 70000 for a smartphone, 120000 for a laptop)
+    - Member functions to:
+        - Set common item details.
+        - Display common item details.
+- Create a derived class Smartphone that inherits from InventoryItem and adds:
+    - RAM (e.g., 8 GB)
+    - Storage (e.g., 128 GB)
+    - Member functions to:
+        - Set smartphone-specific details.
+        - Override display to show RAM and storage.
+- Create another derived class Laptop that inherits from InventoryItem and adds:
+    - Screen Size (in inches, e.g., 13.3)
+    - Battery Life (in hours, e.g., 10)
+    - Member functions to:
+        - Set laptop-specific details.
+        - Override display to show screen size and battery life.
+- In main(), demonstrate:
+    - Creating one Smartphone and one Laptop.
+    - Setting their details.
+    - Displaying each item's full inventory information.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// Smartphone details:[0m
+Inventory Item Details (Smartphone):
+Item Code: SP1001
+Name: iPhone 14
+Price: 70000
+RAM: 8 GB
+Storage: 128 GB
+
+[2;3m// Laptop details:[0m
+Inventory Item Details (Laptop):
+Item Code: LP2002
+Name: Dell XPS 13
+Price: 120000
+Screen Size: 13.3 inches
+Battery Life: 10 hours
+```
+</CollapsibleSection>
+
+---
+
+#### Q9. **_(Adv.)_**
+
+An online marketplace sells a wide variety of items, from physical goods to digital downloads. Each product shares some common information, 
+but extends into different details and behaviors depending on its type. So the store manager needs a tool that helps him maintain a unified 
+catalog of all products, check whether an item can be sold (based on stock or valid license) and process orders accordingly.
+
+<CollapsibleSection title="Instructions">
+<ul>
+    <li>
+        <b>Catalog Management</b>
+        <ul class="list-[circle]">
+            <li>
+                Your program should allow the manager to add new products to the catalog, specifying:
+                <ul class="list-[circle]">
+                    <li>
+                        Common fields: 
+                        - product ID (e.g. `P1001` or `D2001`)
+                        - product name (e.g. `Wireless Mouse` or `C++ eBook`)
+                        - unit price (e.g. `25.00`)
+                    </li>
+                    <li>
+                        If it's a physical good: 
+                        - shipping weight in kg (e.g. `0.2`)
+                        - dimensions (`length x width x height` in cm, e.g. `10 x 5 x 3`)
+                        - initial stock count (e.g. `50`)
+                    </li>
+                    <li>
+                        If it's a digital download: 
+                        - file size in MB (e.g. `5`)
+                        - full download URL (e.g. `www.example.com/download/ebook`) 
+                        - license validity date (e.g. `31-12-2025` in dd/mm/yyyy format)
+                    </li>
+                </ul>
+            </li>
+            <li>After adding items, the manager can ask the program to display all products, which prints every product's full information.</li>
+        </ul>
+    </li>
+    <li>
+        <b>Availability Checking & Ordering</b>
+        <ul class="list-[circle]">
+            <li>
+                When a customer tries to order some quantity of a product (physical or digital), the program must:
+                <ul class="list-[circle]">
+                    <li>Look up the product by ID.</li>
+                    <li>
+                        If it's a physical good:
+                        <ul class="list-[circle]">
+                            <li>Verify that the requested quantity is not more than the current stock.</li>
+                            <li>If not enough stock, print an "Out of stock" or "Insufficient stock" message and decline the order.</li>
+                            <li>If enough stock, calculate `shipping cost = (weight x shipping - rate) x quantity`. Use a fixed shipping rate of $5 per kg.</li>
+                            <li>Reduce the product's stock by the purchased quantity.</li>
+                            <li>
+                                Print an order summary showing product name, quantity, unit price, shipping cost (breakdown per unit and total), total cost and the 
+                                updated stock remaining.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        If it's a digital download:
+                        <ul class="list-[circle]">
+                            <li>Check today's date (for e.g. assume the system date is `02-06-2025`) against the license validity date.</li>
+                            <li>If today is after the license expiry date, decline the order with "License expired" or "Download not available." </li>
+                            <li>
+                                If the license is still valid, do not change any stock (digital items do not run out), but print an order summary showing product name, 
+                                quantity, unit price, total cost and the download URL.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>User Interaction Workflow</b>
+        <ul class="list-[circle]">
+            <li>Add at least one physical product and one digital product to your catalog.</li>
+            <li>Display all products once after adding them.</li>
+            <li>
+                Attempt these orders in sequence:
+                <ul class="list-[circle]">
+                    <li>Order 2 units of the physical product.</li>
+                    <li>Order 1 copy of the digital product.</li>
+                    <li>Attempt to order more units of the physical product than remain in stock (to show the "insufficient stock" message).</li>
+                    <li>Attempt to order the digital product after its license expiry date (to show "license expired").</li>
+                </ul>
+            </li>
+            <li>After each attempt, print the program's response or order summary.</li>
+            <li>At the very end, display all products again so the manager sees updated stock for the physical good.</li>
+        </ul>
+    </li>
+</ul>
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+All Products:
+-------------------------------
+Product ID: P1001
+Name: Wireless Mouse
+Price: rs.500.00
+Type: Physical
+Weight: 0.225 kg
+Dimensions: 10 x 5 x 3 cm
+Stock: 50
+
+Product ID: D2001
+Name: C++ eBook
+Price: rs.750.00
+Type: Digital
+File Size: 5.00 MB
+Download Link: www.example.com/download/cppebook
+License Valid Until: 31/12/2025
+
+Ordering 2 x P1001 (Wireless Mouse)...
+Availability check passed (stock 50 ≥ 2).
+Shipping rate: rs.5.00 per kg
+Weight per unit: 0.20 kg
+Shipping per unit: 0.20 x rs.5.00 = rs.1.00
+Total shipping for 2 units: rs.2.00
+
+Order Summary (Physical Product):
+---------------------------------
+Product: Wireless Mouse
+Quantity: 2
+Unit Price: rs.500.00
+Subtotal (price x quantity): rs.1000.00
+Shipping Cost: rs.2.00
+Total Cost: rs.1002.00
+Remaining Stock for P1001: 48
+---------------------------------
+
+Ordering 1 x D2001 (C++ eBook)...
+Current Date: 02/06/2025
+License Valid Until: 31/12/2025
+License is valid. Proceeding with download.
+
+Order Summary (Digital Product):
+---------------------------------
+Product: C++ eBook
+Quantity: 1
+Unit Price: rs.750.00
+Subtotal (price x quantity): rs.750.00
+Download Link: www.example.com/download/cppebook
+---------------------------------
+
+Ordering 100 x P1001 (Wireless Mouse)...
+Availability check failed. Requested: 100, In Stock: 48.
+Insufficient stock! Order cannot be processed.
+
+Ordering 1 x D2001 (C++ eBook)...
+Current Date: 15/01/2026
+License Valid Until: 31/12/2025
+License expired! Download not available. Order declined.
+
+All Products:
+-------------------------------
+Product ID: P1001
+Name: Wireless Mouse
+Price: rs.500.00
+Type: Physical
+Weight: 0.20 kg
+Dimensions: 10 x 5 x 3 cm
+Stock: 48
+
+Product ID: D2001
+Name: C++ eBook
+Price: rs.750.00
+Type: Digital
+File Size: 5.00 MB
+Download Link: www.example.com/download/cppebook
+License Valid Until: 31/12/2025
+```
+</CollapsibleSection>

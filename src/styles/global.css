@@ -269,8 +269,12 @@ html[data-theme="dark"] {
   /* #endregion */
 
   /* #region SCRATCH PROJECT EMBED */
-  .scratch-project-preview-container {
+  /* .scratch-project-preview-container {
     @apply mt-8;
+  } */
+
+  .scratch-project-iframe {
+    @apply w-3/4 md:w-3/5 aspect-[485/402] mt-8;
   }
   /* #endregion */
 }

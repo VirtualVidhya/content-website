@@ -15,6 +15,12 @@ order: 70
 import Admonition from '@/components/Admonition.astro';
 import LinkMd from '@/components/LinkMd.astro';
 
+<Admonition variant="note" title="note">
+    Whenever you write code for the exercises below, use functions to keep your solution reusable and scalable.
+</Admonition>
+
+---
+
 #### Q1.
 
 What will be the output of the following programs?
@@ -574,10 +580,6 @@ What will be the output of the following programs?
 
 Write a program that takes a person's height in feet as input and converts it to centimeters.
 
-<Admonition variant="hint" title="hint">
-    Use functions for a reusable and scalable solution.
-</Admonition>
-
 **Expected Output:**
 
 ```ansi
@@ -613,15 +615,30 @@ Student's grade: C
 
 Write a program that takes two alphabets as input, then tells which alphabet comes first as per the alphabetical order.
 
+<Admonition variant="note" title="note">
+    Treat uppercase and lowercase letters the same, so that ‘a’ and ‘A’ are not considered different when comparing.
+</Admonition>
+
 **Expected Output:**
 
 ```ansi
+[2;3m// case 1[0m
 Enter first alphabet: q   [2;3m// user input[0m
 Enter second alphabet: g   [2;3m// user input[0m
 
 Output: g
 
-[2;3m// because g comes before q as per alphabetical order
+[2;3m// case 2[0m
+Enter first alphabet: b   [2;3m// user input[0m
+Enter second alphabet: B   [2;3m// user input[0m
+
+Output: both are equal
+
+[2;3m// case 3[0m
+Enter first alphabet: t   [2;3m// user input[0m
+Enter second alphabet: Z   [2;3m// user input[0m
+
+Output: t
 ```
 
 ---

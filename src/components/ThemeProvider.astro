@@ -1,0 +1,89 @@
+---
+
+---
+
+<!-- <style is:inline>
+  html {
+    visibility: hidden;
+  }
+</style> -->
+<!-- <script is:inline>
+  (function () {
+    // Check localStorage for an explicit “theme”
+    let theme = localStorage.getItem("theme");
+
+    if (!theme) {
+      // If none, fall back to OS preference
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+
+    // Apply theme class + data-theme attribute
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+
+    // Sync <meta name="theme-color"> to match the current theme's background
+    // function updateMetaThemeColor(currentTheme) {
+    //   const lightBg = "#f9f8f4"; // From global.css :root --background
+    //   const darkBg = "#1e1e1e"; // From global.css html[data-theme="dark"] --background
+    //   const meta = document.querySelector("meta[name='theme-color']");
+    //   if (meta) {
+    //     meta.setAttribute("content", currentTheme === "dark" ? darkBg : lightBg);
+    //   }
+    // }
+
+    // // Apply theme and update meta tag before making visible
+    // updateMetaThemeColor(theme);
+
+    // Make HTML visible
+    // document.documentElement.style.visibility = "visible";
+  })();
+</script> -->
+<script is:inline>
+  (function () {
+    const themes = {
+      light: { backgroundColor: "#f9f8f4" },
+      dark: { backgroundColor: "#1e1e1e" },
+    };
+
+    const theme = localStorage.getItem("theme");
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+
+    if (theme) {
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+      themeColor.setAttribute("content", themes[theme].backgroundColor);
+    } else {
+      const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.dataset.theme = prefers;
+      document.documentElement.style.colorScheme = prefers;
+      themeColor.setAttribute("content", themes[prefers].backgroundColor);
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", event => {
+        if (!localStorage.getItem(STORE)) {
+          const prefers = event.matches ? "dark" : "light";
+          // const disableAllTransitions = "[&_*]:!transition-none";
+
+          // document.documentElement.classList.add(disableAllTransitions);
+          document.documentElement.dataset.theme = prefers;
+          document.documentElement.style.colorScheme = prefers;
+          themeColor.setAttribute("content", themes[prefers].backgroundColor);
+          // setTimeout(
+          //   () =>
+          //     document.documentElement.classList.remove(disableAllTransitions),
+          //   1
+          // );
+        }
+      });
+
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      // document.documentElement.style.visibility = "visible";
+  })();
+</script>

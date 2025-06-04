@@ -62,6 +62,9 @@ html[data-theme="dark"] {
   body {
     @apply flex min-h-svh flex-col bg-background font-notosans text-foreground selection:bg-accent/75 selection:text-background;
   }
+  /* main {
+    @apply bg-background;
+  } */
   a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
@@ -199,7 +202,7 @@ html[data-theme="dark"] {
 
   /* #region HEADER */
   .header {
-    @apply sticky top-0 z-10 mb-10 flex justify-between bg-navbar px-2 py-2 sm:px-4 md:px-8 md:py-3;
+    @apply sticky top-0 z-10 mb-10 flex justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
   }
 
   .header-logo-text {
@@ -274,7 +277,7 @@ html[data-theme="dark"] {
   } */
 
   .scratch-project-iframe {
-    @apply w-3/4 md:w-3/5 aspect-[485/402] mt-8;
+    @apply mt-8 aspect-[485/402] w-3/4 md:w-3/5;
   }
   /* #endregion */
 }

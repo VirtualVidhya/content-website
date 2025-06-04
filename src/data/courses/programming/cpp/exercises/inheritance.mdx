@@ -628,43 +628,6 @@ What will be the output of the following programs?
     }
     ```
 
-{/* - #### III.
-    ```cpp
-    #include <iostream>
-
-    class Base
-    {
-    public:
-        int m_public {};
-    protected:
-        int m_protected {};
-    private:
-        int m_private {};
-    };
-
-    class Derived: public Base
-    {
-    public:
-        Derived()
-        {
-            m_public = 1;
-            m_protected = 2;
-            m_private = 3;
-        }
-    };
-
-    int main()
-    {
-        Base base;
-
-        std::cout << base.m_public << '\n';
-        std::cout << base.m_protected << '\n';
-        std::cout << base.m_private << '\n';
-
-        return 0;
-    }
-    ``` */}
-
 - #### III.
     ```cpp
     #include <iostream>
@@ -747,6 +710,45 @@ What will be the output of the following programs?
     }
     ```
 
+- #### V.
+    ```cpp
+    #include <iostream>
+
+    class Base
+    {
+    public:
+        Base()
+        {
+            std::cout << "Base()\n";
+        }
+        ~Base()
+        {
+            std::cout << "~Base()\n";
+        }
+    };
+
+    class Derived: public Base
+    {
+    public:
+        Derived()
+        {
+            std::cout << "Derived()\n";
+        }
+        ~Derived()
+        {
+            std::cout << "~Derived()\n";
+        }
+    };
+
+    int main()
+    {
+        Base b;
+        Derived d;
+
+        return 0;
+    }
+    ```
+
 ---
 
 #### Q5.
@@ -815,45 +817,6 @@ What will be the output of the following programs?
 <Admonition variant="caution" title="caution">
     You have to predict the output yourself without running/executing the code.
 </Admonition>
-
-{/* - #### I.
-    ```cpp
-    #include <iostream>
-
-    class Base
-    {
-    protected:
-        int m_value {};
-
-    public:
-        Base(int value)
-            : m_value { value }
-        {
-        }
-    };
-
-    class Derived: public Base
-    {
-    public:
-        Derived(int value)
-            : Base { value }
-        {
-        }
-
-        int getValue() const { return m_value; }
-    };
-
-    int main()
-    {
-        Derived derived { 5 };
-        std::cout << "derived has value " << derived.getValue() << '\n';
-
-        Base base { 5 };
-        std::cout << "base has value " << base.getValue() << '\n';
-
-        return 0;
-    }
-    ``` */}
 
 - #### I.
     ```cpp
@@ -1028,60 +991,56 @@ What will be the output of the following programs?
 
 #### Q7.
 
-A public library wants to catalog different types of media items (books and DVDs) using shared and unique information.
+A zoo wants to keep a registry of animals, organizing shared and unique information.
 
 Create a program that:
-
-- Store common media attributes: title, publication year, and unique item ID.
-- For books, store author and number of pages.
-- For DVDs, store director and duration in minutes.
-- Allow displaying full details for any media item.
+- Stores common animal attributes: name, species, and age.
+- For mammals, stores fur color and whether the animal is endangered.
+- For birds, stores wing span (in cm) and whether the bird can fly.
+- Allows displaying full details for any animal.
 
 <CollapsibleSection title="Instructions">
-- Create a base class MediaItem to store:
-    - Title (e.g., "The Alchemist")
-    - Publication Year (e.g., 1988)
-    - Item ID (e.g., "B1001" for books, "D2002" for DVDs)
+- Create a base class `Animal` to store:
+    - Name (e.g. “Sher Khan”)
+    - Species (e.g. “Bengal Tiger”)
+    - Age (e.g. 4)
     - Member functions to:
-        - Set common media details.
         - Display common media details.
-- Create a derived class Book that inherits from MediaItem and adds:
-    - Author (e.g., "Paulo Coelho")
-    - Number of Pages (e.g., 208)
+- Create a derived class `Mammal` that inherits from Animal and adds:
+    - Fur Color (e.g. “Orange with Black Stripes”)
+    - Is Endangered? (e.g. true/false)
     - Member functions to:
-        - Set book-specific details.
-        - Override display to show author and page count.
-- Create another derived class DVD that inherits from MediaItem and adds:
-    - Director (e.g., "Ustad Rashid Khan")
-    - Duration (e.g., 120 minutes)
+        - Display all common details plus additional details - fur color and endangered status.
+- Create another derived class `Bird` that inherits from `Animal` and adds:
+    - Wing Span (in cm, e.g. 120)
+    - Can Fly? (e.g. true/false)
     - Member functions to:
-        - Set DVD-specific details.
-        - Override display to show director and duration.
-- In main(), demonstrate:
-    - Creating one Book object and one DVD object.
+        - Display all common details plus additional details - wing span and flight capability.
+- In `main()`, demonstrate:
+    - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
     - Setting all relevant details.
-    - Displaying each media item's full details.
+    - Displaying each animal's full details.
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// Book details:[0m
-Media Item Details (Book):
-Title: The Alchemist
-Publication Year: 1988
-Item ID: B1001
-Author: Paulo Coelho
-Pages: 208
+[2;3m// Mammal details:[0m
+Animal Details (Mammal):
+Name: Sher Khan
+Species: Bengal Tiger
+Age: 4
+Fur Color: Orange with Black Stripes
+Endangered: Yes
 
-[2;3m// DVD details:[0m
-Media Item Details (DVD):
-Title: The Maestro - Ustad Rashid Khan
-Publication Year: 2015
-Item ID: D2002
-Director: Ustad Rashid Khan
-Duration: 120 minutes
+[2;3m// Bird details:[0m
+Animal Details (Bird):
+Name: Pingi
+Species: Emperor Penguin
+Age: 2
+Wing Span: 120 cm
+Can Fly: No
 ```
 </CollapsibleSection>
 
@@ -1089,60 +1048,136 @@ Duration: 120 minutes
 
 #### Q8.
 
-An electronics store wants to manage its inventory with shared and specialized item categories.
+An e-learning platform wants to manage different types of courses (SelfPaced and LiveSession) using shared and unique information. 
+Each course must enforce invariants (no negative prices or durations) and support behaviors like enrolling students, tracking progress, or 
+scheduling sessions.
 
 Create a program that:
-
-- Store common inventory item attributes: item code, name, and price.
-- For smartphones, store RAM size and storage capacity.
-- For laptops, store screen size and battery life (in hours).
-- Display full inventory details for any item.
+- Stores common course attributes: course title, course ID and price.
+- For self-paced courses, stores total video hours and number of modules, and provides functions to mark modules complete and calculate percentage progress.
+- For live session courses, stores a scheduled date, maximum class size, and number of enrolled students, and provides functions to enroll a student 
+(updating count until max) and check if the course is full.
+- Enforces invariants: any negative price, video hours, modules, class size or enrolled count become zero; if enrolled count exceeds max, clamp to max.
+- Allows displaying full details for any course, as well as calling its specific behaviors.
 
 <CollapsibleSection title="Instructions">
-- Create a base class InventoryItem to store:
-    - Item Code (e.g., "SP1001" for smartphones, "LP2002" for laptops)
-    - Name (e.g., "iPhone 14", "Dell XPS 13")
-    - Price (e.g., 70000 for a smartphone, 120000 for a laptop)
+- Create a base class `Course` to store:
+    - Course Title (e.g. “Intro to C++”)
+    - Course ID (e.g. “CSE101”)
+    - Price (in ruppees, e.g. 15000.00)
     - Member functions to:
-        - Set common item details.
-        - Display common item details.
-- Create a derived class Smartphone that inherits from InventoryItem and adds:
-    - RAM (e.g., 8 GB)
-    - Storage (e.g., 128 GB)
+        - Display common course details.
+- Create a derived class `SelfPacedCourse` that inherits from Course and adds:
+    - Total Video Hours (e.g. 10.5)
+    - Number of Modules (e.g. 8)
+    - Completed Modules (initially 0)
     - Member functions to:
-        - Set smartphone-specific details.
-        - Override display to show RAM and storage.
-- Create another derived class Laptop that inherits from InventoryItem and adds:
-    - Screen Size (in inches, e.g., 13.3)
-    - Battery Life (in hours, e.g., 10)
+        - Mark a module as completed, which increments the completed modules count, up to the total number of modules.
+        - To know the progress percentage.
+        - Display all the course details.
+    - Getter and Setter functions for Total Video Hours and Number of Modules.
+- Create a derived class `LiveSessionCourse` that inherits from Course and adds:
+    - Course Duration (in months, e.g. 3)
+    - Max Class Size (e.g. 30)
+    - Enrolled Students (initially 0)
     - Member functions to:
-        - Set laptop-specific details.
-        - Override display to show screen size and battery life.
-- In main(), demonstrate:
-    - Creating one Smartphone and one Laptop.
-    - Setting their details.
-    - Displaying each item's full inventory information.
+        - Enroll a student, which increments the enrolled students count, up to the max class size.
+        - To check if the class is full.
+        - Display all the course details.
+    - Getter and Setter functions for Course Duration.
+- In `main()`, demonstrate:
+    - Creating one `SelfPacedCourse` object, setting valid relevant details.
+    - Display all the course details for it.
+    - For `SelfPacedCourse` object, call complete module function several times and print the progress percent after each to show how progress increases.
+    - Use the relevant access function to change the video hours of one course, then display the course details again to confirm the update.
+    - Attempt to call complete module function enough times to exceed the total number of modules, and show that completed modules count 
+    never goes past its maximum.
+    - Creating one `LiveSessionCourse` object, setting valid relevant details.
+    - Display all the course details for it.
+    - For `LiveSessionCourse` object, repeatedly call enroll student function, until the class is full and then attempt to enroll one more student
+    to verify that enrollment is blocked when at capacity.
+    - Finally, create one `SelfPacedCourse` and one `LiveSessionCourse` each with invalid inputs 
+    (e.g., empty title or ID, negative price, negative video hours, negative modules, negative class size, or enrolled > max).
+    - Displaying each course's full details.
+    - Display all the course details for each to show how invalid values were replaced by defaults, verifying that class invariants work as intended.
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// Smartphone details:[0m
-Inventory Item Details (Smartphone):
-Item Code: SP1001
-Name: iPhone 14
-Price: 70000
-RAM: 8 GB
-Storage: 128 GB
+[2;3m// Self-Paced Course 1 details:[0m
+Course Details (SelfPaced):
+Course: C++ Basics
+ID: C101
+Price: rs.25000.00
+Video Hours: 30.50
+Modules: 0 / 5 (0.00%)
 
-[2;3m// Laptop details:[0m
-Inventory Item Details (Laptop):
-Item Code: LP2002
-Name: Dell XPS 13
-Price: 120000
-Screen Size: 13.3 inches
-Battery Life: 10 hours
+[2;3m// Completing modules for C++ Basics...[0m
+Completed module 1. Progress: 20.00%
+Completed module 2. Progress: 40.00%
+Completed module 3. Progress: 60.00%
+
+[2;3m// Updating video hours for C++ Basics to 36.00...[0m
+Course Details (SelfPaced):
+Course: C++ Basics
+ID: C101
+Price: rs.25000.00
+Video Hours: 36.00
+Modules: 3 / 5 (60.00%)
+
+[2;3m// Completing remaining modules...[0m
+Completed module 4. Progress: 80.00%
+Completed module 5. Progress: 100.00%
+[2;3m// Attempting extra module completion...[0m
+Modules: 5 / 5 (100.00%)
+
+
+[2;3m// Live Session Course 1 details:[0m
+Course Details (LiveSession):
+Course: Graphics Design
+ID: GD301
+Price: rs.40000.00
+Course Duration: 8 months
+Class Size: 1 / 3 (Open)
+
+[2;3m// Enrolling student for Data Structures Live...[0m
+Enrollment successful.
+Course Details (LiveSession):
+Course: Graphics Design
+ID: GD301
+Price: rs.40000.00
+Course Duration: 8 months
+Class Size: 2 / 3 (Open)
+
+[2;3m// Enrolling one more student for Data Structures Live...[0m
+Enrollment successful.
+Course Details (LiveSession):
+Course: Graphics Design
+ID: GD301
+Price: rs.40000.00
+Course Duration: 8 months
+Class Size: 3 / 3 (Full)
+
+[2;3m// Attempting one more enrollment...[0m
+Enrollment failed. Class is full.
+
+[2;3m// Invalid Self-Paced Course details:[0m
+Course Details (SelfPaced):
+Course: UNKNOWN
+ID: UNKNOWN
+Price: rs.0.00
+Video Hours: 0.00
+Modules: 0 / 0 (0.00%)
+
+[2;3m// Invalid Live Session Course details:[0m
+Course Details (LiveSession):
+Course: UNKNOWN
+ID: UNKNOWN
+Price: rs.0.00
+Scheduled Date: 
+Class Size: 0 / 0 (Full)
 ```
 </CollapsibleSection>
 
@@ -1155,90 +1190,46 @@ but extends into different details and behaviors depending on its type. So the s
 catalog of all products, check whether an item can be sold (based on stock or valid license) and process orders accordingly.
 
 <CollapsibleSection title="Instructions">
-<ul>
-    <li>
-        <b>Catalog Management</b>
-        <ul class="list-[circle]">
-            <li>
-                Your program should allow the manager to add new products to the catalog, specifying:
-                <ul class="list-[circle]">
-                    <li>
-                        Common fields: 
-                        - product ID (e.g. `P1001` or `D2001`)
-                        - product name (e.g. `Wireless Mouse` or `C++ eBook`)
-                        - unit price (e.g. `25.00`)
-                    </li>
-                    <li>
-                        If it's a physical good: 
-                        - shipping weight in kg (e.g. `0.2`)
-                        - dimensions (`length x width x height` in cm, e.g. `10 x 5 x 3`)
-                        - initial stock count (e.g. `50`)
-                    </li>
-                    <li>
-                        If it's a digital download: 
-                        - file size in MB (e.g. `5`)
-                        - full download URL (e.g. `www.example.com/download/ebook`) 
-                        - license validity date (e.g. `31-12-2025` in dd/mm/yyyy format)
-                    </li>
-                </ul>
-            </li>
-            <li>After adding items, the manager can ask the program to display all products, which prints every product's full information.</li>
-        </ul>
-    </li>
-    <li>
-        <b>Availability Checking & Ordering</b>
-        <ul class="list-[circle]">
-            <li>
-                When a customer tries to order some quantity of a product (physical or digital), the program must:
-                <ul class="list-[circle]">
-                    <li>Look up the product by ID.</li>
-                    <li>
-                        If it's a physical good:
-                        <ul class="list-[circle]">
-                            <li>Verify that the requested quantity is not more than the current stock.</li>
-                            <li>If not enough stock, print an "Out of stock" or "Insufficient stock" message and decline the order.</li>
-                            <li>If enough stock, calculate `shipping cost = (weight x shipping - rate) x quantity`. Use a fixed shipping rate of $5 per kg.</li>
-                            <li>Reduce the product's stock by the purchased quantity.</li>
-                            <li>
-                                Print an order summary showing product name, quantity, unit price, shipping cost (breakdown per unit and total), total cost and the 
-                                updated stock remaining.
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        If it's a digital download:
-                        <ul class="list-[circle]">
-                            <li>Check today's date (for e.g. assume the system date is `02-06-2025`) against the license validity date.</li>
-                            <li>If today is after the license expiry date, decline the order with "License expired" or "Download not available." </li>
-                            <li>
-                                If the license is still valid, do not change any stock (digital items do not run out), but print an order summary showing product name, 
-                                quantity, unit price, total cost and the download URL.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <b>User Interaction Workflow</b>
-        <ul class="list-[circle]">
-            <li>Add at least one physical product and one digital product to your catalog.</li>
-            <li>Display all products once after adding them.</li>
-            <li>
-                Attempt these orders in sequence:
-                <ul class="list-[circle]">
-                    <li>Order 2 units of the physical product.</li>
-                    <li>Order 1 copy of the digital product.</li>
-                    <li>Attempt to order more units of the physical product than remain in stock (to show the "insufficient stock" message).</li>
-                    <li>Attempt to order the digital product after its license expiry date (to show "license expired").</li>
-                </ul>
-            </li>
-            <li>After each attempt, print the program's response or order summary.</li>
-            <li>At the very end, display all products again so the manager sees updated stock for the physical good.</li>
-        </ul>
-    </li>
-</ul>
+- **Catalog Management**
+    - Your program should allow the manager to add new products to the catalog, specifying:
+        - Common fields:
+            - product ID (e.g. "P1001" or "D2001")
+            - product name (e.g. "Wireless Mouse" or "C++ eBook")
+            - unit price (e.g. 25.00)
+        - If it's a physical good: 
+            - shipping weight in kg (e.g. 0.2)
+            - dimensions (length x width x height in cm, e.g. 10 x 5 x 3)
+            - initial stock count (e.g. 50)
+        - If it's a digital download: 
+            - file size in MB (e.g. 5)
+            - full download URL (e.g. "example.com/download/ebook") 
+            - license validity date (in dd/mm/yyyy format, e.g. 31-12-2025)
+    - After adding items, the manager can ask the program to display all products, which prints every product's full information.
+- **Availability Checking & Ordering**
+    - When a customer tries to order some quantity of a product (physical or digital), the program must:
+        - Look up the product by ID.
+        - If it's a physical good:
+            - Verify that the requested quantity is not more than the current stock.
+            - If not enough stock, print an "Out of stock" or "Insufficient stock" message and decline the order.
+            - If enough stock, calculate `shipping cost = (weight x shipping - rate) x quantity`. Use a fixed shipping rate of rs.5 per kg.
+            - Reduce the product's stock by the purchased quantity.
+            - Print an order summary showing product name, quantity, unit price, shipping cost (breakdown per unit and total), total cost and the 
+            updated stock remaining.
+        - If it's a digital download:
+            - Check today's date (for e.g. assume the system date is "02-06-2025") against the license validity date.
+            - If today is after the license expiry date, decline the order with "License expired" or "Download not available."
+            - If the license is still valid, do not change any stock (digital items do not run out), but print an order summary showing product name, 
+            quantity, unit price, total cost and the download URL.
+- **User Interaction Workflow**
+    - Add at least one physical product and one digital product to your catalog.
+    - Display all products once after adding them.
+    - Attempt these orders in sequence:
+        - Order 2 units of the physical product.
+        - Order 1 copy of the digital product.
+        - Attempt to order more units of the physical product than remain in stock (to show the "insufficient stock" message).
+        - Attempt to order the digital product again after the license has expired (to show the "License expired" message).
+    - After each attempt, print the program's response or order summary.
+    - At the very end, display all products again so the manager sees updated stock for the physical good.
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>

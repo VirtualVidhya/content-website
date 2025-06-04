@@ -1,11 +1,14 @@
 ---
-// import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
 import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
+// import ThemeProvider from "@/components/ThemeProvider.astro";
+// import globalCssHref from "../styles/global.css?url&no-inline";
+import toggleThemeSrc from '../scripts/common/toggle-theme.js?url';
 import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+// const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
@@ -35,26 +38,38 @@ const {
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      ...(profile && { url: profile }),
-    },
-  ],
-};
+// const structuredData = {
+//   "@context": "https://schema.org",
+//   "@type": "BlogPosting",
+//   headline: `${title}`,
+//   image: `${socialImageURL}`,
+//   datePublished: `${pubDatetime?.toISOString()}`,
+//   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+//   author: [
+//     {
+//       "@type": "Person",
+//       name: `${author}`,
+//       ...(profile && { url: profile }),
+//     },
+//   ],
+// };
 ---
 
 <!doctype html>
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
+    <!-- <style>
+      :root {
+        background-color: #f9f8f4;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background-color: #1e1e1e;
+        }
+      }
+    </style> -->
+    <!-- <ThemeProvider /> -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
@@ -81,7 +96,7 @@ const structuredData = {
     <meta property="twitter:image" content={socialImageURL} />
 
     <!-- Article Published/Modified time -->
-    {
+    <!-- {
       pubDatetime && (
         <meta
           property="article:published_time"
@@ -96,25 +111,23 @@ const structuredData = {
           content={modDatetime.toISOString()}
         />
       )
-    }
+    } -->
 
     <!-- Google JSON-LD Structured data -->
-    <script
+    <!-- <script
       type="application/ld+json"
       is:inline
       set:html={JSON.stringify(structuredData)}
-    />
+    /> -->
 
     <!-- Enable RSS feed auto-discovery  -->
     <!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery -->
-    <link
+    <!-- <link
       rel="alternate"
       type="application/rss+xml"
       title={SITE.title}
       href={new URL("rss.xml", Astro.site)}
-    />
-
-    <meta name="theme-color" content="" />
+    /> -->
 
     <!-- {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
@@ -128,9 +141,10 @@ const structuredData = {
       )
     } -->
 
-    <!-- <ClientRouter /> -->
+    <ClientRouter />
 
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline src={toggleThemeSrc}></script>
+    <!-- <link rel="stylesheet" href={globalCssHref} /> -->
 
     <!-- Favicons -->
     <link rel="icon" href="data:," />
@@ -158,23 +172,110 @@ const structuredData = {
       color="#000000"
     />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+
+    <!-- <meta name="msapplication-TileColor" content="#ffffff" /> -->
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
+    <!-- <meta
+      name="theme-color"
+      content="#f9f8f4"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1e1e1e"
+      media="(prefers-color-scheme: dark)"
+    /> -->
   </head>
   <!-- <body transition:animate="fade"> -->
   <body>
+    <!-- <script>0</script> -->
+    
     <ScrollUpBtn />
 
     <slot />
+
+    <script is:inline>
+      // Added is:inline to ensure it's processed correctly by Astro
+      // Check if the device supports touch events
+      function isTouchDevice() {
+        // Ensure window is defined (for SSR safety, though less critical for is:inline)
+        return (
+          typeof window !== "undefined" &&
+          ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+        );
+      }
+
+      // Function to handle touch interactions
+      function handleTouchInteractions() {
+        // Get all interactive elements currently on the page
+        const interactiveElements = document.querySelectorAll(
+          ".link-interaction-effect, .link-interaction-underline-effect, .header-navmenu-hover, .scroll-up-btn, .home-page-action-btn, .card-btn, .course-card, .copy-code, .post-navigation-block"
+        );
+
+        // Add event listeners for touch devices
+        interactiveElements.forEach(element => {
+          // --- Cleanup potential old listeners (optional but good practice) ---
+          // If we previously stored handlers, remove them. Requires storing handlers.
+          // For simplicity here, we'll rely on elements being replaced by Astro,
+          // but be aware this might add duplicate listeners if elements persist across navigations.
+
+          // --- Add new listeners ---
+          const touchStartHandler = () => {
+            element.classList.add("touch");
+          };
+          const touchEndHandler = () => {
+            setTimeout(() => {
+              element.classList.remove("touch");
+            }, 500);
+          };
+
+          element.addEventListener("touchstart", touchStartHandler, {
+            passive: true,
+          }); // Use passive for potential scroll performance
+          element.addEventListener("touchend", touchEndHandler);
+
+          // Optional: Store handlers for potential future removal if needed
+          // element._touchStartHandler = touchStartHandler;
+          // element._touchEndHandler = touchEndHandler;
+        });
+      }
+
+      // Function to initialize touch interactions
+      function initializeTouchInteractions() {
+        if (isTouchDevice()) {
+          handleTouchInteractions();
+        }
+      }
+
+      // Run on initial load
+      initializeTouchInteractions();
+
+      // Run after Astro navigations
+      document.addEventListener("astro:page-load", initializeTouchInteractions);
+    </script>
+    <!-- <script src="../scripts/common/toggle-theme.js"></script> -->
+    <script src="../scripts/common/course-sub-menu.js"></script>
+    <script src="../scripts/common/navbar-menu.js"></script>
+    <script src="../scripts/common/scroll-handler.js"></script>
+    <script src="../scripts/common/data.js"></script>
+    <script src="../scripts/specific/attach-copy-buttons.js"></script>
+    <script src="../scripts/common/instant-page.js"></script>
+
+    <!-- <noscript
+      ><style>
+        body {
+          visibility: visible;
+        }
+      </style></noscript
+    > -->
   </body>
 </html>
 
-<style>
+<!-- <style>
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
   }
-</style>
+</style> -->

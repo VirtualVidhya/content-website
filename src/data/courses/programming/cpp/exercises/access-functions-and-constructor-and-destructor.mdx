@@ -17,52 +17,86 @@ import Admonition from '@/components/Admonition.astro';
 
 #### Q1.
 
-A bank wants to manage customer accounts efficiently.
+A social media platform wants to manage user text posts efficiently.
 
 Create a program that:
-
-- Store an account holder's name, account number, and balance.
-- Allow depositing and withdrawing money.
-- Prevent withdrawals if the balance is insufficient.
-- Display the account details.
+- Store a post's author, timestamp, content, mood, and like count.
+- Allow adding or removing a like.
+- Prevent the like count from going below zero.
+- Display the post details.
 
 <CollapsibleSection title="Instructions">
-- Create a class for BankAccount to store:
-    - Account Holder's Name (e.g., Ramesh Panipuriwala)
-    - Account Number (e.g., 78563249)
-    - Balance (e.g., rs.50000)
-
+- Create a class `TextPost` to store:
+    - Author (e.g., “Radha Mohan”)
+    - Timestamp (e.g., “2025-06-05 14:30”)
+    - Content (e.g., Hello, world! Excited to share my first text post.”)
+    - Mood (e.g., "Excitement")
+    - Likes (initially 0)
 - Implement member functions to: 
-    - Set account details. 
-    - Deposit money into the account. 
-    - Withdraw money (if there is enough balance). 
-    - Display the account details.
+    - Display all post details (author, timestamp, likes, content, mood).
+    - Set or update the content.
+    {/* - Set or update the mood. */}
+    - Increment likes.
+    - Decrement likes (if likes > 0).
+- When a post object is destroyed, print this as a notification:
+
+    `TextPost by <author> at <timestamp> is being deleted. Final likes: <likes>`
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// Before transactions:[0m
-Account Details:
-Name: Ramesh Panipuriwala
-Account Number: 78563249
-Balance: rs.50000
+[2;3m// Post example 1 (valid):[0m
+Post:
+Author: radha_mohan
+Timestamp: 2025-06-05 14:30
+Likes: 2
+Content: Hello, world! Excited to share my first text post.
+Mood: Happy
 
-[2;3m// After depositing rs.10000:[0m
-Account Details:
-Name: Ramesh Panipuriwala
-Account Number: 123456789
-Balance: rs.60000
+[2;3m// Updating the content to "Hello, World! Excited to share my first text post here."[0m
+Post content updated successfully.
 
-[2;3m// After withdrawing rs.20000:[0m
-Account Details:
-Name: Ramesh Panipuriwala
-Account Number: 123456789
-Balance: rs.40000
+[2;3m// Displaying the post again:[0m
+Post:
+Author: radha_mohan
+Timestamp: 2025-06-05 14:30
+Likes: 2
+Content: Hello, World! Excited to share my first text post here.
+Mood: Happy
 
-[2;3m// Attempting to withdraw rs.50000 (insufficient balance):[0m
-Insufficient balance! Withdrawal failed.
+[2;3m// Decrementing likes:[0m
+
+[2;3m// Displaying the post again:[0m
+Post:
+Author: radha_mohan
+Timestamp: 2025-06-05 14:30
+Likes: 1
+Content: Hello, World! Excited to share my first text post here.
+Mood: Happy
+
+[2;3m// Incrementing likes multiple times:[0m
+
+[2;3m// Displaying the post again:[0m
+Post:
+Author: radha_mohan
+Timestamp: 2025-06-05 14:30
+Likes: 10
+Content: Hello, World! Excited to share my first text post here.
+Mood: Happy
+
+[2;3m// Post example 2 (empty author & timestamp):[0m
+Post:
+Author: UNKNOWN
+Timestamp: UNKNOWN
+Likes: 0
+Content: Guess, who am I!
+Mood: 
+
+[2;3m// When the program ends:[0m
+Post by radha_mohan at 2025-06-05 14:30 is being deleted. Final likes: 2
+Post by UNKNOWN at UNKNOWN is being deleted. Final likes: 0
 ```
 </CollapsibleSection>
 
@@ -549,63 +583,35 @@ What will be the output of the following programs?
 
 #### Q6.
 
-A Smart Car Energy Management System is designed to optimize battery usage and adjust driving modes for efficient performance.
+A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
 
-- The battery level should always remain between 0% and 100%.
-- The system should display warnings when the battery is low (below 15%) and prevent driving when the battery is at 0%.
-- The car can also boost the battery, but the level cannot exceed 100%.
-- Users can manually switch the drive mode:
-  - Sport Mode requires at least 50% battery. It cannot be activated if the battery is below this threshold.
-  - If the battery level drops below 30%, the system automatically switches to Eco Mode unless manually overridden. The user can only override it to 
-  Normal Mode (not Sport Mode).
-  - Normal Mode has no specific battery requirements, meaning it can be set at any battery level.
-- Users can get useful information from the system, such as:
-  - The current drive mode.
-  - The current battery level.
-  - The car's status (e.g., low battery warning or driving condition).
+<CollapsibleSection title="Instructions">
+Create a VendingMachine class that allows users to:
+
+- Insert money into the machine.
+- Select a product (if enough money is inserted).
+- Dispense the product and return any change.
+- Automatically return the money if the user does not select a product before exiting or if the machine shuts down unexpectedly.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// --- Initializing Smart Car with 50% Battery ---[0m
-Drive Mode: Normal Mode (Balanced)
-Battery Level: 50%
-Car Status: Car is running smoothly.
+[2;3m// case 1: Successful Purchase[0m
+Inserted ₹50 into the vending machine.
+Selected: Chips (₹30)
+Product dispensed. Change returned: ₹20
 
-[2;3m// --- Attempting to switch to Sport Mode ---[0m
-Error: Sport Mode requires at least 50% battery to activate.
+[2;3m// case 2: User exits without selecting a product[0m
+Inserted ₹50 into the vending machine.
+User exited without selecting a product.
+Money returned: ₹50
 
-[2;3m// --- Driving 10 km in Normal Mode ---[0m
-Drove 10 km. Battery consumed: 30%.
-Drive Mode: Eco Mode (Energy Saving)
-
-Drive Mode: Eco Mode (Energy Saving)
-Battery Level: 20%
-Car Status: Low battery! Recharge soon.
-
-[2;3m// --- Boosting Battery by 40% ---[0m
-Boosted battery by 40%. Current level: 60%.
-Drive Mode: Normal Mode (Balanced)
-
-Drive Mode: Normal Mode (Balanced)
-Battery Level: 60%
-Car Status: Car is running smoothly.
-
-[2;3m// --- Driving 30 km in Normal Mode ---[0m
-Drove 30 km. Battery consumed: 90%.
-Drive Mode: Eco Mode (Energy Saving)
-
-Drive Mode: Eco Mode (Energy Saving)
-Battery Level: 15%
-Car Status: Low battery! Recharge soon.
-
-[2;3m// --- Attempting to switch to Sport Mode ---[0m
-Error: Sport Mode requires at least 50% battery to activate.
-
-[2;3m// --- Attempting to override to Sport Mode while in Eco Mode ---[0m
-Error: Cannot switch to Sport Mode. Battery is too low.
-Drive Mode: Normal Mode (Balanced)
-Battery Level: 60%
-Car Status: Car is running smoothly.
+[2;3m// case 3: Unexpected Shutdown[0m
+Inserted ₹100 into the vending machine.
+Unexpected shutdown detected! Returning ₹100 to the user.
+System exited.
 ```
 </CollapsibleSection>
 
@@ -727,34 +733,144 @@ System exited.
 
 #### Q9.
 
-A Vending Machine allows users to insert money, select a product, and receive change. However, if a user inserts money but does not select a product, the machine should automatically return the money when the session ends (e.g., due to inactivity or power failure). This ensures that no money remains stuck in the machine.
+A Smart Car Energy Management System is designed to optimize battery usage and adjust driving modes for efficient performance.
+
+- The battery level should always remain between 0% and 100%.
+- The system should display warnings when the battery is low (below 15%) and prevent driving when the battery is at 0%.
+- The car can also boost the battery, but the level cannot exceed 100%.
+- Users can manually switch the drive mode:
+  - Sport Mode requires at least 50% battery. It cannot be activated if the battery is below this threshold.
+  - If the battery level drops below 30%, the system automatically switches to Eco Mode unless manually overridden. The user can only override it to 
+  Normal Mode (not Sport Mode).
+  - Normal Mode has no specific battery requirements, meaning it can be set at any battery level.
+- Users can get useful information from the system, such as:
+  - The current drive mode.
+  - The current battery level.
+  - The car's status (e.g., low battery warning or driving condition).
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// --- Initializing Smart Car with 50% Battery ---[0m
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 50%
+Car Status: Car is running smoothly.
+
+[2;3m// --- Attempting to switch to Sport Mode ---[0m
+Error: Sport Mode requires at least 50% battery to activate.
+
+[2;3m// --- Driving 10 km in Normal Mode ---[0m
+Drove 10 km. Battery consumed: 30%.
+Drive Mode: Eco Mode (Energy Saving)
+
+Drive Mode: Eco Mode (Energy Saving)
+Battery Level: 20%
+Car Status: Low battery! Recharge soon.
+
+[2;3m// --- Boosting Battery by 40% ---[0m
+Boosted battery by 40%. Current level: 60%.
+Drive Mode: Normal Mode (Balanced)
+
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 60%
+Car Status: Car is running smoothly.
+
+[2;3m// --- Driving 30 km in Normal Mode ---[0m
+Drove 30 km. Battery consumed: 90%.
+Drive Mode: Eco Mode (Energy Saving)
+
+Drive Mode: Eco Mode (Energy Saving)
+Battery Level: 15%
+Car Status: Low battery! Recharge soon.
+
+[2;3m// --- Attempting to switch to Sport Mode ---[0m
+Error: Sport Mode requires at least 50% battery to activate.
+
+[2;3m// --- Attempting to override to Sport Mode while in Eco Mode ---[0m
+Error: Cannot switch to Sport Mode. Battery is too low.
+Drive Mode: Normal Mode (Balanced)
+Battery Level: 60%
+Car Status: Car is running smoothly.
+```
+</CollapsibleSection>
+
+---
+
+#### Q10.
+
+A bank wants to manage customer accounts efficiently.
+
+Create a program that:
+- Store an account holder's name, account number and balance. While setting the details, invalid account details should be handled
+(like negative balance, empty name, etc.).
+- Allow depositing money into the account.
+- Allow withdrawing money, charging a fee on each withdrawal as follows:
+    - If withdrawal amount > 10000, fee = 0.15% of the amount.
+    - If withdrawal amount is between 10000 and 20000 (inclusive), fee = 0.25% of the amount.
+    - Otherwise, no fee.
+- Prevent any withdrawal if the balance is insufficient to cover both the amount and the fee.
+- Display the account details.
 
 <CollapsibleSection title="Instructions">
-Create a VendingMachine class that allows users to:
-
-- Insert money into the machine.
-- Select a product (if enough money is inserted).
-- Dispense the product and return any change.
-- Automatically return the money if the user does not select a product before exiting or if the machine shuts down unexpectedly.
+- Create a class `BankAccount` to store:
+    - Account Holder's Name (e.g., Ramesh Panipuriwala)
+    - Account Number (e.g., 78563249)
+    - Balance (e.g., rs.50000)
+- Implement member functions to: 
+    - Display the account details.
+    - Deposit money into the account (ignore if amount < 0). 
+    - Withdraw money (if there is enough balance, apply the transaction fees according to the rules). 
+    - Getter function to return the balance.
+- In `main()`, demonstrate:
+    - Creating a `BankAccount` object, setting valid relevant details.
+    - Deposite some money, then withdraw some money multiple times (with and without transaction fees), and display the account details after each 
+    transaction.
+    - Use the access function to check the current balance.
+    - Try to withdraw more money than the current balance to verify that the withdrawal is blocked.
+    - Finally, create a `BankAccount` object with invalid inputs (e.g., empty name, negative balance, or account number).
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// case 1: Successful Purchase[0m
-Inserted ₹50 into the vending machine.
-Selected: Chips (₹30)
-Product dispensed. Change returned: ₹20
+[2;3m// Creating a new account (Valid)[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 78563249
+Balance: rs.50000.00
 
-[2;3m// case 2: User exits without selecting a product[0m
-Inserted ₹50 into the vending machine.
-User exited without selecting a product.
-Money returned: ₹50
+[2;3m// After depositing rs.15000:[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 78563249
+Balance: rs.65000.00
 
-[2;3m// case 3: Unexpected Shutdown[0m
-Inserted ₹100 into the vending machine.
-Unexpected shutdown detected! Returning ₹100 to the user.
-System exited.
+[2;3m// After withdrawing rs.2500 (no fee):[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 78563249
+Balance: rs.62500.00
+
+[2;3m// After withdrawing rs.12500:[0m
+[2;3m// Checking the balance:[0m
+Balance: rs.49981.25
+[2;3m// Extra transaction fee of rs.18.75 (0.15% of rs.12500) applied for amount > 10000:[0m
+
+[2;3m// After withdrawing rs.23000:[0m
+Account Details:
+Name: Ramesh Panipuriwala
+Account Number: 78563249
+Balance: rs.26923.75
+[2;3m// Extra transaction fee of rs.57.5 (0.25% of rs.23000) applied for amount > 20000:[0m
+
+[2;3m// Attempting to withdraw rs.30000 (insufficient balance):[0m
+Insufficient balance! Withdrawal failed.
+
+[2;3m// Creating a new account (Invalid)[0m
+Account Details:
+Name: UNKNOWN
+Account Number: 00000000
+Balance: rs.0.00
+[2;3m// Setting default values for invalid account details like empty name, negative balance etc.:[0m
 ```
 </CollapsibleSection>

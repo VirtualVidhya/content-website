@@ -9,27 +9,42 @@ featured: false
 # ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 description: Learn Python Programming by making a utility program to generate a calendar for a given year.
 
-order: 39
+order: 30
 ---
 
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
+import LinkMd from '@/components/LinkMd.astro';
 
 - ## Task
 
-Build a console program that prints the full calendar for a user-specified year, showing each month laid out with weekday 
-headings and correctly aligned dates.
+Build a text-based Full-Year Calendar Generator, which based on a user-specified year, prints all twelve months with correctly 
+aligned weekday headings and dates.
 
-{/* <CollapsibleSection title="Instructions">
-- The game is played on a 3x3 grid.
-- Two players take turns marking a square (Player 1: `X`, Player 2: `O`).
-- A player wins if they get three of their marks in a row (horizontally, vertically, or diagonally).
-- If the board fills up without a winner, the game ends in a draw.
-- The system should: 
-    - Display the board before each move. 
-    - Prompt the current player to enter a move (1-9). 
-    - Validate the move (ensure the chosen cell is empty). 
-    - Check for a winner or a draw after every move.
-</CollapsibleSection> */}
+<CollapsibleSection title="Instructions">
+- Prompt the user for the year (e.g. 2025).
+- Before printing the calendar, you'd need to determine the first day of the week for January 1st of the given year.
+    - Use the simplified version of <LinkMd href='https://en.wikipedia.org/wiki/Zeller%27s_congruence' title="Zeller's congruence algorithm" /> to 
+    determine that:
+
+        `first_day = ((Y-1) + (Y-1)//4  - (Y-1)//100  + (Y-1)//400  + 1) % 7`
+
+        - Where `Y` is the year
+        - All divisions here are <LinkMd href="https://www.sciencedirect.com/topics/computer-science/integer-division" title='integer divisions' /> `//`,
+        discarding any remainder
+        - The result gives the day of the week for January 1st of the given year as an integer value, where 0 - Sunday … 6 - Saturday
+
+- Determine the day of the week for the first day of subsequent months:
+    
+    `first_day_of_next_month = (first_day_of_previous_month + days_in_month(m, y)) % 7`
+
+    - Where `days_in_month(m, y)` is the number of days in month `m` of year `y`
+    - The result gives the weekday index for the first day of the next month as an integer value, where 0 - Sunday … 6 - Saturday
+
+- Print each month with the correct number of days and align the dates under the appropriate weekday headers (Sun, Mon, Tue, Wed, Thu, Fri, Sat).
+- Handle the varying number of days in each month and correctly align the dates under the weekday headers.
+- Consider <LinkMd href='https://www.timeanddate.com/date/leapyear.html' title="leap years" /> when determining the number of days in February.
+- Ensure that the calendar is properly formatted and visually appealing.
+</CollapsibleSection>
 
 <CollapsibleSection title="Expected Output">
 ```ansi
@@ -69,4 +84,4 @@ Sun Mon Tue Wed Thu Fri Sat
 
 - ## Guidelines
 
-Feel free to implement additional features to polish the utility program.
+Feel free to implement additional features to enhance the user experience.

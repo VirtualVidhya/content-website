@@ -6,6 +6,8 @@ import remarkCollapse from "remark-collapse";
 import { remarkInjectTimestamps } from "./src/utils/remark-inject-timestamps.mjs";
 import { SITE } from "./src/config";
 import mdx from "@astrojs/mdx";
+import playformCompress from "@playform/compress";
+import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +16,23 @@ export default defineConfig({
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
-    mdx()
+    mdx(),
+    playformCompress({
+      CSS: false,
+      HTML: {
+        "html-minifier-terser": {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: true,
+      JavaScript: true,
+      SVG: false,
+    }),
+    compressor({
+      fileExtensions: [".html", ".css", ".js", ".cjs", ".mjs", ".svg", ".xml"],
+      gzip: true,
+      brotli: true,
+    }),
   ],
   prefetch: {
     // Automatically prefetch all links once the page loads.
@@ -57,5 +75,9 @@ export default defineConfig({
     responsiveImages: true,
     preserveScriptOrder: true,
   },
-  trailingSlash: 'always', // Ensure URLs always have a trailing slash
+  trailingSlash: "always", // Ensure URLs always have a trailing slash
+  output: "static",
+  build: {
+    assets: "resources",
+  },
 });

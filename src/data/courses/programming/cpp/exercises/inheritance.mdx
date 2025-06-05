@@ -628,43 +628,6 @@ What will be the output of the following programs?
     }
     ```
 
-{/* - #### III.
-    ```cpp
-    #include <iostream>
-
-    class Base
-    {
-    public:
-        int m_public {};
-    protected:
-        int m_protected {};
-    private:
-        int m_private {};
-    };
-
-    class Derived: public Base
-    {
-    public:
-        Derived()
-        {
-            m_public = 1;
-            m_protected = 2;
-            m_private = 3;
-        }
-    };
-
-    int main()
-    {
-        Base base;
-
-        std::cout << base.m_public << '\n';
-        std::cout << base.m_protected << '\n';
-        std::cout << base.m_private << '\n';
-
-        return 0;
-    }
-    ``` */}
-
 - #### III.
     ```cpp
     #include <iostream>
@@ -854,45 +817,6 @@ What will be the output of the following programs?
 <Admonition variant="caution" title="caution">
     You have to predict the output yourself without running/executing the code.
 </Admonition>
-
-{/* - #### I.
-    ```cpp
-    #include <iostream>
-
-    class Base
-    {
-    protected:
-        int m_value {};
-
-    public:
-        Base(int value)
-            : m_value { value }
-        {
-        }
-    };
-
-    class Derived: public Base
-    {
-    public:
-        Derived(int value)
-            : Base { value }
-        {
-        }
-
-        int getValue() const { return m_value; }
-    };
-
-    int main()
-    {
-        Derived derived { 5 };
-        std::cout << "derived has value " << derived.getValue() << '\n';
-
-        Base base { 5 };
-        std::cout << "base has value " << base.getValue() << '\n';
-
-        return 0;
-    }
-    ``` */}
 
 - #### I.
     ```cpp
@@ -1092,7 +1016,7 @@ Create a program that:
     - Can Fly? (e.g. true/false)
     - Member functions to:
         - Display all common details plus additional details - wing span and flight capability.
-- In main(), demonstrate:
+- In `main()`, demonstrate:
     - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
     - Setting all relevant details.
     - Displaying each animal's full details.
@@ -1161,7 +1085,7 @@ Create a program that:
         - To check if the class is full.
         - Display all the course details.
     - Getter and Setter functions for Course Duration.
-- In main(), demonstrate:
+- In `main()`, demonstrate:
     - Creating one `SelfPacedCourse` object, setting valid relevant details.
     - Display all the course details for it.
     - For `SelfPacedCourse` object, call complete module function several times and print the progress percent after each to show how progress increases.
@@ -1175,7 +1099,7 @@ Create a program that:
     - Finally, create one `SelfPacedCourse` and one `LiveSessionCourse` each with invalid inputs 
     (e.g., empty title or ID, negative price, negative video hours, negative modules, negative class size, or enrolled > max).
     - Displaying each course's full details.
-    - Display all the course details for each to show how invalid values were replaced by defaults, verifying that class invariants work as intended..
+    - Display all the course details for each to show how invalid values were replaced by defaults, verifying that class invariants work as intended.
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>

@@ -25,7 +25,7 @@ function setPreference() {
 
 function reflectPreference() {
   // document.firstElementChild.setAttribute("data-theme", themeValue);
-  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme", themeValue);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
 

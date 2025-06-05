@@ -1,0 +1,45 @@
+---
+
+---
+
+<script is:inline>
+  (function () {
+    // Check localStorage for an explicit “theme”
+    let theme = localStorage.getItem("theme");
+
+    if (!theme) {
+      // If none, fall back to OS preference
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+    // If “dark,” add .dark to <html> immediately:
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+
+    // document.firstElementChild.setAttribute("data-theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+
+    document
+      .querySelector("#theme-btn")
+      ?.setAttribute("aria-label", theme);
+
+    // Get a reference to the body element
+    const body = document.body;
+
+    // Check if the body element exists before using getComputedStyle
+    if (body) {
+      // Get the computed styles for the body element
+      const computedStyles = window.getComputedStyle(body);
+
+      // Get the background color property
+      const bgColor = computedStyles.backgroundColor;
+
+      // Set the background color in <meta theme-color ... />
+      document
+        .querySelector("meta[name='theme-color']")
+        ?.setAttribute("content", bgColor);
+    }
+  })();
+</script>

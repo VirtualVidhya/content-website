@@ -1,14 +1,14 @@
-const primaryColorScheme = ""; // "light" | "dark"
+// const primaryColorScheme = ""; // "light" | "dark"
 
 // Get theme data from local storage
 const currentTheme = localStorage.getItem("theme");
 
-function getPreferTheme() {
+function getPreferedTheme() {
   // return theme value in local storage if it is set
   if (currentTheme) return currentTheme;
 
   // return primary color scheme if it is set
-  if (primaryColorScheme) return primaryColorScheme;
+  // if (primaryColorScheme) return primaryColorScheme;
 
   // return user device's prefer color scheme
   return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -16,7 +16,7 @@ function getPreferTheme() {
     : "light";
 }
 
-let themeValue = getPreferTheme();
+let themeValue = getPreferedTheme();
 
 function setPreference() {
   localStorage.setItem("theme", themeValue);
@@ -24,7 +24,8 @@ function setPreference() {
 }
 
 function reflectPreference() {
-  document.firstElementChild.setAttribute("data-theme", themeValue);
+  // document.firstElementChild.setAttribute("data-theme", themeValue);
+  document.documentElement.setAttribute("data-theme", theme);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
 
@@ -47,7 +48,7 @@ function reflectPreference() {
 }
 
 // set early so no page flashes / CSS is made aware
-reflectPreference();
+// reflectPreference();
 
 window.onload = () => {
   function setThemeFeature() {

@@ -1,8 +1,9 @@
 // const primaryColorScheme = ""; // "light" | "dark"
 
-// Get theme data from local storage
+console.log("on script load")
 
 function getPreferedTheme() {
+  // Get theme data from local storage
   const currentTheme = localStorage.getItem("theme");
   // return theme value in local storage if it is set
   if (currentTheme) return currentTheme;
@@ -57,6 +58,7 @@ function reflectPreference() {
 // reflectPreference();
 
 window.onload = () => {
+  console.log("on window load")
   function setThemeFeature() {
     // set on load so screen readers can get the latest value on the button
     reflectPreference();

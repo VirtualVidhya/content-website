@@ -57,11 +57,6 @@ const structuredData = {
 <!doctype html>
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
-    <style>
-      html {
-        visibility: hidden;
-      }
-    </style>
     <!-- <ThemeProvider /> -->
     <script is:inline>
       // (function () {
@@ -79,8 +74,6 @@ const structuredData = {
       document.documentElement.classList.toggle("dark", theme === "dark");
 
       document.documentElement.setAttribute("data-theme", theme);
-
-      document.documentElement.style.visibility = "";
       // })();
     </script>
 

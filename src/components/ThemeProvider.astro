@@ -13,17 +13,16 @@
         ? "dark"
         : "light";
     }
+
     // If “dark,” add .dark to <html> immediately:
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
+    // if (theme === "dark") {
+    //   document.documentElement.classList.add("dark");
+    // }
 
     // document.firstElementChild.setAttribute("data-theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
 
-    document
-      .querySelector("#theme-btn")
-      ?.setAttribute("aria-label", theme);
+    document.querySelector("#theme-btn")?.setAttribute("aria-label", theme);
 
     // Get a reference to the body element
     const body = document.body;

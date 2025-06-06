@@ -1,6 +1,6 @@
 // const primaryColorScheme = ""; // "light" | "dark"
 
-console.log("on script load")
+console.log("on script load");
 
 function getPreferedTheme() {
   // Get theme data from local storage
@@ -57,25 +57,42 @@ function reflectPreference() {
 // set early so no page flashes / CSS is made aware
 // reflectPreference();
 
-window.onload = () => {
-  console.log("on window load")
-  function setThemeFeature() {
-    // set on load so screen readers can get the latest value on the button
-    reflectPreference();
+// window.onload = () => {
+//   console.log("on window load");
+//   function setThemeFeature() {
+//     // set on load so screen readers can get the latest value on the button
+//     reflectPreference();
 
-    // now this script can find and listen for clicks on the control
-    document.querySelector("#theme-btn")?.addEventListener("click", () => {
-      console.log("toggle theme");
-      themeValue = themeValue === "light" ? "dark" : "light";
-      setPreference();
-    });
-  }
+//     // now this script can find and listen for clicks on the control
+//     document.querySelector("#theme-btn")?.addEventListener("click", () => {
+//       console.log("toggle theme");
+//       themeValue = themeValue === "light" ? "dark" : "light";
+//       setPreference();
+//     });
+//   }
 
-  setThemeFeature();
+//   setThemeFeature();
 
-  // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", setThemeFeature);
-};
+//   // Runs on view transitions navigation
+//   document.addEventListener("astro:after-swap", setThemeFeature);
+// };
+
+function setThemeFeature() {
+  // set on load so screen readers can get the latest value on the button
+  reflectPreference();
+
+  // now this script can find and listen for clicks on the control
+  document.querySelector("#theme-btn")?.addEventListener("click", () => {
+    console.log("toggle theme");
+    themeValue = themeValue === "light" ? "dark" : "light";
+    setPreference();
+  });
+}
+
+setThemeFeature();
+
+// Runs on view transitions navigation
+document.addEventListener("astro:after-swap", setThemeFeature);
 
 // sync with system changes
 window

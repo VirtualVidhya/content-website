@@ -57,12 +57,12 @@ const structuredData = {
 <!doctype html>
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
+    <ThemeProvider />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
     <!-- <meta name="generator" content={Astro.generator} /> -->
-
-    <ThemeProvider />
 
     <!-- General Meta Tags -->
     <title>{metadata_title}</title>
@@ -83,8 +83,6 @@ const structuredData = {
     <meta property="twitter:title" content={metadata_title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
-
-    <meta name="theme-color" content="#ffffff" />
 
     <!-- Article Published/Modified time -->
     <!-- {
@@ -167,6 +165,7 @@ const structuredData = {
 
     <!-- <meta name="msapplication-TileColor" content="#ffffff" /> -->
     <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <!-- <body transition:animate="fade"> -->
   <body>

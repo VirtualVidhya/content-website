@@ -3,7 +3,7 @@
 ---
 
 <script is:inline>
-  (function () {
+  // (function () {
     // Check localStorage for an explicit “theme”
     let theme = localStorage.getItem("theme");
 
@@ -43,5 +43,5 @@
         .querySelector("meta[name='theme-color']")
         ?.setAttribute("content", bgColor);
     }
-  })();
+  // })();
 </script>

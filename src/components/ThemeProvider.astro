@@ -30,10 +30,11 @@
     // Check if the body element exists before using getComputedStyle
     if (body) {
       // Get the computed styles for the body element
-      const computedStyles = window.getComputedStyle(body);
+      //   const computedStyles = window.getComputedStyle(body);
 
       // Get the background color property
-      const bgColor = computedStyles.backgroundColor;
+      //   const bgColor = computedStyles.backgroundColor;
+      const bgColor = window.getComputedStyle(body).backgroundColor;
 
       // Set the background color in <meta theme-color ... />
       document

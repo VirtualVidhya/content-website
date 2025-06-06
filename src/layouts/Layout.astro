@@ -3,7 +3,7 @@
 import { SITE } from "@/config";
 // import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
-import ThemeProvider from "@/components/ThemeProvider.astro";
+// import ThemeProvider from "@/components/ThemeProvider.astro";
 import globalCssHref from "../styles/global.css?url&no-inline";
 import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
 
@@ -57,7 +57,32 @@ const structuredData = {
 <!doctype html>
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
-    <ThemeProvider />
+    <style>
+      html {
+        visibility: hidden;
+      }
+    </style>
+    <!-- <ThemeProvider /> -->
+    <script is:inline>
+      // (function () {
+      // Check localStorage for an explicit “theme”
+      let theme = localStorage.getItem("theme");
+
+      if (!theme) {
+        // If none, fall back to OS preference
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      // If “dark,” add .dark to <html> immediately:
+      document.documentElement.classList.toggle("dark", theme === "dark");
+
+      document.documentElement.setAttribute("data-theme", theme);
+
+      document.documentElement.style.visibility = "";
+      // })();
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

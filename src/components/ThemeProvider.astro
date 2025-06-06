@@ -15,26 +15,10 @@
     }
 
     // If “dark,” add .dark to <html> immediately:
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", theme === "dark");
 
-    // document.firstElementChild.setAttribute("data-theme", theme);
     document.documentElement.setAttribute("data-theme", theme);
 
-    // document.querySelector("#theme-btn")?.setAttribute("aria-label", theme);
-
-    // Get a reference to the body element
-    // const body = document.body;
-
-    // Check if the body element exists before using getComputedStyle
-    // if (body) {
-    //   const bgColor = window.getComputedStyle(body).backgroundColor;
-    //   document
-    //     .querySelector("meta[name='theme-color']")
-    //     ?.setAttribute("content", bgColor);
-    // }
+    document.documentElement.style.visibility = "";
   // })();
 </script>

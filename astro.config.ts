@@ -14,7 +14,7 @@ export default defineConfig({
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
-    mdx()
+    mdx(),
   ],
   prefetch: {
     // Automatically prefetch all links once the page loads.
@@ -57,5 +57,8 @@ export default defineConfig({
     responsiveImages: true,
     preserveScriptOrder: true,
   },
-  trailingSlash: 'always', // Ensure URLs always have a trailing slash
+  trailingSlash: "always", // Ensure URLs always have a trailing slash
+  build: {
+    assets: "resources",
+  },
 });

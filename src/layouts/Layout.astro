@@ -3,7 +3,7 @@
 import { SITE } from "@/config";
 // import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
-import ThemeProvider from "@/components/ThemeProvider.astro";
+// import ThemeProvider from "@/components/ThemeProvider.astro";
 import globalCssHref from "../styles/global.css?url&no-inline";
 import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
 
@@ -132,7 +132,48 @@ const structuredData = {
 
     <!-- <script is:inline src="/toggle-theme.js"></script> -->
 
-    <ThemeProvider />
+    <!-- <ThemeProvider /> -->
+    <script>
+      (function () {
+        // Check localStorage for an explicit “theme”
+        let theme = localStorage.getItem("theme");
+
+        if (!theme) {
+          // If none, fall back to OS preference
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        // If “dark,” add .dark to <html> immediately:
+        // if (theme === "dark") {
+        //   document.documentElement.classList.add("dark");
+        // }
+
+        // document.firstElementChild.setAttribute("data-theme", theme);
+        document.documentElement.setAttribute("data-theme", theme);
+
+        document.querySelector("#theme-btn")?.setAttribute("aria-label", theme);
+
+        // Get a reference to the body element
+        const body = document.body;
+
+        // Check if the body element exists before using getComputedStyle
+        if (body) {
+          // Get the computed styles for the body element
+          //   const computedStyles = window.getComputedStyle(body);
+
+          // Get the background color property
+          //   const bgColor = computedStyles.backgroundColor;
+          const bgColor = window.getComputedStyle(body).backgroundColor;
+
+          // Set the background color in <meta theme-color ... />
+          document
+            .querySelector("meta[name='theme-color']")
+            ?.setAttribute("content", bgColor);
+        }
+      })();
+    </script>
 
     <link rel="stylesheet" href={globalCssHref} />
 

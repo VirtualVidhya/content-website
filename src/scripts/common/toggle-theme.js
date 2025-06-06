@@ -1,6 +1,6 @@
 // const primaryColorScheme = ""; // "light" | "dark"
 
-console.log("on script load");
+// console.log("on script load");
 
 function getPreferedTheme() {
   // Get theme data from local storage
@@ -83,7 +83,7 @@ function setThemeFeature() {
 
   // now this script can find and listen for clicks on the control
   document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    console.log("toggle theme");
+    // console.log("toggle theme");
     themeValue = themeValue === "light" ? "dark" : "light";
     setPreference();
   });

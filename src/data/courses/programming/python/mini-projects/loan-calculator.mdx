@@ -35,7 +35,7 @@ tenure and the overpayment amount.
         - Then, the tenure in years needs to be converted to number of monthly installments.
         - Now finally, calculate EMI using the standard formula:
 
-            ``` EMI = [P x r x (1 + r)^n] / [ (1 + r)^n - 1 ] ```
+            <code>EMI = (P x r x (1 + r)<sup>n</sup>) / ((1 + r)<sup>n</sup> - 1)</code>
 
             where, 
             
@@ -54,17 +54,16 @@ tenure and the overpayment amount.
 <CollapsibleSection title="Expected Output">
 ```ansi
 ### Loan Calculator ###
-Enter total loan amount (rs.): 100000
-Enter loan tenure (in years): 1
+Enter total loan amount (rs.): 250000
+Enter loan tenure (in years): 5
 Enter annual interest rate (in %): 12
 Enter down payment rate (% of total amount, 0 if none): 10
 
 ### Loan Repayment Details ###
-Down payment: rs.10000.00
-Financed principal: rs.90000.00
-Monthly EMI: rs.7996.36
-Total amount paid over 12 months: rs.105956.32
-Total overpayment (interest): rs.5956.32
+Down payment: rs.25000.00
+Monthly EMI: rs.5005.00
+Total amount paid: rs.325300.00
+Total overpayment (interest): rs.75300.00
 ```
 </CollapsibleSection>
 

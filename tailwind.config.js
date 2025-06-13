@@ -83,12 +83,11 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
   extend: {
-    typography: {
-      DEFAULT: {
-        css: {
-          // color: 'red',
-        },
-      },
-    },
+    // typography: {
+    //   DEFAULT: {
+    //     css: {
+    //     },
+    //   },
+    // },
   },
 };

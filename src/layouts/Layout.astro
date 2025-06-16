@@ -1,11 +1,11 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
-import "@/styles/global.css";
+// import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
-// import ThemeProvider from "@/components/ThemeProvider.astro";
-// import globalCssHref from "../styles/global.css?url&no-inline";
-import toggleThemeSrc from '../scripts/common/toggle-theme.js?url';
+import ThemeProvider from "@/components/ThemeProvider.astro";
+import globalCssHref from "../styles/global.css?url&no-inline";
+// import toggleThemeSrc from '../scripts/common/toggle-theme.js?url';
 import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
 
 // const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -58,17 +58,7 @@ const socialImageURL = new URL(ogImage, Astro.url);
 <!doctype html>
 <html lang=`${SITE.lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
-    <!-- <style>
-      :root {
-        background-color: #f9f8f4;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          background-color: #1e1e1e;
-        }
-      }
-    </style> -->
-    <!-- <ThemeProvider /> -->
+    <ThemeProvider />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -141,10 +131,10 @@ const socialImageURL = new URL(ogImage, Astro.url);
       )
     } -->
 
-    <ClientRouter />
+    <!-- <script is:inline src={toggleThemeSrc}></script> -->
+    <link rel="stylesheet" href={globalCssHref} />
 
-    <script is:inline src={toggleThemeSrc}></script>
-    <!-- <link rel="stylesheet" href={globalCssHref} /> -->
+    <ClientRouter />
 
     <!-- Favicons -->
     <link rel="icon" href="data:," />
@@ -189,7 +179,7 @@ const socialImageURL = new URL(ogImage, Astro.url);
   <!-- <body transition:animate="fade"> -->
   <body>
     <!-- <script>0</script> -->
-    
+
     <ScrollUpBtn />
 
     <slot />

@@ -1,62 +1,3 @@
-// // (function () {
-//   // Get theme from localStorage or system preference
-//   function getStoredOrSystemTheme() {
-//     const stored = localStorage.getItem("theme");
-//     if (stored === "light" || stored === "dark") {
-//       return stored;
-//     }
-//     return window.matchMedia("(prefers-color-scheme: dark)").matches
-//       ? "dark"
-//       : "light";
-//   }
-
-//   // Apply theme class + data-theme attribute and update meta tag
-//   function applyTheme(theme) {
-//     localStorage.setItem("theme", theme);
-//     document.documentElement.dataset.theme = theme;
-//     document.documentElement.classList.toggle("dark", theme === "dark");
-//     updateMetaThemeColor();
-//   }
-
-//   // Sync <meta name="theme-color"> to match body background
-//   function updateMetaThemeColor() {
-//     const bg = window.getComputedStyle(document.body).backgroundColor;
-//     const meta = document.querySelector("meta[name='theme-color']");
-//     if (meta) meta.setAttribute("content", bg);
-//   }
-
-//   // Initialize toggle button behavior
-//   function initThemeToggle() {
-//     const btn = document.querySelector("#theme-btn");
-
-//     if (!btn) return;
-
-//     // Set initial button label/icon
-//     let current = getStoredOrSystemTheme();
-//     btn.setAttribute("aria-label", current);
-
-//     // On click, flip theme
-//     btn.addEventListener("click", () => {
-//       current = (current === "light" ? "dark" : "light");
-//       applyTheme(current);
-//       btn.setAttribute("aria-label", current);
-//     });
-
-//     // Also respond to system-level changes
-//     window
-//       .matchMedia("(prefers-color-scheme: dark)")
-//       .addEventListener("change", e => {
-//         current = e.matches ? "dark" : "light";
-//         applyTheme(current);
-//         btn.setAttribute("aria-label", current);
-//       });
-//   }
-
-//   // Kick off immediately (no Astro client events needed)
-//   initThemeToggle();
-//   document.addEventListener("astro:page-load", initThemeToggle());
-// // })();
-
 // const primaryColorScheme = ""; // "light" | "dark"
 
 function getPreferedTheme() {
@@ -141,9 +82,9 @@ window.onload = () => {
 // document.addEventListener("astro:page-load", setThemeFeature);
 
 // sync with system changes
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? "dark" : "light";
-    setPreference();
-  });
+// window
+//   .matchMedia("(prefers-color-scheme: dark)")
+//   .addEventListener("change", ({ matches: isDark }) => {
+//     themeValue = isDark ? "dark" : "light";
+//     setPreference();
+//   });

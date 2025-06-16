@@ -1,8 +1,8 @@
 {
   "name": "learn.vvidhya.com",
   "type": "module",
-  "packageManager": "pnpm@10.7.0",
-  "version": "2.0.0",
+  "packageManager": "pnpm@10.12.1",
+  "version": "2.0.10",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
@@ -21,7 +21,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.5",
     "@types/js-yaml": "^4.0.9",
-    "astro": "^5.7.10",
+    "astro": "^5.9.3",
     "astro-compressor": "^1.0.0",
     "dayjs": "^1.11.13",
     "js-yaml": "^4.1.0",

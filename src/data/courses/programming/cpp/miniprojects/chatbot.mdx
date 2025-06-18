@@ -1,0 +1,98 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Chatbot
+metadata_title: Chatbot - Python Programming | V.Vidhya
+slug: chatbot
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Python Programming by making a simple interactive chatbot.
+
+order: 31
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+import LinkMd from '@/components/LinkMd.astro';
+
+- ## Task
+
+Create a text-based lively chatbot that engages with the user, gathers personal details and provides a fun conversation via several activities in phases.
+
+<CollapsibleSection title="Instructions">
+- **Bot Introduction:**
+    - The bot first introduces itself with their name, birth-year and creator name.
+- **Name Reminder:**
+    - Then it asks the user's name and greets them personally.
+- **Age guessing:**
+    - By asking the user for the remainders of their age when divided by 3, 5 and 7, the bot reveals their age by calculating using
+    <LinkMd href='https://en.wikipedia.org/wiki/Chinese_remainder_theorem' title='Chinese Remainder Theorem' />:
+
+        <code>n = (r<sub>1</sub>m<sub>1</sub> + r<sub>2</sub>m<sub>2</sub> + r<sub>3</sub>m<sub>3</sub>) % n<sub>1</sub>n<sub>2</sub>n<sub>3</sub></code>
+
+        where,
+
+            `n` - the number to be guessed
+            
+            <code>r<sub>i</sub></code> - remainder when `n` is divided by the <code>i<sup>th</sup> number</code>
+
+            <code>m<sub>1</sub></code> - 70, <code>m<sub>2</sub></code> - 21, <code>m<sub>3</sub></code> - 15
+
+        here,
+
+            <code>n<sub>1</sub></code> - 3, <code>n<sub>2</sub></code> - 5, <code>n<sub>3</sub></code> - 7
+- **Joke Time:**
+    - The bot offers to tell a joke upon request and delivers a random, lighthearted joke from a built-in collection.
+- **Riddle Time:**
+    - The bot challenges the user with a multiple-choice question. If the answer is incorrect, it prompts again until the correct choice is selected.
+- **Farewell:**
+    - Finally, the bot congratulates the user on completing the interaction and says goodbye.
+</CollapsibleSection>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Hello! My name is Chitti.
+I was created in 2025.
+How can I assist you today?
+
+Please, remind me your name: Vasi   [2;3m// user input[0m
+What a lovely name you have, Vasi!
+
+Let me guess your age.
+Please, enter remainders of dividing your age by 3, 5 and 7.
+Remainder when divided by 3: 1  [2;3m// user input[0m
+Remainder when divided by 5: 2  [2;3m// user input[0m
+Remainder when divided by 7: 1  [2;3m// user input[0m
+Your age is 22, that's a good time to start programming!
+
+Would you like to hear a joke? (yes/no): yes    [2;3m// user input[0m
+Why do programmers prefer dark mode? Because light attracts bugs!
+
+Let's test your programming knowledge.
+Why do we use methods?
+1. To repeat a statement multiple times.
+2. To decompose a program into several small subroutines.
+3. To determine the execution time of a program.
+4. To interrupt the execution of a program.
+
+Please, choose the correct option (1-4): 2  [2;3m// user input[0m
+Correct!
+
+Congratulations, have a nice day!
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Working with data structures to store and manipulate data</li>
+    <li>Decomposing a problem into small, reusable functions</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to make your bot more interactive and fun to use.

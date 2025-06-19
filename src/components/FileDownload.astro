@@ -1,0 +1,20 @@
+---
+import IconDownload from "./Icons/IconDownload.astro";
+
+interface Props {
+  fileSrc: string;
+  fileName: string;
+  styleClass?: string;
+}
+
+const { fileSrc, fileName, styleClass } = Astro.props;
+---
+
+<a href={fileSrc} download={fileName} class=`file-download-button ${styleClass}`>
+  <button
+    ><div class="flex flex-row items-center justify-center gap-2">
+      <code class="!bg-[#dedbce] dark:!bg-[#050505]">{fileName}</code>
+      <IconDownload styleClass="" />
+    </div></button
+  >
+</a>

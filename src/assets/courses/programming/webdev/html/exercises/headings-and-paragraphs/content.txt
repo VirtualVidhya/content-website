@@ -1,0 +1,24 @@
+The Story of HTML: From Birth to Modern Web
+This page explores the origin, history, and evolution of HTML, using headings and paragraphs to organize information clearly for practice.
+
+Origins of HTML
+HTML (HyperText Markup Language) was created in 1990 by Tim Berners-Lee at CERN. It was designed to share scientific documents among researchers using hyperlinks to navigate between pages.
+
+The first version of HTML was simple, with just a few tags for headings, paragraphs, links, and lists. Its goal was to make documents easily readable on different computers.
+
+Early Development and Milestones
+HTML 2.0 (1995)
+HTML 2.0 became the first standardized specification published by the IETF. It formalized tags for forms, tables, and other common elements, setting the foundation for future growth.
+
+HTML 3.2 & 4.0 (1997-1999)
+HTML 3.2 introduced support for applets, text flow around images, and more formatting options. HTML 4.0 added separation of structure and presentation through CSS, emphasizing accessibility and internationalization.
+
+Evolution into HTML5
+Work on HTML5 began in 2004, aiming to replace both HTML 4.0 and XHTML 1.0. It added semantic elements like <article>, <section>, and <nav>, as well as multimedia support without plugins.
+
+HTML5 introduced APIs for canvas drawing, web storage, geolocation, and more, enabling rich web applications directly in the browser.
+
+HTML Today and Beyond
+Modern web standards continue to refine HTML. Browsers and communities collaborate through the W3C and WHATWG to evolve the language, focusing on performance, accessibility, and new capabilities.
+
+As you practice, consider how headings and paragraphs help structure content logically—just as HTML itself structures the web.

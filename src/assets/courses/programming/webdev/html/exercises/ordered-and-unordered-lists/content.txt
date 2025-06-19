@@ -1,0 +1,21 @@
+Welcome to the World Wide Web!
+
+The Web is like a giant library full of pages you can visit with just a click. Let’s discover what makes it so special.
+
+What Makes the Web Amazing?
+
+Web Pages: Documents you view in a browser, filled with text, images, and videos.
+Links: Clickable words or images that jump you from one page to another.
+URLs: Addresses you type in to find a page (like a house address for websites).
+Browsers: Apps such as Chrome or Firefox that let you explore the Web.
+Search Engines: Tools like Google, DuckDuckGo or Bing that help you find topics and pages.
+
+How to Get Around Online
+
+Open your browser (Chrome, Firefox, Safari etc.).
+Type a URL (web address) in the top bar and press Enter.
+Click on links to go from one page to another.
+Use the back and forward buttons to revisit pages.
+Bookmark pages you like to find them again easily.
+Search for anything by entering keywords in a search engine.
+Stay curious and explore new topics each day!

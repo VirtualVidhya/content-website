@@ -20,5 +20,3 @@ HTML5 introduced APIs for canvas drawing, web storage, geolocation, and more, en
 
 HTML Today and Beyond
 Modern web standards continue to refine HTML. Browsers and communities collaborate through the W3C and WHATWG to evolve the language, focusing on performance, accessibility, and new capabilities.
-
-As you practice, consider how headings and paragraphs help structure content logically—just as HTML itself structures the web.

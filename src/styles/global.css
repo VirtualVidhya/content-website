@@ -255,7 +255,7 @@ html[data-theme="dark"] {
   }
 
   .file-download-button {
-    @apply rounded-md border border-b-2 border-border bg-[#dedbce] px-4 pt-2 pb-3 text-base leading-4 font-semibold text-foreground hover:border-borderhover active:border-borderhover dark:bg-[#050505];
+    @apply rounded-md border border-b-2 border-border bg-[#dedbce] px-4 pt-2 pb-3 text-base font-semibold text-foreground hover:border-borderhover active:border-borderhover dark:bg-[#050505];
   }
 
   .file-download-button.touch {

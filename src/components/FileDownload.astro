@@ -7,13 +7,13 @@ interface Props {
   styleClass?: string;
 }
 
-const { fileSrc, fileName, styleClass } = Astro.props;
+const { fileSrc, fileName, styleClass = '' } = Astro.props as Props;
 ---
 
-<a href={fileSrc} download={fileName} class=`file-download-button ${styleClass}`>
-  <button
-    ><div class="flex flex-row items-center justify-center gap-2">
-      <code class="!bg-[#dedbce] dark:!bg-[#050505]">{fileName}</code>
+<a href={fileSrc} download={fileName} class={`file-download-button ${styleClass}`}>
+  <button>
+    <div class="flex flex-row items-center justify-center gap-2">
+      <code class="!bg-[#dedbce] dark:!bg-[#050505] !p-0 !pt-0.5">{fileName}</code>
       <IconDownload styleClass="" />
     </div></button
   >

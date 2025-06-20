@@ -14,9 +14,10 @@ HTML 3.2 & 4.0 (1997-1999)
 HTML 3.2 introduced support for applets, text flow around images, and more formatting options. HTML 4.0 added separation of structure and presentation through CSS, emphasizing accessibility and internationalization.
 
 Evolution into HTML5
-Work on HTML5 began in 2004, aiming to replace both HTML 4.0 and XHTML 1.0. It added semantic elements like <article>, <section>, and <nav>, as well as multimedia support without plugins.
+Work on HTML5 began in 2004, aiming to replace both HTML 4.0 and XHTML 1.0. It added semantic elements as well as multimedia support without plugins.
 
 HTML5 introduced APIs for canvas drawing, web storage, geolocation, and more, enabling rich web applications directly in the browser.
 
 HTML Today and Beyond
-Modern web standards continue to refine HTML. Browsers and communities collaborate through the W3C and WHATWG to evolve the language, focusing on performance, accessibility, and new capabilities.
+Modern web standards continue to refine HTML.
+Browsers and communities collaborate through the W3C and WHATWG to evolve the language, focusing on performance, accessibility, and new capabilities.

@@ -1,0 +1,89 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Form elements II
+metadata_title: Form elements II - HTML | V.Vidhya
+slug: form-elements-II
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Form elements in HTML by practicing exercises based on real-world scenarios with V.Vidhya.
+
+order: 60
+---
+
+import FileDownload from "@/components/FileDownload.astro";
+import FileSrc from "@/assets/courses/programming/webdev/html/exercises/table/content.txt"
+import LinkMd from '@/components/LinkMd.astro';
+
+{/* - ## Task */}
+
+- #### Q1.
+
+Take a look at the form below and write the HTML needed to recreate it exactly—using the right semantic tags, form controls and label associations. 
+Your version should collect:
+
+- A “Personal Details” heading
+- Username and password fields
+- An address textarea
+- A phone number input
+- A “Role” radio group (Student, Teacher, Professional, Other)
+- A date-of-birth picker
+- A “Technical Skills” checkbox list
+- Submit and reset buttons
+
+Make sure each control uses the correct `<input>` type, is wrapped in a `<label>` (or paired via for/id) and the form structure follows best practices for 
+accessibility and semantics.
+
+A screenshot of the example is shared below:
+![Preview](@/assets/courses/programming/webdev/html/exercises/form-elements-II/1.png)
+
+---
+
+- #### Q2.
+
+Consider the `html` code snippet given below:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+      <label>First Name</label>
+      <br />
+      <input type="text" placeholder="Sam" />
+    </form>
+    <br />
+    <form>
+      <label>Last Name</label>
+      <br />
+      <input type="text" placeholder="Smith" />
+    </form>
+    <br />
+    <form>
+      <label>Email</label>
+      <br />
+      <input type="email" placeholder="sam.smith@example.com" />
+    </form>
+    <br />
+    <form>
+      <label>Password:</label>
+      <br />
+      <input type="password" />
+    </form>
+    <br />
+    <button>Submit</button>
+  </body>
+</html>
+```
+
+The above code currently displays the form as shown in the screenshot below:
+![Preview](@/assets/courses/programming/webdev/html/exercises/form-elements-II/2.png)
+
+This HTML form is for collecting user's personal Information. It currently displays content but isn't using the most appropriate tags. 
+Identify and fix any markup issues - improving its structure and semantics, so the form displays and functions correctly.

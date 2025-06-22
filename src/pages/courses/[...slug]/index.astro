@@ -153,11 +153,12 @@ const currentPath = Astro.params.slug || "";
 
 <Layout title={indexConfig?.data.metadata_title || SITE.title}>
   <Header />
-  <Breadcrumb />
   
   <main
-    class="mx-auto mb-24 flex w-full max-w-mdsm flex-col items-center justify-center gap-3 px-6 sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl"
+  class="mx-auto mb-24 flex w-full max-w-mdsm flex-col items-center justify-center gap-3 px-6 sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:px-0 2xl:max-w-4xl"
   >
+    <Breadcrumb />
+    
     {
       indexConfig && (
         <div class="mb-2 self-start">

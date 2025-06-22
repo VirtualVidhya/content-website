@@ -111,19 +111,19 @@ const nextPost =
 <Layout {...layoutProps}>
   <Header />
   <!-- <BackButton /> -->
-  <Breadcrumb />
   <!-- <main
-    id="main-content"
-    class:list={[
-      "mx-auto w-full max-w-3xl px-4 pb-12",
-      { "mt-8": !SITE.showBackButton },
-    ]}
-    data-pagefind-body
+  id="main-content"
+  class:list={[
+  "mx-auto w-full max-w-3xl px-4 pb-12",
+  { "mt-8": !SITE.showBackButton },
+  ]}
+  data-pagefind-body
   > -->
   <main
-    id="main-content"
-    class="mx-auto mb-24 w-full max-w-mdsm sm:max-w-lg md:max-w-2xl lg:max-w-3xl px-6 2xs:px-4 xs:px-2 xl:px-0 2xl:max-w-4xl"
+  id="main-content"
+  class="mx-auto mb-24 w-full max-w-mdsm sm:max-w-lg md:max-w-2xl lg:max-w-3xl px-6 2xs:px-4 xs:px-2 xl:px-0 2xl:max-w-4xl"
   >
+    <Breadcrumb />
     <!-- <h1
       transition:name={slugifyStr(title)}
       class="inline-block text-2xl font-bold text-accent sm:text-3xl"

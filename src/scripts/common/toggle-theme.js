@@ -60,7 +60,7 @@ window.onload = () => {
   setThemeFeature();
 
   // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", setThemeFeature);
+  document.addEventListener("astro:before-swap", setThemeFeature);
 };
 
 // function setThemeFeature() {

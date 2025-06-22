@@ -2,6 +2,7 @@ function initializeCourseSubMenu() {
   const supportsHover = window.matchMedia("(hover: hover)").matches;
   const list = document.querySelector(".sub-menu");
   const submenu_btn = document.querySelector(".submenu-trigger");
+  // const mobile_social_links = document.querySelector(".mobile-social-links");
 
   // If elements don't exist on the current page, exit
   if (!list || !submenu_btn) {

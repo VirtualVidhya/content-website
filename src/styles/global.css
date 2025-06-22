@@ -57,10 +57,15 @@ html[data-theme="dark"] {
     /* scrollbar-color: var(--color-muted) transparent; */
   }
   html {
-    @apply overflow-y-scroll scroll-smooth;
+    @apply scroll-smooth;
   }
   body {
     @apply flex min-h-svh flex-col bg-background font-notosans text-foreground selection:bg-accent/75 selection:text-background;
+  }
+  main {
+    padding-top: calc(var(--header-height) + 40px);
+    /* if you need inline-start padding, keep your existing var too: */
+    /* padding-inline-start: var(--sl-content-inline-start); */
   }
   /* main {
     @apply bg-background;
@@ -76,6 +81,28 @@ html[data-theme="dark"] {
   /* section {
     @apply mx-auto max-w-3xl px-4;
   } */
+
+  :root {
+    --header-height: 52px;
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --header-height: 64px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-height: 88px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --header-height: 94px;
+    }
+  }
 }
 
 @layer components {
@@ -202,7 +229,8 @@ html[data-theme="dark"] {
 
   /* #region HEADER */
   .header {
-    @apply sticky top-0 z-10 mb-10 flex justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
+    @apply fixed top-0 right-0 left-0 z-10 mb-10 flex w-auto justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
+    height: var(--header-height);
   }
 
   .header-logo-text {

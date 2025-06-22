@@ -27,17 +27,19 @@ function initializeNavbarMenu() {
         btn.setAttribute("data-topbarmenu-state", "open");
         if(closeBtnIcon) closeBtnIcon.style.display = "block";
         if(openBtnIcon) openBtnIcon.style.display = "none";
-        list.classList.add("translate-x-[640px]", "opacity-100"); // Corrected translate value? Assuming 0px is open
-        // list.classList.remove("translate-x-[640px]"); // Remove the closed state translate
+        list.classList.add("translate-x-[640px]", "opacity-100");
+        document.documentElement.style.overflow = "hidden";
         body.style.overflow = "hidden";
+        list.style.overflowY = "auto";
       } else {
         // Close the menu
         btn.setAttribute("data-topbarmenu-state", "close");
         if(closeBtnIcon) closeBtnIcon.style.display = "none";
         if(openBtnIcon) openBtnIcon.style.display = "block";
         list.classList.remove("translate-x-[640px]", "opacity-100");
-        // list.classList.add("translate-x-[640px]"); // Add the closed state translate
+        document.documentElement.style.overflow = "";
         body.style.overflow = "";
+        list.style.overflowY = "";
       }
     }
   
@@ -72,4 +74,3 @@ function initializeNavbarMenu() {
   
   // Run on subsequent page loads (client-side navigation)
   document.addEventListener("astro:page-load", initializeNavbarMenu);
-  

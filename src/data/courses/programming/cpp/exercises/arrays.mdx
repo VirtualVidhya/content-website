@@ -13,6 +13,7 @@ order: 100
 ---
 
 import Admonition from '@/components/Admonition.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
 
 #### Q1.
 
@@ -339,14 +340,12 @@ Rating distribution:
 
 ---
 
-#### Q8.
+#### Q8. _**(Adv.)**_
 
 A popular arcade game keeps a list of the five highest scores ever achieved, in descending order. Now they want to automate updating this
 leaderboard whenever a new score arrives.
 
-(When a new score comes in, it needs to be added to that list in the right place and the lowest score dropped if there are more than five. )
-
-- #### I.
+{/* - #### I.
 
     Your program should:
     - Take the current five top scores (from highest to lowest) as user input.
@@ -371,40 +370,46 @@ leaderboard whenever a new score arrives.
     5. 85
     ```
 
-- #### II. _**(Adv.)**_
+- #### II. _**(Adv.)**_ */}
 
-    Now to enhance the program:
-    - Take the five previous scores as user input (in any order).
-    - Sort them into descending order.
-    - Take a new player's score as user input.
-    - Then update the top five scores list in descending order.
+<CollapsibleSection title="Instructions">
+{/* Now to enhance the program: */}
+- Take the five previous scores as user input (in any order).
+- Sort them into descending order.
+- Take a new player's score as user input.
+- Then update the top five scores in descending order. 
+(When a new score comes in, it needs to be added to that list in the right place and the lowest score dropped if there are more than five.)
+</CollapsibleSection>
 
-    **Expected Output:**
+<div class="w-full my-2"></div>
 
-    ```ansi
-    [2;3m// input[0m
-    Enter the previous 5 scores: 72 99 68 87 93
+{/* **Expected Output:** */}
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// input[0m
+Enter the previous 5 scores: 72 99 68 87 93
 
-    [2;3m// output[0m
-    High-score list:
-    1. 99
-    2. 93
-    3. 87
-    4. 72
-    5. 68
-    
-    [2;3m// input[0m
-    Enter the new score:
-    75
+[2;3m// output[0m
+High-score list:
+1. 99
+2. 93
+3. 87
+4. 72
+5. 68
 
-    [2;3m// output[0m
-    High-score list:
-    1. 99
-    2. 93
-    3. 87
-    4. 75
-    5. 72
-    ```
+[2;3m// input[0m
+Enter the new score:
+75
+
+[2;3m// output[0m
+High-score list:
+1. 99
+2. 93
+3. 87
+4. 75
+5. 72
+```
+</CollapsibleSection>
 
 ---
 
@@ -419,8 +424,8 @@ Decide whether you should buy the coupon or not. You should buy it only if the t
 
 Write a program that takes `X`, and `Y` as input, followed by the prices of `5` items, and prints `"DO use coupon"` if buying the coupon is beneficial, otherwise `"DO NOT use coupon"`.
 
-**Expected Outut:**
-
+{/* **Expected Outut:** */}
+<CollapsibleSection title="Expected Output">
 ```ansi
 [2;3m// input[0m
 Enter the coupon price (rs): 30
@@ -453,3 +458,4 @@ DO use coupon
 
 [2;3m// 200 < 240, so it is beneficial to use the coupon.[0m
 ```
+</CollapsibleSection>

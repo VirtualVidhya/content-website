@@ -233,8 +233,21 @@ html[data-theme="dark"] {
     height: var(--header-height);
   }
 
+  .header-logo-svg:hover + .header-logo-text,
+  .header-logo-svg:active + .header-logo-text {
+    @apply text-font-color-green;
+  }
+
+  .header-logo-svg.touch + .header-logo-text {
+    @apply text-font-color-green;
+  }
+
   .header-logo-text {
-    @apply mt-2 text-xl font-black hover:text-font-color-green sm:mt-3 sm:text-2xl md:text-3xl lg:mt-4 lg:text-4xl;
+    @apply mt-2 text-xl font-black sm:mt-3 sm:text-2xl md:text-3xl lg:mt-4 lg:text-4xl hover:text-font-color-green active:text-font-color-green;
+  }
+
+  .header-logo-text.touch {
+    @apply text-font-color-green;
   }
 
   .header-navmenu-hover {

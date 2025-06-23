@@ -82,4 +82,5 @@ function initializeCourseSubMenu() {
 initializeCourseSubMenu();
 
 // Run on subsequent page loads (client-side navigation)
-document.addEventListener("astro:page-load", initializeCourseSubMenu);
+// document.addEventListener("astro:page-load", initializeCourseSubMenu);
+document.addEventListener("astro:after-swap", initializeCourseSubMenu);

@@ -157,8 +157,12 @@ What will be the output of the following programs?
     print(letters)
 
     l = letters.pop(2)
-    print(letters)
     print(l)
+    print(letters)
+
+    k = letters.pop(9)
+    print(k)
+    print(letters)
 
     letters.pop(-1)
     print(letters)
@@ -174,6 +178,9 @@ What will be the output of the following programs?
     i = letters.index('b')
     letters.insert((i + 1), 'c')
     print(letters)
+
+    j = letters.index('e')
+    print(j)
 
     letters.insert(-2, 'e')
     print(letters)
@@ -302,6 +309,19 @@ What will be the output of the following programs?
     ```
 
 - #### IV.
+    ```py
+    scores = [98, 87, 76, 99, 88, 73, 92]
+
+    scores.sort()
+    print(scores)
+
+    names = ['ollie', 'holly', 'molly', 'dolly', "paulie", "polly"]
+
+    names.sort()
+    print(names)
+    ```
+
+- #### V.
     ```py
     sections = ['A', 'B', 'C', 'D']
 

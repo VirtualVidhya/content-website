@@ -4,32 +4,23 @@ function initializeCourseSubMenu() {
   const submenu_btn = document.querySelector(".submenu-trigger");
   // const mobile_social_links = document.querySelector(".mobile-social-links");
 
-  // If elements don't exist on the current page, exit
   if (!list || !submenu_btn) {
     return;
   }
 
-  // Define the toggle function locally
   function SubMenu(target) {
-    // Assuming the target is the ion-icon, get the button
-    const btn = target.closest(".submenu-trigger");
     const isOpen = submenu_btn.getAttribute("data-cousemenu-state") === "open";
 
-    if (!btn) return;
-
-    // if (target.name === "menu") {
     if (isOpen) {
-      // target.name = "close";
       submenu_btn.setAttribute("data-cousemenu-state", "close");
-      btn.classList.remove("text-font-color-sec");
-      btn.classList.remove("underline");
+      submenu_btn.classList.remove("text-font-color-sec");
+      submenu_btn.classList.remove("underline");
       list.classList.add("hidden");
       list.classList.remove("flex");
     } else {
-      // target.name = "menu";
       submenu_btn.setAttribute("data-cousemenu-state", "open");
-      btn.classList.add("text-font-color-sec");
-      btn.classList.add("underline");
+      submenu_btn.classList.add("text-font-color-sec");
+      submenu_btn.classList.add("underline");
       list.classList.remove("hidden");
       list.classList.add("flex");
     }
@@ -45,14 +36,10 @@ function initializeCourseSubMenu() {
   };
 
   // Clean up previous listener if any (important for HMR and multiple navigations)
-  // A simple way is to replace the element's clone to remove all listeners,
-  // but let's try specific listener removal first. We need a consistent handler reference.
-  // Storing the handler on the element itself can work.
   if (submenu_btn._clickHandler) {
     submenu_btn.removeEventListener("click", submenu_btn._clickHandler);
   }
 
-  // Apply logic based on hover support
   if (!supportsHover) {
     submenu_btn.addEventListener("click", clickHandler);
     submenu_btn._clickHandler = clickHandler; // Store reference for removal

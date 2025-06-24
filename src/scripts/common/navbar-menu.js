@@ -4,7 +4,6 @@ function initializeNavbarMenu() {
   const nav = document.querySelector(".topbar-nav");
 
   if (!btn || !list) {
-    // console.log("Navbar elements not found, skipping init."); // Optional debug log
     return;
   }
 
@@ -13,15 +12,11 @@ function initializeNavbarMenu() {
   const body = document.body;
 
   if (!closeBtnIcon || !openBtnIcon) {
-    // console.log("Navbar icons not found, skipping init."); // Optional debug log
     return;
   }
 
-  // Define the toggle function locally
   function toggleMenu() {
-    // Use a data attribute or class to track state instead of element.name
     const isOpen = btn.getAttribute("data-topbarmenu-state") === "open";
-    // const isOpen = (btn.name === "open");
 
     if (!isOpen) {
       // Open the menu

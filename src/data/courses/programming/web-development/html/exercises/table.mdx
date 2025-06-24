@@ -16,7 +16,7 @@ import FileDownload from "@/components/FileDownload.astro";
 import FileSrc from "@/assets/courses/programming/webdev/html/exercises/table/content.txt"
 import LinkMd from '@/components/LinkMd.astro';
 
-- ## Task
+- ### Q1.
 
 A media education portal needs a vibrant “YouTube Insights” page that presents key platform statistics in a clear table format, 
 so build a webpage that displays YouTube metrics in a tabular form with a header, body rows and a footer citation.
@@ -35,7 +35,7 @@ A screenshot of the example webpage is shared below:
 
 ---
 
-- ## Main Lessons
+{/* - ## Main Lessons
 
 Master structuring tabular data using different table elements in HTML.
 
@@ -43,4 +43,107 @@ Master structuring tabular data using different table elements in HTML.
 
 - ## Guidelines
 
-Feel free to have the content as per the topic of your interest, but the structural layout of the webpage should be the same as the example given above.
+Feel free to have the content as per the topic of your interest, but the structural layout of the webpage should be the same as the example given above. */}
+
+- ### Q2.
+
+Consider the `html` code snippet given below:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Elements</title>
+  </head>
+  <body>
+    <h1>History of CSS</h1>
+    <p>
+      CSS was created HÃ¥kon Wium Lie to allow web designers to change the
+      layout, colors, and fonts of their websites. Originally, websites were
+      meant to be used by researchers only, so the decoration did not matter.
+      However, when websites became widespread, the need to make them look nice
+      grew.
+    </p>
+
+    <a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie
+      >Wikipedia page of Håkon Wium Lie</a
+    >
+
+    <br />
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg"
+      alt="A photo of Håkon Wium Lie"
+      width="300"
+      height="auto"
+    />
+    <br /><br />
+
+    <h2>Timeline</h2>
+
+    <li>1994 - HÃ¥kon Wium Lie proposed the idea of CSS.</li>
+    <li>1996 - The first version of CSS was invented.</li>
+    <li>
+      1998 - CSS 2 was released and work on CSS 3 began. CSS 3 was very
+      different from the other versions, instead of being a single monolithic
+      specification, it was published as a set of separate documents known as
+      modules. Each module dealt with a relatively small subset of the overall
+      specification, and either added new features or refined and extended
+      existing features. All additions and enhancements to the specification
+      were written in order to be backward-compatible with older versions of
+      CSS.
+    </li>
+    <li>2011 - CSS 2.1 was released, which fixed the errors found in CSS 2</li>
+
+    <br />
+
+    <br />
+
+    <table border="1" cellspacing="0" cellpadding="8">
+      <h2>CSS Versions & Milestones</h2>
+      <tr>
+        <h4>Year</h4>
+        <h4>Version</h4>
+        <h4>Key Highlights</h4>
+      </tr>
+      <tr>
+        <td>1994</td>
+        <td>CSS 1</td>
+        <td>
+          Proposal by Håkon Wium Lie introducing basic selectors, color, fonts,
+          and box model
+        </td>
+      </tr>
+      <tr>
+        <td>1998</td>
+        <td>CSS 2</td>
+        <td>Positioning, z-index, media types, and table layout features</td>
+      </tr>
+      <tr>
+        <td>2011</td>
+        <td>CSS 2.1</td>
+        <td>
+          Bug fixes and clarifications to CSS 2, improving browser
+          interoperability
+        </td>
+      </tr>
+      <tr>
+        <td>2012-</td>
+        <td>CSS 3</td>
+        <td>
+          Modular specs—selectors, flexbox, animations, transitions, media
+          queries, and more
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">Source: W3C CSS History & Module Specifications</td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+Although this HTML displays the content, it doesn't seem to follow proper HTML semantics and structure. 
+Identify what's invalid or missing and fix it.

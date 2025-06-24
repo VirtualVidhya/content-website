@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
 // import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
+import CustomLoadingIndicator from "@/components/CustomLoadingIndicator.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
 import globalCssHref from "../styles/global.css?url&no-inline";
 // import toggleThemeSrc from '../scripts/common/toggle-theme.js?url';
@@ -175,6 +176,8 @@ const socialImageURL = new URL(ogImage, Astro.url);
       content="#1e1e1e"
       media="(prefers-color-scheme: dark)"
     /> -->
+    
+    <CustomLoadingIndicator />
   </head>
   <!-- <body transition:animate="fade"> -->
   <body>

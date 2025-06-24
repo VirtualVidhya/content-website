@@ -219,11 +219,31 @@ html[data-theme="dark"] {
   }
 
   .scroll-up-btn {
-    @apply fixed right-4 bottom-4 z-[5] hidden h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri;
+    @apply fixed right-4 bottom-4 z-[5] hidden h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri md:h-10 md:w-10;
   }
 
   .scroll-up-btn.touch {
     @apply text-font-color-pri;
+  }
+
+  /* loading-indicator */
+  /* The outer container that vtbot will toggle via html.loading */
+  #vtbot-loading-indicator {
+    @apply pointer-events-none fixed top-[calc(var(--header-height)+1rem)] left-4 z-50 opacity-0 transition-all;
+  }
+
+  /* When a load is happening, vtbot adds .loading to <html> */
+  html.loading #vtbot-loading-indicator {
+    @apply !animate-none !opacity-100 transition-all;
+  }
+
+  /* #vtbot-loading-indicator .loading-spinner-outer {
+    @apply h-6 w-6 animate-spin rounded-full border-4 border-foreground border-t-transparent opacity-100 transition-all md:h-8 md:w-8 md:border-[5px];
+  } */
+
+  /* The actual spinner element inside your #vtbot-loading-indicator */
+  #vtbot-loading-indicator .loading-spinner-inner {
+    @apply h-6 w-6 animate-spin rounded-full border-4 border-font-color-green border-t-transparent opacity-100 shadow-foreground transition-all md:h-8 md:w-8 md:border-[5px];
   }
   /* #endregion */
 

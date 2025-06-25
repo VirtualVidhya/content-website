@@ -26,6 +26,7 @@ function initializeNavbarMenu() {
       list.classList.add("translate-x-[640px]", "opacity-100");
       // document.documentElement.style.overflow = "hidden";
       body.style.overflow = "hidden";
+      // list.style.overflowY = "auto";
       nav.style.overflowY = "auto";
     } else {
       // Close the menu
@@ -35,6 +36,7 @@ function initializeNavbarMenu() {
       list.classList.remove("translate-x-[640px]", "opacity-100");
       // document.documentElement.style.overflow = "";
       body.style.overflow = "";
+      // list.style.overflowY = "";
       nav.style.overflowY = "";
     }
   }

@@ -26,7 +26,7 @@ const { navSection } = Astro.props;
 <!-- <div class="sticky top-0 z-20 bg-transparent"> -->
 <header class="header">
   <LinkPage href="/">
-    <div class="flex flex-row items-center gap-1 text-foreground md:gap-2">
+    <div class="text-foreground flex flex-row items-center gap-1 md:gap-2">
       <VvidhyaLogo logoClass="header-logo-svg" />
 
       <p class="header-logo-text">V.Vidhya</p>
@@ -78,92 +78,94 @@ const { navSection } = Astro.props;
     >
   </button>
 
-  <!-- <div
-      class="topbar-menu fixed top-[50px] left-[-640px] z-10 box-border h-[calc(100dvh-50px)] w-full bg-navbar opacity-0 transition-all duration-200 ease-in sm:static sm:z-auto sm:box-content sm:flex sm:h-auto sm:w-auto sm:opacity-100 sm:transition-none"
-    > -->
   <div
-    class="topbar-menu fixed top-[50px] left-[-640px] z-10 box-border h-dvh w-full bg-navbar opacity-0 transition-transform ease-in sm:static sm:z-auto sm:box-content sm:flex sm:h-auto sm:w-auto sm:opacity-100 sm:transition-none"
+    class="topbar-menu fixed left-[-640px] top-[50px] z-10 box-border p-4 opacity-0 transition-transform ease-in sm:static sm:z-auto sm:box-content sm:flex sm:p-0 sm:opacity-100 sm:transition-none"
   >
-    <nav
-      class="topbar-nav mx-4 mt-14 flex max-h-full flex-col items-start gap-3 text-base font-bold sm:mx-0 sm:mt-0 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 md:space-x-4 md:text-xl"
-    >
-      <LinkPage
-        href="/"
-        class={`flex items-center header-navmenu-hover ${
-          navSection === "home"
-            ? "underline"
-            : "link-interaction-underline-effect"
-        }`}
-        title="Home"
-      />
-      <div class="group sm:relative">
-        <span
-          data-cousemenu-state="close"
-          class={`submenu-trigger h-full flex flex-row items-center cursor-pointer header-navmenu-hover ${
-            navSection === "courses"
+    <!-- <div
+    class="topbar-menu fixed top-[50px] left-[-640px] z-10 box-border h-dvh w-full bg-navbar opacity-0 transition-transform ease-in sm:static sm:z-auto sm:box-content sm:flex sm:h-auto sm:w-auto sm:opacity-100 sm:transition-none"
+  > -->
+    <div class="topbar-nav box-border h-full pb-20 sm:box-content sm:pb-0">
+      <nav
+        class="relative flex flex-col items-start gap-3 pb-10 pt-10 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 sm:pb-0 sm:pt-0 md:space-x-4"
+      >
+        <LinkPage
+          href="/"
+          class={`flex items-center header-navmenu-hover ${
+            navSection === "home"
               ? "underline"
               : "link-interaction-underline-effect"
           }`}
-        >
-          Courses
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            class="util-icon"
-            fill="currentColor"
-            stroke="currentColor"
-            stroke-width="15"
+          title="Home"
+        />
+        <div class="group sm:relative">
+          <span
+            data-cousemenu-state="close"
+            class={`submenu-trigger h-full flex flex-row items-center cursor-pointer header-navmenu-hover ${
+              navSection === "courses"
+                ? "underline"
+                : "link-interaction-underline-effect"
+            }`}
           >
-            <path
-              d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
-            ></path></svg
+            Courses
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+              class="util-icon"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="15"
+            >
+              <path
+                d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+              ></path></svg
+            >
+          </span>
+          <div
+            class="sub-menu bg-navbar hidden min-w-max flex-col gap-4 rounded-md py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pb-4 sm:pt-6"
           >
-        </span>
-        <div
-          class="sub-menu hidden min-w-max flex-col gap-4 rounded-md bg-navbar py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pt-6 sm:pb-4"
-        >
-          <LinkPage
-            href="/courses/"
-            class="link-interaction-effect"
-            title="All Courses"
-          />
-          <LinkPage
-            href="/courses/multimedia/"
-            class="link-interaction-effect"
-            title="Multimedia Courses"
-          />
-          <LinkPage
-            href="/courses/programming/"
-            class="link-interaction-effect"
-            title="Programming Courses"
-          />
-          <LinkPage
-            href="/courses/kids/"
-            class="link-interaction-effect"
-            title="Kids Courses"
-          />
+            <LinkPage
+              href="/courses/"
+              class="link-interaction-effect"
+              title="All Courses"
+            />
+            <LinkPage
+              href="/courses/multimedia/"
+              class="link-interaction-effect"
+              title="Multimedia Courses"
+            />
+            <LinkPage
+              href="/courses/programming/"
+              class="link-interaction-effect"
+              title="Programming Courses"
+            />
+            <LinkPage
+              href="/courses/kids/"
+              class="link-interaction-effect"
+              title="Kids Courses"
+            />
+          </div>
         </div>
-      </div>
 
-      <!-- <li class="col-span-1 flex items-center justify-center">
-          <LinkButton
-            href="/search"
-            class:list={[
-              "focus-outline flex p-3 sm:p-1",
-              { "[&>svg]:stroke-accent": isActive("/search") },
-            ]}
-            ariaLabel="search"
-            title="Search"
-          >
-            <IconSearch />
-            <span class="sr-only">Search</span>
-          </LinkButton>
-        </li> -->
-      {SITE.lightAndDarkMode && <ThemeSelector />}
-    </nav>
+        <!-- <li class="col-span-1 flex items-center justify-center">
+            <LinkButton
+              href="/search"
+              class:list={[
+                "focus-outline flex p-3 sm:p-1",
+                { "[&>svg]:stroke-accent": isActive("/search") },
+              ]}
+              ariaLabel="search"
+              title="Search"
+            >
+              <IconSearch />
+              <span class="sr-only">Search</span>
+            </LinkButton>
+          </li> -->
+        {SITE.lightAndDarkMode && <ThemeSelector />}
+      </nav>
+    </div>
 
     <div
-      class="mobile-social-links fixed bottom-0 z-10 box-border w-full bg-navbar px-2 pb-20 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0"
+      class="mobile-social-links bg-navbar fixed bottom-0 left-0 z-20 box-border w-full px-2 pb-8 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0 sm:pb-0"
     >
       <hr class="side-navmenu-border" />
 

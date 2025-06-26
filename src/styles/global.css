@@ -60,7 +60,7 @@ html[data-theme="dark"] {
     @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground selection:bg-accent/75 selection:text-background flex min-h-svh flex-col font-notosans;
+    @apply flex min-h-svh flex-col bg-background font-notosans text-foreground selection:bg-accent/75 selection:text-background;
   }
   main {
     padding-top: calc(var(--header-height) + 40px);
@@ -72,7 +72,7 @@ html[data-theme="dark"] {
   } */
   a,
   button {
-    @apply outline-accent outline-offset-1 focus-visible:no-underline focus-visible:outline-dashed focus-visible:outline-2;
+    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -184,7 +184,7 @@ html[data-theme="dark"] {
   }
 
   .card-btn {
-    @apply hover:!border-borderhover active:!border-borderhover w-4/5 rounded-lg border-2 border-b-6 px-6 py-4 text-lg font-bold transition-all sm:px-8 sm:py-6 sm:text-xl;
+    @apply w-4/5 rounded-lg border-2 border-b-6 px-6 py-4 text-lg font-bold transition-all hover:!border-borderhover active:!border-borderhover sm:px-8 sm:py-6 sm:text-xl;
   }
 
   .card-btn.touch {
@@ -219,7 +219,7 @@ html[data-theme="dark"] {
   }
 
   .scroll-up-btn {
-    @apply fixed bottom-4 right-4 z-[5] hidden h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri md:h-10 md:w-10;
+    @apply fixed right-4 bottom-4 z-[5] hidden h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-font-color-sec text-font-color-white transition-all hover:text-font-color-pri active:text-font-color-pri md:h-10 md:w-10;
   }
 
   .scroll-up-btn.touch {
@@ -229,7 +229,7 @@ html[data-theme="dark"] {
   /* loading-indicator */
   /* The outer container that vtbot will toggle via html.loading */
   #vtbot-loading-indicator {
-    @apply pointer-events-none fixed left-4 top-[calc(var(--header-height)+1rem)] z-50 opacity-0 transition-all;
+    @apply pointer-events-none fixed top-[calc(var(--header-height)+1rem)] left-4 z-50 opacity-0 transition-all;
   }
 
   /* When a load is happening, vtbot adds .loading to <html> */
@@ -238,18 +238,18 @@ html[data-theme="dark"] {
   }
 
   #vtbot-loading-indicator .loading-outer-ring {
-    @apply border-foreground absolute left-0 top-0 h-6 w-6 rounded-full border-4 md:h-8 md:w-8 md:border-[5px];
+    @apply absolute top-0 left-0 h-6 w-6 rounded-full border-4 border-foreground md:h-8 md:w-8 md:border-[5px];
   }
 
   /* The actual spinner element inside your #vtbot-loading-indicator */
   #vtbot-loading-indicator .loading-inner-spinner {
-    @apply border-t-transparent absolute left-0 top-0 h-6 w-6 animate-spin rounded-full border-4 border-font-color-green transition-all md:h-8 md:w-8 md:border-[5px];
+    @apply absolute top-0 left-0 h-6 w-6 animate-spin rounded-full border-4 border-font-color-green border-t-transparent transition-all md:h-8 md:w-8 md:border-[5px];
   }
   /* #endregion */
 
   /* #region HEADER */
   .header {
-    @apply bg-navbar text-foreground fixed left-0 right-0 top-0 z-10 mb-10 flex w-auto justify-between px-2 py-2 sm:px-4 md:px-8 md:py-3;
+    @apply fixed top-0 right-0 left-0 z-10 mb-10 flex w-auto justify-between bg-navbar px-2 py-2 text-foreground sm:px-4 md:px-8 md:py-3;
     height: var(--header-height);
   }
 
@@ -285,11 +285,19 @@ html[data-theme="dark"] {
 
   /* #region NAV MENU */
   .topbar-menu {
-    @apply bg-navbar h-[calc(100dvh - var(--header-height))] w-full sm:h-auto sm:w-auto;
+    @apply w-full bg-navbar sm:w-auto box-border sm:box-content p-4 sm:p-0 z-10 sm:z-auto;
+
+    height: calc(100vh - var(--header-height));
+  }
+
+  @media (min-width: 640px) {
+    .topbar-menu {
+      height: auto;
+    }
   }
 
   .topbar-nav {
-    @apply text-base font-bold md:text-xl;
+    @apply sm:flex sm:items-center sm:justify-center text-base font-bold md:text-xl;
   }
   /* #endregion */
 
@@ -300,7 +308,7 @@ html[data-theme="dark"] {
 
   .home-page-action-btn {
     /* @apply rounded-lg border-2 border-b-6 border-font-color-blue-dark bg-font-color-blue px-6 py-3 text-lg font-bold text-font-color-white transition-all hover:border-font-color-pri hover:text-font-color-pri active:border-font-color-pri active:text-font-color-pri sm:px-8 sm:py-4 sm:text-xl; */
-    @apply hover:border-borderhover active:border-borderhover rounded-lg border-2 border-b-6 border-font-color-blue-dark bg-font-color-blue px-6 py-3 text-lg font-bold text-font-color-white transition-all sm:px-8 sm:py-4 sm:text-xl;
+    @apply rounded-lg border-2 border-b-6 border-font-color-blue-dark bg-font-color-blue px-6 py-3 text-lg font-bold text-font-color-white transition-all hover:border-borderhover active:border-borderhover sm:px-8 sm:py-4 sm:text-xl;
   }
 
   .home-page-action-btn.touch {
@@ -318,7 +326,7 @@ html[data-theme="dark"] {
 
   /* #region POST-DETAILS PAGE */
   .post-navigation-block {
-    @apply border-border bg-navbar hover:border-borderhover active:border-borderhover flex w-full items-center gap-3 rounded-lg border-2 border-b-6 p-3 transition-all;
+    @apply flex w-full items-center gap-3 rounded-lg border-2 border-b-6 border-border bg-navbar p-3 transition-all hover:border-borderhover active:border-borderhover;
   }
 
   .post-navigation-block.touch {
@@ -326,7 +334,7 @@ html[data-theme="dark"] {
   }
 
   .file-download-button {
-    @apply border-border text-foreground hover:border-borderhover active:border-borderhover rounded-md border border-b-2 bg-[#dedbce] px-4 pb-3 pt-2 text-base font-semibold dark:bg-[#050505];
+    @apply rounded-md border border-b-2 border-border bg-[#dedbce] px-4 pt-2 pb-3 text-base font-semibold text-foreground hover:border-borderhover active:border-borderhover dark:bg-[#050505];
   }
 
   .file-download-button.touch {
@@ -336,7 +344,7 @@ html[data-theme="dark"] {
 
   /* #region CODE BLOCK */
   .copy-code {
-    @apply border-border text-foreground hover:border-borderhover active:border-borderhover absolute -top-3 right-3 rounded-md border border-b-2 bg-[#dedbce] px-2 py-1 text-xs font-semibold leading-4 dark:bg-[#050505];
+    @apply absolute -top-3 right-3 rounded-md border border-b-2 border-border bg-[#dedbce] px-2 py-1 text-xs leading-4 font-semibold text-foreground hover:border-borderhover active:border-borderhover dark:bg-[#050505];
   }
 
   .copy-code.touch {

@@ -18,6 +18,57 @@ import Admonition from '@/components/Admonition.astro';
 
 #### Q1.
 
+- Create a Fruit base class that contains two private members: a name (`std::string`), and a color (`std::string`). 
+- Create an Apple class that inherits Fruit. Apple should have an additional private member: fiber (`double`). 
+- Create a Banana class that also inherits Fruit. Banana has no additional members.
+
+The following program should run:
+
+```cpp
+#include <iostream>
+
+int main()
+{
+	Apple a{ "Red delicious", "red", 4.2 };
+	std::cout << a.printDetails() << '\n';
+
+	Banana b{ "Cavendish", "yellow" };
+	std::cout << b.printDetails() << '\n';
+
+	return 0;
+}
+```
+
+And print the following:
+
+```ansi
+Apple(Red delicious, red, 4.2)
+Banana(Cavendish, yellow)
+```
+
+---
+
+#### Q2.
+
+- Create a Carriage class that contains three private members: an id (`int`), a type (`std::string`) and a seatCount (`int`).
+- Create a Train class that contains two private members: a name (`std::string`) and carriages (`std::vector<Carriage>`) should have:
+    - a constructor taking the train name,
+    - an `addCarriage(`const std::string& type, int seats)` method that automatically assigns `id = carriages.size() + 1` and adds a new Carriage,
+    - a `printManifest()` method that returns a `std::string` listing the train name and each carriage's specs.
+
+And print the following:
+
+```ansi
+Train: Rajdhani Express
+Carriage[1: Sleeper, 40 seats]
+Carriage[2: Seater, 72 seats]
+Carriage[3: Dining, 20 seats]
+```
+
+---
+
+#### Q3.
+
 Analyze the given programs below, predict their outputs and determine whether they follow the principles of object-oriented programming correctly.
 
 - #### I.
@@ -124,6 +175,51 @@ Analyze the given programs below, predict their outputs and determine whether th
     ```cpp
     #include <iostream>
 
+    class Department
+    {
+    private:
+        std::string m_branch_name{};
+
+    public:
+        Department(std::string name)
+            : m_branch_name{name}
+        {
+        }
+
+        const std::string& getName() const { return m_branch_name; }
+    };
+
+    class Teacher : public Department
+    {
+    private:
+        std::string m_teacher_name{};
+        int m_salary{};
+
+    public:
+        Teacher(std::string d_name, std::string t_name, int salary)
+            : Department{d_name}, m_teacher_name{t_name}, m_salary{salary}
+        {
+        }
+
+        const std::string& getName() const { return m_teacher_name; }
+    };
+
+    int main()
+    {
+        Department department{"Computer Science"};
+        Teacher teacher{"Physics", "Richard Feynman", 100000};
+
+        std::cout << "Department name: " << department.getName() << '\n';
+        std::cout << "Teacher name: " << teacher.getName() << '\n';
+    
+        return 0;
+    }
+    ```
+
+- #### III.
+    ```cpp
+    #include <iostream>
+
     class Vehicle
     {
     private:
@@ -220,7 +316,7 @@ Analyze the given programs below, predict their outputs and determine whether th
 
 ---
 
-#### Q2.
+#### Q4.
 
 What will be the output of the following programs?
 
@@ -499,39 +595,64 @@ What will be the output of the following programs?
 
 ---
 
-#### Q3.
+#### Q5.
 
-Create a Fruit base class that contains two private members: a name (`std::string`), and a color (`std::string`). 
-Create an Apple class that inherits Fruit. Apple should have an additional private member: fiber (`double`). 
-Create a Banana class that also inherits Fruit. Banana has no additional members.
+A zoo wants to keep a registry of animals, organizing shared and unique information.
 
-The following program should run:
+Create a program that:
+- Stores common animal attributes: name, species, and age.
+- For mammals, stores fur color and whether the animal is endangered.
+- For birds, stores wing span (in cm) and whether the bird can fly.
+- Allows displaying full details for any animal.
 
-```cpp
-#include <iostream>
+<CollapsibleSection title="Instructions">
+- Create a base class `Animal` to store:
+    - Name (e.g. “Sher Khan”)
+    - Species (e.g. “Bengal Tiger”)
+    - Age (e.g. 4)
+    - Member functions to:
+        - Display common media details.
+- Create a derived class `Mammal` that inherits from Animal and adds:
+    - Fur Color (e.g. “Orange with Black Stripes”)
+    - Is Endangered? (e.g. true/false)
+    - Member functions to:
+        - Display all common details plus additional details - fur color and endangered status.
+- Create another derived class `Bird` that inherits from `Animal` and adds:
+    - Wing Span (in cm, e.g. 120)
+    - Can Fly? (e.g. true/false)
+    - Member functions to:
+        - Display all common details plus additional details - wing span and flight capability.
+- In `main()`, demonstrate:
+    - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
+    - Setting all relevant details.
+    - Displaying each animal's full details.
+</CollapsibleSection>
 
-int main()
-{
-	Apple a{ "Red delicious", "red", 4.2 };
-	std::cout << a.printDetails() << '\n';
+<div class="w-full my-2"></div>
 
-	Banana b{ "Cavendish", "yellow" };
-	std::cout << b.printDetails() << '\n';
-
-	return 0;
-}
-```
-
-And print the following:
-
+<CollapsibleSection title="Expected Output">
 ```ansi
-Apple(Red delicious, red, 4.2)
-Banana(Cavendish, yellow)
+[2;3m// Mammal details:[0m
+Animal Details (Mammal):
+Name: Sher Khan
+Species: Bengal Tiger
+Age: 4
+Fur Color: Orange with Black Stripes
+Endangered: Yes
+
+[2;3m// Bird details:[0m
+Animal Details (Bird):
+Name: Pingi
+Species: Emperor Penguin
+Age: 2
+Wing Span: 120 cm
+Can Fly: No
 ```
+</CollapsibleSection>
 
 ---
 
-#### Q4.
+#### Q6.
 
 What will be the output of the following programs?
 
@@ -751,7 +872,42 @@ What will be the output of the following programs?
 
 ---
 
-#### Q5.
+#### Q7.
+
+A computer shop needs a simple tool to keep track of each machine and its parts.
+
+Create a program that:
+- Keeps common computer info: brand and model name.
+- For the CPU processor, stores number of cores and clock speed in GHz.
+- For memory, lets you add multiple modules, each with a size in GB and a type chosen from a fixed list (for e.g. “DDR3”, “DDR4”, “DDR5”).
+- Can show all the details of a computer in one formatted display.
+
+<CollapsibleSection title="Instructions">
+In your design you should:
+- Have a Computer class that holds its brand, model, one CPU and a list of MemoryModules.
+- Have a CPU class that stores its core count and clock speed.
+- Have a MemoryModule class that stores its capacity and a type chosen from a predefined set of memory types (use an enum for the types).
+- Let Computer provide a way to add memory modules.
+- Provide a way to print everything: the computer's brand and model, the CPU's specs and each memory module's size and type.
+- In `main()`, demonstrate by:
+    - Creating a computer (pick any brand and model).
+    - Adding at least two memory modules of different sizes/types.
+    - Printing the computer's full details.
+</CollapsibleSection>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Computer: ThinkPad X1 Carbon
+CPU: 6 cores @ 2.8 GHz
+Memory Modules:
+  - 16 GB DDR4
+  - 32 GB DDR5
+```
+</CollapsibleSection>
+
+---
+
+#### Q8.
 
 - #### I.
 
@@ -810,7 +966,7 @@ My Granny Smith apple is green.
 
 ---
 
-#### Q6.
+#### Q9.
 
 What will be the output of the following programs?
 
@@ -989,64 +1145,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q7.
-
-A zoo wants to keep a registry of animals, organizing shared and unique information.
-
-Create a program that:
-- Stores common animal attributes: name, species, and age.
-- For mammals, stores fur color and whether the animal is endangered.
-- For birds, stores wing span (in cm) and whether the bird can fly.
-- Allows displaying full details for any animal.
-
-<CollapsibleSection title="Instructions">
-- Create a base class `Animal` to store:
-    - Name (e.g. “Sher Khan”)
-    - Species (e.g. “Bengal Tiger”)
-    - Age (e.g. 4)
-    - Member functions to:
-        - Display common media details.
-- Create a derived class `Mammal` that inherits from Animal and adds:
-    - Fur Color (e.g. “Orange with Black Stripes”)
-    - Is Endangered? (e.g. true/false)
-    - Member functions to:
-        - Display all common details plus additional details - fur color and endangered status.
-- Create another derived class `Bird` that inherits from `Animal` and adds:
-    - Wing Span (in cm, e.g. 120)
-    - Can Fly? (e.g. true/false)
-    - Member functions to:
-        - Display all common details plus additional details - wing span and flight capability.
-- In `main()`, demonstrate:
-    - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
-    - Setting all relevant details.
-    - Displaying each animal's full details.
-</CollapsibleSection>
-
-<div class="w-full my-2"></div>
-
-<CollapsibleSection title="Expected Output">
-```ansi
-[2;3m// Mammal details:[0m
-Animal Details (Mammal):
-Name: Sher Khan
-Species: Bengal Tiger
-Age: 4
-Fur Color: Orange with Black Stripes
-Endangered: Yes
-
-[2;3m// Bird details:[0m
-Animal Details (Bird):
-Name: Pingi
-Species: Emperor Penguin
-Age: 2
-Wing Span: 120 cm
-Can Fly: No
-```
-</CollapsibleSection>
-
----
-
-#### Q8.
+#### Q10.
 
 An e-learning platform wants to manage different types of courses (SelfPaced and LiveSession) using shared and unique information. 
 Each course must enforce invariants (no negative prices or durations) and support behaviors like enrolling students, tracking progress, or 
@@ -1183,7 +1282,7 @@ Class Size: 0 / 0 (Full)
 
 ---
 
-#### Q9. **_(Adv.)_**
+#### Q11. **_(Adv.)_**
 
 An online marketplace sells a wide variety of items, from physical goods to digital downloads. Each product shares some common information, 
 but extends into different details and behaviors depending on its type. So the store manager needs a tool that helps him maintain a unified 

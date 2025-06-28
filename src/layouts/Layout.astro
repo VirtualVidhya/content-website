@@ -3,12 +3,12 @@ import { ClientRouter } from "astro:transitions";
 import { SITE } from "@/config";
 // import "@/styles/global.css";
 // import "@/styles/view-transitions.css";
-import CustomLoadingIndicator from "@/components/CustomLoadingIndicator.astro";
+// import CustomLoadingIndicator from "@/components/CustomLoadingIndicator.astro";
+import CustomLoadingProgressbar from "@/components/CustomLoadingProgressbar.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
 import globalCssHref from "../styles/global.css?url&no-inline";
 // import toggleThemeSrc from '../scripts/common/toggle-theme.js?url';
 import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
-
 // const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
@@ -176,8 +176,9 @@ const socialImageURL = new URL(ogImage, Astro.url);
       content="#1e1e1e"
       media="(prefers-color-scheme: dark)"
     /> -->
-    
-    <CustomLoadingIndicator />
+
+    <!-- <CustomLoadingIndicator /> -->
+    <CustomLoadingProgressbar />
   </head>
   <!-- <body transition:animate="fade"> -->
   <body>

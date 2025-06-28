@@ -5,16 +5,15 @@ function setupGlobalScrollHandler() {
 
   // Function to create the progress bar (only if needed)
   function createProgressBar() {
-    if (document.getElementById("progress-container")) return; // Already created
+    if (document.getElementById("scroll-progress-container")) return; // Already created
 
     const container = document.createElement("div");
-    container.id = "progress-container";
-    container.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-background"; // Use existing classes
+    container.id = "scroll-progress-container";
+    container.className = "scroll-progress-container"; // Use existing classes
 
     const bar = document.createElement("div");
-    bar.id = "myBar"; // Use existing ID
-    bar.className = "progress-bar h-1 w-0 bg-accent"; // Use existing classes
+    // bar.id = "myBar"; // Use existing ID
+    bar.className = "scroll-progress-bar"; // Use existing classes
 
     container.appendChild(bar);
     document.body.appendChild(container);
@@ -37,7 +36,10 @@ function setupGlobalScrollHandler() {
     // Progress bar logic (only if on PostDetails page)
     if (postArticle) {
       // Create progress bar elements if they don't exist yet
-      if (!progressBar && !document.getElementById("progress-container")) {
+      if (
+        !progressBar &&
+        !document.getElementById("scroll-progress-container")
+      ) {
         createProgressBar();
       }
 

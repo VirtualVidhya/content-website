@@ -53,7 +53,7 @@ Banana(Cavendish, yellow)
 - Create a Carriage class that contains three private members: an id (`int`), a type (`std::string`) and a seatCount (`int`).
 - Create a Train class that contains two private members: a name (`std::string`) and carriages (`std::vector<Carriage>`) should have:
     - a constructor taking the train name,
-    - an `addCarriage(`const std::string& type, int seats)` method that automatically assigns `id = carriages.size() + 1` and adds a new Carriage,
+    - an `addCarriage(const std::string& type, int seats)` method that automatically assigns `id = carriages.size() + 1` and adds a new Carriage,
     - a `printManifest()` method that returns a `std::string` listing the train name and each carriage's specs.
 
 And print the following:
@@ -597,58 +597,60 @@ What will be the output of the following programs?
 
 #### Q5.
 
-A zoo wants to keep a registry of animals, organizing shared and unique information.
+- #### I.
 
-Create a program that:
-- Stores common animal attributes: name, species, and age.
-- For mammals, stores fur color and whether the animal is endangered.
-- For birds, stores wing span (in cm) and whether the bird can fly.
-- Allows displaying full details for any animal.
+Write an Apple class and a Banana class that are derived from a common Fruit class. Fruit should have two members: a name and a color.
 
-<CollapsibleSection title="Instructions">
-- Create a base class `Animal` to store:
-    - Name (e.g. “Sher Khan”)
-    - Species (e.g. “Bengal Tiger”)
-    - Age (e.g. 4)
-    - Member functions to:
-        - Display common media details.
-- Create a derived class `Mammal` that inherits from Animal and adds:
-    - Fur Color (e.g. “Orange with Black Stripes”)
-    - Is Endangered? (e.g. true/false)
-    - Member functions to:
-        - Display all common details plus additional details - fur color and endangered status.
-- Create another derived class `Bird` that inherits from `Animal` and adds:
-    - Wing Span (in cm, e.g. 120)
-    - Can Fly? (e.g. true/false)
-    - Member functions to:
-        - Display all common details plus additional details - wing span and flight capability.
-- In `main()`, demonstrate:
-    - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
-    - Setting all relevant details.
-    - Displaying each animal's full details.
-</CollapsibleSection>
+The following program should run:
 
-<div class="w-full my-2"></div>
+```cpp
+int main()
+{
+	Apple a{ "red" };
+	Banana b{};
 
-<CollapsibleSection title="Expected Output">
-```ansi
-[2;3m// Mammal details:[0m
-Animal Details (Mammal):
-Name: Sher Khan
-Species: Bengal Tiger
-Age: 4
-Fur Color: Orange with Black Stripes
-Endangered: Yes
+	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
 
-[2;3m// Bird details:[0m
-Animal Details (Bird):
-Name: Pingi
-Species: Emperor Penguin
-Age: 2
-Wing Span: 120 cm
-Can Fly: No
+	return 0;
+}
 ```
-</CollapsibleSection>
+
+And produce the result:
+
+```ansi
+My apple is red.
+My banana is yellow.
+```
+
+- #### II.
+
+Add a new class to the previous program called GrannySmith that inherits from Apple.
+
+The following program should run:
+
+```cpp
+int main()
+{
+	Apple a{ "red" };
+	Banana b;
+	GrannySmith c;
+
+	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
+	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
+
+	return 0;
+}
+```
+
+And produce the result:
+
+```ansi
+My apple is red.
+My banana is yellow.
+My Granny Smith apple is green.
+```
 
 ---
 
@@ -909,60 +911,58 @@ Memory Modules:
 
 #### Q8.
 
-- #### I.
+A zoo wants to keep a registry of animals, organizing shared and unique information.
 
-Write an Apple class and a Banana class that are derived from a common Fruit class. Fruit should have two members: a name and a color.
+Create a program that:
+- Stores common animal attributes: name, species, and age.
+- For mammals, stores fur color and whether the animal is endangered.
+- For birds, stores wing span (in cm) and whether the bird can fly.
+- Allows displaying full details for any animal.
 
-The following program should run:
+<CollapsibleSection title="Instructions">
+- Create a base class `Animal` to store:
+    - Name (e.g. “Sher Khan”)
+    - Species (e.g. “Bengal Tiger”)
+    - Age (e.g. 4)
+    - Member functions to:
+        - Display common media details.
+- Create a derived class `Mammal` that inherits from Animal and adds:
+    - Fur Color (e.g. “Orange with Black Stripes”)
+    - Is Endangered? (e.g. true/false)
+    - Member functions to:
+        - Display all common details plus additional details - fur color and endangered status.
+- Create another derived class `Bird` that inherits from `Animal` and adds:
+    - Wing Span (in cm, e.g. 120)
+    - Can Fly? (e.g. true/false)
+    - Member functions to:
+        - Display all common details plus additional details - wing span and flight capability.
+- In `main()`, demonstrate:
+    - Creating one `Mammal` object (e.g. a tiger) and one `Bird` object (e.g. a penguin).
+    - Setting all relevant details.
+    - Displaying each animal's full details.
+</CollapsibleSection>
 
-```cpp
-int main()
-{
-	Apple a{ "red" };
-	Banana b{};
+<div class="w-full my-2"></div>
 
-	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
-	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
-
-	return 0;
-}
-```
-
-And produce the result:
-
+<CollapsibleSection title="Expected Output">
 ```ansi
-My apple is red.
-My banana is yellow.
+[2;3m// Mammal details:[0m
+Animal Details (Mammal):
+Name: Sher Khan
+Species: Bengal Tiger
+Age: 4
+Fur Color: Orange with Black Stripes
+Endangered: Yes
+
+[2;3m// Bird details:[0m
+Animal Details (Bird):
+Name: Pingi
+Species: Emperor Penguin
+Age: 2
+Wing Span: 120 cm
+Can Fly: No
 ```
-
-- #### II.
-
-Add a new class to the previous program called GrannySmith that inherits from Apple.
-
-The following program should run:
-
-```cpp
-int main()
-{
-	Apple a{ "red" };
-	Banana b;
-	GrannySmith c;
-
-	std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
-	std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
-	std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
-
-	return 0;
-}
-```
-
-And produce the result:
-
-```ansi
-My apple is red.
-My banana is yellow.
-My Granny Smith apple is green.
-```
+</CollapsibleSection>
 
 ---
 

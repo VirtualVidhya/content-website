@@ -2,22 +2,31 @@ function setupGlobalScrollHandler() {
   const scrollUpBtn = document.getElementById("scroll-up-btn");
   const postArticle = document.getElementById("article"); // Element specific to PostDetails
   let progressBar = null; // Initialize progress bar variable
+  let progressContainer = null;
 
   // Function to create the progress bar (only if needed)
   function createProgressBar() {
-    if (document.getElementById("scroll-progress-container")) return; // Already created
+    const existingContainer = document.getElementById(
+      "scroll-progress-container",
+    );
+    if (existingContainer) {
+      progressContainer = existingContainer;
+      progressBar = existingContainer.querySelector(".scroll-progress-bar");
+      return;
+    }
 
     const container = document.createElement("div");
-    container.id = "scroll-progress-container";
+    // container.id = "scroll-progress-container";
     container.className = "scroll-progress-container"; // Use existing classes
 
     const bar = document.createElement("div");
-    // bar.id = "myBar"; // Use existing ID
+    // bar.id = "myBar";
     bar.className = "scroll-progress-bar"; // Use existing classes
 
     container.appendChild(bar);
     document.body.appendChild(container);
     progressBar = bar; // Store reference
+    progressContainer = container;
   }
 
   // Single scroll event listener
@@ -36,20 +45,23 @@ function setupGlobalScrollHandler() {
     // Progress bar logic (only if on PostDetails page)
     if (postArticle) {
       // Create progress bar elements if they don't exist yet
-      if (
-        !progressBar &&
-        !document.getElementById("scroll-progress-container")
-      ) {
+      if (!progressContainer) {
         createProgressBar();
       }
 
       // Update progress bar width
-      if (progressBar) {
+      if (progressBar && progressContainer) {
         const height =
           document.documentElement.scrollHeight -
           document.documentElement.clientHeight;
         const scrolled = height > 0 ? (scrollY / height) * 100 : 0;
         progressBar.style.width = scrolled + "%";
+
+        if (scrollY > 10) {
+          progressContainer.classList.add("is-visible");
+        } else {
+          progressContainer.classList.remove("is-visible");
+        }
       }
     }
   });

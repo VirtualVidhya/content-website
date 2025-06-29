@@ -248,7 +248,7 @@ html[data-theme="dark"] {
 
   /* loading-progress-bar */
   .progress-bar-container {
-    @apply fixed top-0 left-0 !w-full !h-1 bg-background !z-100 opacity-0 pointer-events-none transition-all !duration-200;
+    @apply fixed top-0 left-0 !w-full !h-1 bg-background !z-100 opacity-0 pointer-events-none transition-all !duration-150;
   }
 
   html.loading .progress-bar-container {
@@ -261,11 +261,15 @@ html[data-theme="dark"] {
 
   /* scroll-progress-bar */
   .scroll-progress-container {
-    @apply fixed top-0 z-50 h-1 w-full bg-background opacity-100;
+    @apply fixed top-0 z-50 h-1 w-full bg-background opacity-0 transition-opacity !duration-150 ease-out pointer-events-none;
+  }
+
+  .scroll-progress-container.is-visible {
+    @apply opacity-100 transition-opacity !duration-450 ease-in;
   }
 
   html.loading .scroll-progress-container {
-    @apply !opacity-0;
+    @apply !opacity-0 !transition-none;
   }
 
   .scroll-progress-bar {

@@ -1,3 +1,5 @@
+let isTransitioning = false;
+
 function setupGlobalScrollHandler() {
   const scrollUpBtn = document.getElementById("scroll-up-btn");
   const postArticle = document.getElementById("article"); // Element specific to PostDetails
@@ -7,7 +9,7 @@ function setupGlobalScrollHandler() {
   // Function to create the progress bar (only if needed)
   function createProgressBar() {
     const existingContainer = document.getElementById(
-      "scroll-progress-container",
+      "scroll-progress-container"
     );
     if (existingContainer) {
       progressContainer = existingContainer;
@@ -31,6 +33,8 @@ function setupGlobalScrollHandler() {
 
   // Single scroll event listener
   window.addEventListener("scroll", () => {
+    if (isTransitioning) return; // Don't run during transitions
+
     const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
     // Scroll-to-top button logic
@@ -94,4 +98,11 @@ if (document.readyState === "loading") {
 }
 
 // Re-run setup after Astro view transitions
-document.addEventListener("astro:after-swap", setupGlobalScrollHandler);
+document.addEventListener("astro:before-swap", () => {
+  isTransitioning = true;
+});
+document.addEventListener("astro:after-swap", () => {
+  isTransitioning = false;
+  window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+  setupGlobalScrollHandler();
+});

@@ -261,7 +261,7 @@ html[data-theme="dark"] {
 
   /* scroll-progress-bar */
   .scroll-progress-container {
-    @apply pointer-events-none fixed top-0 z-50 h-1 w-full bg-background opacity-0 transition-opacity !duration-150 ease-out;
+    @apply pointer-events-none fixed top-0 !z-50 h-1 w-full bg-background opacity-0 transition-opacity !duration-150 ease-out;
   }
 
   .scroll-progress-container.is-visible {
@@ -273,7 +273,7 @@ html[data-theme="dark"] {
   }
 
   .scroll-progress-bar {
-    @apply h-1 w-0 bg-accent;
+    @apply !z-50 h-1 w-0 bg-accent;
   }
   /* #endregion */
 

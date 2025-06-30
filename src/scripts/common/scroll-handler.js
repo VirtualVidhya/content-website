@@ -102,7 +102,9 @@ document.addEventListener("astro:before-swap", () => {
   isTransitioning = true;
 });
 document.addEventListener("astro:after-swap", () => {
-  isTransitioning = false;
   window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-  setupGlobalScrollHandler();
+  setTimeout(() => {
+    isTransitioning = false;
+    setupGlobalScrollHandler();
+  }, 450);
 });

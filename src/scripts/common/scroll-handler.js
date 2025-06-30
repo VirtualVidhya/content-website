@@ -97,8 +97,7 @@ if (document.readyState === "loading") {
   setupGlobalScrollHandler();
 }
 
-// Re-run setup after Astro view transitions
-document.addEventListener("astro:before-swap", () => {
+document.addEventListener("astro:before-preparation", () => {
   isTransitioning = true;
 });
 document.addEventListener("astro:after-swap", () => {
@@ -106,5 +105,5 @@ document.addEventListener("astro:after-swap", () => {
   setTimeout(() => {
     isTransitioning = false;
     setupGlobalScrollHandler();
-  }, 450);
+  }, 600);
 });

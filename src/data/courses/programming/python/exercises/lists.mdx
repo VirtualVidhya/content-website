@@ -340,7 +340,7 @@ What will be the output of the following programs?
 #### Q7.
 
 A teacher wants to analyze how students performed in a multiple-choice test with 10 questions.
-The correct answers are stored in an array. The teacher then inputs a student's answers into another array. Your program should:
+The correct answers are stored in a list. The teacher then inputs a student's answers into another list. Your program should:
 - Display how many answers are correct.
 - Give the student's score. (Each correct answer is worth 10 marks.)
 
@@ -438,9 +438,9 @@ If an item's price is `Y` or less, it becomes free.
 Decide whether you should buy the coupon or not. You should buy it only if the total cost after applying the discount 
 (including the coupon's price) is strictly less than the total cost without the coupon.  
 
-Write a program that takes `X`, and `Y` as input, followed by the prices of `5` items, and prints `"DO use coupon"` if buying the coupon is beneficial, otherwise `"DO NOT use coupon"`.
+Write a program that takes `X` and `Y` as input, followed by the prices of `5` items and prints "DO use coupon" if buying the coupon is beneficial, 
+otherwise "DO NOT use coupon".
 
-{/* **Expected Outut:** */}
 <CollapsibleSection title="Expected Output">
 ```ansi
 [2;3m// input[0m
@@ -500,11 +500,11 @@ X  .  .
 // 7 8 9[0m
 ```
 
-- Your task is to: Store this current state into a game data-set and display it on the screen.
+- Your task is to: store this current state into a game data-set and display it on the screen.
 
-Now, it's Player O's turn, and they want to place their mark in the middle row, first position i.e. cell number 4.
+Now, it's player O's turn, and they want to place their mark in the middle row, first position i.e. cell number 4.
 
-- Your next task is to: Update the board with the new move and again display the updated game board after the move.
+- Your next task is to: update the board with the new move and again display the updated game board after the move.
 
 ---
 
@@ -700,7 +700,8 @@ Exiting the system.
 
 #### Q14. _**(Adv.)**_
 
-A hospital consists of multiple floors (`3`), each with a certain number of rooms (`2`), and each room has a fixed number of beds (`4`). Due to rising patient intake, the hospital administration wants to efficiently manage the availability of beds across all floors.
+A hospital consists of multiple floors (`3`), each with a certain number of rooms (`2`) and each room has a fixed number of beds (`4`). 
+Due to rising patient intake, the hospital administration wants to efficiently manage the availability of beds across all floors.
 
 Your task is to develop a program that:
 - Keeps track of which beds are occupied or vacant in each room.

@@ -18,7 +18,7 @@ function setupGlobalScrollHandler() {
     }
 
     const container = document.createElement("div");
-    // container.id = "scroll-progress-container";
+    container.id = "scroll-progress-container";
     container.className = "scroll-progress-container"; // Use existing classes
 
     const bar = document.createElement("div");
@@ -99,7 +99,19 @@ if (document.readyState === "loading") {
 
 document.addEventListener("astro:before-preparation", () => {
   isTransitioning = true;
+
+  // Proactively hide and reset the progress bar to prevent flashing
+  const progressContainer = document.getElementById("scroll-progress-container");
+
+  if (progressContainer) {
+    progressContainer.classList.remove("is-visible");
+    const progressBar = progressContainer.querySelector(".scroll-progress-bar");
+    if (progressBar) {
+      progressBar.style.width = "0%";
+    }
+  }
 });
+
 document.addEventListener("astro:after-swap", () => {
   window.scrollTo({ left: 0, top: 0, behavior: "instant" });
   setTimeout(() => {

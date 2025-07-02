@@ -162,7 +162,6 @@ html[data-theme="dark"] {
 
   .footer-logo-svg .body-outline {
     stroke-width: 11.25;
-    @apply stroke-font-color-pri;
   }
 
   .footer-logo-svg .eyes-outline {
@@ -309,7 +308,7 @@ html[data-theme="dark"] {
   }
 
   .side-navmenu-border {
-    @apply my-3 border-[1px] border-solid border-font-color-pri md:my-5;
+    @apply my-5 border-[1px] border-solid border-foreground sm:my-0;
   }
   /* #endregion */
 

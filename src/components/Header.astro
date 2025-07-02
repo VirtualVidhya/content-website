@@ -2,23 +2,23 @@
 import { SITE } from "@/config";
 import VvidhyaLogo from "./VvidhyaLogo.astro";
 import SocialLinks from "./SocialLinks.astro";
-// import IconSun from "./Icons/IconSun.astro";
-// import IconMoon from "./Icons/IconMoon.astro";
 import LinkPage from "@/components/LinkPage.astro";
 import ThemeSelector from "./ThemeSelector.astro";
+import LinkButton from "./LinkButton.astro";
+import IconSearch from "./Icons/IconSearch.astro";
 
-// const { pathname } = Astro.url;
+const { pathname } = Astro.url;
 
 // Remove trailing slash from current pathname if exists
-// const currentPath =
-//   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+const currentPath =
+  pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 
-// const isActive = (path: string) => {
-//   const currentPathArray = currentPath.split("/").filter(p => p.trim());
-//   const pathArray = path.split("/").filter(p => p.trim());
+const isActive = (path: string) => {
+  const currentPathArray = currentPath.split("/").filter(p => p.trim());
+  const pathArray = path.split("/").filter(p => p.trim());
 
-//   return currentPath === path || currentPathArray[0] === pathArray[0];
-// };
+  return currentPath === path || currentPathArray[0] === pathArray[0];
+};
 
 const { navSection } = Astro.props;
 ---
@@ -26,7 +26,7 @@ const { navSection } = Astro.props;
 <!-- <div class="sticky top-0 z-20 bg-transparent"> -->
 <header class="header">
   <LinkPage href="/">
-    <div class="text-foreground flex flex-row items-center gap-1 md:gap-2">
+    <div class="flex flex-row items-center gap-1 text-foreground md:gap-2">
       <VvidhyaLogo logoClass="header-logo-svg" />
 
       <p class="header-logo-text">V.Vidhya</p>
@@ -79,14 +79,14 @@ const { navSection } = Astro.props;
   </button>
 
   <div
-    class="topbar-menu fixed left-[-640px] top-[50px] opacity-0 transition-transform ease-in sm:static sm:flex sm:opacity-100 sm:transition-none"
+    class="topbar-menu fixed top-[50px] left-[-640px] opacity-0 transition-transform ease-in sm:static sm:flex sm:opacity-100 sm:transition-none"
   >
     <!-- <div
     class="topbar-menu fixed top-[50px] left-[-640px] z-10 box-border h-dvh w-full bg-navbar opacity-0 transition-transform ease-in sm:static sm:z-auto sm:box-content sm:flex sm:h-auto sm:w-auto sm:opacity-100 sm:transition-none"
   > -->
     <div class="topbar-nav box-border h-full pb-20 sm:box-content sm:pb-0">
       <nav
-        class="relative flex flex-col items-start gap-3 pb-10 pt-10 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 sm:pb-0 sm:pt-0 md:space-x-4"
+        class="relative flex flex-col items-start gap-3 pt-10 pb-10 sm:flex-row sm:items-stretch sm:gap-0 sm:space-x-2 sm:pt-0 sm:pb-0 md:space-x-4"
       >
         <LinkPage
           href="/"
@@ -121,7 +121,7 @@ const { navSection } = Astro.props;
             >
           </span>
           <div
-            class="sub-menu bg-navbar hidden min-w-max flex-col gap-4 rounded-md py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pb-4 sm:pt-6"
+            class="sub-menu hidden min-w-max flex-col gap-4 rounded-md bg-navbar py-3 pl-5 sm:absolute sm:right-0 sm:px-6 sm:pt-6 sm:pb-4"
           >
             <LinkPage
               href="/courses/"
@@ -146,26 +146,21 @@ const { navSection } = Astro.props;
           </div>
         </div>
 
-        <!-- <li class="col-span-1 flex items-center justify-center">
-            <LinkButton
-              href="/search"
-              class:list={[
-                "focus-outline flex p-3 sm:p-1",
-                { "[&>svg]:stroke-accent": isActive("/search") },
-              ]}
-              ariaLabel="search"
-              title="Search"
-            >
-              <IconSearch />
-              <span class="sr-only">Search</span>
-            </LinkButton>
-          </li> -->
+        <!-- <a
+          href="/search/"
+          aria-label="search"
+          title="Search"
+          class="focus-outline flex h-4 w-4 items-center px-2 sm:h-auto sm:w-auto hover:[&>svg]:stroke-accent"
+        >
+          <IconSearch styleClass="link-interaction-effect" />
+        </a> -->
+
         {SITE.lightAndDarkMode && <ThemeSelector />}
       </nav>
     </div>
 
     <div
-      class="mobile-social-links bg-navbar absolute bottom-0 left-0 z-20 box-border w-full px-2 pb-10 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0 sm:pb-0"
+      class="mobile-social-links absolute bottom-0 left-0 z-20 box-border w-full bg-navbar px-2 pb-10 text-xl sm:box-content sm:hidden sm:w-auto sm:px-0 sm:pb-0"
     >
       <hr class="side-navmenu-border" />
 

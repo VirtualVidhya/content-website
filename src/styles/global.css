@@ -396,4 +396,99 @@ html[data-theme="dark"] {
     @apply mt-8 aspect-[485/402] w-3/4 md:w-3/5;
   }
   /* #endregion */
+
+  /* #region PAGEFIND-SEARCH */
+  #pagefind-search {
+    --pagefind-ui-font: var(--font-notosans) !important;
+    --pagefind-ui-text: var(--foreground) !important;
+    --pagefind-ui-background: var(--background) !important;
+    --pagefind-ui-border: var(--border) !important;
+    --pagefind-ui-primary: var(--accent) !important;
+    --pagefind-ui-tag: var(--background) !important;
+    --pagefind-ui-border-radius: 0.375rem !important;
+    --pagefind-ui-border-width: 2px !important;
+    --pagefind-ui-image-border-radius: 8px !important;
+    --pagefind-ui-image-box-ratio: 3 / 2 !important;
+    --pagefind-ui-scale: 0.85 !important;
+  }
+
+  /* #pagefind-search form {
+    @apply !flex !flex-col;
+  } */
+
+  #pagefind-search form::before {
+    background-color: var(--foreground) !important;
+  }
+
+  #pagefind-search input {
+    /* font-weight: 400; */
+    @apply !rounded-lg !border-2 !border-solid !border-border !font-semibold hover:!border-borderhover active:!border-borderhover;
+    /* border: 1px solid var(--border) !important; */
+  }
+
+  #pagefind-search input:focus-visible {
+    @apply !border-font-color-green;
+    outline: 0px solid var(--borderhover) !important;
+  }
+
+  #pagefind-search input::placeholder {
+    @apply !font-semibold !text-foreground;
+  }
+
+  #pagefind-search .pagefind-ui__search-clear {
+    @apply !h-auto !bg-[#dedbce] !px-2 !py-1 !text-xs !font-semibold hover:!text-border dark:!bg-[#050505];
+    top: calc(18px * var(--pagefind-ui-scale)) !important;
+    right: calc(12px * var(--pagefind-ui-scale)) !important;
+  }
+
+  #pagefind-search .pagefind-ui__message {
+    border-bottom: 2.5px solid var(--border) !important;
+  }
+
+  #pagefind-search .pagefind-ui__result {
+    border-top: 1.25px dashed var(--border) !important;
+    border-bottom: 1.25px dashed var(--color-border) !important;
+  }
+
+  #pagefind-search .pagefind-ui__result:first-child {
+    border-top: none !important;
+  }
+
+  #pagefind-search .pagefind-ui__result-title a {
+    /* color: var(--accent) !important; */
+    @apply !text-foreground;
+    outline-offset: 1px !important;
+    outline-color: var(--accent) !important;
+    font-size: calc(24px * var(--pagefind-ui-scale)) !important;
+  }
+
+  #pagefind-search .pagefind-ui__result-nested a {
+    font-size: calc(18px * var(--pagefind-ui-scale)) !important;
+  }
+
+  #pagefind-search .pagefind-ui__result-title a:focus-visible,
+  #pagefind-search .pagefind-ui__search-clear:focus-visible {
+    text-decoration-line: none !important;
+    outline-width: 2px !important;
+    outline-style: dashed !important;
+  }
+
+  #pagefind-search .pagefind-ui__result:last-of-type {
+    border-bottom: 0 !important;
+  }
+
+  #pagefind-search
+    .pagefind-ui__result-nested
+    .pagefind-ui__result-link:before {
+    font-family: var(--font-notosans) !important;
+  }
+
+  #pagefind-search mark {
+    @apply !bg-accent !text-background;
+  }
+
+  #pagefind-search .pagefind-ui__button {
+    @apply !rounded-lg !border-2 !border-solid !border-border !font-semibold hover:!border-borderhover active:!border-borderhover;
+  }
+  /* endregion */
 }

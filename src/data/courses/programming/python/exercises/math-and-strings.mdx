@@ -1,0 +1,380 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Math functions & String Operations
+metadata_title: Math functions and String Operations - Python Programming | V.Vidhya
+slug: math-and-strings
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Math functions and String Operations in Python Programming by practicing exercises based on real-world scenarios with V.Vidhya.
+
+order: 70
+---
+
+import Admonition from '@/components/Admonition.astro';
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+#### Q1.
+
+A team of seismologists has gathered a sequence of recent earthquake (richter magnitude) readings from sensors around a fault line. 
+They need a small program to analyze these magnitudes, write a program that: 
+- Shows how much each reading changed from the one before it.
+- Finds the average reading, how spread-out the readings are and which reading happened most often.
+- Counts how many different magnitudes were recorded.
+- Prepares simple chart data by rounding each reading down to a whole number.
+
+{/* - checking amplitude ratios, finding common readings, computing summary statistics 
+and preparing the data for charting. */}
+
+<CollapsibleSection title="Instructions">
+- Take the list of recorded magnitudes (at least ten values, possibly with repeats) as user input.
+- Calculate the amplitude ratio between each consecutive pair of magnitudes (m1 - m2) using the formula:
+
+    <code>amplitude_ratio = 10 <sup>(m2 - m1)</sup></code>
+
+    and store these ratios in a list. (This shows how many times stronger (or weaker) the second event was.)
+
+- Using the `statistics` module, compute and display: 
+    - mean: the average magnitude
+    - variance: how much the magnitudes vary overall
+    - mode: the most common magnitude
+- Convert the magnitude list into a `set` to determine and display the number of distinct magnitude recorded.
+- Prepare a list of chart bins by flooring each magnitude to the nearest whole number.
+- Finally, print out:
+    - The original magnitudes
+    - The amplitude ratios between each pair
+    - The calculated mean, variance and mode
+    - The count of unique magnitudes
+    - The list of floored chart bins
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// input[0m
+Enter magnitudes: 3.2 4.1 3.8 5.0 4.1 3.2 4.7 5.0 4.1 3.8
+
+[2;3m// output[0m
+Original magnitudes:
+[3.2, 4.1, 3.8, 5.0, 4.1, 3.2, 4.7, 5.0, 4.1, 3.8]
+
+Amplitude ratios between each pair:
+[7.94, 0.50, 15.85, 0.13, 0.13, 31.62, 1.99, 0.13, 0.50]
+
+Magnitude stats:
+Mean: 4.1  
+Variance: 0.42  
+Mode: 4.1
+
+Number of distinct magnitudes: 5
+
+Chart bins (floored values):
+[3, 4, 3, 5, 4, 3, 4, 5, 4, 3]
+```
+</CollapsibleSection>
+
+---
+
+#### Q2.
+
+A climate researcher is tracking atmospheric CO₂ concentrations over several months to understand how quickly levels are rising and to forecast when 
+they might reach critical thresholds. They need a program that analyzes past data and makes simple future projections.
+
+<CollapsibleSection title="Instructions">
+- Take a list of monthly CO₂ readings in parts per million (ppm) as **user input** (at least six values).
+- **Monthly Growth Factors:**
+    - For each consecutive pair of readings (prev, curr), compute the exact growth factor (`curr / prev`) (using `Fraction` module) and then convert to a float.
+        (This shows how many times higher the concentration is compared to the previous month.)
+    - Store these in a list.
+
+- Convert each growth factor into a monthly growth rate using the natural logarithm:
+
+    `rate = log(factor)`
+
+    (This tells the continuous rate of increase per month.)
+
+- **Logarithmic Rates:**
+    - Find the highest and lowest recorded CO₂ values using `max()` and `min()`. 
+    - Then compute their difference (`range_ppm = max - min`) to see the overall swing.
+
+{/* - **Variability Measure:**
+    - Calculate the variance of the monthly readings:
+        - Compute the mean of the list.
+        - Sum the squared deviations from the mean.
+        - Divide by the number of readings.
+        - Take the square root of this variance to get the standard deviation (`std_dev = sqrt(variance)`). */}
+
+- **Future Projection (Exponential Growth):**
+    - Find the average monthly growth rate (mean of your rate list).
+    - Project the CO₂ level 12 months from the last reading using:
+
+        <code>projection = last_reading * (1 + average_rate)<sup>12</sup></code>
+
+- **Threshold Timing:**
+    - Ask the user for a critical threshold value (e.g., 450 ppm).
+    - Solve for how many whole months it will take to exceed that threshold by rearranging the exponential model:
+
+        `months = log(threshold / last_reading) / log(1 + average_rate)`
+
+    - Round this up to the next whole month with `ceil()`.
+- Finally, **print out**:
+    - The original CO₂ readings
+    - The list of growth factors
+    - The max, min, and range of readings
+    - The standard deviation (√variance)
+    - The projected CO₂ after one year
+    - The count of unique magnitudes
+    - The number of months (ceiled) to reach the threshold
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// input[0m
+Enter CO₂ readings (ppm): 400 405 410 412 415 420
+
+Enter threshold (ppm): 450
+
+[2;3m// output[0m
+Original readings:
+[400, 405, 410, 412, 415, 420]
+
+Exact growth factors:
+[81/80, 82/81, 206/205, 415/412, 84/83]
+
+Decimal growth factors:
+[1.0125, 1.0123, 1.0049, 1.0073, 1.0120]
+
+Monthly log-rates:
+[0.0124, 0.0123, 0.0049, 0.0073, 0.0120]
+
+Max reading: 420  
+Min reading: 400  
+Range: 20
+
+Projected CO₂ after 12 months: 471.91 ppm
+
+Months to reach 450 ppm: 8
+```
+</CollapsibleSection>
+
+---
+
+#### Q3.
+
+A road-building team has measured how steep different parts of a mountain road are. They need a small program to:
+- Find each slope's angle so they know how steep it is.
+- See how gravity breaks down along and across the slope.
+- Flag any sections that are steeper than what's considered safe.
+
+{/* A mountain road design team needs to evaluate the steepness of various hillside segments to ensure safety. For each surveyed segment 
+they have measured the vertical rise and the horizontal run. They want a Python program to:
+- Compute the slope angle of each segment.
+- Analyze the component ratios of gravity along and perpendicular to the slope.
+- Identify any segments that exceed a safe-angle threshold. */}
+
+<CollapsibleSection title="Instructions">
+- Take two lists (same length) as **user input**:
+    - `rise` (vertical rise in meters)
+    - `run` (horizontal run in meters)
+- **Compute Slope Angles:**
+    - For each pair (rise, run), calculate the slope angle in degrees:
+        - <code>angle_rad = atan(rise / run)</code>
+        - <code>angle_deg = degrees(angle_rad)</code>
+    - Store all angles in a list. (This tells how many degrees above horizontal each slope is.)
+- **Gravity Components:**
+    - For each `angle_rad`, compute:
+        - <code>vertical_ratio = sin(angle_rad)</code>  (i.e. rise / hypotenuse : this tells how much gravity pulls down the slope.)
+        - <code>horizontal_ratio = cos(angle_rad)</code> (i.e. run / hypotenuse : this tells how much gravity pulls along the slope.)
+        
+        (These ratios help engineers know braking and traction needs.)
+- **Filter Unsafe Segments:**
+    - Ask the user for a maximum safe angle (in degrees), (e.g. 35 degrees).
+    - Use built-in `filter()` to select only those slopes where `angle_deg > max_safe`. 
+        (These are the segments that need extra attention or redesign.)
+- Finally, **print out**:
+    - for each segment:
+        - Rise, run
+        - Computed angle (°)
+        - Vertical and horizontal ratios
+    - Then separately list which segment indices (or rise/run pairs) are unsafe.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// input[0m
+Enter rises (m): 10 20 40 8 25
+Enter runs (m): 50 40 30 20 60
+Enter maximum safe angle (°): 35
+
+[2;3m// output[0m
+Segment data:
+1. Rise: 10, Run: 50 - Angle: 11.31° | Vertical ratio: 0.20, Horizontal ratio: 0.98
+2. Rise: 20, Run: 40 - Angle: 26.57° | Vertical ratio: 0.45, Horizontal ratio: 0.89
+3. Rise: 40, Run: 30 - Angle: 53.13° | Vertical ratio: 0.80, Horizontal ratio: 0.60
+4. Rise: 8,  Run: 20 - Angle: 21.80° | Vertical ratio: 0.37, Horizontal ratio: 0.93
+5. Rise: 25, Run: 60 - Angle: 22.62° | Vertical ratio: 0.38, Horizontal ratio: 0.92
+
+Unsafe segments (angle > 35°):
+3. Rise: 40, Run: 30 → Angle: 53.13°
+```
+</CollapsibleSection>
+
+---
+
+#### Q4.
+
+A parent has collected a list of popular baby names but wants an easy way to see all the options that begin with a given letter. 
+Write a program that helps them quickly get the names starting with the letter they choose.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m
+// names: Amiya, Aarav, Aarna, Avyaya, Anura, Barkha, Chhavi, Chaah, Dhithi, Dvij, Falak, 
+Hanita, Izaan, Jiyaan, Krishiv, Laya, Mahi, Moh, Navya, Nirvan, Nirmay, Nahar, Nadhiya, 
+Ojal. Ojas, Parishi, Praan, Rahi, Sakhi, Shay, Yuti
+
+// case 1[0m
+Enter the first letter: N
+
+Names found:
+Nahar
+Navya
+Nirmay
+Nirvan
+
+[2;3m// case 2[0m
+Enter the first letter: V
+
+No names found starting with 'V'.
+```
+</CollapsibleSection>
+
+---
+
+#### Q5.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    message = "hello"
+    message[0] = "H"
+
+    print(message)
+    ```
+
+- #### II.
+    ```py
+    message = 'code'
+
+    n = message.find('ad')
+    print(n)
+
+    print(message)
+
+    message.replace('od', 'abl')
+
+    print(message)
+    ```
+
+- #### III.
+    ```py
+    animal_name = "cat"
+    animal_name += "erpillar"
+
+    print(animal_name)
+    ```
+
+- #### IV.
+    ```py
+    email = "     eXamPle@emAil.com    "
+
+    email = email.strip()
+    print(email)
+
+    l = len(email)
+    print(l)
+
+    email.lower()
+    print(email)
+    ```
+
+- #### V.
+    ```py
+    message = 'code'
+
+    print(message[1:3])
+    print(message[1:])
+    print(message[:3])
+    print(message[0:3])
+    print(message[:])
+    print(message[:-3])
+    ```
+
+- #### VI.
+    ```py
+    names = "tina, meena, rina, veena"
+
+    names.split(',')
+    print(names)
+    ```
+
+---
+
+#### Q6.
+
+You and your friend want to send each other secret messages so that if anyone else sees the message data in between, they won't understand it. 
+To do this, you'll write two programs:
+- Encoder: turns your plain-text message into a string of numbers before one sends it.
+- Decoder: takes that string of numbers and turns it back into the original text when one receives it.
+
+<CollapsibleSection title="Instructions">
+
+- #### I. Encoder
+
+    - Before sending a message, transform each character into its hidden numeric form. 
+        That way, anyone peeking at the data will see only numbers, not the secret words!
+
+        - Take the plain-text message as user input.
+        - For each character in the note, use `ord()` to get its Unicode number.
+        - Store those Unicode numbers and print the sequence of numbers.
+
+- #### II. Decoder
+
+    - On receiving the secret code (a list of numbers), it needs to be turned back into the original message to be read easily by the recipient.
+
+        - Take the secret code as user input.
+        - For each number, use `chr()` to convert it back to the character.
+        - Join all characters into a single string and display the decoded message.
+
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m
+// Encoder[0m
+Enter your secret message: Club meeting at midnight in the treehouse!
+
+Here is your encoded message:
+67 108 117 98 32 109 101 101 116 105 110 103 32 97 116 32 109 105 100 110 105 103 104 116 32 105 110 32 116 104 101 32 116 114 101 101 104 111 117 115 101 33
+
+[2;3m// Decoder[0m
+Enter the secret code: 67 108 117 98 32 109 101 101 116 105 110 103 32 97 116 32 109 105 100 110 105 103 104 116 32 105 110 32 116 104 101 32 116 114 101 101 104 111 117 115 101 33
+
+Your decoded message:
+Club meeting at midnight in the treehouse!
+```
+</CollapsibleSection>

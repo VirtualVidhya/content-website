@@ -334,6 +334,60 @@ What will be the output of the following programs?
 
 #### Q6.
 
+A new site wants to give each user a fun, memorable username automatically. The rule is:
+- First character: the first letter of first name (lowercase)
+- Next four characters: the first four letters of last name (lowercase), 
+    by taking its letters in order and repeating them as needed to reach exactly four characters
+- Last two characters: a random two-digit number
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter your first and last name: Soham Parekh
+Your username is: sparekh42
+
+[2;3m// case 2[0m
+Enter your first and last name: Ria Da
+Your username is: rdada96
+
+[2;3m// case 3[0m
+Enter your first and last name: Mann Day
+Your username is: mdayd17
+```
+</CollapsibleSection>
+
+---
+
+#### Q7.
+
+A writer is polishing their story and worries that certain words may be overused. 
+To help, write a program where, user will type in the paragraph and then list the common <LinkMd href="https://www.coursera.org/articles/what-are-stop-words" title="stop-words" /> 
+they want the program to ignore. The program will then reports the five words that appear most frequently outside of the stop-word list.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter your text: 
+His followers called him Mahasamatman and said he was a god. He preferred to drop the Maha 
+and the atman, however, and called himself Sam. He never claimed to be a god. But then, 
+he never claimed not to be a god.
+
+Enter stop-words (separated by spaces):
+he a the and to of in was is but
+
+[2;3m// output[0m
+god: 3
+called: 2
+claimed: 2
+never: 2
+followers: 1
+```
+</CollapsibleSection>
+
+---
+
+#### Q8.
+
 You and your friend want to send each other secret messages so that if anyone else sees the message data in between, they won't understand it. 
 To do this, you'll write two programs:
 - Encoder: turns your plain-text message into a string of numbers before one sends it.

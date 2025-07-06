@@ -54,7 +54,7 @@ html[data-theme="dark"] {
   * {
     @apply border-border outline-accent/75;
     scrollbar-width: auto;
-    /* scrollbar-color: var(--color-muted) transparent; */
+    scrollbar-color: rgb(156, 154, 151, 0.35) var(--color-navbar);
   }
   html {
     @apply scroll-smooth;

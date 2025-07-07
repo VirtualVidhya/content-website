@@ -122,7 +122,10 @@ const nextPost =
   <main
   id="main-content"
   class="mx-auto mb-24 w-full max-w-mdsm sm:max-w-lg md:max-w-2xl lg:max-w-3xl px-6 2xs:px-4 xs:px-2 xl:px-0 2xl:max-w-4xl"
+  data-pagefind-body
   >
+    <!-- <meta data-pagefind-sort="weight:1"> -->
+    
     <Breadcrumb />
     <!-- <h1
       transition:name={slugifyStr(title)}
@@ -131,7 +134,7 @@ const nextPost =
       {title}
     </h1> -->
     <!-- <div class="flex flex-row justify-between items-center"> -->
-      <h1 class="inline-block text-2xl font-bold sm:text-3xl">
+      <h1 class="inline-block text-2xl font-bold sm:text-3xl" data-pagefind-sort="weight[data-weight]" data-pagefind-weight="10.0">
         {title}
       </h1>
       <!-- <button>

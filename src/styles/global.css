@@ -422,8 +422,13 @@ html[data-theme="dark"] {
 
   #pagefind-search input {
     /* font-weight: 400; */
-    @apply !rounded-lg !border-2 !border-solid !border-border !font-semibold hover:!border-borderhover active:!border-borderhover;
+    @apply !rounded-lg !border-2 !border-solid !border-border !font-semibold hover:!border-borderhover;
     /* border: 1px solid var(--border) !important; */
+  }
+
+  #pagefind-search input.touch {
+    @apply !border-font-color-green;
+    outline: 0px solid var(--borderhover) !important;
   }
 
   #pagefind-search input:focus-visible {

@@ -303,7 +303,7 @@ The correct answers are stored in an array. The teacher then inputs a student's 
 
 ```ansi
 [2;3m// correct answers[0m
-correct-answers: 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B'
+correct-answers: A, B, C, D, A, B, C, D, A, B
 
 [2;3m// input[0m
 Enter student answers: A B D D A C C D B B
@@ -340,7 +340,37 @@ Rating distribution:
 
 ---
 
-#### Q8. _**(Adv.)**_
+#### Q8.
+
+A parent has collected a list of popular baby names but wants an easy way to see all the options that begin with a given letter. 
+Write a program that helps them quickly get the names starting with the letter they choose.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m
+// names: Amiya, Aarav, Aarna, Avyaya, Anura, Barkha, Chhavi, Chaah, Dhithi, Dvij, Falak, 
+Hanita, Izaan, Jiyaan, Krishiv, Laya, Mahi, Moh, Navya, Nirvan, Nirmay, Nahar, Nadhiya, 
+Ojal. Ojas, Parishi, Praan, Rahi, Sakhi, Shay, Yuti
+
+// case 1[0m
+Enter the first letter: N
+
+Names found:
+Nahar
+Navya
+Nirmay
+Nirvan
+
+[2;3m// case 2[0m
+Enter the first letter: V
+
+No names found starting with 'V'.
+```
+</CollapsibleSection>
+
+---
+
+#### Q9. _**(Adv.)**_
 
 A popular arcade game keeps a list of the five highest scores ever achieved, in descending order. Now they want to automate updating this
 leaderboard whenever a new score arrives.
@@ -413,7 +443,7 @@ High-score list:
 
 ---
 
-#### Q9. _**(Adv.)**_
+#### Q10. _**(Adv.)**_
 
 You are shopping for `5` items, each with a known price. 
 The store offers a discount coupon that costs `X` rupees and reduces the price of every item by `Y` rupees. 

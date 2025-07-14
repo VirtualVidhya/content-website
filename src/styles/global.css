@@ -70,10 +70,10 @@ html[data-theme="dark"] {
   /* main {
     @apply bg-background;
   } */
-  a,
+  /* a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
-  }
+  } */
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;

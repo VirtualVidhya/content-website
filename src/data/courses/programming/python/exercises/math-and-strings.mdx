@@ -387,6 +387,39 @@ followers: 1
 
 #### Q8.
 
+Write a text-based <LinkMd href="https://www.ncbi.nlm.nih.gov/books/NBK26887/" title='DNA to RNA Converter' /> that lets the user enter DNA sequences, validate them and then turns them into mRNA.
+
+<CollapsibleSection title="Instructions">
+- Prompt the user to enter a DNA sequence.
+- Validate the input. (DNA sequence can contain only the letters A, T, C, G)
+- Convert it to mRNA by replacing:
+    - T - A
+    - A - U
+    - C - G
+    - G - C
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter a DNA sequence: ATGCCAATT
+Converted mRNA: UACGGUUAA
+
+[2;3m// case 2[0m
+Enter a DNA sequence: AGTX
+Invalid DNA sequence! Please use only A, T, C and G.
+
+Enter a DNA sequence: GGCC
+Converted mRNA: CCGG
+```
+</CollapsibleSection>
+
+---
+
+#### Q9.
+
 You and your friend want to send each other secret messages so that if anyone else sees the message data in between, they won't understand it. 
 To do this, you'll write two programs:
 - Encoder: turns your plain-text message into a string of numbers before one sends it.

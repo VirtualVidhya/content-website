@@ -1,0 +1,130 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Fake Medicine
+metadata_title: Fake Medicine - Python Programming | V.Vidhya
+slug: fake-medicine-manager
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Python Programming by making a utility for solving the fake medicine issue.
+
+order: 60
+---
+
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+- ## Task
+
+Fake medicines endanger lives. To ensure authenticity, each medicine should have a unique alphanumeric label. 
+Build a text-based Medicine Label Manager that lets a user generate or verify labels through a simple menu-driven interface.
+
+<CollapsibleSection title="Instructions">
+- When the program starts, show the user a menu to choose the action.
+- **I. Generate a label:**
+    - Prompt for the medicine name and based on that generate a label as per this format:
+
+    `[4-digit random number][3-letter uppercase name][1 random uppercase letter][3-digit sequence]`
+    
+    where:
+
+        - 4-digit random number is 0000-9999
+        - 3-letter name is the first three letters (in uppercase) of the medicine (padded with 'X' if shorter)
+        - 1 random letter is a-z (in uppercase)
+        - 3-digit sequence increments per medicine prefix (001, 002, …)
+- **II. Verify a label:**
+    - Prompt for the label string and check for that label in your database to verify.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 1
+
+How many packages to label? 3
+Package #1 medicine name: Paracetamol
+Generated label: 0112PARJ003
+Package #2 medicine name: Azithromycin
+Generated label: 5572AZIF001
+Package #3 medicine name: Metformin
+Generated label: 6293METW001
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 1
+
+How many packages to label? 2
+Package #1 medicine name: Telmisartan
+Generated label: 2572TELD001
+Package #2 medicine name: Azithromycin
+Generated label: 6677AZIB002
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 1
+
+How many packages to label? 2
+Package #1 medicine name: Paracetamol
+Generated label: 7352PARX004
+Package #2 medicine name: Paracetamol
+Generated label: 5276PARM005
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 2
+
+Enter a label to verify: 6677AZIB002
+This medicine is genuine.
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 4       
+
+Invalid choice. Please select 1, 2, or 3.
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 2
+
+Enter a label to verify: 5213AZIK005
+Warning: fake medicine detected!
+
+Select an action:
+1. Generate new labels
+2. Verify a label
+3. Quit
+Enter choice (1-3): 3
+Goodbye!
+```
+</CollapsibleSection>
+
+---
+
+- ## Main Lessons
+
+<ul class="list-[circle]">
+    <li>Designing a menu-driven interface</li>
+    <li>Working with large datasets</li>
+    <li>Generating fixed-length unique alphanumeric codes</li>
+</ul>
+
+---
+
+- ## Guidelines
+
+Feel free to implement additional features to this utility program.

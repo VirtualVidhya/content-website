@@ -16,13 +16,15 @@ import Admonition from '@/components/Admonition.astro';
 import LinkMd from '@/components/LinkMd.astro';
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
 
-import FileDownload from "@/components/FileDownload.astro";
+{/* // import FileDownload from "@/components/FileDownload.astro"; */}
 import LibFileSrc from "@/assets/courses/programming/python/simpleimage.py"
 
-<Admonition variant="note" title="note">
-    <div class="flex flex-col gap-2 justify-center items-start my-2">
-        <p>The required <span class="font-bold">SimpleImage</span> helper module for all the exercises can be downloaded from here:</p>
-        <FileDownload fileSrc={LibFileSrc} fileName="simpleimage.py" />
+<Admonition variant="caution" title="note">
+    <div class="flex flex-col gap-2 my-2">
+        <p>The required <span class="font-bold">SimpleImage</span> helper module for all the exercises can be downloaded from 
+            <a href={LibFileSrc} download="simpleimage.py">here</a>
+        .</p>
+        {/* <FileDownload fileSrc={LibFileSrc} fileName="simpleimage.py" /> */}
         <p>The SimpleImage module uses the <span class="font-bold">Pillow</span> image library so In order for SimpleImage to work properly, 
         you need to <LinkMd href="https://pillow.readthedocs.io/en/stable/installation/basic-installation.html" title="install Pillow" /> on your machine.</p>
     </div>

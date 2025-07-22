@@ -16,7 +16,7 @@ if (title == null) title = variant;
 <div
   id="admonition"
   class:list={[
-    "flex w-full flex-col items-start justify-start gap-2 rounded-md border-2 border-b-6 px-6 py-3 transition-all prose-p:m-0",
+    "flex w-full flex-col items-start justify-start gap-2 rounded-md border-2 border-b-6 px-6 py-3 prose-p:m-0",
     {
       "border-font-color-blue-dark bg-font-color-blue dark:border-font-color-blue-dark dark:bg-font-color-blue-extra-dark":
         variant === "note",
@@ -30,7 +30,7 @@ if (title == null) title = variant;
         variant === "caution",
     },
     {
-      "border-font-color-blue-dark bg-font-color-blue dark:border-font-color-blue-dark dark:bg-font-color-blue-extra-dark":
+      "border-border bg-codeblock":
         variant === "info",
     },
   ]}
@@ -52,7 +52,7 @@ if (title == null) title = variant;
           variant == "caution",
       },
       {
-        "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+        "!text-foreground":
           variant == "info",
       },
     ]}
@@ -77,7 +77,7 @@ if (title == null) title = variant;
             variant == "caution",
         },
         {
-          "!text-font-color-blue-extra-dark dark:!text-font-color-blue":
+          "!text-foreground":
             variant == "info",
         },
       ]}

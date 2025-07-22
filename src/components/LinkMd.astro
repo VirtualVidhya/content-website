@@ -2,9 +2,10 @@
 interface Props {
   href: string
   title: string;
+  styleClass?: string;
 }
 
-const { href, title } = Astro.props as Props;
+const { href, title, styleClass = '' } = Astro.props as Props;
 ---
 
-<a href={href} rel="noreferrer noopener" target="_blank">{title}</a>
+<a href={href} rel="noreferrer noopener" target="_blank" class={`${styleClass}`}>{title}</a>

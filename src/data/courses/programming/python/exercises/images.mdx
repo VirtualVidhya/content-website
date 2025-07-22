@@ -1,0 +1,112 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Images
+metadata_title: Images - Python Programming | V.Vidhya
+slug: images
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Image Manipulation in Python Programming by practicing exercises based on real-world scenarios with V.Vidhya.
+
+order: 80
+---
+
+import Admonition from '@/components/Admonition.astro';
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+import FileDownload from "@/components/FileDownload.astro";
+import LibFileSrc from "@/assets/courses/programming/python/simpleimage.py"
+
+<Admonition variant="note" title="note">
+    <div class="flex flex-col gap-2 justify-center items-start my-2">
+        <p>The required <span class="font-bold">SimpleImage</span> helper module for all the exercises can be downloaded from here:</p>
+        <FileDownload fileSrc={LibFileSrc} fileName="simpleimage.py" />
+        <p>The SimpleImage module uses the <span class="font-bold">Pillow</span> image library so In order for SimpleImage to work properly, 
+        you need to <LinkMd href="https://pillow.readthedocs.io/en/stable/installation/basic-installation.html" title="install Pillow" /> on your machine.</p>
+    </div>
+        {/* <p class="!my-2.5 lg:!my-5">The required SimpleImage helper module for all the exercises can be downloaded from here:</p>  */}
+    {/* <div class="flex flex-col lg:flex-row lg:gap-3 justify-center items-start lg:justify-start lg:items-center">
+    </div> */}
+</Admonition>
+
+{/* <div class="w-full mb-12"></div> */}
+
+---
+
+#### Q1.
+
+Imagine you're building a simple photo-editing tool for your friend's photography blog. One of the popular looks they love is a warm “vintage sunset” filter that 
+boosts reds and blues, but slightly mutes greens - just like the glow you see when the sun is setting over the horizon.
+
+<CollapsibleSection title="Instructions">
+- Ask the user for an image filename (or uses a default if they just press Enter) and load the selected image.
+- Apply the “Vintage Sunset” filter by updating every pixel's color:
+    - `new red = old red x 1.5`
+    - `new green = old green x 0.7`
+    - `new blue = old blue x 1.5`
+- Show the image before and after applying the filter, so your friend can instantly compare the edited image against the original.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+- Original image:
+    ![Original Image Preview](@/assets/courses/programming/python/exercises/1.jpg)
+
+- Edited image:  
+    ![Edited Image Preview](@/assets/courses/programming/python/exercises/2.jpg)
+</CollapsibleSection>
+
+---
+
+#### Q2.
+
+You're working with environmental scientists who need an easy way to spot active forest fires in a satellite 
+photo of <LinkMd href="https://en.wikipedia.org/wiki/Wildfires_in_2017" title="Greenland's 2017 fire season" />. Your job is to write a function that lights up 
+the burning areas in bright red and turns the rest of the landscape into shades of gray, so the fires jump right off the screen.
+
+<CollapsibleSection title="Instructions">
+- Ask the user for an image filename (or uses a default if they just press Enter) and loads the selected image.
+- For each pixel, compute the average of its red, green and blue values. If the pixel's red component is greater than equal to that average, it's sufficiently red, indicating fire.
+- **Highlighting Fires:** 
+    - If a pixel is sufficiently red: set red = 255, green = 0, blue = 0
+    - else compute the pixel's grayscale value by averaging its RGB channels and set red = green = blue = that average.
+- Finally, show the original image side by side with the processed version for comparison.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+- Original image:
+    ![Original Image Preview](@/assets/courses/programming/python/exercises/3.jpg)
+
+- Edited image:  
+    ![Edited Image Preview](@/assets/courses/programming/python/exercises/4.jpg)
+</CollapsibleSection>
+
+---
+
+#### Q3.
+
+You're building a simple photo-editing feature for a nature website. 
+Your friend wants to add a mirror reflection effect beneath each photo, as if the image is sitting on a calm lake. 
+The reflected image should flip the original vertically, creating a seamless reflection.
+
+<CollapsibleSection title="Instructions">
+- Ask the user for an image filename (or uses a default if they just press Enter) and loads the selected image.
+- Create a new blank image that is twice as tall as the original (same width), copies the original into the top half, then
+generate a vertical reflection of the original into the bottom half, so the first row of the original becomes the last row of the output and so on.
+- Show the image before and after applying the filter, so your friend can instantly compare the edited image against the original.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+- Original image:
+    ![Original Image Preview](@/assets/courses/programming/python/exercises/5.jpg)
+
+- Edited image:
+    ![Edited Image Preview](@/assets/courses/programming/python/exercises/6.jpg)
+</CollapsibleSection>

@@ -64,7 +64,7 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
-    assetsInclude: ['**/*.zip'],
+    assetsInclude: ['**/*.zip', '**/*.py'],
   },
   image: {
     // Used for all Markdown images; not configurable per-image

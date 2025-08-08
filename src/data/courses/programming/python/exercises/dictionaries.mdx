@@ -1,0 +1,373 @@
+---
+pubDatetime: 2025-04-28T15:57:52.737Z
+modDatetime: 2025-04-28T15:57:52.737Z
+
+title: Dictionaries
+metadata_title: Dictionaries - Python Programming | V.Vidhya
+slug: dictionaries
+featured: false
+# ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+description: Learn Dictionaries in Python Programming by practicing exercises based on real-world scenarios with V.Vidhya.
+
+order: 80
+---
+
+import Admonition from '@/components/Admonition.astro';
+import LinkMd from '@/components/LinkMd.astro';
+import CollapsibleSection from '@/components/CollapsibleSection.astro';
+
+#### Q1.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    ages = ['hema': 23, 'rekha': 30, 'jaya': 27, 'sushma': 39]
+    print(ages)
+
+    salaries = {hema: 5000, rekha: 3500, jaya: 7000, sushma: 4500}
+    print(salaries)
+    ```
+
+- #### II.
+    ```py
+    userdata = {'name': 'sita', 'age': 23, 'address': 'kathmandu', 'active': True}
+
+    if userdata['AGE'] > 20:
+        print('Allowed')
+    else:
+        print('Disallowed')
+    ```
+
+- #### III.
+    ```py
+    squares = {}
+
+    squares = {2: 4, 3: 9, 5: 25}
+    print(squares)
+
+    squares[1] = 1
+    squares[4] = 16
+    print(squares)
+    ```
+
+---
+
+#### Q2.
+
+Write a program that stores five subjects and their marks in a dictionary, then prints the marks obtained in Maths and finally prints the total marks for all subjects.
+
+<Admonition variant="note" title="note">
+    No need to take user input. Just pre-initialise the values in the list.
+</Admonition>
+
+**Expected Output:**
+
+```ansi
+[2;3m// subject marks: Maths:85, English: 90, Science:78, History:88, Geography:80[0m
+
+Marks obtained in Maths: 85
+Total marks: 421
+```
+
+---
+
+#### Q3.
+
+A farmer monitors soil moisture across multiple fields each morning to detect dry spots before they stress the crops. 
+They need a simple program that reports current readings, flags fields below a critical threshold and then simulates irrigation by boosting those levels.
+
+<CollapsibleSection title="Instructions">
+Write a program that stores and manages current soil moisture readings (%) for five fields (**No need to take user input**), then:
+- Print the moisture level for each field.
+- For every field whose reading is below 30%, print an alert message saying "Irrigation needed".
+- Irrigate those dry fields by adding 20% to their moisture readings.
+- Finally, print the updated moisture levels for all fields.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// soil_moisture: Field-1:45, Field-2:28, Field-3:33, Field-4:25, Field-5:50[0m
+
+Soil moisture readings:
+Field-1: 45%
+Field-2: 28%
+Field-3: 33%
+Field-4: 25%
+Field-5: 50%
+
+Irrigation needed at Field-2
+Irrigation needed at Field-4
+
+Updated moisture after irrigation:
+Field-1: 45%
+Field-2: 48%
+Field-3: 33%
+Field-4: 45%
+Field-5: 50%
+```
+</CollapsibleSection>
+
+---
+
+#### Q4.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    ages = {'hema': 23, 'rekha': 30, 'jaya': 27, 'sushma': 39}
+
+    ages['rekha'] += 1
+    print(ages['sushma'])
+
+    ages['rani'] += 1
+    print(ages['rani'])
+
+    def incrementAge(name):
+        if name in ages:
+            ages[name] += 1
+
+    incrementAge('jaya')
+    print(ages['jaya'])
+    ```
+
+- #### II.
+    ```py
+    prices = {'pen': 10, 'pencil': 5, 'eraser': 3, 'sharpener': 8, 'notebook': 25, 'pen': 12}
+
+    print(prices)
+
+    stock = {'pen': 5, 'pencil': 5, 'eraser': 20, 'sharpener': 18, 'notebook': 7}
+
+    print(stock)
+    ```
+
+- #### III.
+    ```py
+    ages = {'hema': 23, 'rekha': 30, 'jaya': 27, 'sushma': 39}
+
+    print(ages.get('rani'))
+    print(ages['alia'])
+
+    removed_item_1 = ages.pop('rekha')
+    print(removed_item_1)
+
+    def printDict():
+        print("### People's Ages ###")
+        for name in ages:
+            print(str(name) + ": " + str(ages[name]))
+
+    printDict()
+
+    removed_item_2 = ages.pop('mahi')
+    print(removed_item_2)
+
+    del ages['maya']
+    removed_item_3 = del ages['jaya']
+    print(removed_item_3)
+
+    printDict()
+    ```
+
+- #### IV.
+    ```py
+    fruit_stock = {'apple': 10, 'banana': 18, 'orange': 15, 'papaya': 12}
+
+    print(f'Total fruits: {len(fruit_stock)}')
+    for subject in fruit_stock.keys():
+        print(subject)
+
+    fruit_stock.clear()
+
+    print(fruit_stock)
+    ```
+
+---
+
+#### Q5.
+
+A writer is polishing their story and worries that certain words may be overused. 
+To help, write a program where, user will type in the paragraph and then list the common <LinkMd href="https://www.coursera.org/articles/what-are-stop-words" title="stop-words" /> 
+they want the program to ignore. The program will then reports the five words that appear most frequently outside of the stop-word list.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter your text: 
+His followers called him Mahasamatman and said he was a god. He preferred to drop the Maha 
+and the atman, however, and called himself Sam. He never claimed to be a god. But then, 
+he never claimed not to be a god.
+
+Enter stop-words (separated by spaces):
+he a the and to of in was is but
+
+[2;3m// output[0m
+god: 3
+called: 2
+claimed: 2
+never: 2
+followers: 1
+```
+</CollapsibleSection>
+
+---
+
+#### Q6. **_(Adv.)_**
+
+A small business owner needs a digital contact manager to keep track of clients' multiple phone numbers and emails, allowing staff to quickly add, remove or update client details 
+and always have an up-to-date, alphabetized directory.
+
+<CollapsibleSection title="Instructions">
+- Pre-initialize a contacts dictionary with three sample entries, each mapping a person's name to another dict with:
+    - phones: a list of one or more phone-number strings
+    - email: their email address string
+- Present a menu to the user with options:
+    - Add a new contact: prompt for name, one phone and email
+    - Remove a contact: 
+    - Update a contact: prompt for name and a new phone, append it to that contact's phones list (print “Not found” if missing).
+    - Display all contacts: print all contacts sorted alphabetically by name
+    - Exit
+- Use dictionary methods and checks for clean lookups and updates
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// Initial Contacts:
+Lukasz Langa: phones: 9876543210, 8765432109, email: lukasz@email.com
+Daniel Feldroy: phones: 9123456780, email: daniel@email.com
+Doug Hellmann: phones: 9988776655, email: doug@email.com[0m
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 4
+
+Contacts list:
+# Daniel Feldroy:
+   Phones: 9123456780
+   Email: daniel@email.com
+# Doug Hellmann:
+   Phones: 9988776655
+   Email: doug@email.com
+# Lukasz Langa:
+   Phones: 9876543210, 8765432109
+   Email: lukasz@email.com
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 1
+Enter name: Matt Layman
+Enter phone: 7856985642
+Enter email: matt@email.com
+Contact 'Matt Layman' added.
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 4
+
+Contacts list:
+# Daniel Feldroy:
+   Phones: 9123456780
+   Email: daniel@email.com
+# Doug Hellmann:
+   Phones: 9988776655
+   Email: doug@email.com
+# Lukasz Langa:
+   Phones: 9876543210, 8765432109
+   Email: lukasz@email.com
+# Matt Layman:
+   Phones: 7856985642
+   Email: matt@email.com
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 2
+Enter name: Doug Hallmann
+Not found.
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 2
+Enter name: Doug Hellmann   
+Contact 'Doug Hellmann' deleted.
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 3
+Enter name: Daniel Feldroy
+Enter new phone: 9898757564
+Phone number added for 'Daniel Feldroy'.
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 4
+
+Contacts list:
+# Daniel Feldroy:
+   Phones: 9123456780, 9898757564
+   Email: daniel@email.com
+# Lukasz Langa:
+   Phones: 9876543210, 8765432109
+   Email: lukasz@email.com
+# Matt Layman:
+   Phones: 7856985642
+   Email: matt@email.com
+
+### MENU: ###
+1. Add contact
+2. Delete contact
+3. Update contact
+4. Display contacts
+5. Exit
+
+Enter choice: 5
+Program closed!
+```
+</CollapsibleSection>

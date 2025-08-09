@@ -371,3 +371,235 @@ Enter choice: 5
 Program closed!
 ```
 </CollapsibleSection>
+
+---
+
+#### Q7. **_(Adv.)_**
+
+A regional farmers' co-op reviews weekend market performance to spot top sellers and customer satisfaction. For that, they need an interactive tool to summarize sales, 
+identify popular products and track vendor ratings on the fly.
+
+<CollapsibleSection title="Instructions">
+Your program should present a simple menu that lets users: 
+- View comprehensive sales and rating summaries
+- Enter a live update (vendor name, product, quantity, rating)
+- After each action, it must recalculate and display:
+    - Total units sold per vendor
+    - Aggregate sales per product and the top-selling item
+    - Each vendor's average customer rating and list those rated 4.0 or higher
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Welcome to the Farmers' Co-op Market Performance Tracker!
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 1
+
+--------------------------------------------------
+COMPREHENSIVE MARKET PERFORMANCE SUMMARY
+--------------------------------------------------
+
+TOTAL UNITS SOLD PER VENDOR:
+----------------------------------------
+  Agrim Farms             77 units
+  Freshnet Agro           50 units
+  Swasthya Baag           43 units
+
+TOP-SELLING PRODUCT:
+----------------------------------------
+  Tomatoes - 45 units sold
+
+ALL PRODUCT SALES:
+----------------------------------------
+  Tomatoes                 45 units
+  Apples                   38 units
+  Lettuce                  32 units
+  Cheese                   25 units
+  Milk                     18 units
+  Honey                    12 units
+
+VENDOR RATINGS:
+----------------------------------------
+  Swasthya Baag         4.73/5.0
+  Agrim Farms           4.50/5.0
+  Freshnet Agro         4.10/5.0
+
+HIGHLY RATED VENDORS (4.0+):
+----------------------------------------
+  Swasthya Baag         4.73/5.0
+  Agrim Farms           4.50/5.0
+  Freshnet Agro         4.10/5.0
+
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 2
+
+--------------------------------------------------
+ADD LIVE MARKET UPDATE
+--------------------------------------------------
+Enter vendor name: Freshnet Agro
+Enter product name: Apples
+Enter quantity sold: 35
+Enter customer rating (1.0-5.0): 3.45
+Successfully added: 35 units of Apples from Freshnet Agro (Rating: 3.45/5.0)
+
+Updated Market Summary:
+----------------------------------------
+
+Total units by vendor:
+  Freshnet Agro: 85 units
+  Agrim Farms: 77 units
+  Swasthya Baag: 43 units
+
+Top-selling product: Apples (73 units)
+
+Vendors rated 4.0+:
+  Swasthya Baag: 4.73/5.0
+  Agrim Farms: 4.50/5.0
+
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 2
+
+--------------------------------------------------
+ADD LIVE MARKET UPDATE
+--------------------------------------------------
+Enter vendor name: Malabar Farms
+Enter product name: Tomatoes
+Enter quantity sold: 20
+Enter customer rating (1.0-5.0): 4.15
+Successfully added: 20 units of Tomatoes from Malabar Farms (Rating: 4.15/5.0)
+
+Updated Market Summary:
+----------------------------------------
+
+Total units by vendor:
+  Freshnet Agro: 85 units
+  Agrim Farms: 77 units
+  Swasthya Baag: 43 units
+  Malabar Farms: 20 units
+
+Top-selling product: Apples (73 units)
+
+Vendors rated 4.0+:
+  Swasthya Baag: 4.73/5.0
+  Agrim Farms: 4.50/5.0
+  Malabar Farms: 4.15/5.0
+
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 2       
+
+--------------------------------------------------
+ADD LIVE MARKET UPDATE
+--------------------------------------------------
+Enter vendor name: Malabar Farms
+Enter product name: Onions
+Enter quantity sold: 25
+Enter customer rating (1.0-5.0): 3.24
+Successfully added: 25 units of Onions from Malabar Farms (Rating: 3.24/5.0)
+
+Updated Market Summary:
+----------------------------------------
+
+Total units by vendor:
+  Freshnet Agro: 85 units
+  Agrim Farms: 77 units
+  Malabar Farms: 45 units
+  Swasthya Baag: 43 units
+
+Top-selling product: Apples (73 units)
+
+Vendors rated 4.0+:
+  Swasthya Baag: 4.73/5.0
+  Agrim Farms: 4.50/5.0
+
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 1
+
+--------------------------------------------------
+COMPREHENSIVE MARKET PERFORMANCE SUMMARY
+--------------------------------------------------
+
+TOTAL UNITS SOLD PER VENDOR:
+----------------------------------------
+  Freshnet Agro           85 units
+  Agrim Farms             77 units
+  Malabar Farms           45 units
+  Swasthya Baag           43 units
+
+TOP-SELLING PRODUCT:
+----------------------------------------
+  Apples - 73 units sold
+
+ALL PRODUCT SALES:
+----------------------------------------
+  Apples                   73 units
+  Tomatoes                 65 units
+  Lettuce                  32 units
+  Cheese                   25 units
+  Onions                   25 units
+  Milk                     18 units
+  Honey                    12 units
+
+VENDOR RATINGS:
+----------------------------------------
+  Swasthya Baag         4.73/5.0
+  Agrim Farms           4.50/5.0
+  Freshnet Agro         3.94/5.0
+  Malabar Farms         3.70/5.0
+
+HIGHLY RATED VENDORS (4.0+):
+----------------------------------------
+  Swasthya Baag         4.73/5.0
+  Agrim Farms           4.50/5.0
+
+Press Enter to continue...
+
+==================================================
+FARMERS' CO-OP MARKET PERFORMANCE TRACKER
+==================================================
+1. View comprehensive sales and rating summaries
+2. Enter a live update (vendor, product, quantity, rating)
+3. Exit program
+--------------------------------------------------
+Enter your choice (1-3): 3
+
+Thank you for using the Market Performance Tracker!
+Have a great market day!
+```
+</CollapsibleSection>

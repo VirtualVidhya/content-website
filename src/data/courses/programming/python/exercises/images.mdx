@@ -64,6 +64,32 @@ boosts reds and blues, but slightly mutes greens - just like the glow you see wh
 
 #### Q2.
 
+Imagine you're adding an Instagram-style <LinkMd href='https://en.wikipedia.org/wiki/Sepia_(color)' title='Sepia filter' /> to your photo tool - a warm, brownish tone that gives pictures a nostalgic, old-time feel 
+and helps freeze those good memories.
+
+<CollapsibleSection title="Instructions">
+- Ask the user for an image filename (or uses a default if they just press Enter) and load the selected image.
+- Apply the Sepia filter to every pixel using the following transform (then cap each channel at 255):
+    - `new_red = 0.393 * old_red + 0.769 * old_green + 0.189 * old_blue`
+    - `new_green = 0.349 * old_red + 0.686 * old_green + 0.168 * old_blue`
+    - `new_blue = 0.272 * old_red + 0.534 * old_green + 0.131 * old_blue`
+- Show the image before and after applying the filter, so your friend can instantly compare the edited image against the original.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+- Original image:
+    ![Original Image Preview](@/assets/courses/programming/python/exercises/images/7.jpg)
+
+- Edited image:  
+    ![Edited Image Preview](@/assets/courses/programming/python/exercises/images/8.jpg)
+</CollapsibleSection>
+
+---
+
+#### Q3.
+
 You're working with environmental scientists who need an easy way to spot active forest fires in a satellite 
 photo of <LinkMd href="https://en.wikipedia.org/wiki/Wildfires_in_2017" title="Greenland's 2017 fire season" />. Your job is to write a function that lights up 
 the burning areas in bright red and turns the rest of the landscape into shades of gray, so the fires jump right off the screen.
@@ -89,7 +115,7 @@ the burning areas in bright red and turns the rest of the landscape into shades 
 
 ---
 
-#### Q3.
+#### Q4.
 
 You're building a simple photo-editing feature for a nature website. 
 Your friend wants to add a mirror reflection effect beneath each photo, as if the image is sitting on a calm lake. 

@@ -229,6 +229,44 @@ Unsafe segments (angle > 35°):
 
 #### Q4.
 
+Write a program that asks for a person's birthdate and then tells them their exact age - years, months and days - as of today. 
+The program should check if the date is valid and correctly handle leap years and months of different lengths.
+
+<Admonition variant="hint" title="hint">
+    **<LinkMd href="https://docs.python.org/3/library/datetime.html" title="datetime" />** module can be used for all the date and time related operations.
+</Admonition>
+
+<div class="w-full mt-6 mb-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3m// case 1[0m
+Enter the birth year: 2002
+Enter the birth month: 2
+Enter the birth day: 2
+
+Age: 23 years, 18 months, and 10 days
+
+[2;3m// case 2[0m
+Enter the birth year: 2028
+Enter the birth month: 12
+Enter the birth day: 2
+
+Invalid birthdate! Please enter a valid date.
+
+[2;3m// case 3[0m
+Enter the birth year: 1999
+Enter the birth month: 29
+Enter the birth day: 2
+
+Invalid birthdate! Please enter a valid date.
+```
+</CollapsibleSection>
+
+---
+
+#### Q5.
+
 A parent has collected a list of popular baby names but wants an easy way to see all the options that begin with a given letter. 
 Write a program that helps them quickly get the names starting with the letter they choose.
 
@@ -257,7 +295,7 @@ No names found starting with 'V'.
 
 ---
 
-#### Q5.
+#### Q6.
 
 What will be the output of the following programs?
 
@@ -331,7 +369,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q6.
+#### Q7.
 
 A new site wants to give each user a fun, memorable username automatically. The rule is:
 - First character: the first letter of first name (lowercase)
@@ -357,7 +395,7 @@ Your username is: mdayd17
 
 ---
 
-#### Q7.
+#### Q8.
 
 Write a text-based <LinkMd href="https://www.ncbi.nlm.nih.gov/books/NBK26887/" title='DNA to RNA Converter' /> that lets the user enter DNA sequences, validate them and then turns them into mRNA.
 
@@ -390,7 +428,7 @@ Converted mRNA: CCGG
 
 ---
 
-#### Q8.
+#### Q9.
 
 You and your friend want to send each other secret messages so that if anyone else sees the message data in between, they won't understand it. 
 To do this, you'll write two programs:

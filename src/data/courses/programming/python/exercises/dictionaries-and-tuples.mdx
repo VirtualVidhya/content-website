@@ -2,12 +2,12 @@
 pubDatetime: 2025-04-28T15:57:52.737Z
 modDatetime: 2025-04-28T15:57:52.737Z
 
-title: Dictionaries
-metadata_title: Dictionaries - Python Programming | V.Vidhya
-slug: dictionaries
+title: Dictionaries & Tuples
+metadata_title: Dictionaries & Tuples - Python Programming | V.Vidhya
+slug: dictionaries-and-tuples
 featured: false
 # ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
-description: Learn Dictionaries in Python Programming by practicing exercises based on real-world scenarios with V.Vidhya.
+description: Learn Dictionaries & Tuples in Python Programming by practicing exercises based on real-world scenarios with V.Vidhya.
 
 order: 90
 ---
@@ -203,7 +203,7 @@ they want the program to ignore. The program will then reports the five words th
 
 <CollapsibleSection title="Expected Output">
 ```ansi
-[2;3m// case 1[0m
+[2;3m// input[0m
 Enter your text: 
 His followers called him Mahasamatman and said he was a god. He preferred to drop the Maha 
 and the atman, however, and called himself Sam. He never claimed to be a god. But then, 
@@ -374,7 +374,50 @@ Program closed!
 
 ---
 
-#### Q7. **_(Adv.)_**
+#### Q7.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    customers = ()
+
+    customers.append("Anon")
+    ```
+
+- #### II.
+    ```py
+    jan_sales_data = (13, 12, 65, 45)
+    feb_sales_data = (34, 29, 51, 36)
+    total_sales_data = jan_sales_data + feb_sales_data
+
+    print(total_sales_data)
+    ```
+
+- #### III.
+    ```py
+    err_msg = ('Error', 'Invalid input!')
+
+    print(err_msg * 2)
+
+    err_msg[1] = 'Invalid Input'
+    ```
+
+- #### IV.
+    ```py
+    sales_data = (4, 2, 8, 3, 5, 7, 1, 6, 9, 0, 4, 3)
+
+    print(sales_data[5])
+    print(sales_data[1:6])
+    ```
+
+---
+
+#### Q8. **_(Adv.)_**
 
 A regional farmers' co-op reviews weekend market performance to spot top sellers and customer satisfaction. For that, they need an interactive tool to summarize sales, 
 identify popular products and track vendor ratings on the fly.
@@ -601,5 +644,176 @@ Enter your choice (1-3): 3
 
 Thank you for using the Market Performance Tracker!
 Have a great market day!
+```
+</CollapsibleSection>
+
+---
+
+#### Q9.
+
+What will be the output of the following programs?
+
+<Admonition variant="caution" title="caution">
+    You have to predict the output result without running/executing the code.
+</Admonition>
+
+- #### I.
+    ```py
+    year_data = list(map(int, input('Enter birth and death years: ').split()))
+    user_data = (11, 'Aaron Swartz', year_data, 'Reddit')
+
+    user_data[2][0] = 1986
+    print(user_data)
+    ```
+
+- #### II.
+    ```py
+    n1 = (40)
+    n2 = (40,)
+
+    if n1 == n2:
+        print('n1 is equal to n2')
+    else:
+        print('n1 is not equal to n2')
+    ```
+
+- #### III.
+    ```py
+    err_msg = ('Error', 'Invalid input!')
+
+    print(err_msg * 2)
+
+    err_msg[1] = 'Invalid Input'
+    ```
+
+- #### IV. **_(Adv.)_**
+    ```py
+    n1 = (1, 2, 3)
+    n2 = (1, 2, 3)
+
+    if n1 == n2:
+        print('n1 is equal to n2')
+    else:
+        print('n1 is not equal to n2')
+
+    if n1 is n2:
+        print('n1 is n2')
+    else:
+        print('n1 is not n2')
+    ```
+
+- #### V. **_(Adv.)_**
+    ```py
+    n1 = (42, 'Edward Snowden', ['Lonnie', 'Wendy'])
+    n2 = (42, 'Edward Snowden', ['Lonnie', 'Wendy'])
+
+    if n1 == n2:
+        print('n1 is equal to n2')
+    else:
+        print('n1 is not equal to n2')
+
+    if n1 is n2:
+        print('n1 is n2')
+    else:
+        print('n1 is not n2')
+    ```
+
+---
+
+#### Q10.
+
+You're building a World Treasure Map assistant program. 
+When an explorer types the name of a famous treasure/place, the program should return the place's GPS coordinates.
+
+**Expected Output:**
+
+```ansi
+[2;3m// case 1[0m
+Enter place name: Taj Mahal
+Found! Statue of Liberty at latitude 27.1751 and longitude 78.0421
+
+[2;3m// case 2[0m
+Enter place name: Hampi
+Not Found! Sorry, Hampi is not in our database.
+```
+
+---
+
+#### Q11.
+
+You're on the event planning team and must build a simple, menu-driven event helper so staff can add school events, check a date, list all events and find the next event.
+
+<CollapsibleSection title="Instructions">
+Your program should present a simple menu that lets users:
+- Add event: prompt for date (YYYY MM DD) and event name
+- Check event by date: prompt for date and show the corresponding event
+- List all events: print all date-event pairs sorted chronologically
+- Next event after date: prompt for date and print the next occuring event after that date
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+```ansi
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 3
+All event dates:
+(2025, 3, 21), 'Spring Fair'
+(2025, 8, 16), 'Janmashtami Celebration'
+(2025, 12, 25), 'Winter Feast'
+
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 1
+Enter date (YYYY MM DD): 2026 1 14
+Enter event description: Kite Festival
+
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 2
+Enter date (YYYY MM DD): 2025 8 16
+Found: 2024-07-29 - Janmashtami Celebration
+
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 2
+Enter date (YYYY MM DD): 2025 6 7
+No event on 2025-06-07
+
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 4        
+Enter date (YYYY MM DD): 2024 7 30
+Next event: 2025-12-25 - Winter Feast
+
+### MENU: ###
+1. Add event
+2. Check event by date
+3. List all events
+4. Next event after date
+5. Exit
+Choose option: 5
+Exiting program. Goodbye!
 ```
 </CollapsibleSection>

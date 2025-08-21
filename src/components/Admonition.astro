@@ -1,6 +1,7 @@
 ---
 import IconBulb from "./Icons/IconBulb.astro";
 import IconCircleExclamation from "./Icons/IconCircleExclamation.astro";
+import IconInfo from "./Icons/IconInfo.astro";
 import IconTriangleExclamation from "./Icons/IconTriangleExclamation.astro";
 
 interface Props {
@@ -60,7 +61,7 @@ if (title == null) title = variant;
     {variant === "note" && <IconCircleExclamation styleClass="h-6 w-6" />}
     {variant === "hint" && <IconBulb styleClass="h-6 w-6" />}
     {variant === "caution" && <IconTriangleExclamation styleClass="h-6 w-6" />}
-    {variant === "info" && <IconCircleExclamation styleClass="h-6 w-6" />}
+    {variant === "info" && <IconInfo styleClass="h-6 w-6" />}
     <p
       class:list={[
         "font-bold",

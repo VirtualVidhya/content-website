@@ -19,22 +19,39 @@ import LibFileSrc from "@/assets/courses/programming/python/exercises/graphics-a
 
 <Admonition variant="caution" title="note">
     <div class="flex flex-col gap-2 my-2">
+        <p>For all the graphics functionality, you can use <LinkMd href="https://docs.python.org/3/library/tkinter.html" title='tkinter' /> package.</p>
         <p>You can <a href={LibFileSrc} download="make_canvas.py">get the <i>make_canvas()</i></a> utility function, which makes drawing the canvas for painting raw graphics 
-        simpler</p>
-        {/* <FileDownload fileSrc={LibFileSrc} fileName="simpleimage.py" /> */}
-        <p>The SimpleImage module uses the Pillow image library so in order for SimpleImage to work properly, 
-        you need to <LinkMd href="https://pillow.readthedocs.io/en/stable/installation/basic-installation.html" title="install Pillow" /> on your machine.</p>
+        simpler.</p>
     </div>
-        {/* <p class="!my-2.5 lg:!my-5">The required SimpleImage helper module for all the exercises can be downloaded from here:</p>  */}
-    {/* <div class="flex flex-col lg:flex-row lg:gap-3 justify-center items-start lg:justify-start lg:items-center">
-    </div> */}
 </Admonition>
 
 ---
 
 #### Q1.
 
-Imagine you're building a simple chess game and your first job right now is to just draw the game board. So create a canvas (for e.g. 800x800)
+Imagine you're building a tiny generative-art toy program. Your task is to make a program that fills a window with colorful random circles so it looks like 
+confetti on a canvas.
+
+<CollapsibleSection title="Instructions">
+- Write a program that draws `N` random circles on a canvas. 
+- Each circle must have -
+    - a random diameter within a fixed range (e.g. 50 to 100 px)
+    - a random position so it fits fully inside the canvas
+    - a random generated color
+- Keep the key parameters - canvas size, number of circles, diameter range etc. defined in one place so it's easy to change thm later.
+</CollapsibleSection>
+
+<div class="w-full my-2"></div>
+
+<CollapsibleSection title="Expected Output">
+    ![Expected Output Preview](@/assets/courses/programming/python/exercises/graphics-animations-and-ui/2.png)
+</CollapsibleSection>
+
+---
+
+#### Q2.
+
+Imagine you're building a simple chess game and your first job right now is to just draw the game board. So, create a canvas (for e.g. 800x800)
 and draw a 8x8 grid that fits the canvas.
 
 <CollapsibleSection title="Instructions">

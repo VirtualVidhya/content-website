@@ -86,59 +86,44 @@ and draw a 8x8 grid that fits the canvas.
     ![Expected Output Preview](@/assets/courses/programming/python/exercises/graphics-animations-and-ui/1.png)
 </CollapsibleSection>
 
-{/* ---
+---
 
-#### Q2.
+#### Q4.
 
-Imagine you're adding an Instagram-style <LinkMd href='https://en.wikipedia.org/wiki/Sepia_(color)' title='Sepia filter' /> to your photo tool - a warm, brownish tone that gives pictures a nostalgic, old-time feel 
-and helps freeze those good memories.
+Build a simple interactive 'Follow the mouse' program, where a small image smoothly glides from its current position to the position where the user clicks.
 
-<CollapsibleSection title="Instructions">
+{/* <CollapsibleSection title="Instructions">
 - Ask the user for an image filename (or uses a default if they just press Enter) and load the selected image.
 - Apply the Sepia filter to every pixel using the following transform (then cap each channel at 255):
     - `new_red = 0.393 * old_red + 0.769 * old_green + 0.189 * old_blue`
     - `new_green = 0.349 * old_red + 0.686 * old_green + 0.168 * old_blue`
     - `new_blue = 0.272 * old_red + 0.534 * old_green + 0.131 * old_blue`
 - Show the image before and after applying the filter, so your friend can instantly compare the edited image against the original.
-</CollapsibleSection>
+</CollapsibleSection> */}
 
-<div class="w-full my-2"></div>
+{/* <div class="w-full my-2"></div> */}
 
 <CollapsibleSection title="Expected Output">
-- Original image:
-    ![Original Image Preview](@/assets/courses/programming/python/exercises/images/7.jpg)
-
-- Edited image:  
-    ![Edited Image Preview](@/assets/courses/programming/python/exercises/images/8.jpg)
+![Expected Output Preview](@/assets/courses/programming/python/exercises/graphics-animations-and-ui/4.gif)
 </CollapsibleSection>
 
 ---
 
-#### Q3.
+#### Q5.
 
-You're working with environmental scientists who need an easy way to spot active forest fires in a satellite 
-photo of <LinkMd href="https://en.wikipedia.org/wiki/Wildfires_in_2017" title="Greenland's 2017 fire season" />. Your job is to write a function that lights up 
-the burning areas in bright red and turns the rest of the landscape into shades of gray, so the fires jump right off the screen.
+Build a simple side-view car controller where the player can steer a car left and right using the keyboard keys.
 
 <CollapsibleSection title="Instructions">
-- Ask the user for an image filename (or uses a default if they just press Enter) and loads the selected image.
-- For each pixel, compute the average of its red, green and blue values. If the pixel's red component is greater than equal to that average, it's sufficiently red, indicating fire.
-- **Highlighting Fires:** 
-    - If a pixel is sufficiently red: set red = 255, green = 0, blue = 0
-    - else compute the pixel's grayscale value by averaging its RGB channels and set red = green = blue = that average.
-- Finally, show the original image side by side with the processed version for comparison.
+- The car can be made from simple canvas shapes (body, roof, wheels, spoke lines) but feel free to use your creativity.
+- On pressing the keyboard keys, the car should move ahead in the respective direction and the wheels should visually rotate (spokes turn).
 </CollapsibleSection>
 
 <div class="w-full my-2"></div>
 
 <CollapsibleSection title="Expected Output">
-- Original image:
-    ![Original Image Preview](@/assets/courses/programming/python/exercises/images/3.jpg)
-
-- Edited image:  
-    ![Edited Image Preview](@/assets/courses/programming/python/exercises/images/4.jpg)
+![Expected Output Preview](@/assets/courses/programming/python/exercises/graphics-animations-and-ui/5.gif)
 </CollapsibleSection>
-
+{/* 
 ---
 
 #### Q4.

@@ -1,0 +1,15 @@
+---
+export type Props = {
+  level: "B" | "I" | "A";
+};
+
+const { level } = Astro.props;
+
+const difficultyMap: Record<string, string> = {
+  B: "BEG",
+  I: "INT",
+  A: "ADV",
+};
+---
+
+<p class="que-difficulty-tag">{difficultyMap[level]}</p>

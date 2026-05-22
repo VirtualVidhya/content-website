@@ -14,8 +14,9 @@ order: 20
 
 import Admonition from '@/components/Admonition.astro';
 import LinkMd from '@/components/LinkMd.astro';
+import QueDiffTag from '@/components/QueDifficultyTag.astro';
 
-#### Q1.
+#### Q1. <QueDiffTag level='B' />
 
 Write a program to calculate the perimeter and the area of a rectangle.
 Take the length and the width of a rectangle from user and then prints the value of perimeter and area of that given rectangle.
@@ -47,12 +48,12 @@ What will be the output of the following programs?
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     print(6 + 5 * 4 % 3)
     ```
 
-- #### II. 
+- #### II. <QueDiffTag level='B' />
     ```py
     a = 3
     a += 1
@@ -64,7 +65,7 @@ What will be the output of the following programs?
     print(a)
     ```
 
-- #### III. 
+- #### III. <QueDiffTag level='B' />
     ```py
     x = '420'
     y = '96'
@@ -72,7 +73,7 @@ What will be the output of the following programs?
     print(x + y)
     ```
 
-- #### IV. 
+- #### IV. <QueDiffTag level='B' />
     ```py
     x = 9
     y = 2
@@ -90,7 +91,7 @@ What will be the output of the following programs?
     print(y)
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='I' />
     ```py
     i = 5 * 2; print(i);
 
@@ -98,7 +99,7 @@ What will be the output of the following programs?
     print(j)
     ```
 
-- #### VI.
+- #### VI. <QueDiffTag level='B' />
     ```py
     GRAVITY = 9.8
 
@@ -115,7 +116,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q3.
+#### Q3. <QueDiffTag level='I' />
 
 There are 10 seats placed in a circle for an event, numbered from 1 to 10. People are arriving and standing in a waiting line (queue). Each person is given a seat based on their position in the line.
 
@@ -142,7 +143,7 @@ What will be the output of the following programs?
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='I' />
     ```py
     message1 = "Linus Torvalds, the creator of the linux kernel once said -"
     message2 = "Most of the good programmers do programming not because they expect to get paid or get adulation by the public,"
@@ -152,7 +153,7 @@ What will be the output of the following programs?
     print('{} {}'.format(message2, message3))
     ```
 
-- #### II. 
+- #### II. <QueDiffTag level='B' />
     ```py
     show_name = "Monty Python's Flying Circus"
 
@@ -160,7 +161,7 @@ What will be the output of the following programs?
     print(show_name)
     ```
 
-- #### III. 
+- #### III. <QueDiffTag level='I' />
     ```py
     fname = "Guido"
     mname = "van"
@@ -169,7 +170,7 @@ What will be the output of the following programs?
     print('{1} {2} {3}'.format(fname, mname, lname))
     ```
 
-- #### IV.
+- #### IV. <QueDiffTag level='B' />
     ```py
     name = "Albert Einstein"
 
@@ -181,7 +182,7 @@ What will be the output of the following programs?
     print(f"- {name}")
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='I' />
     ```py
     print(1,00,000)
 
@@ -190,7 +191,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q5.
+#### Q5. <QueDiffTag level='B' />
 
 Write a program that takes the cost of any 3 food items from the user (e.g. a packet of biscuit, a packet of waffer, an icecream cone) and then - 
 - Print the **Total Cost** of the items
@@ -217,7 +218,7 @@ Total Bill: 153.4
 
 ---
 
-#### Q6.
+#### Q6. <QueDiffTag level='B' />
 
 Write a program that takes a value of radius from user, then find the circumference and area of a circle for a given radius.
 
@@ -240,7 +241,7 @@ Area: 78.5
 
 ---
 
-#### Q7.
+#### Q7. <QueDiffTag level='B' />
 
 Write a program that takes a value of temperature in Celsius from user, then convert it into Kelvin and Fahrenheit.
 
@@ -261,7 +262,7 @@ temperature in Fahrenheit: 86
 
 ---
 
-#### Q8.
+#### Q8. <QueDiffTag level='I' />
 
 You're helping a government planning department analyze how a country's population is expected to grow over time. Based on the current population, 
 an estimated annual growth rate and a time period in years, you need to calculate what the population will be at the end of that period.
@@ -296,7 +297,7 @@ What will be the output of the following programs?
     You have to predict the output result without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     x = 10
     y = 5
@@ -306,7 +307,7 @@ What will be the output of the following programs?
     print((x - 4) != (y + 2))
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     x = 10
     y = 5
@@ -316,7 +317,7 @@ What will be the output of the following programs?
     print(((x > 20) or (not (y < 10))))
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='I' />
     ```py
     w = True
     x = False
@@ -329,7 +330,7 @@ What will be the output of the following programs?
     print((w or (x or not y and z)))
     ```
 
-- #### IV. _**(Adv.)**_
+- #### IV. <QueDiffTag level='A' />
     ```py
     x = (100.0 - 99.99)
     y = (10.0 - 9.99)
@@ -341,7 +342,7 @@ What will be the output of the following programs?
 
 ----
 
-#### Q10.
+#### Q10. <QueDiffTag level='B' />
 
 A bank wants to alert its customers when their daily balance swing is large.
 
@@ -366,7 +367,7 @@ Alert! Your balance swung by rs.1300.75 today.
 
 ---
 
-#### Q11.
+#### Q11. <QueDiffTag level='B' />
 
 Your car's onboard computer needs a quick summary of mileage. Write a program that -
 - Asks for distance traveled (in km) and fuel consumed (in liters).
@@ -387,7 +388,7 @@ Your fuel efficiency is 13.92 km/L.
 
 ---
 
-#### Q12. _**(Adv.)**_
+#### Q12. <QueDiffTag level='A' />
 
 Consider the following division and remainder operations, and try to predict the result.
 
@@ -414,7 +415,7 @@ Consider the following division and remainder operations, and try to predict the
 
 ---
 
-#### Q13.
+#### Q13. <QueDiffTag level='I' />
 
 A workshop organizer needs to make a system to determine at what hour a workshop ends on a 12-hour clock, given its start time and duration. 
 Write a Python program that -

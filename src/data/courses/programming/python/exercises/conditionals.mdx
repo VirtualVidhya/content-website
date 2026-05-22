@@ -13,12 +13,13 @@ order: 30
 ---
 
 import Admonition from '@/components/Admonition.astro';
+import QueDiffTag from '@/components/QueDifficultyTag.astro';
 
 #### Q1.
 
 Consider the following programs:
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -28,7 +29,7 @@ Consider the following programs:
         print("Bye")
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -38,7 +39,7 @@ Consider the following programs:
         print("Bye")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -48,8 +49,8 @@ Consider the following programs:
         print("Bye")
     ```
 
-- #### IV.
-    ```py
+- #### IV. <QueDiffTag level='B' />
+    ```py 
     x = 5
 
     if x =< 10:
@@ -58,7 +59,7 @@ Consider the following programs:
         print("Bye")
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -68,7 +69,7 @@ Consider the following programs:
         print("Bye")
     ```
 
-- #### VI.
+- #### VI. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -76,7 +77,7 @@ Consider the following programs:
         print("Hi")
     ```
 
-- #### VII.
+- #### VII. <QueDiffTag level='B' />
     ```py
     x = 5
 
@@ -101,7 +102,7 @@ What will be the output for the programs given above?
 
 ---
 
-#### Q2.
+#### Q2. <QueDiffTag level='B' />
 
 At a local bank, customers are allowed to withdraw money without any extra charge as long as the withdrawal amount is less than rs.1000 in a single day.
 However, if a customer withdraws rs.1000 or more in a day, a small transaction fee is applied.
@@ -130,7 +131,7 @@ What will be the output of the following programs?
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     score = 18
     total = 20
@@ -141,7 +142,7 @@ What will be the output of the following programs?
         print("Invalid score.")
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='I' />
     ```py
     percentage = 55.63
 
@@ -151,7 +152,7 @@ What will be the output of the following programs?
         print("This is not a valid percentage.")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='I' />
     ```py
     itemsOrdered = 3
     totalAmount = 950
@@ -162,7 +163,7 @@ What will be the output of the following programs?
         print("Delivery Fee Applied")
     ```
 
-- #### IV.
+- #### IV. <QueDiffTag level='I' />
     ```py
     a = b = 5
 
@@ -172,7 +173,7 @@ What will be the output of the following programs?
         print("not all are 5")
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='I' />
     ```py
     grade = 'D'
 
@@ -184,7 +185,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q4.
+#### Q4. <QueDiffTag level='B' />
 
 At a stationery shop, pens are packed in boxes of five. Write a program that asks the user for the total number of pens they have and then 
 tells the user whether all the pens will fit into complete boxes or how many pens will be left over after packing.
@@ -212,7 +213,7 @@ What will be the output of the following programs?
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     x = 10
     y = 30
@@ -227,7 +228,7 @@ What will be the output of the following programs?
 
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     x = 30
 
@@ -238,7 +239,7 @@ What will be the output of the following programs?
         print(x, " is negative")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='B' />
     ```py
     x = -30
 
@@ -251,7 +252,7 @@ What will be the output of the following programs?
             print(f"{x} is less than -20")
     ```
 
-- #### IV.
+- #### IV. <QueDiffTag level='B' />
     ```py
     x = 15
     y = 30
@@ -263,7 +264,7 @@ What will be the output of the following programs?
             print("x is 10 but y is not 20")
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='I' />
     ```py
     n = '5'
 
@@ -284,7 +285,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q6.
+#### Q6. <QueDiffTag level='B' />
 
 At the airport cargo counter, packages are checked based on their size. Instead of actual weight, they use a volumetric weight formula to decide if 
 the package is too heavy to ship. Write a program that ask the user to enter the length, breadth, and height of the package in cm, then calculate 
@@ -323,7 +324,7 @@ What will be the output of the following programs?
     You have to predict the output yourself without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     x = 10
     y = 20
@@ -336,7 +337,7 @@ What will be the output of the following programs?
         print('C')
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     age = 25
 
@@ -350,7 +351,7 @@ What will be the output of the following programs?
         print("Toddler")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='B' />
     ```py
     marks = 90
 
@@ -366,7 +367,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q8.
+#### Q8. <QueDiffTag level='B' />
 
 Write a program that takes an integer from user and checks if that number is even or odd.
 
@@ -384,7 +385,7 @@ Enter a number: 9   [2;3m// user input[0m
 
 ---
 
-#### Q9.
+#### Q9. <QueDiffTag level='I' />
 
 At the college library, books can be borrowed and returned by students. To manage everything efficiently, they need a system to check students' borrowing history and pending dues.
 Write a program that,
@@ -418,7 +419,7 @@ Please clear the fine before borrowing a new book.
 
 ---
 
-#### Q10.
+#### Q10. <QueDiffTag level='B' />
 
 A college professor wants to make a student result declaration system.
 Write a program that takes student percentage as user input and gives student's result status.
@@ -439,7 +440,7 @@ Result: Pass with Merit
 
 ---
 
-#### Q11.
+#### Q11. <QueDiffTag level='B' />
 
 Create a system to calculate popcorn prices based on the bucket size customer asks for:
 
@@ -462,7 +463,7 @@ Price: 100
 
 ---
 
-#### Q12.
+#### Q12. <QueDiffTag level='B' />
 
 At a city's traffic control system, drivers are monitored for speed violations. The city has a strict speed policy - if a driver stays within the 
 speed limit, they can continue without any fine. However, if they exceed the limit, fines are imposed depending on how much they overspeed.
@@ -487,7 +488,7 @@ You have exceeded the speed limit. A fine of rs.1000 is applicable.
 
 ---
 
-#### Q13.
+#### Q13. <QueDiffTag level='B' />
 
 For a good and safe paragliding experience as a beginner, certain weather conditions need to be met.
 - No raining
@@ -506,7 +507,7 @@ It's a good condition for paragliding.
 
 ---
 
-#### Q14.
+#### Q14. <QueDiffTag level='B' />
 
 Create a program to make a mini-calculator.
 
@@ -529,7 +530,7 @@ output: 5 * 3 = 15
 
 ---
 
-#### Q15. _**(Adv.)**_
+#### Q15. <QueDiffTag level='A' />
 
 At the city's electricity board, household electricity bills are calculated based on the number of units consumed in a month. The board follows a slab system where different rates apply based on consumption levels.
 
@@ -560,7 +561,7 @@ Electricity Bill: rs.950
 
 ---
 
-#### Q16.
+#### Q16. <QueDiffTag level='I' />
 
 At an international airport's travel help desk, travellers often want to know the value of their Indian Rupees (INR) in different currencies.
 Write a program that helps a traveller by converting their amount in INR into a currency of their choice.

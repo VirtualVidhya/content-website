@@ -15,8 +15,9 @@ order: 40
 import CollapsibleSection from '@/components/CollapsibleSection.astro';
 import Admonition from '@/components/Admonition.astro';
 import LinkMd from '@/components/LinkMd.astro';
+import QueDiffTag from '@/components/QueDifficultyTag.astro';
 
-#### Q1.
+#### Q1. <QueDiffTag level='B' />
 
 Print first 25 <LinkMd href="https://www.cuemath.com/numbers/whole-numbers/" title="whole numbers" /> one-by-one, each in a new line.
 
@@ -42,7 +43,7 @@ Print first 25 <LinkMd href="https://www.cuemath.com/numbers/whole-numbers/" tit
 
 ---
 
-#### Q2.
+#### Q2. <QueDiffTag level='B' />
 
 Print all even numbers between 4 and 60, in a single line separated by a space in between.
 
@@ -52,7 +53,7 @@ Print all even numbers between 4 and 60, in a single line separated by a space i
 
 ---
 
-#### Q3.
+#### Q3. <QueDiffTag level='B' />
 
 Print all odd numbers between 1 and 50 in reverse order.
 
@@ -62,7 +63,7 @@ Print all odd numbers between 1 and 50 in reverse order.
 
 ---
 
-#### Q4.
+#### Q4. <QueDiffTag level='B' />
 
 Write a program to print all the numbers that are not divisible by 4, between 1 and 50.
 
@@ -93,10 +94,10 @@ Write a program to print all the numbers that are not divisible by 4, between 1 
 
 Write a program that -
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     Prints the multiplication table of 7.
 
-- #### II.
+- #### II. <QueDiffTag level='I' />
     Asks the user to enter a number and prints the multiplication table of that number.
 
 {/* <div class="w-full my-5"></div> */}
@@ -125,7 +126,7 @@ What will be the output of the following programs?
     You have to predict the output result without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     count = 20
 
@@ -136,7 +137,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     for i in range(10, 0, -2):
         print(i)
@@ -144,7 +145,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='B' />
     ```py
     count = 1
 
@@ -154,7 +155,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### IV.
+- #### IV. <QueDiffTag level='B' />
     ```py
     for i in range(10, 0):
         print(i, end=' ')
@@ -162,7 +163,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### V.
+- #### V. <QueDiffTag level='B' />
     ```py
     count = 15
 
@@ -173,7 +174,7 @@ What will be the output of the following programs?
     print("End of Loop")
     ```
 
-- #### VI.
+- #### VI. <QueDiffTag level='B' />
     ```py
     for i in range(1, 25, 4):
         print(i, end=' ')
@@ -181,7 +182,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### VII.
+- #### VII. <QueDiffTag level='I' />
     ```py
     print ("start")
 
@@ -193,7 +194,7 @@ What will be the output of the following programs?
 
 ---
 
-#### Q7.
+#### Q7. <QueDiffTag level='B' />
 
 A local weather station logs the rainfall (in mm) for each month of the year. Write a program that:
 - Prompts the user to enter the rainfall for each of the 12 months.
@@ -221,7 +222,7 @@ Average monthly rainfall: 75.42 mm
 
 ---
 
-#### Q8.
+#### Q8. <QueDiffTag level='I' />
 
 <LinkMd href="https://en.m.wikipedia.org/wiki/Fizz_buzz" title="Fizz Buzz" /> is a simple math game used to teach children about divisibility. It is also sometimes used as an interview question to assess basic programming skills.
 The rules of the game are simple: Starting at 1, and counting upward, replace any number divisible only by three with the word “fizz”, any number only divisible by five with the word “buzz”, and any number divisible by both 3 and 5 with the word “fizzbuzz”.)
@@ -264,7 +265,7 @@ What will be the output of the following programs?
     You have to predict the output result without running/executing the code.
 </Admonition>
 
-- #### I.
+- #### I. <QueDiffTag level='B' />
     ```py
     count = 0
 
@@ -279,7 +280,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### II.
+- #### II. <QueDiffTag level='B' />
     ```py
     for i in range(-3, 5):
         print(i, end=' ')
@@ -290,7 +291,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### III.
+- #### III. <QueDiffTag level='I' />
     ```py
     for i in range(-5, 5):
         if ((i + i) >= (i * i)):
@@ -301,7 +302,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### IV.
+- #### IV. <QueDiffTag level='B' />
     ```py
     count = 1
 
@@ -316,7 +317,7 @@ What will be the output of the following programs?
         print("\nEnd of Loop")
     ```
 
-- #### V. **_(Adv.)_**
+- #### V. *<QueDiffTag level='A' />
     ```py
     i = 50
 
@@ -331,7 +332,7 @@ What will be the output of the following programs?
     print("\nEnd of Loop")
     ```
 
-- #### VI.
+- #### VI. <QueDiffTag level='I' />
     ```py
     i = -5
 
@@ -346,7 +347,7 @@ What will be the output of the following programs?
         print("\nThe Loop is Over")
     ```
 
-- #### VII.
+- #### VII. <QueDiffTag level='I' />
     ```py
     for i in range(-5, 0):
         print(i, end=' ')
@@ -359,7 +360,95 @@ What will be the output of the following programs?
 
 ---
 
-#### Q10.
+#### Q10. <QueDiffTag level='I' />
+
+You're creating a simple login system for an app. The user gets up to 3 attempts to enter the correct password.
+- If the correct password is entered at any time, immediately display "Access Granted" and stop asking for more attempts.
+- If the user fails to enter the correct password after all 3 attempts, display "Access Denied".
+
+<CollapsibleSection title="Expected Output">
+```ansi
+[2;3# mTest Case 1: Correct password entered on the 1st attempt[0m
+Enter password: python123
+Access Granted
+
+[2;3# mTest Case 2: Correct password entered on the 2nd attempt[0m
+Enter password: hello
+Enter password: python123
+Access Granted
+
+[2;3# mTest Case 3: Correct password entered on the 3rd attempt[0m
+Enter password: abc
+Enter password: 12345 
+Enter password: python123
+Access Granted
+
+[2;3# mTest Case 4: Incorrect password entered all 3 times[0m
+Enter password: abc
+Enter password: 12345
+Enter password: qwerty
+Access Denied
+```
+</CollapsibleSection>
+
+---
+
+#### Q11. <QueDiffTag level='I' />
+
+You're building a simple study tracker for students. For each of the 7 days in a week, display 3 checkboxes (□) 
+representing the completion status of Morning, Afternoon and Evening study sessions.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+Day 1: □ □ □
+Day 2: □ □ □
+Day 3: □ □ □
+Day 4: □ □ □
+Day 5: □ □ □
+Day 6: □ □ □
+Day 7: □ □ □
+```
+</CollapsibleSection>
+
+---
+
+#### Q12. <QueDiffTag level='I' />
+
+You're creating a parking management system for a shopping mall. To help visitors quickly find available spaces, 
+the system needs to display every parking level along with all of its parking spot numbers.
+The mall has 3 parking levels and each level contains 5 parking spots.
+
+Write a program that displays the parking directory for the shopping mall by printing every parking level and all of 
+its parking spot numbers in the format shown in the expected output.
+
+<CollapsibleSection title="Expected Output">
+```ansi
+# LEVEL 1 #
+Level 1 - Spot 1 
+Level 1 - Spot 2 
+Level 1 - Spot 3 
+Level 1 - Spot 4 
+Level 1 - Spot 5 
+
+# LEVEL 2 #
+Level 2 - Spot 1 
+Level 2 - Spot 2 
+Level 2 - Spot 3 
+Level 2 - Spot 4 
+Level 2 - Spot 5 
+
+# LEVEL 3 #
+Level 3 - Spot 1 
+Level 3 - Spot 2 
+Level 3 - Spot 3 
+Level 3 - Spot 4 
+Level 3 - Spot 5
+```
+</CollapsibleSection>
+
+---
+
+#### Q13. <QueDiffTag level='I' />
 
 You need a quick black-and-white <LinkMd href="https://en.wikipedia.org/wiki/Checkerboard#:~:text=A%20checkerboard%20(American%20English)%20or,as%20English%20draughts)%20is%20played." title="checkerboard" /> 
 background for an old-school game screen.
@@ -380,7 +469,7 @@ O X O X O X
 
 ---
 
-#### Q11.
+#### Q14. <QueDiffTag level='B' />
 
 At a grocery checkout, the cashier enters each item's price one by one. Write a program that:
 - Keeps on asking the user for the price of the next item.
@@ -401,7 +490,7 @@ Total Bill: rs.300
 
 ---
 
-#### Q12.
+#### Q15. <QueDiffTag level='B' />
 
 A fitness app asks the user each day how many steps they walked, for a 7-day challenge. Write a program that:
 - Asks the user - the step count for each day of the week.
@@ -424,7 +513,7 @@ You met your 10,000 steps goal on 5 out of 7 days.
 
 ---
 
-#### Q13. _**(Adv.)**_
+#### Q16. <QueDiffTag level='A' />
 
 A popular music festival is happening in town, and the organizer has invited `N` different bands to perform on the main stage. Since the event has only one stage, 
 the performances will happen one after the other — no two bands can perform at the same time.
@@ -457,7 +546,7 @@ Total possible lineups: 720
 
 ---
 
-#### Q14.
+#### Q17. <QueDiffTag level='I' />
 
 A new café wants a big, eye-catching sign around its name. To help them, write a program that asks the user for the width and 
 height of the sign, then draw a rectangular border of * characters of that size. The inside should be blank.
@@ -477,7 +566,7 @@ Enter height: 5   [2;3m// user input[0m
 
 ---
 
-#### Q15.
+#### Q18. <QueDiffTag level='B' />
 
 At an event entrance, the staff record the ages of attendees. The survey wants to know how many are minors (< 18) and how many are adults (≥ 18). 
 Write a program that:
@@ -504,7 +593,7 @@ Adults (18 and over): 2
 
 ---
 
-#### Q16.
+#### Q19. <QueDiffTag level='I' />
 
 A coach wants a quick strike-rate report for every batsman in a small squad, each facing a fixed number of balls. To solve this problem, 
 write a program that:
@@ -554,7 +643,7 @@ Batsman-3: Total Runs: 8, Strike Rate: 133.33%
 
 ---
 
-#### Q17. _**(Adv.)**_
+#### Q20. <QueDiffTag level='A' />
 
 A fruit wholesaler receives apple crates every `X` days and orange crates every `Y` days. Each apple delivery brings `A` crates and each orange delivery brings `B` crates. 
 The wholesaler stores all incoming crates and wants to pack mixed baskets so that every basket has the same number of apple and orange crates, using up the entire stock 
